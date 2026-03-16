@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECH - Encrypted Client Hello | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>ECH</h1>
+            <p>Encrypted Client Hello – privacy-preserving TLS extension that hides SNI & handshake metadata</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>Encrypted Client Hello (ECH) is a TLS extension (RFC 9257 / draft-ietf-tls-esni) that encrypts the entire ClientHello message — including the Server Name Indication (SNI), ALPN, and other handshake metadata — preventing passive observers from seeing which domain a client is connecting to. In March 2026, ECH is widely deployed and considered **best practice** for public-facing HTTPS services. It is supported by all major browsers (Chrome 117+, Firefox 118+, Safari 16.4+, Edge 117+), most CDNs (Cloudflare, Akamai, Fastly, Google Cloud CDN, AWS CloudFront with custom origins), and a growing number of origin servers (Nginx 1.25+, Apache 2.4.58+, Caddy 2.7+, Traefik, Envoy, HAProxy). ECH is mandated or strongly recommended by privacy-focused standards, privacy regulations (GDPR, CCPA/CPRA, LGPD), cyber insurance policies, zero-trust architectures, and enterprise security baselines to prevent SNI snooping, metadata leakage, and domain-targeted censorship or surveillance. ECH works in conjunction with **TLS 1.3** (mandatory) and **Encrypted DNS** (DoH/DoT) to provide comprehensive connection privacy.</p>
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> ECH significantly enhances user privacy by hiding the destination domain from passive network observers — reducing metadata leakage, preventing domain-targeted attacks & censorship, supporting zero-trust principles, improving compliance with privacy regulations, and — when combined with TLS 1.3, ECH, and DoH — delivering the strongest practical protection for data-in-transit privacy in 2026.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Components & Requirements (2026)</h2>
+
+                <h3>ECH Operation</h3>
+                <ul>
+                    <li>Client fetches ECH config from HTTPS DNS record (ECHConfigList)</li>
+                    <li>Client encrypts ClientHelloInner & sends encrypted outer ClientHello</li>
+                    <li>Server decrypts & processes Inner, responds with encrypted handshake</li>
+                </ul>
+
+                <h3>Key Dependencies</h3>
+                <ul>
+                    <li>TLS 1.3 mandatory (ECH only works over TLS 1.3)</li>
+                    <li>Encrypted DNS (DoH/DoT) to protect ECH config fetch</li>
+                    <li>Certificate transparency & short-lived certs recommended</li>
+                </ul>
+
+                <h3>Deployment Models</h3>
+                <ul>
+                    <li>CDN-fronted (Cloudflare, Akamai, Fastly) – easiest path</li>
+                    <li>Origin server direct (Nginx, Caddy, Envoy, Traefik)</li>
+                    <li>Hybrid (CDN + origin fallback)</li>
+                </ul>
+
+                <h3>Privacy & Security Benefits</h3>
+                <ul>
+                    <li>Hides SNI, ALPN, QUIC version, extensions</li>
+                    <li>Prevents passive domain fingerprinting & censorship</li>
+                    <li>Reduces metadata available to ISPs & middleboxes</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Key Trends & Best Practices in 2026</h2>
+
+                <h3>Privacy & Regulatory Push</h3>
+                <ul>
+                    <li>ECH mandated in privacy-focused enterprise baselines</li>
+                    <li>GDPR, CCPA/CPRA, LGPD & DORA privacy alignment</li>
+                    <li>Cyber insurance discounts for ECH deployment</li>
+                </ul>
+
+                <h3>Post-Quantum & Future-Proofing</h3>
+                <ul>
+                    <li>Hybrid post-quantum key exchange with ECH</li>
+                    <li>Preparation for full PQ migration (2030–2035)</li>
+                    <li>ECH + DoH + TLS 1.3 as privacy trifecta</li>
+                </ul>
+
+                <h3>Deployment & Monitoring</h3>
+                <ul>
+                    <li>Enable ECH on CDNs first (Cloudflare, Akamai, Fastly)</li>
+                    <li>Monitor ECH success rate & fallback to non-ECH</li>
+                    <li>Use certificate transparency logs & short-lived certs</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Best Practices for ECH Deployment (2026)</h2>
+
+                <h3>Implementation</h3>
+                <ul>
+                    <li>Start with CDN (Cloudflare, Akamai, Fastly) for immediate coverage</li>
+                    <li>Enable ECH on origin servers (Nginx, Caddy, Envoy)</li>
+                    <li>Use DoH/DoT for ECH config fetch privacy</li>
+                </ul>
+
+                <h3>Security & Privacy Hardening</h3>
+                <ul>
+                    <li>Enforce TLS 1.3 only & strong ciphers</li>
+                    <li>Enable HSTS preload & certificate transparency</li>
+                    <li>Monitor fallback rates & privacy leakage</li>
+                </ul>
+
+                <h3>Governance & Compliance</h3>
+                <ul>
+                    <li>Document ECH deployment in privacy & security policies</li>
+                    <li>Conduct periodic privacy impact assessments</li>
+                    <li>Align with GDPR, CCPA, DORA & cyber insurance</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Define ECH & TLS privacy strategy for public services</li>
+                    <li>Approve ECH deployment roadmap & fallback handling</li>
+                    <li>Ensure TLS 1.3 + ECH + DoH/DoT enforcement</li>
+                    <li>Oversee privacy posture, fallback rates & compliance</li>
+                    <li>Monitor ECH success, handshake anomalies & leakage</li>
+                    <li>Drive integration with zero-trust, SASE & regulatory requirements</li>
+                    <li>Align ECH with ESG, privacy & business goals</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>RFC 9257 (ECH), RFC 9258 (ECH DNS records)</li>
+                    <li>Cloudflare, Akamai, Fastly ECH deployment guides</li>
+                    <li>CISA & ENISA TLS privacy & ECH best practices</li>
+                    <li>Google Chrome & Mozilla Firefox ECH status pages</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

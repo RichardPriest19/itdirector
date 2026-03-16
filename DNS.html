@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNS - Domain Name System | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>DNS</h1>
+            <p>Domain Name System – hierarchical naming system translating domain names to IP addresses</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>The Domain Name System (DNS) is the hierarchical and decentralized naming system of the internet that translates human-readable domain names (e.g., example.com) into machine-readable IP addresses and other records. In March 2026, DNS is still the foundational protocol for all internet and private network communication — with **DNSSEC** now mandatory in most regulated and enterprise environments, **DNS-over-HTTPS (DoH)** and **DNS-over-TLS (DoT)** as default for privacy and integrity, **Encrypted Client Hello (ECH)** integration for TLS privacy, **DNS Firewall / RPZ** as standard security control, **AI-driven DNS threat detection** (tunneling, exfiltration, C2), **private DNS resolution** (split-horizon, conditional forwarding, private zones), **zero-trust DNS** (query filtering, policy enforcement), and **quantum-resistant cryptography** readiness (post-quantum signatures in DNSSEC). It is managed via public resolvers (Cloudflare 1.1.1.1, Google 8.8.8.8, Quad9), enterprise DNS servers (BIND, Microsoft DNS, Infoblox, BlueCat), and cloud services (Route 53, Azure DNS, Google Cloud DNS).</p>
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> DNS is the address book of the internet and private networks — enabling reliable name resolution, global service discovery, load balancing, failover, security hardening (DNSSEC, DoH/DoT), threat blocking (DNS Firewall), and — when zero-trust aligned — providing foundational visibility, policy enforcement, and privacy protection for all network communication.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Components & Record Types (2026)</h2>
+
+                <h3>DNS Resolution Path</h3>
+                <ul>
+                    <li>Stub resolver → recursive resolver → authoritative nameservers</li>
+                    <li>Root, TLD, authoritative servers</li>
+                    <li>Caching & TTL (Time to Live)</li>
+                </ul>
+
+                <h3>Key DNS Record Types</h3>
+                <ul>
+                    <li>A / AAAA – IPv4/IPv6 address</li>
+                    <li>CNAME – alias</li>
+                    <li>MX – mail exchange</li>
+                    <li>TXT – text (SPF, DKIM, DMARC)</li>
+                    <li>SRV – service locator</li>
+                    <li>HTTPS – SVCB/HTTPS records (ECH support)</li>
+                </ul>
+
+                <h3>Security & Privacy</h3>
+                <ul>
+                    <li>DNSSEC – cryptographic signing & validation</li>
+                    <li>DNS-over-HTTPS (DoH) & DNS-over-TLS (DoT)</li>
+                    <li>Encrypted Client Hello (ECH) in HTTPS records</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Key Trends & Best Practices in 2026</h2>
+
+                <h3>Encrypted & Zero-Trust DNS</h3>
+                <ul>
+                    <li>DoH/DoT mandatory for privacy & integrity</li>
+                    <li>DNSSEC signing & validation enforced</li>
+                    <li>DNS Firewall / RPZ for threat blocking</li>
+                </ul>
+
+                <h3>AI & Threat Detection</h3>
+                <ul>
+                    <li>AI-driven DNS query anomaly & exfiltration detection</li>
+                    <li>DNS tunneling & C2 identification</li>
+                    <li>Integration with SIEM & EDR</li>
+                </ul>
+
+                <h3>Private & Hybrid DNS</h3>
+                <ul>
+                    <li>Split-horizon & conditional forwarding</li>
+                    <li>Private hosted zones & VPC association</li>
+                    <li>Hybrid resolution (on-prem ↔ cloud)</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Best Practices for DNS Management (2026)</h2>
+
+                <h3>Security Hardening</h3>
+                <ul>
+                    <li>Enable DNSSEC & DoH/DoT everywhere</li>
+                    <li>Deploy DNS Firewall / RPZ for malicious domain blocking</li>
+                    <li>Restrict recursive queries & zone transfers</li>
+                </ul>
+
+                <h3>Resolution & Performance</h3>
+                <ul>
+                    <li>Use anycast resolvers (Cloudflare, Quad9, Route 53 Resolver)</li>
+                    <li>Implement caching & TTL optimization</li>
+                    <li>Monitor query latency & failure rates</li>
+                </ul>
+
+                <h3>Governance & Monitoring</h3>
+                <ul>
+                    <li>Centralize DNS management & logging</li>
+                    <li>Integrate with SIEM for threat detection</li>
+                    <li>Conduct regular DNS audits & legacy protocol scans</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Define DNS strategy & zero-trust resolution baseline</li>
+                    <li>Approve DNSSEC, DoH/DoT & DNS Firewall enforcement</li>
+                    <li>Ensure private DNS & hybrid resolution design</li>
+                    <li>Oversee DNS query logging, threat detection & compliance</li>
+                    <li>Monitor DNS performance, availability & security posture</li>
+                    <li>Drive AI-assisted DNS anomaly detection & automation</li>
+                    <li>Align DNS with regulatory (GDPR, DORA) & security requirements</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>RFC 1034/1035 (DNS), RFC 6891 (DNSSEC), RFC 8484 (DoH)</li>
+                    <li>CISA & NIST DNS security & zero-trust guidance</li>
+                    <li>Cloudflare, Quad9, Route 53 Resolver documentation</li>
+                    <li>OWASP & MITRE DNS threat resources</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

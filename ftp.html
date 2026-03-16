@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FTP - File Transfer Protocol | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>FTP</h1>
+            <p>File Transfer Protocol – legacy protocol for transferring files over TCP networks</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>FTP (File Transfer Protocol) is a standard network protocol (defined in RFC 959, 1985) used for transferring files between a client and server over a TCP network. It operates in two modes (active/passive) and uses separate control (port 21) and data connections. In March 2026, **plain FTP is considered obsolete and insecure** — credentials and data are transmitted in clear text, making it vulnerable to interception, credential theft, and man-in-the-middle attacks. It has been almost entirely replaced by secure alternatives: **SFTP** (SSH File Transfer Protocol), **FTPS** (FTP over TLS), **SCP**, **WebDAV over HTTPS**, **S3-compatible APIs**, **rsync over SSH**, and modern cloud file sync/share services. FTP is now only encountered in very old industrial equipment, legacy mainframe systems, or misconfigured legacy workflows — and its continued use is strongly discouraged.</p>
+                <div class="highlight-box">
+                    <strong>Key Value (historical):</strong> FTP was once the simplest and most universal way to move files across networks — but in 2026 its only remaining “value” is as a reminder of insecure-by-design protocols. All modern organizations should have fully migrated to encrypted, secure file transfer methods.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Characteristics & Legacy Status (2026)</h2>
+
+                <h3>FTP Fundamentals</h3>
+                <ul>
+                    <li>Control channel: TCP port 21 (commands)</li>
+                    <li>Data channel: dynamic ports (active mode) or port 20 (passive mode)</li>
+                    <li>Clear-text authentication & data transfer</li>
+                    <li>Active vs Passive mode (firewall traversal challenges)</li>
+                    <li>ASCII vs Binary transfer modes</li>
+                </ul>
+
+                <h3>Security Issues</h3>
+                <ul>
+                    <li>Credentials transmitted in plain text</li>
+                    <li>No encryption of data in transit</li>
+                    <li>Vulnerable to eavesdropping, replay, and MITM attacks</li>
+                    <li>No integrity protection or modern authentication</li>
+                </ul>
+
+                <h3>Modern Secure Alternatives</h3>
+                <ul>
+                    <li>SFTP (SSH File Transfer Protocol) – port 22, encrypted</li>
+                    <li>FTPS (Explicit/Implicit) – FTP over TLS, port 990/21</li>
+                    <li>SCP / rsync over SSH – simple secure file copy</li>
+                    <li>WebDAV over HTTPS, S3 APIs, Azure Blob, Google Cloud Storage</li>
+                    <li>Secure file share platforms (Box, Dropbox Business, OneDrive for Business)</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Key Trends & Status in 2026</h2>
+
+                <h3>Legacy & Industrial Use</h3>
+                <ul>
+                    <li>Still found in old manufacturing equipment, mainframes, embedded systems</li>
+                    <li>Common in air-gapped or isolated legacy environments</li>
+                    <li>Gradual decommissioning & replacement programs ongoing</li>
+                </ul>
+
+                <h3>Security & Compliance Pressure</h3>
+                <ul>
+                    <li>Plain FTP explicitly prohibited by PCI-DSS, HIPAA, GDPR, NIS2</li>
+                    <li>Cyber insurance policies often exclude FTP-related incidents</li>
+                    <li>Regulatory audits flag FTP as high-risk</li>
+                </ul>
+
+                <h3>Migration & Replacement</h3>
+                <ul>
+                    <li>Most organizations completed FTP → SFTP/FTPS migration by 2024–2025</li>
+                    <li>Cloud-native file transfer (S3, Azure Blob, Google Cloud Storage APIs) dominant</li>
+                    <li>Zero-trust file access & encrypted channels mandatory</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Best Practices for FTP-Related Situations (2026)</h2>
+
+                <h3>Migration Strategy</h3>
+                <ul>
+                    <li>Identify all FTP usage (scans, logs, firewall rules)</li>
+                    <li>Prioritize migration to SFTP, FTPS or cloud-native transfer</li>
+                    <li>Replace legacy FTP servers with secure alternatives (AWS Transfer Family, Azure Files, etc.)</li>
+                </ul>
+
+                <h3>Interim Mitigation (if FTP cannot be removed immediately)</h3>
+                <ul>
+                    <li>Force FTPS (Explicit TLS) & disable plain FTP</li>
+                    <li>Restrict to internal/VPN-only access</li>
+                    <li>Implement strong credential rotation & monitoring</li>
+                </ul>
+
+                <h3>Security & Monitoring</h3>
+                <ul>
+                    <li>Block outbound FTP (port 21) at firewall unless explicitly justified</li>
+                    <li>Monitor for FTP traffic & alert on unauthorized use</li>
+                    <li>Conduct regular legacy protocol audits</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Champion complete elimination of plain FTP across the organization</li>
+                    <li>Approve FTP migration roadmap & secure alternatives</li>
+                    <li>Ensure zero-trust & encrypted file transfer policies</li>
+                    <li>Oversee legacy protocol scans & risk assessments</li>
+                    <li>Monitor for unauthorized FTP usage & compliance violations</li>
+                    <li>Drive SFTP/FTPS/cloud-native adoption & training</li>
+                    <li>Align file transfer strategy with regulatory & cyber insurance requirements</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>RFC 959 (FTP), RFC 4217 (FTPS), RFC 4251 (SSH/SFTP)</li>
+                    <li>CISA & NIST guidance on legacy protocol removal</li>
+                    <li>PCI-DSS, HIPAA, GDPR requirements prohibiting plain FTP</li>
+                    <li>AWS Transfer Family, Azure Files, Google Cloud Storage docs</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

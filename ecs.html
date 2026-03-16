@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECS - Amazon Elastic Container Service | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>ECS</h1>
+            <p>Amazon Elastic Container Service – fully managed container orchestration on AWS</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>Amazon Elastic Container Service (ECS) is AWS's fully managed container orchestration service that supports Docker and any compatible container runtime. In March 2026, **ECS on Fargate** is the dominant model for serverless container workloads — removing node management entirely — while **ECS on EC2** remains popular for cost optimization & custom AMI needs. Key 2026 features include **ECS Anywhere** maturity (hybrid/on-prem), **AWS Copilot CLI** & **ECS Blueprints** for developer simplicity, **Graviton** instances for best price/performance, **ECS Service Connect** for simplified service discovery & observability, **AWS Proton** for template-driven deployments, **GPU & Inferentia/Trainium** support for AI/ML, and deep integration with **CloudWatch**, **X-Ray**, **App Mesh**, and **AWS Firewall Manager**. ECS competes directly with EKS (Kubernetes) and is preferred by teams that want simpler orchestration, tighter AWS integration, and lower operational overhead.</p>
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> ECS delivers production-grade, fully managed container orchestration with native AWS integration — enabling fast deployment, serverless scaling (Fargate), cost optimization (Graviton), simplified networking & observability, and strong security — while reducing complexity compared to Kubernetes for teams that don’t need full K8s flexibility.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Capabilities (2026)</h2>
+
+                <h3>Compute Options</h3>
+                <ul>
+                    <li>ECS on Fargate – serverless, no infrastructure management</li>
+                    <li>ECS on EC2 – managed node groups, custom AMIs, Graviton</li>
+                    <li>ECS Anywhere – on-prem, edge, hybrid nodes</li>
+                </ul>
+
+                <h3>Networking & Service Discovery</h3>
+                <ul>
+                    <li>ECS Service Connect – simplified discovery, load balancing, telemetry</li>
+                    <li>AWS App Mesh & Cloud Map integration</li>
+                    <li>VPC-native networking & security groups</li>
+                </ul>
+
+                <h3>Security & Governance</h3>
+                <ul>
+                    <li>IAM task roles & task execution roles</li>
+                    <li>Task-level encryption & secrets (SSM Parameter Store, Secrets Manager)</li>
+                    <li>GuardDuty, Security Hub & AWS Firewall Manager support</li>
+                </ul>
+
+                <h3>Observability & Automation</h3>
+                <ul>
+                    <li>CloudWatch Container Insights & X-Ray tracing</li>
+                    <li>AWS Copilot CLI & ECS Blueprints for GitOps-style workflows</li>
+                    <li>Auto-scaling & scheduled tasks</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Key Trends & Best Practices in 2026</h2>
+
+                <h3>Serverless & Graviton Dominance</h3>
+                <ul>
+                    <li>Fargate as default for new workloads</li>
+                    <li>Graviton instances for 30–40% better price/performance</li>
+                    <li>Auto-scaling & capacity providers maturity</li>
+                </ul>
+
+                <h3>AI/ML & GPU Workloads</h3>
+                <ul>
+                    <li>GPU & Inferentia/Trainium support in ECS tasks</li>
+                    <li>SageMaker & ECS integration for training/inference</li>
+                    <li>Vector database & RAG pipelines on ECS</li>
+                </ul>
+
+                <h3>Observability & GitOps</h3>
+                <ul>
+                    <li>Service Connect for built-in telemetry</li>
+                    <li>Copilot & Terraform for declarative deployments</li>
+                    <li>Multi-account & multi-region strategies</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Best Practices for ECS Adoption (2026)</h2>
+
+                <h3>Architecture & Deployment</h3>
+                <ul>
+                    <li>Prefer Fargate for most workloads; use EC2 for cost-sensitive or custom needs</li>
+                    <li>Use ECS Blueprints & Copilot for standardized setups</li>
+                    <li>Enable Service Connect for simplified networking</li>
+                </ul>
+
+                <h3>Security & Governance</h3>
+                <ul>
+                    <li>Use task roles & least privilege IAM</li>
+                    <li>Enable GuardDuty & Security Hub monitoring</li>
+                    <li>Implement private endpoints & VPC-only traffic</li>
+                </ul>
+
+                <h3>Operations & Optimization</h3>
+                <ul>
+                    <li>Monitor with Container Insights & X-Ray</li>
+                    <li>Automate scaling & capacity providers</li>
+                    <li>Use Graviton for compute savings</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Define ECS strategy aligned with container & multi-cloud roadmap</li>
+                    <li>Approve Fargate vs EC2 mix & security baseline</li>
+                    <li>Ensure AI/ML workload support & cost optimization</li>
+                    <li>Oversee cluster health, uptime & compliance</li>
+                    <li>Monitor cost, performance & developer adoption</li>
+                    <li>Drive GitOps & automation maturity</li>
+                    <li>Align with zero-trust, sustainability & regulatory requirements</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>aws.amazon.com/ecs – official ECS documentation</li>
+                    <li>AWS Copilot CLI, ECS Blueprints & Terraform modules</li>
+                    <li>AWS Well-Architected Framework – ECS Lens</li>
+                    <li>Gartner & Forrester Container & Orchestration reports 2025–2026</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

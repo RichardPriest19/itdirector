@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETL / ELT - Data Integration Pipelines | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>ETL / ELT</h1>
+            <p>Extract, Transform, Load vs Extract, Load, Transform – modern approaches to building reliable, scalable data pipelines</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>ETL (Extract, Transform, Load) and ELT (Extract, Load, Transform) are the two dominant patterns for moving and preparing data from source systems into analytics-ready environments (data warehouses, data lakes, lakehouses). ETL transforms data in a staging area before loading, ensuring clean, structured data arrives in the target. ELT loads raw data first and leverages the massive compute power of modern cloud warehouses (Snowflake, BigQuery, Databricks, Fabric) to perform transformations afterward. In 2026, ELT has become the default for most analytics and AI/ML workloads due to cloud economics, while ETL remains relevant for compliance-heavy, real-time, or legacy-constrained scenarios. Many enterprises now use hybrid approaches.</p>
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> The right ETL/ELT strategy reduces data latency, improves quality & governance, lowers long-term costs, accelerates insight delivery, and supports AI-ready data products.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Differences – ETL vs ELT</h2>
+
+                <h3>Process Order & Transformation Location</h3>
+                <ul>
+                    <li><strong>ETL</strong>: Extract → Transform (in separate engine/server) → Load</li>
+                    <li><strong>ELT</strong>: Extract → Load (raw) → Transform (inside warehouse/lakehouse)</li>
+                </ul>
+
+                <h3>When to Choose ETL</h3>
+                <ul>
+                    <li>Strict compliance / sensitive data (transform before landing raw data)</li>
+                    <li>Complex, multi-source cleansing & enrichment required upfront</li>
+                    <li>Legacy on-premises warehouses with limited compute</li>
+                    <li>Real-time streaming with heavy pre-processing</li>
+                </ul>
+
+                <h3>When to Choose ELT (dominant in 2026)</h3>
+                <ul>
+                    <li>Cloud-native warehouses with separated storage & compute</li>
+                    <li>Large volume / variety data (big data, semi-structured, IoT)</li>
+                    <li>Self-service analytics, data science & ML teams</li>
+                    <li>Need to re-transform historical data without re-extraction</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Key Features of Modern Pipelines (2026)</h2>
+
+                <h3>Hybrid & DataOps Capabilities</h3>
+                <ul>
+                    <li>Metadata-driven orchestration (Airflow, Prefect, Dagster, dbt Cloud, Microsoft Fabric)</li>
+                    <li>Version control for transformations (Git + dbt, SQL)</li>
+                    <li>Automated testing, CI/CD, observability</li>
+                </ul>
+
+                <h3>Real-time & Streaming Support</h3>
+                <ul>
+                    <li>Kafka, Flink, Spark Streaming, Azure Event Hubs + ELT</li>
+                    <li>Change Data Capture (CDC) for near-real-time sync</li>
+                    <li>Streaming ELT patterns (e.g., Fivetran + Snowflake Streams)</li>
+                </ul>
+
+                <h3>AI & Governance Integration</h3>
+                <ul>
+                    <li>Auto-schema detection, anomaly detection</li>
+                    <li>Data lineage & impact analysis (Atlan, Collibra, Microsoft Purview)</li>
+                    <li>Built-in PII detection, masking, consent tracking</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Best Practices for Enterprise IT (2026)</h2>
+
+                <h3>Architecture & Strategy</h3>
+                <ul>
+                    <li>Default to ELT for analytics / AI; use ETL only when required</li>
+                    <li>Adopt hybrid model when compliance or latency dictate</li>
+                    <li>Centralize orchestration & monitoring (one control plane)</li>
+                </ul>
+
+                <h3>Data Quality & Reliability</h3>
+                <ul>
+                    <li>Implement contract testing & schema validation</li>
+                    <li>Use incremental loading + CDC as standard</li>
+                    <li>Build automated data quality gates & alerts</li>
+                </ul>
+
+                <h3>Cost & Performance Optimization</h3>
+                <ul>
+                    <li>Leverage auto-scaling compute in cloud warehouses</li>
+                    <li>Monitor & right-size warehouse usage</li>
+                    <li>Partition & cluster tables intelligently</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Define data integration strategy aligned with analytics & AI goals</li>
+                    <li>Approve ETL/ELT architectural pattern & tooling stack</li>
+                    <li>Ensure governance, lineage, quality & compliance controls</li>
+                    <li>Oversee total cost of ownership (storage + compute + licensing)</li>
+                    <li>Drive adoption of DataOps practices & self-service enablement</li>
+                    <li>Monitor pipeline reliability, SLAs & business impact</li>
+                    <li>Plan for future (real-time, vector DBs, generative AI pipelines)</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>dbt Labs – Best practices for ELT transformations</li>
+                    <li>Gartner Magic Quadrant / Market Guide for Data Integration 2025–2026</li>
+                    <li>Microsoft Fabric, Snowflake, Databricks documentation</li>
+                    <li>Fivetran, Airbyte, Matillion, Informatica modern guides</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disaster Recovery & Business Continuity | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>Disaster Recovery & Business Continuity</h1>
+            <p>Planning and execution to maintain operations during disruptions and recover from disasters</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>Disaster Recovery (DR) and Business Continuity (BC) are complementary disciplines that prepare organizations to continue critical operations during disruptions. Business Continuity focuses on maintaining business processes during any disruption, while Disaster Recovery focuses specifically on IT systems and recovery from IT failures or disasters. Together, they enable organizations to minimize service disruption, protect revenue, and maintain customer trust during crises.</p>
+                <div class="highlight-box">
+                    <strong>Key Distinction:</strong> Business Continuity is about keeping the business running; Disaster Recovery is about restoring IT systems. BC is broader and business-focused; DR is IT-focused.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Business Continuity vs Disaster Recovery</h2>
+
+                <h3>Business Continuity (BC)</h3>
+                <ul>
+                    <li>Focus on maintaining business operations during disruptions</li>
+                    <li>Includes IT, facilities, people, processes</li>
+                    <li>Addresses any type of disruption (not just IT)</li>
+                    <li>Proactive planning for continuity</li>
+                    <li>Business-owned with IT participation</li>
+                </ul>
+
+                <h3>Disaster Recovery (DR)</h3>
+                <ul>
+                    <li>Focus on restoring IT systems after failure</li>
+                    <li>Specifically addresses technology recovery</li>
+                    <li>Includes backup, replication, failover procedures</li>
+                    <li>Reactive response to IT disasters</li>
+                    <li>IT-owned responsibility</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Key Concepts and Metrics</h2>
+
+                <h3>Recovery Time Objective (RTO)</h3>
+                <p>Maximum acceptable time for system to be unavailable. Defines recovery speed requirement. Example: "Database must be recovered within 4 hours."</p>
+
+                <h3>Recovery Point Objective (RPO)</h3>
+                <p>Maximum acceptable data loss. Defines backup frequency requirement. Example: "Lose no more than 1 hour of transactions."</p>
+
+                <h3>Disaster Recovery Plan (DRP)</h3>
+                <p>Documented procedures for recovering IT systems from disaster. Includes detailed steps, contacts, escalation procedures.</p>
+
+                <h3>Business Continuity Plan (BCP)</h3>
+                <p>Broader plan for maintaining business operations during disruptions. Includes alternative work locations, backup processes, communication plans.</p>
+
+                <h3>Maximum Tolerable Downtime (MTD)</h3>
+                <p>Maximum time a function can be unavailable before business impact becomes unacceptable.</p>
+            </div>
+
+            <div class="content-section">
+                <h2>Business Continuity Planning</h2>
+
+                <h3>Phase 1: Business Impact Analysis (BIA)</h3>
+                <ul>
+                    <li>Identify critical business functions</li>
+                    <li>Assess impact of disruption to each function</li>
+                    <li>Determine MTD for each function</li>
+                    <li>Identify dependencies (IT, facilities, people, suppliers)</li>
+                    <li>Prioritize recovery order</li>
+                </ul>
+
+                <h3>Phase 2: Strategy Development</h3>
+                <ul>
+                    <li>Determine continuity strategies for each function</li>
+                    <li>Examples: Remote work capability, alternative sites, backup processes</li>
+                    <li>Document alternative procedures</li>
+                    <li>Identify required resources and training</li>
+                </ul>
+
+                <h3>Phase 3: Plan Development</h3>
+                <ul>
+                    <li>Document BCP with detailed procedures</li>
+                    <li>Assign roles and responsibilities</li>
+                    <li>Establish communication procedures</li>
+                    <li>Create alternative work location plans</li>
+                    <li>Develop recovery procedures</li>
+                </ul>
+
+                <h3>Phase 4: Testing and Training</h3>
+                <ul>
+                    <li>Regular testing of procedures (at least annually)</li>
+                    <li>Train key personnel on their roles</li>
+                    <li>Conduct tabletop exercises</li>
+                    <li>Perform simulated activations</li>
+                    <li>Test alternative work locations</li>
+                </ul>
+
+                <h3>Phase 5: Maintenance and Improvement</h3>
+                <ul>
+                    <li>Regular review and updates to plan</li>
+                    <li>Update for organizational changes</li>
+                    <li>Incorporate lessons learned</li>
+                    <li>Keep contact information current</li>
+                    <li>Update procedures based on testing</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Disaster Recovery Planning</h2>
+
+                <h3>1. System Inventory and Classification</h3>
+                <ul>
+                    <li>Inventory all IT systems</li>
+                    <li>Classify by criticality (critical, important, non-critical)</li>
+                    <li>Document RTO and RPO for each system</li>
+                    <li>Identify dependencies between systems</li>
+                </ul>
+
+                <h3>2. Backup Strategy</h3>
+                <ul>
+                    <li><strong>Frequency:</strong> Hourly, daily, or weekly based on RPO</li>
+                    <li><strong>Method:</strong> Full or incremental backups</li>
+                    <li><strong>Storage:</strong> Off-site and geographically dispersed</li>
+                    <li><strong>Testing:</strong> Regular restore testing</li>
+                    <li><strong>Automation:</strong> Automated backup with validation</li>
+                </ul>
+
+                <h3>3. Replication and Failover</h3>
+                <ul>
+                    <li>Database replication to recovery site</li>
+                    <li>Real-time or periodic replication</li>
+                    <li>Automated failover for critical systems</li>
+                    <li>DNS and routing failover procedures</li>
+                </ul>
+
+                <h3>4. Recovery Site Options</h3>
+                <ul>
+                    <li><strong>Hot Site:</strong> Fully equipped, real-time sync, expensive</li>
+                    <li><strong>Warm Site:</strong> Equipment ready, some lag in data, moderate cost</li>
+                    <li><strong>Cold Site:</strong> Basic equipment, manual setup, low cost</li>
+                    <li><strong>Cloud-Based:</strong> Virtual machines in cloud, scalable, cost-effective</li>
+                </ul>
+
+                <h3>5. Recovery Procedures</h3>
+                <ul>
+                    <li>Step-by-step recovery procedures for each system</li>
+                    <li>Documented in DRP manual</li>
+                    <li>Tested regularly</li>
+                    <li>Assigned recovery teams</li>
+                    <li>Defined escalation procedures</li>
+                </ul>
+
+                <h3>6. Testing and Validation</h3>
+                <ul>
+                    <li>Regular restore testing (monthly or quarterly)</li>
+                    <li>DR drills and simulations (at least annually)</li>
+                    <li>Failover testing for critical systems</li>
+                    <li>Document test results and lessons learned</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Disaster Types and Response</h2>
+
+                <h3>Natural Disasters</h3>
+                <ul>
+                    <li>Hurricanes, earthquakes, floods, fires</li>
+                    <li>Requires geographically dispersed backup sites</li>
+                    <li>Recovery site in different region/state</li>
+                </ul>
+
+                <h3>Cyber Attacks and Ransomware</h3>
+                <ul>
+                    <li>Data encryption and extortion</li>
+                    <li>Requires isolated backups not connected to network</li>
+                    <li>Fast recovery capability critical</li>
+                </ul>
+
+                <h3>Data Center Failures</h3>
+                <ul>
+                    <li>Power outages, cooling failures, hardware failures</li>
+                    <li>Requires backup data center or cloud</li>
+                    <li>Network failover procedures</li>
+                </ul>
+
+                <h3>Pandemic or Workforce Disruption</h3>
+                <ul>
+                    <li>Large percentage workforce unable to work</li>
+                    <li>Requires remote work capability</li>
+                    <li>Documented procedures and tools</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Develop and maintain DRP and BCP</li>
+                    <li>Conduct business impact analysis</li>
+                    <li>Establish RTO/RPO for critical systems</li>
+                    <li>Design backup and recovery strategy</li>
+                    <li>Select recovery site options</li>
+                    <li>Implement backup and replication</li>
+                    <li>Establish testing and maintenance schedule</li>
+                    <li>Conduct regular DR drills</li>
+                    <li>Document lessons learned and improvements</li>
+                    <li>Communicate plan to organization</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>Business Continuity Planning guides</li>
+                    <li>Disaster Recovery Plan templates</li>
+                    <li>BIA worksheets</li>
+                    <li>DR testing procedures</li>
+                    <li>Backup and replication tools</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

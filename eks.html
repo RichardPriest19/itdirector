@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EKS - Amazon Elastic Kubernetes Service | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>EKS</h1>
+            <p>Amazon Elastic Kubernetes Service – managed Kubernetes platform on AWS</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>Amazon Elastic Kubernetes Service (EKS) is AWS's fully managed Kubernetes service that handles cluster control plane, etcd, upgrades, patching, and scaling while allowing users to manage worker nodes (EC2, Fargate, Hybrid Nodes). In March 2026, **EKS** remains the most widely adopted managed Kubernetes offering on AWS, with **EKS Auto Mode** (launched 2025) now mature and heavily used for fully automated cluster lifecycle (auto-scaling, auto-healing, managed node groups). Key 2026 features include **EKS Pod Identity** (simplified workload IAM), **EKS Hybrid Nodes** (on-prem/edge), **AWS Graviton** dominance for cost/performance, **EKS Blueprints** & **eksctl** standardization, **AI/ML acceleration** (NVIDIA GPU operators, SageMaker integration), **security posture** (IRSA, Pod Security Admission, GuardDuty), **multi-cluster federation** (EKS Anywhere, Cluster API), and **observability** (Amazon Managed Prometheus, CloudWatch Container Insights).</p>
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> EKS delivers production-grade, fully managed Kubernetes with deep AWS integration — providing automated operations, high availability, security hardening, cost optimization, AI/ML workload support, and multi-cloud/hybrid flexibility — enabling platform teams to focus on developer experience and application innovation rather than control plane management.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Capabilities (2026)</h2>
+
+                <h3>EKS Control Plane & Automation</h3>
+                <ul>
+                    <li>Fully managed control plane (high availability, upgrades, patching)</li>
+                    <li>EKS Auto Mode – automatic cluster lifecycle & node management</li>
+                    <li>Fargate & managed node groups</li>
+                </ul>
+
+                <h3>Security & Identity</h3>
+                <ul>
+                    <li>EKS Pod Identity – simplified workload IAM roles</li>
+                    <li>IRSA (IAM Roles for Service Accounts)</li>
+                    <li>Pod Security Admission & GuardDuty integration</li>
+                </ul>
+
+                <h3>Compute & Performance</h3>
+                <ul>
+                    <li>AWS Graviton (Arm64) instances for cost/performance</li>
+                    <li>NVIDIA GPU & Inferentia/Trainium support</li>
+                    <li>Hybrid Nodes (on-prem/edge) & Karpenter auto-scaling</li>
+                </ul>
+
+                <h3>Observability & Networking</h3>
+                <ul>
+                    <li>Amazon Managed Prometheus & CloudWatch Container Insights</li>
+                    <li>VPC CNI & AWS Load Balancer Controller</li>
+                    <li>Multi-cluster service discovery & networking</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Key Trends & Best Practices in 2026</h2>
+
+                <h3>AI/ML & GPU Workloads</h3>
+                <ul>
+                    <li>NVIDIA GPU operators & SageMaker integration</li>
+                    <li>AI training/inference on Graviton + GPU clusters</li>
+                    <li>Vector database & RAG pipelines on EKS</li>
+                </ul>
+
+                <h3>Automation & GitOps</h3>
+                <ul>
+                    <li>EKS Blueprints & eksctl for standardized clusters</li>
+                    <li>GitOps with ArgoCD, Flux, Terraform</li>
+                    <li>Auto Mode for reduced operational overhead</li>
+                </ul>
+
+                <h3>Security & Multi-Cloud</h3>
+                <ul>
+                    <li>Zero-trust & Pod Security Admission enforcement</li>
+                    <li>EKS Anywhere for hybrid/on-prem</li>
+                    <li>Multi-cloud federation & portability</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Best Practices for EKS Adoption (2026)</h2>
+
+                <h3>Cluster Design</h3>
+                <ul>
+                    <li>Use EKS Auto Mode or Blueprints for standardized clusters</li>
+                    <li>Adopt Graviton instances for cost/performance</li>
+                    <li>Enable Pod Identity & IRSA for workload IAM</li>
+                </ul>
+
+                <h3>Security & Governance</h3>
+                <ul>
+                    <li>Enforce Pod Security Admission & network policies</li>
+                    <li>Use GuardDuty & Security Hub for threat detection</li>
+                    <li>Implement multi-account strategy & landing zone</li>
+                </ul>
+
+                <h3>Operations & Optimization</h3>
+                <ul>
+                    <li>Enable Karpenter for just-in-time scaling</li>
+                    <li>Monitor with Prometheus & Container Insights</li>
+                    <li>Automate upgrades & drift remediation</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Define EKS strategy aligned with multi-cloud & AI roadmap</li>
+                    <li>Approve EKS governance, security baseline & landing zone</li>
+                    <li>Ensure AI/ML workload acceleration & cost optimization</li>
+                    <li>Oversee cluster health, uptime & compliance</li>
+                    <li>Monitor cost, performance & developer adoption</li>
+                    <li>Drive GitOps & automation maturity</li>
+                    <li>Align with zero-trust, sustainability & regulatory requirements</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>aws.amazon.com/eks – official EKS documentation</li>
+                    <li>EKS Blueprints, eksctl & Terraform modules</li>
+                    <li>AWS Well-Architected Framework – EKS Lens</li>
+                    <li>Gartner & Forrester Container & Kubernetes reports 2025–2026</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
