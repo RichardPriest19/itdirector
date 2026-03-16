@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PostgreSQL - Relational Database | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>PostgreSQL</h1>
+            <p>PostgreSQL – open-source relational database with enterprise-grade features, extensibility, and strong ACID compliance</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>PostgreSQL (often called Postgres) is the world's most advanced open-source relational database, known for its robustness, extensibility, standards compliance, and ACID guarantees. In March 2026 (PostgreSQL 17 stable, 18 in preview), it offers significant performance gains in parallel query execution, logical replication, JSON/JSONB processing, incremental backups, MERGE improvements, and native support for vector search & AI workloads via extensions (pgvector 0.8+, pgai). It powers transactional systems, analytical workloads (HTAP), geospatial applications (PostGIS), time-series (TimescaleDB), and modern AI/vector databases. Major cloud providers (AWS RDS, Azure Database for PostgreSQL, Google Cloud SQL, Supabase, Neon) offer fully managed versions with high availability, auto-scaling, and security features.</p>
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> PostgreSQL delivers unmatched reliability, extensibility, and cost-efficiency for mission-critical applications, hybrid transactional/analytical workloads, and emerging AI/vector use cases — with no licensing costs and strong community/cloud ecosystem support.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Capabilities (2026)</h2>
+
+                <h3>Core Database Engine</h3>
+                <ul>
+                    <li>Full ACID compliance & MVCC (multi-version concurrency control)</li>
+                    <li>Advanced indexing (B-tree, GiST, GIN, BRIN, Bloom, SP-GiST)</li>
+                    <li>JSON/JSONB with path expressions & indexing</li>
+                    <li>Window functions, CTEs, lateral joins, MERGE</li>
+                </ul>
+
+                <h3>Performance & Scalability</h3>
+                <ul>
+                    <li>Parallel query execution & incremental sort</li>
+                    <li>Logical replication & bidirectional replication</li>
+                    <li>Incremental backups & point-in-time recovery</li>
+                    <li>Partitioning, declarative partitioning improvements</li>
+                </ul>
+
+                <h3>Extensibility & AI</h3>
+                <ul>
+                    <li>pgvector – vector similarity search & embeddings</li>
+                    <li>PostGIS – geospatial & location intelligence</li>
+                    <li>TimescaleDB – time-series & hypertables</li>
+                    <li>Custom functions, operators, data types & languages (PL/pgSQL, PL/Python, PL/Rust)</li>
+                </ul>
+
+                <h3>Security & Compliance</h3>
+                <ul>
+                    <li>Row-level security, column-level privileges</li>
+                    <li>SCRAM-SHA-256, certificate auth, pgcrypto</li>
+                    <li>Audit logging, SELinux/AppArmor support</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Key Features & Trends in 2026</h2>
+
+                <h3>AI & Vector Capabilities</h3>
+                <ul>
+                    <li>pgvector 0.8+ – HNSW/IVFFlat indexing, hybrid search</li>
+                    <li>Integration with LangChain, LlamaIndex, Vertex AI embeddings</li>
+                    <li>Native AI functions & vector operators</li>
+                </ul>
+
+                <h3>Performance Enhancements</h3>
+                <ul>
+                    <li>PostgreSQL 17/18 – faster parallel plans, vacuum improvements</li>
+                    <li>Incremental backups & faster PITR</li>
+                    <li>Improved JSON/JSONB performance & indexing</li>
+                </ul>
+
+                <h3>Cloud & Managed Services</h3>
+                <ul>
+                    <li>AWS RDS, Azure Database, Google Cloud SQL, Supabase, Neon</li>
+                    <li>Serverless & auto-scaling PostgreSQL (Neon, AlloyDB)</li>
+                    <li>Multi-region HA & disaster recovery</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Best Practices for Enterprise Deployment (2026)</h2>
+
+                <h3>Architecture & Setup</h3>
+                <ul>
+                    <li>Use managed cloud PostgreSQL for production (HA, backups, patching)</li>
+                    <li>Implement logical replication for zero-downtime upgrades</li>
+                    <li>Enable pgvector for AI/vector workloads</li>
+                </ul>
+
+                <h3>Performance & Tuning</h3>
+                <ul>
+                    <li>Optimize work_mem, shared_buffers & parallel workers</li>
+                    <li>Use connection pooling (PgBouncer, PgCat)</li>
+                    <li>Monitor with pg_stat_statements & EXPLAIN ANALYZE</li>
+                </ul>
+
+                <h3>Security & Governance</h3>
+                <ul>
+                    <li>Enforce row-level security & least privilege</li>
+                    <li>Use SCRAM auth & TLS everywhere</li>
+                    <li>Regular vacuum & analyze maintenance</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Define PostgreSQL strategy (self-managed vs cloud-native)</li>
+                    <li>Approve architecture for HA, DR & multi-region</li>
+                    <li>Ensure security posture (encryption, RLS, audit)</li>
+                    <li>Oversee performance & cost optimization (cloud vs on-prem)</li>
+                    <li>Monitor database health, query performance & capacity</li>
+                    <li>Drive adoption for AI/vector & HTAP workloads</li>
+                    <li>Plan upgrade & migration strategy (17 → 18)</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>postgresql.org – official documentation & release notes</li>
+                    <li>PostgreSQL 17 / 18 release announcements & blogs</li>
+                    <li>pgvector & PostGIS official guides</li>
+                    <li>AWS RDS, Azure Database, Google Cloud SQL PostgreSQL docs</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

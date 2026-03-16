@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCP/IP - Transmission Control Protocol / Internet Protocol | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>TCP/IP</h1>
+            <p>Transmission Control Protocol / Internet Protocol – foundational suite of the modern internet & networks</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>TCP/IP is the foundational protocol suite that powers virtually every modern network — the Internet, enterprise LANs/WANs, cloud, IoT, edge, mobile, and hybrid environments. TCP (Transmission Control Protocol) provides reliable, ordered, error-checked delivery of data streams, while IP (Internet Protocol) handles addressing and routing of packets across networks. In March 2026, **IPv6** adoption has reached ~45–50% globally (driven by mobile/5G, IoT, cloud exhaustion of IPv4), **TCP** remains dominant for reliable transport, but **QUIC (HTTP/3)** has overtaken TCP for most web & API traffic, **TCP Fast Open**, **Multipath TCP (MPTCP)**, **TCP BBR** congestion control, and **ECN** are widely deployed, **post-quantum cryptography** readiness is emerging in early TLS/TCP extensions, and **AI-driven network optimization** (congestion prediction, flow steering, anomaly detection) is standard in enterprise & cloud networks. TCP/IP underpins all higher-layer protocols (HTTP/3, TLS 1.3, DNS, VPN/IPsec, SIP, MQTT, etc.) and remains the universal language of networked computing.</p>
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> TCP/IP delivers reliable, routable, end-to-end communication across any network — enabling the entire internet & enterprise connectivity, supporting congestion control & reliability (TCP), global addressing & routing (IP), massive scale (IPv6), modern performance enhancements (QUIC/MPTCP/BBR), and — when combined with TLS & zero-trust — providing the secure, interoperable foundation for all digital services, cloud, IoT, edge, and hybrid environments.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Components & Versions (2026)</h2>
+
+                <h3>IP (Internet Protocol)</h3>
+                <ul>
+                    <li>IPv4 – 32-bit addresses (legacy, NAT-heavy)</li>
+                    <li>IPv6 – 128-bit addresses (global adoption ~45–50%, mandatory in 5G)</li>
+                    <li>Fragmentation, routing, ICMP(v6)</li>
+                </ul>
+
+                <h3>TCP (Transmission Control Protocol)</h3>
+                <ul>
+                    <li>Reliable, ordered, congestion-controlled byte stream</li>
+                    <li>TCP Fast Open, Multipath TCP (MPTCP), BBR congestion control</li>
+                    <li>Window scaling, selective ACKs, ECN</li>
+                </ul>
+
+                <h3>Modern Transport Evolution</h3>
+                <ul>
+                    <li>QUIC (UDP-based) – default for HTTP/3, overtakes TCP for web/API</li>
+                    <li>TLS 1.3 mandatory over TCP & QUIC</li>
+                    <li>Post-quantum hybrid key exchange readiness</li>
+                </ul>
+
+                <h3>Security & Enhancements</h3>
+                <ul>
+                    <li>IPsec (for VPN/site-to-site)</li>
+                    <li>AI-driven congestion & flow optimization</li>
+                    <li>Zero-trust network principles</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Key Trends & Best Practices in 2026</h2>
+
+                <h3>IPv6 & Dual-Stack Maturity</h3>
+                <ul>
+                    <li>IPv6-only internal networks in cloud & 5G</li>
+                    <li>Dual-stack transition & NAT64/DNS64 for legacy</li>
+                    <li>IPv6 security hardening (RA Guard, SAVI)</li>
+                </ul>
+
+                <h3>Performance & Congestion Control</h3>
+                <ul>
+                    <li>TCP BBR & QUIC as default congestion algorithms</li>
+                    <li>Multipath TCP for mobile & multi-homed links</li>
+                    <li>AI/ML-based network path prediction & steering</li>
+                </ul>
+
+                <h3>Security & Zero Trust</h3>
+                <ul>
+                    <li>TLS 1.3 mandatory, ECH adoption</li>
+                    <li>Post-quantum readiness in early deployments</li>
+                    <li>Zero-trust segmentation & continuous verification</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Best Practices for TCP/IP Usage (2026)</h2>
+
+                <h3>Protocol & Security Hardening</h3>
+                <ul>
+                    <li>Enforce TLS 1.3 & disable legacy protocols</li>
+                    <li>Enable HTTP/3 (QUIC) for public services</li>
+                    <li>Implement IPv6 dual-stack & RA Guard</li>
+                </ul>
+
+                <h3>Performance Optimization</h3>
+                <ul>
+                    <li>Use TCP BBR & QUIC for congestion control</li>
+                    <li>Enable Multipath TCP on multi-homed devices</li>
+                    <li>Optimize MTU & window scaling</li>
+                </ul>
+
+                <h3>Monitoring & Governance</h3>
+                <ul>
+                    <li>Monitor TCP retransmits, latency & connection success</li>
+                    <li>Log & analyze QUIC/HTTP/3 traffic</li>
+                    <li>Conduct regular protocol & cipher audits</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Define TCP/IP & transport-layer strategy for enterprise networks</li>
+                    <li>Approve IPv6 adoption & legacy protocol deprecation</li>
+                    <li>Ensure TLS 1.3, HTTP/3 & post-quantum readiness</li>
+                    <li>Oversee network performance, congestion & security posture</li>
+                    <li>Monitor TCP retransmits, QUIC adoption & anomalies</li>
+                    <li>Drive AI-driven network optimization & zero-trust alignment</li>
+                    <li>Align TCP/IP usage with regulatory, ESG & business requirements</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>RFC 9293 (TCP), RFC 9000 (QUIC), RFC 8200 (IPv6)</li>
+                    <li>IETF TCPM & QUIC Working Group documents</li>
+                    <li>CISA & NIST TCP/IP & TLS security guidance</li>
+                    <li>Cloudflare, Akamai, Fastly HTTP/3 & QUIC resources</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OAuth - Authorization Framework | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>OAuth</h1>
+            <p>OAuth (2.1 in 2026) – secure delegated authorization framework for APIs and modern applications</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>OAuth is the industry-standard protocol for delegated authorization, allowing users to grant limited access to their resources on one service (e.g., Google, Microsoft, Salesforce) to third-party applications without sharing credentials. In March 2026, **OAuth 2.1** (consolidated profile of OAuth 2.0 + a decade of security best practices) is the de facto standard: it mandates secure patterns (Authorization Code + PKCE), removes dangerous grants (Implicit, Resource Owner Password Credentials), enforces strict redirect validation, and hardens token usage. It integrates tightly with OpenID Connect (OIDC) for authentication, supports passwordless/passkey flows, and aligns with Zero Trust, API security, and modern app architectures (SPAs, mobile, microservices, AI agents).</p>
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> OAuth enables secure, scalable third-party access, eliminates credential sharing, supports fine-grained scopes, reduces phishing risk when combined with phishing-resistant auth, and is foundational for modern identity federation, B2B integrations, and API ecosystems.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Flows & Changes in OAuth 2.1 (2026)</h2>
+
+                <h3>Mandatory Secure Flow</h3>
+                <ul>
+                    <li>Authorization Code + PKCE – only recommended flow for all clients (public & confidential)</li>
+                    <li>PKCE (Proof Key for Code Exchange) now required – prevents authorization code interception</li>
+                </ul>
+
+                <h3>Deprecated / Removed Flows</h3>
+                <ul>
+                    <li>Implicit Grant – tokens in URL fragment; fully removed (phishing & token leakage risk)</li>
+                    <li>Resource Owner Password Credentials (ROPC) – username/password grant; deprecated (encourages credential sharing)</li>
+                </ul>
+
+                <h3>Security Hardening</h3>
+                <ul>
+                    <li>Exact redirect URI matching (no wildcard or open redirectors)</li>
+                    <li>State parameter mandatory to prevent CSRF</li>
+                    <li>Refresh token rotation & sender-constrained tokens (DPoP, mTLS)</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Key Features & Trends in 2026</h2>
+
+                <h3>Passwordless & Phishing-Resistant Integration</h3>
+                <ul>
+                    <li>Passkeys / FIDO2 / WebAuthn as first-class credentials</li>
+                    <li>Bound tokens & device-bound auth (prevents token replay)</li>
+                    <li>OAuth for first-party apps & native flows</li>
+                </ul>
+
+                <h3>Zero Trust & API Security</h3>
+                <ul>
+                    <li>Rich scopes & fine-grained authorization</li>
+                    <li>Integration with ZTNA, API gateways, workload identity</li>
+                    <li>Continuous token validation & revocation signals</li>
+                </ul>
+
+                <h3>Developer & Enterprise Tools</h3>
+                <ul>
+                    <li>OAuth 2.1-compliant IdPs (Entra ID, Okta, Auth0, Ping, Google)</li>
+                    <li>Client metadata & dynamic registration</li>
+                    <li>AI-assisted token debugging & policy generation</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Best Practices for Enterprise OAuth (2026)</h2>
+
+                <h3>Secure Implementation</h3>
+                <ul>
+                    <li>Use Authorization Code + PKCE exclusively</li>
+                    <li>Enforce strict redirect validation & state parameter</li>
+                    <li>Prefer sender-constrained tokens (DPoP or mTLS) for high-security APIs</li>
+                </ul>
+
+                <h3>Governance & Migration</h3>
+                <ul>
+                    <li>Migrate legacy Implicit/ROPC flows immediately</li>
+                    <li>Centralize OAuth client registry & scope approval</li>
+                    <li>Automate token rotation & revocation on compromise</li>
+                </ul>
+
+                <h3>Monitoring & Compliance</h3>
+                <ul>
+                    <li>Log & audit all token issuance/usage</li>
+                    <li>Integrate with SIEM & threat detection</li>
+                    <li>Map to NIST, ISO 27001, PCI-DSS OAuth controls</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Define OAuth 2.1 adoption strategy & deprecation roadmap for legacy flows</li>
+                    <li>Approve primary authorization servers & protocol standards (OIDC + OAuth)</li>
+                    <li>Ensure phishing-resistant & passwordless integration across workforce & B2B</li>
+                    <li>Oversee client governance, scope minimization & compliance mapping</li>
+                    <li>Monitor token-related incidents, adoption coverage & security posture</li>
+                    <li>Drive cultural shift toward secure delegated auth (no credential sharing)</li>
+                    <li>Plan for emerging extensions (e.g., agentic auth, first-party app flows)</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>draft-ietf-oauth-v2-1 – The OAuth 2.1 Authorization Framework (latest draft)</li>
+                    <li>OAuth 2.1 Security Best Current Practices & migration guides</li>
+                    <li>Microsoft Entra ID, Okta, Auth0 OAuth 2.1 support documentation</li>
+                    <li>FIDO Alliance & OAuth Working Group resources (passkeys + OAuth)</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMB - Server Message Block | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>SMB</h1>
+            <p>Server Message Block – network file sharing & printer sharing protocol (SMB 3.1.1 secure standard)</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>SMB (Server Message Block) is the primary network protocol used for file sharing, printer sharing, and inter-process communication in Windows environments (also supported on Linux/macOS via Samba). In March 2026, **SMB 1.0** is fully deprecated and disabled by default across all supported Windows versions, most enterprise clients/servers, and modern Samba releases — due to severe security vulnerabilities (e.g., EternalBlue exploit vector). **SMB 3.1.1** (introduced 2015, still current) is the secure standard, offering **AES-128-GCM encryption**, **pre-authentication integrity**, **secure dialect negotiation**, **multi-channel**, **SMB Direct** (RDMA), **transparent failover**, and **access-based enumeration**. It is used extensively for on-premises file shares, DFS namespaces, Hyper-V storage, SQL Server file storage, Azure Files, Windows 365 cloud PCs, and hybrid cloud scenarios. Legacy SMBv1 exposure is now limited to very old industrial equipment, embedded systems, or misconfigured legacy networks.</p>
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> Modern SMB 3.1.1 provides secure, high-performance, reliable file and printer sharing with strong encryption, multi-channel throughput, transparent failover, and deep Windows integration — making it the standard for enterprise file services while minimizing attack surface when properly hardened (signing enforced, encryption required, SMBv1 disabled).
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Versions & Characteristics (2026)</h2>
+
+                <h3>SMB 1.0 (Obsolete / Insecure)</h3>
+                <ul>
+                    <li>Clear-text capable, vulnerable to MITM & replay attacks</li>
+                    <li>Exploited by WannaCry/EternalBlue</li>
+                    <li>Disabled by default on Windows 10/11/Server 2016+ since 2017–2018</li>
+                </ul>
+
+                <h3>SMB 3.0–3.1.1 (Secure Standard)</h3>
+                <ul>
+                    <li>AES-128-CCM/GCM encryption (3.1.1 default)</li>
+                    <li>Pre-authentication integrity & secure dialect negotiation</li>
+                    <li>Multi-channel, SMB Direct (RDMA), transparent failover</li>
+                    <li>Opportunistic locking & leasing improvements</li>
+                </ul>
+
+                <h3>Common Usage Scenarios</h3>
+                <ul>
+                    <li>File shares, DFS namespaces, Home Folders</li>
+                    <li>Hyper-V & SQL Server storage (Cluster Shared Volumes)</li>
+                    <li>Azure Files & Windows 365 cloud PC storage</li>
+                    <li>Printer sharing & legacy app compatibility</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Key Trends & Hardening in 2026</h2>
+
+                <h3>Security Hardening</h3>
+                <ul>
+                    <li>SMB signing & encryption required by default (Group Policy)</li>
+                    <li>SMBv1 completely removed from Windows images</li>
+                    <li>Restrict SMB to internal networks & block outbound port 445</li>
+                </ul>
+
+                <h3>Modern Alternatives & Integration</h3>
+                <ul>
+                    <li>Azure Files & OneDrive for Business for cloud-first shares</li>
+                    <li>Microsoft Teams/SharePoint for collaboration</li>
+                    <li>SMB over QUIC (SMB Direct over UDP) for WAN acceleration</li>
+                </ul>
+
+                <h3>Legacy & Industrial Exposure</h3>
+                <ul>
+                    <li>Still present in old SCADA/PLC equipment & embedded devices</li>
+                    <li>Isolated VLANs or air-gapped networks required</li>
+                    <li>Gradual replacement with secure protocols (SFTP, HTTPS)</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Best Practices for SMB Usage (2026)</h2>
+
+                <h3>Security Hardening</h3>
+                <ul>
+                    <li>Enforce SMB signing & encryption via Group Policy</li>
+                    <li>Disable SMBv1 completely (registry & feature removal)</li>
+                    <li>Block outbound SMB (port 445) at perimeter</li>
+                </ul>
+
+                <h3>Configuration & Access</h3>
+                <ul>
+                    <li>Use access-based enumeration & least privilege</li>
+                    <li>Enable SMB over QUIC for secure WAN access</li>
+                    <li>Restrict to internal VLANs or PrivateLink</li>
+                </ul>
+
+                <h3>Migration & Monitoring</h3>
+                <ul>
+                    <li>Scan for SMBv1 usage & legacy devices</li>
+                    <li>Monitor SMB traffic & authentication failures</li>
+                    <li>Migrate legacy shares to Azure Files or SharePoint</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Champion complete SMBv1 elimination & SMB 3.1.1 hardening</li>
+                    <li>Approve SMB security baseline (signing, encryption, access control)</li>
+                    <li>Ensure legacy protocol scans & air-gapped segmentation</li>
+                    <li>Oversee SMB monitoring, unauthorized access alerts & compliance</li>
+                    <li>Drive migration to Azure Files/SharePoint for modern shares</li>
+                    <li>Align SMB usage with zero-trust, regulatory & cyber insurance requirements</li>
+                    <li>Monitor SMB performance & file access patterns</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>Microsoft Docs – SMB overview, security hardening, SMB over QUIC</li>
+                    <li>CISA & NIST guidance on legacy protocol removal (SMBv1)</li>
+                    <li>PCI-DSS, HIPAA, GDPR requirements prohibiting insecure SMB</li>
+                    <li>Azure Files & Windows 365 file storage best practices</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

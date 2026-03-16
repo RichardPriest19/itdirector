@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNMP - Simple Network Management Protocol | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>SNMP</h1>
+            <p>Simple Network Management Protocol – standard protocol for monitoring and managing network devices</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>SNMP (Simple Network Management Protocol) is an application-layer protocol (RFC 1157 for v1, RFC 1901/1905 for v2c, RFC 3411–3418 for v3) used to monitor, manage, and configure network devices (routers, switches, firewalls, servers, printers, UPSs, IoT devices). It operates in a manager–agent model: agents run on devices and expose Management Information Base (MIB) data, while managers poll or receive traps/notifications. In March 2026, **SNMPv1** and **SNMPv2c** are considered **legacy and insecure** (clear-text community strings, trivial to spoof/sniff), and their continued use is strongly discouraged except in isolated/air-gapped networks. **SNMPv3** (with authentication, encryption, and access control) is the only acceptable version in modern, security-conscious environments. Many organizations have completed migration to v3, but legacy devices (especially industrial/IoT) still force v2c/v1 usage in segmented VLANs or DMZs.</p>
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> SNMP provides a standardized, lightweight way to monitor and manage thousands of network devices at scale — delivering visibility into uptime, performance, faults, and configuration. When secured with SNMPv3, it remains a safe, reliable foundation for network observability and automation.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Versions & Characteristics (2026)</h2>
+
+                <h3>SNMPv1 & SNMPv2c (Legacy / Insecure)</h3>
+                <ul>
+                    <li>Community-string authentication (read-only/read-write)</li>
+                    <li>Clear-text transmission (credentials & data)</li>
+                    <li>v2c adds GetBulk, 64-bit counters, improved error handling</li>
+                    <li>Still common on very old equipment or industrial networks</li>
+                </ul>
+
+                <h3>SNMPv3 (Secure & Current Standard)</h3>
+                <ul>
+                    <li>User-based Security Model (USM) – authentication (MD5/SHA) & privacy (DES/AES)</li>
+                    <li>Access control via View-based Access Control Model (VACM)</li>
+                    <li>No community strings; supports engineID & context</li>
+                    <li>Mandatory in regulated & modern networks</li>
+                </ul>
+
+                <h3>Common Operations</h3>
+                <ul>
+                    <li>Get, GetNext, GetBulk, Set, Trap/Inform</li>
+                    <li>MIBs (standard & vendor-specific) define managed objects</li>
+                    <li>Traps (v1/v2c) & Informs (v2c/v3) for asynchronous notifications</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Key Trends & Status in 2026</h2>
+
+                <h3>Migration & Deprecation</h3>
+                <ul>
+                    <li>v1/v2c effectively deprecated in security-conscious organizations</li>
+                    <li>SNMPv3 mandatory for compliance (PCI-DSS, HIPAA, GDPR, NIS2)</li>
+                    <li>Many vendors phasing out v1/v2c support in new firmware</li>
+                </ul>
+
+                <h3>Modern Monitoring Alternatives</h3>
+                <ul>
+                    <li>OpenTelemetry, Prometheus, gNMI/gRPC for modern devices</li>
+                    <li>Streaming telemetry & model-driven management (NETCONF/YANG)</li>
+                    <li>Cloud-native monitoring (AWS CloudWatch, Azure Monitor, GCP Operations)</li>
+                </ul>
+
+                <h3>Security Hardening</h3>
+                <ul>
+                    <li>SNMPv3 with SHA-256/AES-256 mandatory</li>
+                    <li>Restrict to read-only, specific managers, and segmented networks</li>
+                    <li>Monitor for unauthorized SNMP polling/traps</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Best Practices for SNMP Usage (2026)</h2>
+
+                <h3>Security & Deployment</h3>
+                <ul>
+                    <li>Migrate all devices to SNMPv3 (SHA/AES) or disable SNMP</li>
+                    <li>Restrict SNMP to specific management VLANs & IP ranges</li>
+                    <li>Use SNMPv3 users with noAuthNoPriv only in emergencies</li>
+                </ul>
+
+                <h3>Monitoring & Configuration</h3>
+                <ul>
+                    <li>Limit to read-only access unless Set is required</li>
+                    <li>Use strong engineID & context-based access control</li>
+                    <li>Log & alert on SNMP authentication failures</li>
+                </ul>
+
+                <h3>Migration & Alternatives</h3>
+                <ul>
+                    <li>Replace SNMPv1/v2c with SNMPv3 or modern protocols (NETCONF, RESTCONF, gNMI)</li>
+                    <li>Move legacy devices to isolated segments or replace</li>
+                    <li>Adopt OpenTelemetry for unified observability</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Champion full migration from SNMPv1/v2c to v3 or modern alternatives</li>
+                    <li>Approve SNMP security baseline & access policy</li>
+                    <li>Ensure SNMP is restricted to secure management networks</li>
+                    <li>Oversee legacy protocol scans & risk assessments</li>
+                    <li>Monitor SNMP traffic & unauthorized polling alerts</li>
+                    <li>Drive transition to OpenTelemetry, gNMI, or cloud-native monitoring</li>
+                    <li>Align SNMP usage with compliance & cyber insurance requirements</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>RFC 1157 (SNMPv1), RFC 1901–1905 (SNMPv2), RFC 3411–3418 (SNMPv3)</li>
+                    <li>CISA & NIST guidance on legacy protocol removal</li>
+                    <li>PCI-DSS, HIPAA, GDPR requirements prohibiting insecure SNMP</li>
+                    <li>OpenTelemetry & NETCONF/gNMI best practices</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

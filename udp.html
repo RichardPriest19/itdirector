@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UDP - User Datagram Protocol | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>UDP</h1>
+            <p>User Datagram Protocol – lightweight, connectionless transport protocol for low-latency applications</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>UDP (User Datagram Protocol) is a simple, connectionless transport-layer protocol in the TCP/IP stack (defined in RFC 768, updated in later RFCs). It provides minimal overhead: no handshakes, no congestion control, no guaranteed delivery, no ordering, and no retransmission — making it ideal for applications where speed and low latency are more important than perfect reliability. In March 2026, UDP remains essential for **real-time media** (WebRTC, VoIP, live streaming, video conferencing), **online gaming**, **IoT telemetry & sensor data**, **DNS queries**, **QUIC** (HTTP/3 transport), **low-latency edge computing**, **5G/6G URLLC**, **multicast/broadcast** (IPTV, stock tickers), and many performance-critical microservices. Modern usage emphasizes **QUIC over UDP** (replacing TCP for HTTP/3), **UDP-based congestion control** (BBR, QUIC CC), **security hardening** (DTLS 1.3), and **network slicing** in 5G/6G private networks.</p>
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> UDP delivers the lowest possible latency and overhead for time-sensitive, loss-tolerant applications — enabling real-time experiences, massive scale IoT, efficient multicast, and high-performance transport (QUIC) — while modern extensions (QUIC, DTLS) add reliability and security without sacrificing core speed advantages.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Characteristics & Use Cases (2026)</h2>
+
+                <h3>UDP Core Traits</h3>
+                <ul>
+                    <li>Connectionless & stateless</li>
+                    <li>Minimal header (8 bytes)</li>
+                    <li>No congestion control, flow control, or retransmission</li>
+                    <li>Best-effort delivery, out-of-order packets possible</li>
+                    <li>Supports unicast, multicast, broadcast</li>
+                </ul>
+
+                <h3>Primary Use Cases</h3>
+                <ul>
+                    <li>Real-time media (WebRTC, VoIP, live video/audio streaming)</li>
+                    <li>Online multiplayer gaming & esports</li>
+                    <li>IoT telemetry, sensor data & industrial control</li>
+                    <li>DNS, NTP, DHCP, SNMP</li>
+                    <li>QUIC (HTTP/3 transport), RTP/RTCP</li>
+                </ul>
+
+                <h3>Modern Extensions</h3>
+                <ul>
+                    <li>QUIC (UDP-based, TLS-integrated, multi-path, fast handshake)</li>
+                    <li>DTLS 1.3 (Datagram TLS for secure UDP)</li>
+                    <li>UDP Options (RFC 8899) for advanced features</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Key Trends & Best Practices in 2026</h2>
+
+                <h3>QUIC Dominance</h3>
+                <ul>
+                    <li>HTTP/3 over QUIC mandatory in browsers & servers</li>
+                    <li>QUIC multi-path & connection migration maturity</li>
+                    <li>QUIC congestion control (BBRv3, CUBIC variants)</li>
+                </ul>
+
+                <h3>Security Hardening</h3>
+                <ul>
+                    <li>Widespread DTLS 1.3 adoption for secure UDP</li>
+                    <li>UDP source port randomization & anti-amplification</li>
+                    <li>Integration with zero-trust & SASE edge</li>
+                </ul>
+
+                <h3>Performance & Edge</h3>
+                <ul>
+                    <li>UDP in low-latency edge computing & 5G/6G URLLC</li>
+                    <li>Wi-Fi 7 & 5G multi-path UDP optimization</li>
+                    <li>AI/ML-assisted UDP traffic steering</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Best Practices for UDP Usage (2026)</h2>
+
+                <h3>Application Design</h3>
+                <ul>
+                    <li>Use UDP only when latency > reliability</li>
+                    <li>Implement application-level reliability (retransmits, FEC, ACKs)</li>
+                    <li>Use QUIC instead of raw UDP for new web/HTTP workloads</li>
+                </ul>
+
+                <h3>Security & Hardening</h3>
+                <ul>
+                    <li>Always pair UDP with DTLS 1.3 or QUIC/TLS</li>
+                    <li>Apply rate limiting & source validation</li>
+                    <li>Mitigate amplification & reflection attacks</li>
+                </ul>
+
+                <h3>Performance & Monitoring</h3>
+                <ul>
+                    <li>Enable UDP checksum offload & jumbo frames where possible</li>
+                    <li>Monitor packet loss, jitter & latency (RTCP, QUIC metrics)</li>
+                    <li>Use observability tools (OpenTelemetry, Prometheus) for UDP flows</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Define UDP/QUIC usage policy & security baseline</li>
+                    <li>Approve DTLS 1.3 & QUIC adoption for real-time apps</li>
+                    <li>Ensure low-latency connectivity (Wi-Fi 7, 5G, edge)</li>
+                    <li>Oversee UDP-related risk (amplification, DoS, data exposure)</li>
+                    <li>Monitor UDP performance, loss & jitter KPIs</li>
+                    <li>Drive QUIC migration for HTTP/3 workloads</li>
+                    <li>Plan for 5G/6G URLLC & private network convergence</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>RFC 768 (UDP), RFC 9000 (QUIC), RFC 8899 (UDP Options)</li>
+                    <li>IETF QUIC Working Group & HTTP/3 specifications</li>
+                    <li>Wi-Fi Alliance Wi-Fi 7 & 5G URLLC resources</li>
+                    <li>CISA & NIST UDP/QUIC security guidance</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TPM 2.0 - Trusted Platform Module | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>TPM 2.0</h1>
+            <p>Trusted Platform Module 2.0 – hardware root of trust for secure boot, encryption & device identity</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>TPM 2.0 (Trusted Platform Module 2.0) is the current industry-standard hardware-based security module (specified in ISO/IEC 11889:2015 and TCG TPM 2.0 Library) that provides a hardware root of trust for devices. Mandatory for Windows 11 (and strongly recommended for Windows 10/11 Pro/Enterprise), TPM 2.0 enables **secure boot**, **measured boot**, **BitLocker full-volume encryption**, **Windows Hello for Business**, **Credential Guard**, **Device Guard**, **attestation**, **secure key storage**, **cryptographic operations** (RSA, ECC, SHA-256, AES), and **device identity** (endorsement key). In March 2026 (Windows 11 24H2 / 25H2 era), TPM 2.0 is deeply integrated with **Microsoft Pluton** (firmware TPM in newer silicon), **Microsoft Entra ID**, **Intune**, **Microsoft Defender for Endpoint**, and **Zero Trust** architecture. It supports **firmware TPM** (fTPM in AMD/Intel CPUs), **discrete TPM** chips, and **virtual TPM** in VMs, with strong compliance alignment (FIPS 140-2/3, NIST 800-193, ISO/IEC 19790, GDPR, HIPAA).</p>
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> TPM 2.0 delivers hardware-enforced root of trust, tamper-resistant key storage, secure boot, and device attestation — enabling strong data protection (BitLocker), password-less authentication (Windows Hello), credential isolation (Credential Guard), and Zero Trust device health verification with minimal performance impact and high assurance.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Capabilities (2026)</h2>
+
+                <h3>Root of Trust & Secure Boot</h3>
+                <ul>
+                    <li>Measured boot & PCR (Platform Configuration Registers)</li>
+                    <li>Secure Boot chain-of-trust validation</li>
+                    <li>Attestation & remote device health proof</li>
+                </ul>
+
+                <h3>Cryptography & Key Management</h3>
+                <ul>
+                    <li>RSA/ECC key generation & storage</li>
+                    <li>AES encryption/decryption & SHA-256 hashing</li>
+                    <li>Endorsement key (EK) & storage root key (SRK)</li>
+                </ul>
+
+                <h3>Integration & Features</h3>
+                <ul>
+                    <li>BitLocker automatic enablement & recovery key escrow</li>
+                    <li>Windows Hello for Business & FIDO2 support</li>
+                    <li>Credential Guard & Device Guard (Virtualization-based Security)</li>
+                </ul>
+
+                <h3>Compliance & Security</h3>
+                <ul>
+                    <li>FIPS 140-2/3 Level 2+ certification</li>
+                    <li>ISO/IEC 19790 & TCG TPM 2.0 compliance</li>
+                    <li>Zero Trust device health & attestation</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Key Features & Trends in 2026</h2>
+
+                <h3>Pluton & Firmware TPM</h3>
+                <ul>
+                    <li>Microsoft Pluton (fTPM in AMD/Intel/Qualcomm silicon)</li>
+                    <li>Enhanced tamper resistance & secure firmware updates</li>
+                    <li>Pluton integration with Windows Hello & Defender</li>
+                </ul>
+
+                <h3>Zero Trust & Remote Attestation</h3>
+                <ul>
+                    <li>Device health attestation to Entra ID & Intune</li>
+                    <li>Conditional Access based on TPM presence & PCR values</li>
+                    <li>Integration with Microsoft Defender for Endpoint</li>
+                </ul>
+
+                <h3>Compliance & Enterprise</h3>
+                <ul>
+                    <li>Mandatory for Windows 11 compliance & security baselines</li>
+                    <li>Strong alignment with NIST 800-193, FedRAMP, ISO 27001</li>
+                    <li>Support for ARM64 & Windows on ARM devices</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Best Practices for TPM 2.0 Adoption (2026)</h2>
+
+                <h3>Deployment & Policy</h3>
+                <ul>
+                    <li>Require TPM 2.0 in device procurement & Intune policies</li>
+                    <li>Enable BitLocker & recovery key escrow to Entra ID</li>
+                    <li>Enforce Secure Boot & measured boot</li>
+                </ul>
+
+                <h3>Security & Governance</h3>
+                <ul>
+                    <li>Integrate TPM attestation with Conditional Access</li>
+                    <li>Use Credential Guard & Virtualization-based Security</li>
+                    <li>Monitor TPM health & PCR values via Defender</li>
+                </ul>
+
+                <h3>Compliance & Assurance</h3>
+                <ul>
+                    <li>Align with NIST 800-193 & ISO 27001 controls</li>
+                    <li>Conduct regular TPM & device health audits</li>
+                    <li>Plan for Pluton-enabled devices & firmware updates</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Champion TPM 2.0 as core hardware root of trust</li>
+                    <li>Approve TPM & BitLocker policies in Intune</li>
+                    <li>Ensure TPM 2.0 compliance across device fleet</li>
+                    <li>Oversee recovery key governance & attestation</li>
+                    <li>Monitor TPM health, Secure Boot & Zero Trust readiness</li>
+                    <li>Drive integration with Entra ID, Defender & Pluton</li>
+                    <li>Align TPM with ISO 27001, NIST & regulatory needs</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>learn.microsoft.com/windows/security/hardware-security/tpm – official TPM docs</li>
+                    <li>Trusted Computing Group (TCG) TPM 2.0 Library specification</li>
+                    <li>Microsoft Windows 11 security baselines & Intune policies</li>
+                    <li>NIST SP 800-193 & FIPS 140-3 TPM guidance</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

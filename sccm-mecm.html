@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCCM / MECM - Endpoint Configuration Manager | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>SCCM / MECM</h1>
+            <p>Microsoft Systems/Endpoint Configuration Manager for on-premises endpoint management</p>
+        </div>
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>Microsoft Systems Center Configuration Manager (SCCM), renamed to Microsoft Endpoint Configuration Manager (MECM), is Microsoft's on-premises endpoint management platform. While SCCM is considered legacy with Intune as the modern cloud-first solution, many enterprises still run SCCM for managing large Windows device fleets. Microsoft supports co-management where Intune and SCCM work together, allowing gradual migration to cloud-based management. SCCM remains critical in organizations with significant Windows deployments and on-premises infrastructure.</p>
+                <div class="highlight-box">
+                    <strong>Key Transition:</strong> SCCM is transitioning to Intune, with co-management allowing both to work together during migration.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Capabilities</h2>
+
+                <h3>Software Distribution</h3>
+                <ul>
+                    <li>Deploy applications to devices</li>
+                    <li>Windows Update management</li>
+                    <li>Patch management</li>
+                    <li>Application lifecycle management</li>
+                </ul>
+
+                <h3>Operating System Deployment</h3>
+                <ul>
+                    <li>Windows image deployment</li>
+                    <li>Zero-touch deployment (ZTD)</li>
+                    <li>Bare-metal device provisioning</li>
+                    <li>In-place upgrades</li>
+                </ul>
+
+                <h3>Hardware Inventory</h3>
+                <ul>
+                    <li>Device and hardware inventory</li>
+                    <li>Software license tracking</li>
+                    <li>Reporting on assets</li>
+                </ul>
+
+                <h3>Configuration Management</h3>
+                <ul>
+                    <li>Desired State Configuration (DSC)</li>
+                    <li>Device compliance monitoring</li>
+                    <li>Configuration baselines</li>
+                </ul>
+
+                <h3>Compliance and Reporting</h3>
+                <ul>
+                    <li>Device compliance reporting</li>
+                    <li>Software compliance</li>
+                    <li>Audit and reporting</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>SCCM vs Intune</h2>
+
+                <h3>SCCM (On-Premises, Legacy)</h3>
+                <ul>
+                    <li>Mature, feature-rich</li>
+                    <li>Requires on-premises infrastructure</li>
+                    <li>Best for managing Windows</li>
+                    <li>Complex to manage</li>
+                </ul>
+
+                <h3>Intune (Cloud, Modern)</h3>
+                <ul>
+                    <li>Cloud-based</li>
+                    <li>Multi-platform (Windows, Mac, iOS, Android)</li>
+                    <li>Easier to manage</li>
+                    <li>Modern security capabilities</li>
+                </ul>
+
+                <h3>Co-Management</h3>
+                <ul>
+                    <li>SCCM and Intune work together</li>
+                    <li>Gradual migration to cloud</li>
+                    <li>Use best of both platforms</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Deployment and Infrastructure</h2>
+
+                <h3>Requirements</h3>
+                <ul>
+                    <li>On-premises site servers</li>
+                    <li>SQL Server database</li>
+                    <li>Windows Server infrastructure</li>
+                    <li>Network connectivity</li>
+                </ul>
+
+                <h3>Site Structure</h3>
+                <ul>
+                    <li>Central Administration Site (CAS)</li>
+                    <li>Primary sites</li>
+                    <li>Secondary sites (legacy)</li>
+                    <li>Distribution points for software delivery</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Plan SCCM/MECM deployment (if needed)</li>
+                    <li>Design site hierarchy</li>
+                    <li>Manage device collections</li>
+                    <li>Oversee software and patch deployment</li>
+                    <li>Plan migration to Intune</li>
+                    <li>Establish co-management (if hybrid)</li>
+                    <li>Monitor compliance and reporting</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Migration Path to Intune</h2>
+
+                <h3>Co-Management Phase</h3>
+                <ul>
+                    <li>Hybrid management with both SCCM and Intune</li>
+                    <li>Gradual workload shift</li>
+                    <li>Test and validate in Intune</li>
+                </ul>
+
+                <h3>Full Intune Migration</h3>
+                <ul>
+                    <li>Complete move to cloud</li>
+                    <li>Retire SCCM infrastructure</li>
+                    <li>Benefits: cloud-based, modern, multi-platform</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>Microsoft MECM documentation</li>
+                    <li>Deployment guides</li>
+                    <li>Co-management planning guides</li>
+                    <li>Migration to Intune resources</li>
+                </ul>
+            </div>
+        </main>
+        <footer class="footer">
+            <p>&copy; 2024 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

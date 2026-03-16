@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenID Connect - Authentication Protocol | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>OpenID Connect</h1>
+            <p>OpenID Connect (OIDC) – identity layer on top of OAuth 2.x for secure authentication & user info</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>OpenID Connect (OIDC) is the modern identity protocol built on OAuth 2.x, adding authentication and user profile information to the authorization framework. In March 2026, OIDC is the de facto standard for secure single sign-on (SSO), identity federation, and user authentication across web, mobile, SPA, native apps, and APIs. It delivers ID tokens (JWTs) containing verified user claims, supports phishing-resistant flows (passkeys/FIDO2/WebAuthn), aligns tightly with OAuth 2.1 (mandatory PKCE, no Implicit/ROPC), and includes advanced profiles like FAPI 2.0 (financial-grade), PAR (Pushed Authorization Requests), JAR (JWT-secured requests), and DPoP (Demonstrable Proof-of-Possession) for token binding. OIDC is implemented by virtually all major identity providers (Entra ID, Okta, Auth0, Google, Ping, Keycloak).</p>
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> OIDC provides secure, interoperable authentication with verified identity claims, enables phishing-resistant SSO, supports passwordless/passkey experiences, and — when combined with OAuth 2.1 — delivers strong authorization + authentication in one protocol flow.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Flows & Components (2026)</h2>
+
+                <h3>Primary Flows</h3>
+                <ul>
+                    <li>Authorization Code + PKCE – secure standard flow for all clients</li>
+                    <li>Hybrid Flow – code + token for SPAs & mobile</li>
+                    <li>Client Credentials – machine-to-machine (no user context)</li>
+                </ul>
+
+                <h3>ID Token & UserInfo</h3>
+                <ul>
+                    <li>ID Token (JWT) – signed, verifiable claims about user & auth event</li>
+                    <li>UserInfo endpoint – additional claims via access token</li>
+                    <li>Claims: sub, name, email, roles, auth_time, amr (auth method reference)</li>
+                </ul>
+
+                <h3>Security Hardening</h3>
+                <ul>
+                    <li>Mandatory PKCE & state parameter</li>
+                    <li>DPoP & sender-constrained tokens</li>
+                    <li>PAR & JAR for secure request transmission</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Key Features & Trends in 2026</h2>
+
+                <h3>Phishing-Resistant & Passwordless</h3>
+                <ul>
+                    <li>FIDO2/WebAuthn/passkeys as first-class auth methods</li>
+                    <li>amr claim values for strong auth (hwk, swk, phr)</li>
+                    <li>Integration with FAPI 2.0 for high-security sectors</li>
+                </ul>
+
+                <h3>Zero Trust & Modern Apps</h3>
+                <ul>
+                    <li>Continuous auth signals & step-up authentication</li>
+                    <li>Support for SPAs, native apps, & agentic flows</li>
+                    <li>Token binding & replay protection</li>
+                </ul>
+
+                <h3>Interoperability & Profiles</h3>
+                <ul>
+                    <li>FAPI 2.0 – financial-grade security baseline</li>
+                    <li>Shared Signals Framework (CAEP, RISC) for event notifications</li>
+                    <li>Native SSO & federation across IdPs</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Best Practices for Enterprise Use (2026)</h2>
+
+                <h3>Secure Implementation</h3>
+                <ul>
+                    <li>Use Authorization Code + PKCE exclusively</li>
+                    <li>Enforce DPoP or mTLS for token binding</li>
+                    <li>Validate ID token signature & claims (iss, aud, exp, nonce)</li>
+                </ul>
+
+                <h3>Phishing Resistance</h3>
+                <ul>
+                    <li>Require passkeys/FIDO2 for workforce & high-risk apps</li>
+                    <li>Deprecate SMS/TOTP as primary MFA</li>
+                    <li>Use step-up auth for sensitive actions</li>
+                </ul>
+
+                <h3>Governance & Monitoring</h3>
+                <ul>
+                    <li>Centralize client registration & scope approval</li>
+                    <li>Log & audit token issuance/usage</li>
+                    <li>Monitor for token misuse & session anomalies</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Define OIDC as primary authentication protocol across apps</li>
+                    <li>Approve IdP selection & phishing-resistant requirements</li>
+                    <li>Ensure alignment with OAuth 2.1 & Zero Trust standards</li>
+                    <li>Oversee client governance, scope minimization & compliance</li>
+                    <li>Monitor OIDC adoption, security incidents & user experience</li>
+                    <li>Drive migration from legacy flows (Implicit/ROPC) to modern OIDC</li>
+                    <li>Plan for emerging profiles (FAPI 2.0, agentic auth)</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>openid.net/specs/openid-connect-core-1_0.html – core specification</li>
+                    <li>OpenID Connect Security Best Practices & FAPI 2.0</li>
+                    <li>Microsoft Entra ID, Okta, Auth0 OIDC guides</li>
+                    <li>FIDO Alliance & OAuth/OIDC Working Group resources</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

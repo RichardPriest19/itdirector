@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCI-DSS - Payment Card Industry Data Security | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>PCI-DSS (Payment Card Industry Data Security Standard)</h1>
+            <p>Security standard for protecting payment card data and transaction security</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>The Payment Card Industry Data Security Standard (PCI-DSS) is a set of security requirements established by the Payment Card Industry Security Standards Council (PCI SSC). It applies to any organization that accepts, processes, stores, or transmits payment card data, including credit cards, debit cards, and prepaid cards. PCI-DSS was created by major credit card companies (Visa, Mastercard, American Express, Discover, JCB) to establish a baseline of security practices and reduce payment card fraud and data breaches.</p>
+                <div class="highlight-box">
+                    <strong>Critical:</strong> Non-compliance with PCI-DSS can result in fines of $5,000 to $100,000 per month, potential legal action from card brands, card transaction termination, and loss of business. A single breach can cost millions in remediation, notification, and legal fees.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>PCI-DSS History and Evolution</h2>
+
+                <h3>PCI-DSS v1.0 (2004)</h3>
+                <p>Original standard released to address growing payment card fraud and security incidents.</p>
+
+                <h3>PCI-DSS v2.0 (2010)</h3>
+                <p>Updates to strengthen authentication and access control requirements.</p>
+
+                <h3>PCI-DSS v3.0 (2013)</h3>
+                <p>Major revision adding focus on tokenization, advanced encryption, and vulnerability management. Still widely used today.</p>
+
+                <h3>PCI-DSS v3.2.1 (2018)</h3>
+                <p>Maintenance updates and clarifications. Added multi-factor authentication requirements.</p>
+
+                <h3>PCI-DSS v4.0 (2022)</h3>
+                <p>Latest version with flexibility for cloud environments, modern technologies, and consolidated requirements. Extended compliance date to March 2024.</p>
+            </div>
+
+            <div class="content-section">
+                <h2>Who Must Comply?</h2>
+
+                <h3>Merchants</h3>
+                <p>Any business accepting credit or debit card payments, including:</p>
+                <ul>
+                    <li>E-commerce retailers</li>
+                    <li>Physical retail stores</li>
+                    <li>Restaurants and hospitality</li>
+                    <li>Healthcare providers</li>
+                    <li>Subscription services</li>
+                </ul>
+
+                <h3>Service Providers</h3>
+                <p>Organizations that process, store, or transmit cardholder data on behalf of merchants:</p>
+                <ul>
+                    <li>Payment processors</li>
+                    <li>Payment gateway providers</li>
+                    <li>Acquiring banks</li>
+                    <li>Hosting providers storing cardholder data</li>
+                    <li>IT service providers with cardholder data access</li>
+                </ul>
+
+                <h3>Level of Compliance</h3>
+                <p>Compliance level depends on transaction volume:</p>
+                <ul>
+                    <li><strong>Level 1 (Acquirer Merchants):</strong> Over 6 million transactions/year with any card brand OR acquirer-designated. Requires annual on-site assessment by Qualified Security Assessor (QSA) and quarterly network scans.</li>
+                    <li><strong>Level 2 (Large Merchants):</strong> 1-6 million Visa transactions/year (other brands may have different thresholds). Requires annual assessment and quarterly scans.</li>
+                    <li><strong>Level 3 (Medium Merchants):</strong> 20,000-1 million e-commerce transactions/year. Annual assessment and quarterly scans.</li>
+                    <li><strong>Level 4 (Small Merchants):</strong> Under 20,000 e-commerce transactions/year OR any merchant processing less than 1 million transactions/year. Self-assessment questionnaire (SAQ) based.</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>The 12 PCI-DSS Requirements</h2>
+
+                <h3>1. Install and Maintain a Firewall Configuration</h3>
+                <p>Establish network segmentation and firewall policies to protect cardholder data environment (CDE).</p>
+                <ul>
+                    <li>Define firewall and network architecture</li>
+                    <li>Restrict inbound/outbound traffic by business need</li>
+                    <li>Prohibit direct public access to cardholder data</li>
+                    <li>Document and implement firewall rules</li>
+                    <li>Review firewall configuration every 6 months</li>
+                </ul>
+
+                <h3>2. Do Not Use Vendor-Supplied Defaults for Passwords and Other Security Parameters</h3>
+                <p>Change all default passwords and disable unnecessary accounts on all systems.</p>
+                <ul>
+                    <li>Change default passwords before network access</li>
+                    <li>Remove or disable unnecessary user accounts</li>
+                    <li>Remove unnecessary services, protocols, ports</li>
+                    <li>Disable unnecessary administrative access</li>
+                </ul>
+
+                <h3>3. Protect Stored Cardholder Data</h3>
+                <p>Implement strong cryptography to protect cardholder data at rest.</p>
+                <ul>
+                    <li>Render Primary Account Number (PAN) unreadable anywhere it is stored</li>
+                    <li>Use encryption, tokenization, hashing, or masking</li>
+                    <li>Limit retention of stored data</li>
+                    <li>Render data unreadable if breached</li>
+                    <li>Purge stored data when no longer needed</li>
+                </ul>
+
+                <h3>4. Encrypt Transmission of Cardholder Data Across Public Networks</h3>
+                <p>Protect cardholder data in transit with strong encryption.</p>
+                <ul>
+                    <li>Use TLS 1.2 or higher for all systems (v4.0 requires TLS 1.2+)</li>
+                    <li>Encrypt all transmission across public networks</li>
+                    <li>Use strong cryptography (minimum 128-bit)</li>
+                    <li>Implement certificate management</li>
+                    <li>Change encryption keys if compromised</li>
+                </ul>
+
+                <h3>5. Protect Systems Against Malware</h3>
+                <p>Deploy and maintain anti-malware software on all systems.</p>
+                <ul>
+                    <li>Deploy anti-virus/anti-malware on all systems with cardholder data</li>
+                    <li>Keep virus definitions current</li>
+                    <li>Enable real-time scanning and periodic scanning</li>
+                    <li>Monitor and remediate infections</li>
+                    <li>Prevent user circumvention of protections</li>
+                </ul>
+
+                <h3>6. Develop and Maintain Secure Systems and Applications</h3>
+                <p>Ensure systems and software are secure and free from vulnerabilities.</p>
+                <ul>
+                    <li>Establish secure development program</li>
+                    <li>Document security requirements</li>
+                    <li>Implement secure coding practices</li>
+                    <li>Test applications for vulnerabilities</li>
+                    <li>Use secure libraries and frameworks</li>
+                    <li>Patch and update systems regularly</li>
+                    <li>Manage configuration securely</li>
+                </ul>
+
+                <h3>7. Restrict Access to Cardholder Data by Business Need to Know</h3>
+                <p>Limit access to cardholder data to those who need it for business purposes.</p>
+                <ul>
+                    <li>Restrict access by business role and need</li>
+                    <li>Implement least privilege principle</li>
+                    <li>Document access needs and justification</li>
+                    <li>Grant only necessary permissions</li>
+                    <li>Review and revoke access regularly</li>
+                    <li>Restrict physical access to cardholder data</li>
+                </ul>
+
+                <h3>8. Identify and Authenticate Access to System Components</h3>
+                <p>Implement strong authentication and access control mechanisms.</p>
+                <ul>
+                    <li>Assign unique user ID to each individual</li>
+                    <li>Restrict administrative access</li>
+                    <li>Implement multi-factor authentication (MFA)</li>
+                    <li>Encrypt authentication credentials in transmission</li>
+                    <li>Limit access attempts (failed login lockout)</li>
+                    <li>Change default authentication mechanisms</li>
+                    <li>Implement session timeout</li>
+                </ul>
+
+                <h3>9. Restrict Physical Access to Cardholder Data</h3>
+                <p>Control physical access to facilities and systems containing cardholder data.</p>
+                <ul>
+                    <li>Restrict facility access to authorized individuals</li>
+                    <li>Implement access controls (badges, keys, biometric)</li>
+                    <li>Maintain visitor logs</li>
+                    <li>Secure physical facilities and equipment</li>
+                    <li>Control and secure media (tapes, disks, USB drives)</li>
+                    <li>Physically destroy media securely</li>
+                    <li>Monitor and log facility access</li>
+                </ul>
+
+                <h3>10. Track and Monitor All Access to Network Resources and Cardholder Data</h3>
+                <p>Implement comprehensive logging, monitoring, and alerting.</p>
+                <ul>
+                    <li>Log all access to cardholder data</li>
+                    <li>Log all failed access attempts</li>
+                    <li>Log administrative actions</li>
+                    <li>Time-synchronize all systems for accurate logging</li>
+                    <li>Protect log files from modification or deletion</li>
+                    <li>Monitor logs for suspicious activity</li>
+                    <li>Retain logs for at least 1 year (3 months online)</li>
+                </ul>
+
+                <h3>11. Regularly Test Security Systems and Processes</h3>
+                <p>Conduct regular security testing and assessments.</p>
+                <ul>
+                    <li>Conduct quarterly vulnerability scans</li>
+                    <li>Conduct annual penetration testing</li>
+                    <li>Use approved scanning vendors (ASV) for scans</li>
+                    <li>Remediate vulnerabilities timely</li>
+                    <li>Validate security configurations</li>
+                    <li>Test incident response procedures</li>
+                    <li>Test wireless detection systems (if applicable)</li>
+                </ul>
+
+                <h3>12. Maintain a Policy That Addresses Information Security for All Personnel</h3>
+                <p>Establish and maintain comprehensive information security policies.</p>
+                <ul>
+                    <li>Establish information security policy</li>
+                    <li>Distribute policy to all personnel</li>
+                    <li>Provide security awareness training for all personnel</li>
+                    <li>Conduct annual training</li>
+                    <li>Document training completion</li>
+                    <li>Implement incident response procedures</li>
+                    <li>Maintain vendor relationships and compliance</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Cardholder Data Environment (CDE)</h2>
+
+                <h3>What is Included?</h3>
+                <ul>
+                    <li>Systems that store, process, or transmit cardholder data</li>
+                    <li>Network segments containing such systems</li>
+                    <li>Databases and applications containing cardholder data</li>
+                    <li>Point-of-sale (POS) devices</li>
+                    <li>Card readers and payment terminals</li>
+                </ul>
+
+                <h3>Scope Determination</h3>
+                <p>Critical to accurately determine scope of PCI-DSS. Systems NOT in scope do not need to comply. Key questions:</p>
+                <ul>
+                    <li>Does system store, process, or transmit cardholder data?</li>
+                    <li>Is it connected to systems that do?</li>
+                    <li>Could it affect security of cardholder data?</li>
+                </ul>
+
+                <h3>Segmentation</h3>
+                <p>Network segmentation can reduce PCI-DSS scope by isolating CDE from other systems. Requires proper firewall rules and monitoring.</p>
+            </div>
+
+            <div class="content-section">
+                <h2>PCI-DSS Assessment Methods</h2>
+
+                <h3>Qualified Security Assessor (QSA) Assessment</h3>
+                <p>Third-party assessor performs on-site audit. Required for Level 1 merchants and service providers. Most credible assessment method.</p>
+                <ul>
+                    <li>Review policies and procedures</li>
+                    <li>Test system configurations</li>
+                    <li>Verify controls implementation</li>
+                    <li>Produce assessment report</li>
+                </ul>
+
+                <h3>Internal Security Assessor (ISA) Assessment</h3>
+                <p>Qualified internal staff perform assessment. Available for Levels 2-4 with card brand approval.</p>
+
+                <h3>Self-Assessment Questionnaire (SAQ)</h3>
+                <p>Merchant completes detailed questionnaire. Available for Level 4 merchants meeting specific requirements (e.g., outsourced all processing).</p>
+
+                <h3>Approved Scanning Vendor (ASV) Scans</h3>
+                <p>Required for all merchants. Vendor conducts quarterly vulnerability scans and annual scan after remediation.</p>
+            </div>
+
+            <div class="content-section">
+                <h2>PCI-DSS Best Practices</h2>
+
+                <h3>Technical Controls</h3>
+                <ul>
+                    <li>Implement tokenization to reduce cardholder data storage</li>
+                    <li>Use end-to-end encryption (E2EE) for payment data</li>
+                    <li>Implement point-to-point encryption (P2PE)</li>
+                    <li>Segment network to isolate CDE</li>
+                    <li>Deploy intrusion detection/prevention systems</li>
+                    <li>Use Web Application Firewall (WAF)</li>
+                    <li>Implement DLP (Data Loss Prevention) tools</li>
+                </ul>
+
+                <h3>Operational Controls</h3>
+                <ul>
+                    <li>Maintain comprehensive inventory of systems in CDE</li>
+                    <li>Implement change management procedures</li>
+                    <li>Establish baseline security configurations</li>
+                    <li>Monitor and review logs regularly</li>
+                    <li>Implement incident response plan</li>
+                    <li>Establish vendor management program</li>
+                    <li>Conduct regular training and awareness</li>
+                </ul>
+
+                <h3>Process Controls</h3>
+                <ul>
+                    <li>Regular vulnerability assessments and penetration testing</li>
+                    <li>Timely patching and updates</li>
+                    <li>Change request and approval process</li>
+                    <li>Periodic access reviews and recertification</li>
+                    <li>Annual compliance audit and report filing</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>PCI-DSS Compliance Challenges</h2>
+                <ul>
+                    <li><strong>Scope Complexity:</strong> Determining what systems are in scope can be complex</li>
+                    <li><strong>Legacy Systems:</strong> Older systems may not meet modern security requirements</li>
+                    <li><strong>Third-Party Risk:</strong> Managing compliance of service providers and vendors</li>
+                    <li><strong>Cost:</strong> Significant investment in security tools and assessments</li>
+                    <li><strong>Expertise:</strong> Need for specialized PCI-DSS knowledge</li>
+                    <li><strong>Continuous Compliance:</strong> Requires ongoing effort, not just annual assessment</li>
+                    <li><strong>Evolving Standards:</strong> Standards change requiring continuous updates</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>PCI-DSS v4.0 Key Changes</h2>
+                <ul>
+                    <li><strong>Flexibility:</strong> More options for meeting requirements (e.g., compensating controls)</li>
+                    <li><strong>Cloud Support:</strong> Better alignment with cloud computing and modern architectures</li>
+                    <li><strong>Consolidation:</strong> Fewer but more comprehensive requirements</li>
+                    <li><strong>Multi-Factor Authentication:</strong> Strengthened MFA requirements</li>
+                    <li><strong>Stronger Encryption:</strong> Required TLS 1.2 minimum (sunset for older versions)</li>
+                    <li><strong>API Security:</strong> New requirements for API security</li>
+                    <li><strong>Third-Party Risk:</strong> Enhanced vendor management requirements</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Understand PCI-DSS scope and requirements</li>
+                    <li>Lead technical control implementation and configuration</li>
+                    <li>Ensure systems are designed securely from inception</li>
+                    <li>Implement and manage firewalls, encryption, and network segmentation</li>
+                    <li>Establish vulnerability assessment and patch management processes</li>
+                    <li>Implement logging, monitoring, and alerting</li>
+                    <li>Conduct regular security assessments and penetration tests</li>
+                    <li>Maintain access controls and authentication mechanisms</li>
+                    <li>Ensure third-party and vendor compliance</li>
+                    <li>Coordinate with QSA or ISA for assessments</li>
+                    <li>Manage remediation of identified vulnerabilities</li>
+                    <li>Maintain compliance documentation</li>
+                    <li>Report status and incidents to executive management</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Common PCI-DSS Non-Compliance Issues</h2>
+                <ul>
+                    <li>Inadequate network segmentation</li>
+                    <li>Weak or default credentials</li>
+                    <li>Failure to implement MFA</li>
+                    <li>Use of obsolete encryption (SSL, TLS 1.0)</li>
+                    <li>Unpatched and vulnerable systems</li>
+                    <li>Inadequate logging and monitoring</li>
+                    <li>Lack of access controls and segregation</li>
+                    <li>Insufficient incident response procedures</li>
+                    <li>Poor change management</li>
+                    <li>Inadequate security training</li>
+                    <li>Non-compliant third parties</li>
+                    <li>Excessive cardholder data storage</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>PCI-DSS Implementation Timeline</h2>
+
+                <h3>Phase 1: Planning and Scope (Weeks 1-4)</h3>
+                <ul>
+                    <li>Determine PCI-DSS scope (systems in CDE)</li>
+                    <li>Assess current compliance status</li>
+                    <li>Identify gaps against requirements</li>
+                    <li>Develop implementation roadmap</li>
+                </ul>
+
+                <h3>Phase 2: Quick Wins (Months 2-3)</h3>
+                <ul>
+                    <li>Change default passwords and disable unnecessary accounts</li>
+                    <li>Update firewall rules and test</li>
+                    <li>Deploy anti-malware and vulnerability scanning</li>
+                    <li>Establish logging baseline</li>
+                </ul>
+
+                <h3>Phase 3: Core Controls (Months 4-8)</h3>
+                <ul>
+                    <li>Implement strong encryption and tokenization</li>
+                    <li>Deploy network segmentation and monitoring</li>
+                    <li>Establish access controls and authentication</li>
+                    <li>Implement data retention and secure deletion</li>
+                </ul>
+
+                <h3>Phase 4: Assessment and Optimization (Months 9-12)</h3>
+                <ul>
+                    <li>Conduct vulnerability scans and penetration testing</li>
+                    <li>Remediate identified issues</li>
+                    <li>Document all controls and evidence</li>
+                    <li>Conduct QSA assessment or file SAQ</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources and Tools</h2>
+                <ul>
+                    <li>PCI Security Standards Council official website (pcisecuritystandards.org)</li>
+                    <li>PCI-DSS v4.0 Standard documentation</li>
+                    <li>PCI-DSS Implementation Guidance</li>
+                    <li>Approved Scanning Vendors (ASV) list</li>
+                    <li>Qualified Security Assessor (QSA) list</li>
+                    <li>Self-Assessment Questionnaire (SAQ) templates</li>
+                    <li>PCI compliance tools and software</li>
+                    <li>Industry consultants and assessors</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

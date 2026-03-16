@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VPC - Amazon Virtual Private Cloud | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>VPC</h1>
+            <p>Amazon Virtual Private Cloud – isolated, logically separated section of the AWS cloud</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>Amazon Virtual Private Cloud (VPC) is the foundational networking service in AWS that lets you launch AWS resources in a logically isolated virtual network that you define. In March 2026, VPC is the cornerstone of all secure, compliant, and scalable AWS architectures — supporting **zero-trust networking**, **multi-account & multi-region strategies**, **Transit Gateway + Network Manager** for centralized routing, **VPC Lattice** for simplified service-to-service connectivity, **IP Address Management (IPAM)** automation, **PrivateLink** for secure SaaS/private service exposure, **IPv6-only** and **dual-stack** deployments, **security group & NACL policy-as-code**, and **AI-driven network anomaly & threat detection**. It integrates deeply with every AWS service and is the primary boundary for network isolation, segmentation, and connectivity in hybrid/multi-cloud environments.</p>
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> VPC provides complete control over your virtual networking environment — enabling secure isolation, fine-grained access control, multi-account scale, zero-trust enforcement, private connectivity, and — with modern features like Lattice & IPAM — simplified, scalable, and observable network architecture across cloud, on-premises, and edge.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Components & Capabilities (2026)</h2>
+
+                <h3>Networking Fundamentals</h3>
+                <ul>
+                    <li>Subnets (public/private), route tables, internet gateways</li>
+                    <li>NAT gateways/instances, VPC endpoints (Gateway & Interface)</li>
+                    <li>IPv6-only & dual-stack support</li>
+                </ul>
+
+                <h3>Security & Access Control</h3>
+                <ul>
+                    <li>Security groups (stateful) & Network ACLs (stateless)</li>
+                    <li>PrivateLink for private service exposure</li>
+                    <li>Zero-trust segmentation & reachability analyzer</li>
+                </ul>
+
+                <h3>Connectivity & Scale</h3>
+                <ul>
+                    <li>Transit Gateway & Network Manager for centralized routing</li>
+                    <li>VPC Lattice – service-to-service connectivity & discovery</li>
+                    <li>VPC peering, Direct Connect, Site-to-Site VPN</li>
+                </ul>
+
+                <h3>Governance & Automation</h3>
+                <ul>
+                    <li>IP Address Management (IPAM) – automated IP allocation</li>
+                    <li>Policy as code (security group rules, NACLs)</li>
+                    <li>Flow Logs & Reachability Analyzer for troubleshooting</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Key Trends & Best Practices in 2026</h2>
+
+                <h3>Zero Trust & Security</h3>
+                <ul>
+                    <li>Security groups & NACLs as code (Terraform, CloudFormation)</li>
+                    <li>VPC Lattice for micro-segmentation</li>
+                    <li>PrivateLink everywhere for SaaS & private services</li>
+                </ul>
+
+                <h3>Multi-Account & Multi-Cloud</h3>
+                <ul>
+                    <li>Transit Gateway + Network Manager for centralized control</li>
+                    <li>Multi-account VPC sharing & peering</li>
+                    <li>Hybrid connectivity (Direct Connect, Site-to-Site VPN)</li>
+                </ul>
+
+                <h3>Automation & Observability</h3>
+                <ul>
+                    <li>IPAM for automated IP address management</li>
+                    <li>Flow Logs & VPC Reachability Analyzer integration</li>
+                    <li>AI-driven network anomaly & threat detection</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Best Practices for VPC Design (2026)</h2>
+
+                <h3>Architecture & Segmentation</h3>
+                <ul>
+                    <li>Use multi-account strategy with centralized egress/ingress</li>
+                    <li>Implement private subnets & NAT gateways</li>
+                    <li>Enforce least-privilege security groups & NACLs</li>
+                </ul>
+
+                <h3>Connectivity & Scale</h3>
+                <ul>
+                    <li>Use Transit Gateway for hub-and-spoke connectivity</li>
+                    <li>Adopt VPC Lattice for service-to-service communication</li>
+                    <li>Enable IPv6-only where possible</li>
+                </ul>
+
+                <h3>Security & Observability</h3>
+                <ul>
+                    <li>Enable Flow Logs & VPC Reachability Analyzer</li>
+                    <li>Use PrivateLink for secure SaaS access</li>
+                    <li>Integrate with GuardDuty, Security Hub & Network Firewall</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Define VPC & networking strategy for multi-account & multi-cloud</li>
+                    <li>Approve zero-trust networking baseline & security controls</li>
+                    <li>Ensure PrivateLink & VPC Lattice adoption</li>
+                    <li>Oversee IPAM, Flow Logs & observability coverage</li>
+                    <li>Monitor network performance, cost & compliance</li>
+                    <li>Drive AI-driven network anomaly detection & automation</li>
+                    <li>Align with regulatory (GDPR, DORA, NIST) & sustainability goals</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>aws.amazon.com/vpc – official VPC documentation</li>
+                    <li>AWS Well-Architected Framework – Networking Lens</li>
+                    <li>Transit Gateway, VPC Lattice & IPAM guides</li>
+                    <li>CISA & NIST zero-trust networking guidance</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

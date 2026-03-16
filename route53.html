@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Route 53 - Amazon Route 53 | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>Route 53</h1>
+            <p>Amazon Route 53 – scalable DNS web service, domain registration & traffic management</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>Amazon Route 53 is AWS's fully managed, highly available, and scalable Domain Name System (DNS) web service that also handles domain name registration, health checking, and global traffic routing. In March 2026, Route 53 remains the dominant DNS solution for AWS-centric and multi-cloud/hybrid environments, with key features including **Route 53 Resolver DNS Firewall** maturity (domain filtering, allow/block lists), **DNSSEC** enforcement, **health-check based failover & multi-value routing**, **geoproximity & latency-based routing**, **private hosted zones** & **VPC association**, **Route 53 Profiles** for centralized DNS policy management, **query logging & analytics**, and **AI-driven threat intelligence** integration (with GuardDuty, Route 53 Resolver Query Logging). It supports **global anycast** routing, **alias records** for AWS resources, and **domain registration/transfer** with privacy protection.</p>
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> Route 53 delivers ultra-reliable, low-latency, globally distributed DNS resolution with built-in health checking, intelligent traffic routing, strong security (DNS Firewall, DNSSEC), private DNS capabilities, and seamless AWS integration — enabling high availability, disaster recovery, multi-region failover, secure name resolution, and centralized DNS governance across cloud and hybrid environments.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Capabilities (2026)</h2>
+
+                <h3>DNS Resolution & Routing</h3>
+                <ul>
+                    <li>Authoritative DNS for public & private hosted zones</li>
+                    <li>Routing policies: simple, weighted, latency, geolocation, geoproximity, failover, multi-value answer</li>
+                    <li>Alias records for AWS resources (ELB, CloudFront, S3)</li>
+                </ul>
+
+                <h3>Security & Filtering</h3>
+                <ul>
+                    <li>Route 53 Resolver DNS Firewall – domain allow/block lists</li>
+                    <li>DNSSEC signing & validation</li>
+                    <li>Resolver Query Logging & integration with GuardDuty</li>
+                </ul>
+
+                <h3>Health Checking & Failover</h3>
+                <ul>
+                    <li>HTTP/HTTPS/TCP health checks with calculated health</li>
+                    <li>Automatic failover & multi-region routing</li>
+                    <li>Route 53 Profiles for centralized policy management</li>
+                </ul>
+
+                <h3>Domain Registration & Management</h3>
+                <ul>
+                    <li>Domain registration, transfer, privacy protection</li>
+                    <li>Auto-renewal & expiration monitoring</li>
+                    <li>Integration with ACM for SSL/TLS certificates</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Key Trends & Best Practices in 2026</h2>
+
+                <h3>Zero Trust & DNS Security</h3>
+                <ul>
+                    <li>DNS Firewall & DNSSEC mandatory for public zones</li>
+                    <li>Private DNS & VPC association for internal services</li>
+                    <li>Route 53 Resolver Query Logging for threat detection</li>
+                </ul>
+
+                <h3>Multi-Region & Hybrid</h3>
+                <ul>
+                    <li>Geoproximity & latency-based routing for global apps</li>
+                    <li>Failover & health-check integration with Route 53 Profiles</li>
+                    <li>Hybrid DNS resolution (on-prem ↔ AWS)</li>
+                </ul>
+
+                <h3>Observability & Automation</h3>
+                <ul>
+                    <li>AI-driven anomaly detection in query logs</li>
+                    <li>Integration with CloudWatch & EventBridge</li>
+                    <li>Policy as code for DNS Firewall rules</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Best Practices for Route 53 Usage (2026)</h2>
+
+                <h3>Design & Security</h3>
+                <ul>
+                    <li>Use private hosted zones for internal services</li>
+                    <li>Enable DNSSEC & Resolver DNS Firewall</li>
+                    <li>Implement least-privilege IAM roles & VPC-only access</li>
+                </ul>
+
+                <h3>Reliability & Traffic Management</h3>
+                <ul>
+                    <li>Use health checks & failover routing for HA</li>
+                    <li>Apply geoproximity/latency routing for global performance</li>
+                    <li>Enable Route 53 Profiles for centralized policy</li>
+                </ul>
+
+                <h3>Monitoring & Governance</h3>
+                <ul>
+                    <li>Enable query logging & integrate with GuardDuty</li>
+                    <li>Monitor health check status & DNS query metrics</li>
+                    <li>Automate domain renewal & expiration alerts</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Define Route 53 strategy for DNS & global traffic management</li>
+                    <li>Approve zero-trust DNS baseline (DNSSEC, DNS Firewall)</li>
+                    <li>Ensure private DNS & multi-region failover design</li>
+                    <li>Oversee query logging, threat detection & compliance</li>
+                    <li>Monitor DNS performance, availability & cost</li>
+                    <li>Drive AI-driven anomaly detection & automation</li>
+                    <li>Align with regulatory (GDPR, DORA) & security requirements</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>aws.amazon.com/route53 – official Route 53 documentation</li>
+                    <li>Route 53 Resolver DNS Firewall & Profiles guides</li>
+                    <li>AWS Well-Architected Framework – Networking Lens</li>
+                    <li>CISA & NIST DNS security best practices</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TFTP - Trivial File Transfer Protocol | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>TFTP</h1>
+            <p>Trivial File Transfer Protocol – lightweight, legacy protocol for simple file transfers</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>TFTP (Trivial File Transfer Protocol) is an extremely simple, UDP-based file transfer protocol (defined in RFC 1350, 1992) designed for minimal overhead and ease of implementation in constrained environments. It has no authentication, no encryption, no directory listing, and no file integrity verification — making it suitable only for non-sensitive, read-only or controlled file transfers. In March 2026, TFTP is considered **legacy and insecure** for almost all practical purposes and is used almost exclusively in very narrow, isolated scenarios: **PXE/iPXE network booting**, **firmware/OS image loading** on routers/switches/embedded devices, **initial configuration** in industrial control systems, and **bootloader environments**. Modern security standards (PCI-DSS, HIPAA, GDPR, NIS2, DORA) effectively prohibit plain TFTP over untrusted networks, and most organizations have either eliminated it or restricted it to air-gapped or tightly controlled local segments.</p>
+                <div class="highlight-box">
+                    <strong>Key Value (historical):</strong> TFTP was once valued for its extreme simplicity and tiny footprint in bootloaders and embedded systems — but in 2026 its only remaining legitimate use is in secure, isolated, read-only boot environments. All other file transfer needs should use SFTP, FTPS, SCP, HTTPS, or secure cloud APIs.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Characteristics & Legacy Status (2026)</h2>
+
+                <h3>TFTP Fundamentals</h3>
+                <ul>
+                    <li>UDP port 69 (server), ephemeral ports for data</li>
+                    <li>No authentication or encryption</li>
+                    <li>Only basic read/write operations (no directory listing)</li>
+                    <li>Block-based transfer (512-byte blocks by default)</li>
+                    <li>Very small code footprint (ideal for bootloaders)</li>
+                </ul>
+
+                <h3>Security & Risk Issues</h3>
+                <ul>
+                    <li>Clear-text transmission of all data</li>
+                    <li>No user authentication or access control</li>
+                    <li>Vulnerable to eavesdropping, tampering, spoofing</li>
+                    <li>Amplification/reflection attack vector (if misconfigured)</li>
+                </ul>
+
+                <h3>Modern Secure Alternatives</h3>
+                <ul>
+                    <li>PXE → iPXE with HTTPS boot</li>
+                    <li>Firmware upgrades → SFTP, HTTPS, or vendor-specific secure protocols</li>
+                    <li>File transfer → SCP, rsync over SSH, S3-compatible APIs, WebDAV over HTTPS</li>
+                    <li>Network boot → Secure Boot + HTTPS-based provisioning</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Key Trends & Status in 2026</h2>
+
+                <h3>Legacy & Industrial Use</h3>
+                <ul>
+                    <li>Still present in old network gear, industrial PLCs, embedded bootloaders</li>
+                    <li>Common in isolated lab/test environments or air-gapped systems</li>
+                    <li>Rapid decommissioning programs in regulated sectors</li>
+                </ul>
+
+                <h3>Security & Compliance Pressure</h3>
+                <ul>
+                    <li>Plain TFTP explicitly prohibited by PCI-DSS, HIPAA, GDPR, NIS2</li>
+                    <li>Cyber insurance policies often exclude TFTP-related incidents</li>
+                    <li>Audits flag TFTP servers as critical vulnerabilities</li>
+                </ul>
+
+                <h3>Migration & Replacement</h3>
+                <ul>
+                    <li>Most enterprises completed TFTP → secure boot/transfer migration by 2024–2025</li>
+                    <li>HTTPS-based PXE/iPXE and secure firmware update channels dominant</li>
+                    <li>Zero-trust network boot & encrypted provisioning mandatory</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Best Practices for TFTP-Related Situations (2026)</h2>
+
+                <h3>Migration Strategy</h3>
+                <ul>
+                    <li>Scan for TFTP servers/traffic (port 69 UDP) across all networks</li>
+                    <li>Prioritize migration to iPXE/HTTPS boot or SFTP/FTPS</li>
+                    <li>Replace legacy TFTP servers with secure alternatives (e.g., TFTP over VPN only)</li>
+                </ul>
+
+                <h3>Interim Mitigation (if TFTP cannot be removed immediately)</h3>
+                <ul>
+                    <li>Restrict TFTP to air-gapped or isolated VLANs</li>
+                    <li>Block outbound TFTP at perimeter firewalls</li>
+                    <li>Monitor & alert on any TFTP usage</li>
+                </ul>
+
+                <h3>Security & Monitoring</h3>
+                <ul>
+                    <li>Disable TFTP servers on all modern devices</li>
+                    <li>Log and alert on TFTP traffic</li>
+                    <li>Conduct regular legacy protocol audits</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Champion complete elimination of plain TFTP across the organization</li>
+                    <li>Approve TFTP migration roadmap & secure boot/transfer alternatives</li>
+                    <li>Ensure zero-trust & encrypted file provisioning policies</li>
+                    <li>Oversee legacy protocol scans & risk assessments</li>
+                    <li>Monitor for unauthorized TFTP usage & compliance violations</li>
+                    <li>Drive iPXE/HTTPS boot & secure firmware update adoption</li>
+                    <li>Align file/network boot strategy with regulatory & cyber insurance requirements</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>RFC 1350 (TFTP), RFC 2347 (TFTP Options)</li>
+                    <li>CISA & NIST guidance on legacy protocol removal</li>
+                    <li>PCI-DSS, HIPAA, GDPR requirements prohibiting insecure file transfer</li>
+                    <li>iPXE, HTTPS boot & secure firmware update documentation</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

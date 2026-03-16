@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PyTorch - ML Framework | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>PyTorch</h1>
+            <p>Open-source machine learning framework – dynamic computation graphs, research-first design, production-ready deployment</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>PyTorch is Meta AI's open-source deep learning framework, favored for its dynamic computation graph (eager execution), Pythonic API, and flexibility — making it the de facto standard in academic research and increasingly in production. As of March 2026 (PyTorch 2.10.0 released January 2026), it features advanced `torch.compile` optimizations, ExecuTorch for on-device/edge inference, TorchAO for quantization/awareness, FlexAttention for efficient transformer kernels, improved numerical debugging (DebugMode, tlparse), and strong multi-hardware support (NVIDIA, AMD, Intel, Apple Silicon, TPUs via XLA). It balances rapid prototyping with production maturity through TorchServe, ONNX export, and integration with Kubeflow, Ray, and cloud platforms.</p>
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> PyTorch accelerates innovation with intuitive debugging and fast iteration, while delivering high performance in production via compilation, quantization, and edge deployment — ideal for research-to-production pipelines in AI-driven organizations.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Capabilities (2026)</h2>
+
+                <h3>Model Development & Training</h3>
+                <ul>
+                    <li>Dynamic graphs with eager execution + torch.compile for speed</li>
+                    <li>DistributedDataParallel & FullyShardedDataParallel for large models</li>
+                    <li>torch.compile with Inductor backend (CPU/GPU/TPU)</li>
+                    <li>torch.utils.data & DataLoader optimizations</li>
+                </ul>
+
+                <h3>Production & Deployment</h3>
+                <ul>
+                    <li>ExecuTorch – on-device inference (mobile, embedded, edge)</li>
+                    <li>TorchServe & Torch-ML for scalable serving</li>
+                    <li>ONNX export & interoperability</li>
+                    <li>Quantization-aware training & post-training quantization (TorchAO)</li>
+                </ul>
+
+                <h3>Advanced Features</h3>
+                <ul>
+                    <li>FlexAttention – fused, memory-efficient attention kernels</li>
+                    <li>TorchDynamo + AOTInductor for ahead-of-time compilation</li>
+                    <li>Numerical stability tools (DebugMode, anomaly detection)</li>
+                    <li>Support for Python 3.13+ & FP8/mixed precision</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Key Features & Trends in 2026</h2>
+
+                <h3>Performance & Compilation</h3>
+                <ul>
+                    <li>torch.compile maturity – near-zero graph breaks, Python 3.13 support</li>
+                    <li>Improved Inductor backend for CPU & AMD ROCm</li>
+                    <li>FlexAttention stable for LLM training/inference efficiency</li>
+                </ul>
+
+                <h3>Edge & On-Device</h3>
+                <ul>
+                    <li>ExecuTorch stable – iOS/Android/embedded deployment</li>
+                    <li>Quantization (int4/int8) & sparsity via TorchAO</li>
+                    <li>Delegate support for NPUs, GPUs, DSPs</li>
+                </ul>
+
+                <h3>Ecosystem & Interoperability</h3>
+                <ul>
+                    <li>Hugging Face integration & model hub dominance</li>
+                    <li>PyTorch/XLA for Google TPUs</li>
+                    <li>Ray, Kubeflow, Vertex AI, AWS SageMaker support</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Best Practices for Enterprise Adoption (2026)</h2>
+
+                <h3>Development & Training</h3>
+                <ul>
+                    <li>Use torch.compile aggressively for production models</li>
+                    <li>Enable FlexAttention & TorchAO for LLM efficiency</li>
+                    <li>Leverage distributed strategies early for scale</li>
+                </ul>
+
+                <h3>Production & Serving</h3>
+                <ul>
+                    <li>Deploy with ExecuTorch for edge, TorchServe for servers</li>
+                    <li>Implement model versioning, A/B testing & monitoring</li>
+                    <li>Use ONNX for cross-framework portability</li>
+                </ul>
+
+                <h3>Responsible & Performant ML</h3>
+                <ul>
+                    <li>Apply quantization & pruning to reduce inference cost</li>
+                    <li>Monitor numerical stability with DebugMode</li>
+                    <li>Integrate with MLOps tools for drift detection & governance</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Define PyTorch strategy vs TensorFlow/JAX trade-offs</li>
+                    <li>Approve platform for research & production ML workloads</li>
+                    <li>Ensure infrastructure readiness (GPU/TPU clusters, cloud integrations)</li>
+                    <li>Oversee MLOps maturity (serving, monitoring, versioning)</li>
+                    <li>Monitor performance, cost, & model drift in production</li>
+                    <li>Drive team skills in PyTorch ecosystem & best practices</li>
+                    <li>Plan multi-framework support & migration readiness</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>pytorch.org – official docs, tutorials & install guide</li>
+                    <li>PyTorch 2.10.0 release notes & blog (January 2026)</li>
+                    <li>ExecuTorch, TorchAO, FlexAttention documentation</li>
+                    <li>PyTorch Developer Mailing List & GitHub releases</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

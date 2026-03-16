@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCP - Secure Copy Protocol | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>SCP</h1>
+            <p>Secure Copy Protocol – secure file transfer utility over SSH</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>SCP (Secure Copy Protocol) is a command-line utility and protocol for securely transferring files and directories between hosts over an SSH (Secure Shell) connection. It encrypts both authentication and data in transit using the underlying SSH session (typically port 22). In March 2026, SCP remains widely used in Linux/Unix environments for **simple, one-off secure file transfers**, automation scripts, DevOps pipelines, backup jobs, and server-to-server copying. While SCP is **secure** (no clear-text credentials or data), it is considered **legacy/basic** compared to more advanced alternatives: **SFTP** (interactive session, resume, directory listing), **rsync over SSH** (delta transfers, synchronization), **rclone** (cloud sync), or cloud-native tools (AWS S3 CLI, Azure Storage Explorer, gsutil). SCP is **not deprecated** but is gradually being replaced in modern workflows for its lack of features (no resume, no wildcards in some implementations, no bandwidth throttling).</p>
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> SCP provides a simple, secure, and widely available method for encrypted file transfer over SSH — ideal for quick server-to-server copies, scripts, and environments where simplicity and SSH infrastructure already exist. For complex or ongoing transfers, rsync over SSH or SFTP is preferred.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Characteristics & Usage (2026)</h2>
+
+                <h3>SCP Fundamentals</h3>
+                <ul>
+                    <li>Runs over SSH (port 22 by default)</li>
+                    <li>Encrypts authentication & data via SSH</li>
+                    <li>Supports recursive copy (-r), preserve attributes (-p), verbose output (-v)</li>
+                    <li>Syntax: scp [options] source destination</li>
+                    <li>Examples: scp file.txt user@remote:/path/, scp -r dir/ user@remote:/path/</li>
+                </ul>
+
+                <h3>Strengths</h3>
+                <ul>
+                    <li>Extremely simple & available on almost all Unix/Linux systems</li>
+                    <li>Secure by default (leverages SSH encryption & keys)</li>
+                    <li>No additional server setup required beyond SSH</li>
+                </ul>
+
+                <h3>Limitations</h3>
+                <ul>
+                    <li>No resume on interrupted transfers</li>
+                    <li>No directory listing or interactive mode</li>
+                    <li>No built-in bandwidth limiting or delta transfers</li>
+                    <li>Limited error handling & progress reporting</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Key Trends & Alternatives in 2026</h2>
+
+                <h3>Modern Secure File Transfer</h3>
+                <ul>
+                    <li>SFTP – interactive, resume-capable, directory browsing (preferred for most use cases)</li>
+                    <li>rsync over SSH – delta transfers, synchronization, bandwidth limiting</li>
+                    <li>rclone – sync to cloud storage (S3, Azure Blob, Google Cloud, etc.)</li>
+                </ul>
+
+                <h3>Security & Best Practices</h3>
+                <ul>
+                    <li>Use SSH key-based auth (disable password auth)</li>
+                    <li>Restrict SCP to specific users/groups via sshd_config</li>
+                    <li>Prefer SFTP subsystem over legacy SCP in sshd_config</li>
+                </ul>
+
+                <h3>Cloud-Native & Automation</h3>
+                <ul>
+                    <li>Cloud CLI tools (aws s3 cp/sync, azcopy, gsutil)</li>
+                    <li>CI/CD pipelines using rsync or rclone over SSH</li>
+                    <li>Secure file drop services (Box, Dropbox Business, OneDrive)</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Best Practices for SCP Usage (2026)</h2>
+
+                <h3>When to Use SCP</h3>
+                <ul>
+                    <li>Quick, one-off secure file copy between trusted servers</li>
+                    <li>Automation scripts where rsync features are unnecessary</li>
+                    <li>Environments without SFTP subsystem enabled</li>
+                </ul>
+
+                <h3>Security Hardening</h3>
+                <ul>
+                    <li>Use SSH key authentication only (disable password login)</li>
+                    <li>Restrict SCP/SFTP to specific users via Match directive in sshd_config</li>
+                    <li>Enable verbose logging & monitor SCP usage</li>
+                </ul>
+
+                <h3>Migration & Replacement</h3>
+                <ul>
+                    <li>Prefer SFTP or rsync over SSH for interactive or ongoing transfers</li>
+                    <li>Use rclone or cloud-native tools for cloud/object storage</li>
+                    <li>Audit & remove plain FTP/TFTP before SCP migration</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Define secure file transfer policy (no plain FTP/TFTP, prefer SFTP/rsync)</li>
+                    <li>Approve SCP usage only for justified, low-risk scenarios</li>
+                    <li>Ensure SSH key management & password auth disablement</li>
+                    <li>Oversee SCP/SFTP usage monitoring & legacy protocol audits</li>
+                    <li>Drive migration to modern tools (rclone, cloud-native, secure drop)</li>
+                    <li>Align file transfer with compliance (GDPR, HIPAA, SOC 2)</li>
+                    <li>Plan for SSH & SCP hardening in zero-trust architecture</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>OpenSSH documentation (scp, sftp, sshd_config)</li>
+                    <li>RFC 4251–4254 (SSH protocol family)</li>
+                    <li>CISA & NIST guidance on secure file transfer</li>
+                    <li>rclone & rsync over SSH best practices</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

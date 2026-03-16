@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VLAN - Virtual Local Area Network | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>VLAN</h1>
+            <p>Virtual Local Area Network – Layer 2 segmentation & broadcast domain isolation</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>A Virtual Local Area Network (VLAN) is a Layer 2 (data-link layer) segmentation technology that logically divides a physical network into multiple isolated broadcast domains without requiring separate physical switches. Defined in IEEE 802.1Q (VLAN tagging), VLANs remain a foundational building block in March 2026 for **campus**, **branch**, **data center**, and **industrial networks** — even as overlay technologies (VXLAN, EVPN, SD-WAN) handle much of the east-west and multi-site traffic. VLANs are heavily used for **micro-segmentation**, **zero-trust access zoning**, **guest/IoT isolation**, **voice/data separation** (VoIP VLANs), **compliance scoping** (PCI-DSS, HIPAA zones), **management VLAN hardening**, **dynamic VLAN assignment** (802.1X/MAB), **private VLANs** (PVLANs), and integration with **NAC**, **ACLs/VACLs/PACLs**, **AI-driven anomaly detection**, and **network access control** platforms (Cisco ISE, Aruba ClearPass, FortiNAC, Forescout). They are still the simplest and most performant way to segment Layer 2 traffic in access-layer and campus environments.</p>
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> VLANs provide simple, high-performance Layer 2 isolation and segmentation — enabling broadcast control, security zoning, compliance scoping, traffic separation (voice, guest, IoT), zero-trust access enforcement, and efficient resource utilization while remaining the fastest and most reliable way to segment campus and branch networks.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Concepts & Types (2026)</h2>
+
+                <h3>VLAN Basics</h3>
+                <ul>
+                    <li>IEEE 802.1Q tagging (VLAN ID 1–4094)</li>
+                    <li>Default VLAN (VLAN 1) – often renamed/disabled</li>
+                    <li>Access ports (untagged) vs trunk ports (tagged)</li>
+                </ul>
+
+                <h3>Common VLAN Types</h3>
+                <ul>
+                    <li>Data VLANs – user/employee traffic</li>
+                    <li>Voice VLANs – VoIP phones (CDP/LLDP auto-config)</li>
+                    <li>Guest/IoT VLANs – isolated internet-only access</li>
+                    <li>Management VLAN – out-of-band switch/router management</li>
+                    <li>Private VLANs (PVLANs) – intra-VLAN isolation</li>
+                </ul>
+
+                <h3>Security & Access Control</h3>
+                <ul>
+                    <li>Dynamic VLAN assignment (802.1X, MAB, profiling)</li>
+                    <li>Port ACLs (PACLs), VLAN ACLs (VACLs), Router ACLs (RACLs)</li>
+                    <li>Protected ports & storm control</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Key Trends & Best Practices in 2026</h2>
+
+                <h3>Zero Trust & Micro-segmentation</h3>
+                <ul>
+                    <li>VLANs as first-layer zero-trust boundary</li>
+                    <li>Integration with NAC & dynamic segmentation</li>
+                    <li>Private VLANs & intra-VLAN firewalling</li>
+                </ul>
+
+                <h3>IoT & Guest Isolation</h3>
+                <ul>
+                    <li>Dedicated IoT VLANs with strict egress filtering</li>
+                    <li>Guest VLANs with captive portal & bandwidth limiting</li>
+                    <li>AI-driven device profiling & quarantine</li>
+                </ul>
+
+                <h3>Management & Hardening</h3>
+                <ul>
+                    <li>Disable VLAN 1 & rename default VLAN</li>
+                    <li>Use dedicated management VLAN with ACLs</li>
+                    <li>Enable port security & DHCP snooping</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Best Practices for VLAN Design (2026)</h2>
+
+                <h3>Segmentation Strategy</h3>
+                <ul>
+                    <li>Separate voice, data, guest, IoT, management VLANs</li>
+                    <li>Use PVLANs for DMZ-like intra-VLAN isolation</li>
+                    <li>Implement dynamic VLAN assignment (802.1X/MAB)</li>
+                </ul>
+
+                <h3>Security Hardening</h3>
+                <ul>
+                    <li>Disable unused ports & VLAN 1</li>
+                    <li>Enforce port security, storm control, DHCP snooping</li>
+                    <li>Apply VACLs/PACLs for inter-VLAN filtering</li>
+                </ul>
+
+                <h3>Monitoring & Governance</h3>
+                <ul>
+                    <li>Monitor VLAN utilization & broadcast storms</li>
+                    <li>Integrate with NAC & AI anomaly detection</li>
+                    <li>Document VLAN assignments & review annually</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Define VLAN segmentation & zero-trust strategy</li>
+                    <li>Approve VLAN design, naming & security baseline</li>
+                    <li>Ensure guest/IoT isolation & dynamic assignment</li>
+                    <li>Oversee VLAN monitoring, broadcast control & compliance</li>
+                    <li>Monitor utilization, security posture & anomaly alerts</li>
+                    <li>Drive integration with NAC, AI tools & policy enforcement</li>
+                    <li>Align VLANs with regulatory (PCI-DSS, HIPAA) & zero-trust requirements</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>IEEE 802.1Q standard & VLAN tagging specs</li>
+                    <li>Cisco, Aruba, Juniper VLAN & zero-trust guides</li>
+                    <li>CISA & NIST network segmentation best practices</li>
+                    <li>PCI-DSS, HIPAA VLAN scoping requirements</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

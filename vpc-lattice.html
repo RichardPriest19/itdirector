@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VPC Lattice - AWS Service Networking | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>VPC Lattice</h1>
+            <p>VPC Lattice – managed service-to-service connectivity & networking layer in AWS</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>Amazon VPC Lattice is a fully managed application networking service that simplifies secure service-to-service communication across VPCs, accounts, and regions without requiring VPC peering, Transit Gateway routing, or complex private link configuration. In March 2026, VPC Lattice is widely adopted for **zero-trust service networking**, **automatic service discovery**, **traffic routing & load balancing**, **built-in observability** (metrics, logs, traces), **fine-grained authorization policies** (IAM-based), and **multi-account/multi-region scale**. It abstracts away underlying networking complexity, supports containers (ECS, EKS), serverless (Lambda), VMs (EC2), and integrates natively with **AWS IAM**, **CloudWatch**, **X-Ray**, **VPC Flow Logs**, **AWS Network Firewall**, and **AWS PrivateLink** — making it the preferred choice for microservices, distributed applications, and modern application architectures on AWS.</p>
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> VPC Lattice provides secure, observable, and scalable service-to-service connectivity with zero-trust principles — eliminating VPC peering sprawl, simplifying multi-account & multi-region communication, enforcing IAM-based authorization, delivering built-in observability, and allowing teams to focus on application logic rather than network plumbing.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Capabilities (2026)</h2>
+
+                <h3>Service Discovery & Connectivity</h3>
+                <ul>
+                    <li>Automatic service discovery & DNS-based resolution</li>
+                    <li>Cross-VPC, cross-account, cross-region connectivity</li>
+                    <li>Support for containers (ECS, EKS), Lambda, EC2, on-prem (via Hybrid Nodes)</li>
+                </ul>
+
+                <h3>Traffic Management & Routing</h3>
+                <ul>
+                    <li>Weighted routing, path-based routing, header-based routing</li>
+                    <li>Built-in load balancing & health checks</li>
+                    <li>Canary & blue/green deployment support</li>
+                </ul>
+
+                <h3>Security & Authorization</h3>
+                <ul>
+                    <li>IAM-based authZ policies (fine-grained, resource-level)</li>
+                    <li>TLS encryption & certificate management</li>
+                    <li>Integration with AWS Network Firewall & security groups</li>
+                </ul>
+
+                <h3>Observability & Monitoring</h3>
+                <ul>
+                    <li>CloudWatch metrics, logs, & X-Ray tracing</li>
+                    <li>VPC Flow Logs integration</li>
+                    <li>Service-level dashboards & anomaly detection</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Key Trends & Best Practices in 2026</h2>
+
+                <h3>Zero Trust Service Networking</h3>
+                <ul>
+                    <li>IAM authZ as the primary access control model</li>
+                    <li>Least-privilege policies & continuous verification</li>
+                    <li>Elimination of broad VPC peering & security group sprawl</li>
+                </ul>
+
+                <h3>Multi-Account & Multi-Region</h3>
+                <ul>
+                    <li>Centralized service network for cross-account access</li>
+                    <li>Global routing & failover with health checks</li>
+                    <li>Multi-region service sharing & disaster recovery</li>
+                </ul>
+
+                <h3>Observability & Automation</h3>
+                <ul>
+                    <li>AI-driven anomaly detection & root-cause in logs/metrics</li>
+                    <li>Integration with EventBridge for automated response</li>
+                    <li>Policy as code for Lattice authZ rules</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Best Practices for VPC Lattice Adoption (2026)</h2>
+
+                <h3>Design & Architecture</h3>
+                <ul>
+                    <li>Start with service networks & associate VPCs/accounts</li>
+                    <li>Use VPC Lattice for internal service-to-service traffic</li>
+                    <li>Combine with PrivateLink for external/SaaS exposure</li>
+                </ul>
+
+                <h3>Security & Authorization</h3>
+                <ul>
+                    <li>Enforce IAM-based authZ policies</li>
+                    <li>Require TLS & certificate validation</li>
+                    <li>Integrate with Network Firewall & GuardDuty</li>
+                </ul>
+
+                <h3>Observability & Operations</h3>
+                <ul>
+                    <li>Enable X-Ray tracing & CloudWatch metrics</li>
+                    <li>Monitor latency, error rate & traffic patterns</li>
+                    <li>Use health checks & automatic failover</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Define VPC Lattice strategy for zero-trust service networking</li>
+                    <li>Approve multi-account & multi-region connectivity model</li>
+                    <li>Ensure IAM authZ & security baseline enforcement</li>
+                    <li>Oversee observability coverage & performance SLAs</li>
+                    <li>Monitor service discovery, traffic & compliance</li>
+                    <li>Drive AI-driven anomaly detection & automation</li>
+                    <li>Align with regulatory (GDPR, DORA) & zero-trust requirements</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>aws.amazon.com/vpc-lattice – official documentation</li>
+                    <li>VPC Lattice & VPC Lattice Profiles guides</li>
+                    <li>AWS Well-Architected Framework – Networking Lens</li>
+                    <li>CISA & NIST zero-trust networking guidance</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
