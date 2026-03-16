@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACLs - Access Control Lists | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>ACLs</h1>
+            <p>Access Control Lists – packet filtering rules for permitting/denying traffic on network devices</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>Access Control Lists (ACLs) are ordered sets of rules configured on network devices (routers, switches, firewalls) to permit or deny traffic based on criteria such as source/destination IP, protocol, port, or other packet attributes. In March 2026, ACLs remain one of the most fundamental and widely deployed network security controls — used at **Layer 3** (IP ACLs on routers/switches) and **Layer 2** (MAC ACLs, port ACLs, VLAN ACLs) — even as next-generation tools (NGFW, ZTNA, micro-segmentation) handle advanced filtering. ACLs are critical for **zero-trust segmentation**, **compliance scoping** (PCI-DSS, HIPAA zones), **guest/IoT isolation**, **management traffic protection**, **anti-spoofing**, **rate-limiting**, **policy-as-code** enforcement (Ansible, Terraform, NetBox), and **AI-assisted ACL optimization** (anomaly detection, rule redundancy removal, intent-based generation). They are implemented on Cisco, Aruba, Juniper, Palo Alto, Fortinet, and other platforms, with **named ACLs**, **object groups**, **time-based ACLs**, **reflective ACLs**, and **infrastructure ACLs** as standard patterns.</p>
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> ACLs provide simple, high-performance, stateless or stateful packet filtering — enabling traffic control, security zoning, compliance enforcement, broadcast suppression, and basic zero-trust segmentation at line rate — while remaining the fastest and most reliable way to implement coarse-grained access controls in campus, branch, data center, and WAN environments.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core ACL Types & Placement (2026)</h2>
+
+                <h3>Standard & Extended ACLs</h3>
+                <ul>
+                    <li>Standard ACL – filters by source IP only (1–99, 1300–1999)</li>
+                    <li>Extended ACL – filters by source/destination IP, protocol, port, flags (100–199, 2000–2699)</li>
+                    <li>Named ACLs – human-readable & editable</li>
+                </ul>
+
+                <h3>Layer 2 & Specialized ACLs</h3>
+                <ul>
+                    <li>MAC ACLs & Port ACLs (PACLs) – Layer 2 filtering</li>
+                    <li>VLAN ACLs (VACLs) – per-VLAN filtering</li>
+                    <li>Router ACLs (RACLs) – routed traffic</li>
+                </ul>
+
+                <h3>Placement & Direction</h3>
+                <ul>
+                    <li>Inbound – closest to source (anti-spoofing, resource protection)</li>
+                    <li>Outbound – closest to destination (egress filtering)</li>
+                    <li>Infrastructure ACLs – protect control plane</li>
+                </ul>
+
+                <h3>Advanced Features</h3>
+                <ul>
+                    <li>Object groups & time-based ACLs</li>
+                    <li>Reflexive & context-based ACLs</li>
+                    <li>Policy-based routing with ACL matching</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Key Trends & Best Practices in 2026</h2>
+
+                <h3>Zero Trust & Micro-segmentation</h3>
+                <ul>
+                    <li>ACLs as first-layer zero-trust enforcement</li>
+                    <li>Integration with NAC & dynamic ACL assignment</li>
+                    <li>AI-assisted ACL rule optimization & redundancy removal</li>
+                </ul>
+
+                <h3>Policy-as-Code & Automation</h3>
+                <ul>
+                    <li>ACLs defined in code (Terraform, Ansible, NetBox)</li>
+                    <li>Intent-based ACL generation & validation</li>
+                    <li>CI/CD pipelines for ACL changes</li>
+                </ul>
+
+                <h3>Compliance & Visibility</h3>
+                <ul>
+                    <li>ACLs for PCI-DSS, HIPAA, DORA zone scoping</li>
+                    <li>Logging & monitoring (NetFlow, syslog, IPFIX)</li>
+                    <li>AI-driven ACL hit analysis & anomaly detection</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Best Practices for ACL Deployment (2026)</h2>
+
+                <h3>Design & Strategy</h3>
+                <ul>
+                    <li>Use extended/named ACLs & object groups</li>
+                    <li>Apply inbound at distribution/core, outbound at access</li>
+                    <li>Implement infrastructure ACLs for control plane protection</li>
+                </ul>
+
+                <h3>Security Hardening</h3>
+                <ul>
+                    <li>Implicit deny at end of every ACL</li>
+                    <li>Log denied traffic & monitor hits</li>
+                    <li>Enable time-based & reflexive ACLs where needed</li>
+                </ul>
+
+                <h3>Management & Governance</h3>
+                <ul>
+                    <li>Version control ACLs with policy-as-code</li>
+                    <li>Automate change via CI/CD & approval workflows</li>
+                    <li>Review ACLs quarterly & remove unused rules</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Define ACL strategy aligned with zero-trust & segmentation goals</li>
+                    <li>Approve ACL design, placement & security baseline</li>
+                    <li>Ensure compliance scoping (PCI-DSS, HIPAA, DORA zones)</li>
+                    <li>Oversee ACL change governance & policy-as-code adoption</li>
+                    <li>Monitor ACL hits, anomalies & compliance violations</li>
+                    <li>Drive AI-assisted ACL optimization & automation</li>
+                    <li>Align ACLs with regulatory, ESG & business requirements</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>Cisco, Aruba, Juniper ACL & security configuration guides</li>
+                    <li>IEEE 802.1Q & ACL standards documentation</li>
+                    <li>CISA & NIST network access control best practices</li>
+                    <li>PCI-DSS, HIPAA, DORA ACL scoping requirements</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMDB - Configuration Management Database | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>CMDB</h1>
+            <p>Configuration Management Database – central repository for IT assets, configurations and relationships</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>The Configuration Management Database (CMDB) acts as the single source of truth for all configuration items (CIs) in the IT environment. It tracks hardware, software, cloud resources, services, applications, documentation, licenses, and — most importantly — the relationships and dependencies between them. A high-quality CMDB is essential for effective change impact analysis, rapid incident resolution, accurate problem management, reliable asset lifecycle tracking, license compliance, cost allocation, and regulatory audit readiness.</p>
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> A well-maintained CMDB significantly reduces risk during changes, shortens mean time to resolution (MTTR), improves service visibility, enables accurate dependency mapping, and supports stronger compliance & financial reporting.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Capabilities</h2>
+
+                <h3>Configuration Item (CI) Management</h3>
+                <ul>
+                    <li>Servers, storage, network devices, endpoints</li>
+                    <li>Applications, databases, middleware, operating systems</li>
+                    <li>Cloud resources (VMs, containers, PaaS services, subscriptions)</li>
+                    <li>Business services, technical services, SLAs</li>
+                    <li>Certificates, licenses, contracts, documentation</li>
+                </ul>
+
+                <h3>Relationship & Dependency Mapping</h3>
+                <ul>
+                    <li>Application → database → server → VM → cluster → datacenter</li>
+                    <li>Business service → supporting technical services → CIs</li>
+                    <li>Impact & root-cause visualization</li>
+                    <li>Upstream / downstream dependency views</li>
+                </ul>
+
+                <h3>Discovery & Reconciliation</h3>
+                <ul>
+                    <li>Automated discovery (agent-based, agentless, API-based)</li>
+                    <li>Duplicate detection, merging, normalization</li>
+                    <li>Scheduled & real-time reconciliation rules</li>
+                    <li>Federated CMDB capabilities</li>
+                </ul>
+
+                <h3>Change & Impact Analysis</h3>
+                <ul>
+                    <li>Pre-change blast radius visualization</li>
+                    <li>Link changes, incidents, problems to affected CIs</li>
+                    <li>Baseline & historical configuration snapshots</li>
+                    <li>What-if analysis support</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Key Features of Modern Enterprise CMDBs</h2>
+
+                <h3>Integration & Data Sources</h3>
+                <ul>
+                    <li>Discovery tools: ServiceNow Discovery, SCCM/MECM, Tanium, Lansweeper</li>
+                    <li>Cloud-native: AWS Config, Azure Resource Graph, Google Cloud Asset Inventory</li>
+                    <li>Observability: Datadog, New Relic, Dynatrace, Splunk</li>
+                    <li>ITSM / change platforms: ServiceNow, Jira Service Management</li>
+                </ul>
+
+                <h3>Data Quality & Governance</h3>
+                <ul>
+                    <li>CI ownership & stewardship model</li>
+                    <li>Data certification workflows</li>
+                    <li>Audit trails and full change history</li>
+                    <li>CI lifecycle states (Proposed → Operational → Retired)</li>
+                    <li>Attribute validation & mandatory field rules</li>
+                </ul>
+
+                <h3>Visualization & Reporting</h3>
+                <ul>
+                    <li>Service & application dependency maps</li>
+                    <li>Impact analysis dashboards</li>
+                    <li>License compliance & cost allocation reports</li>
+                    <li>CMDB health & completeness metrics</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>CMDB Best Practices</h2>
+
+                <h3>Start with Business Value</h3>
+                <ul>
+                    <li>Begin with critical business services / applications</li>
+                    <li>Focus on relationships early — not just attributes</li>
+                    <li>Align scope with high-value use cases (change, incident, compliance)</li>
+                </ul>
+
+                <h3>Data Quality First</h3>
+                <ul>
+                    <li>Implement continuous automated reconciliation</li>
+                    <li>Assign data stewards / owners per CI class</li>
+                    <li>Measure & publish data accuracy & completeness KPIs</li>
+                    <li>Use normalization & deduplication aggressively</li>
+                </ul>
+
+                <h3>Process Integration</h3>
+                <ul>
+                    <li>Enforce CMDB updates in change, incident, request & problem workflows</li>
+                    <li>Require impact analysis referencing CMDB data</li>
+                    <li>Make CMDB part of CAB / emergency change review</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Typical Implementation Roadmap</h2>
+
+                <h3>Phase 1 – Foundation (0–6 months)</h3>
+                <ul>
+                    <li>Define CI classes, attributes & relationship model</li>
+                    <li>Deploy discovery & populate core infrastructure CIs</li>
+                    <li>Build initial service & application dependency maps</li>
+                    <li>Establish basic governance & ownership</li>
+                </ul>
+
+                <h3>Phase 2 – Value Realization (6–12 months)</h3>
+                <ul>
+                    <li>Integrate CMDB with Change, Incident & Problem processes</li>
+                    <li>Enable visual impact analysis in service desk & CAB</li>
+                    <li>Start license compliance & cost visibility reporting</li>
+                </ul>
+
+                <h3>Phase 3 – Advanced Maturity (12+ months)</h3>
+                <ul>
+                    <li>Full hybrid/multi-cloud discovery & federation</li>
+                    <li>Service portfolio & business service mapping</li>
+                    <li>Advanced analytics, AI-driven normalization & anomaly detection</li>
+                    <li>Continuous compliance & audit automation</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Define CMDB vision, scope and business justification</li>
+                    <li>Secure executive sponsorship and cross-functional commitment</li>
+                    <li>Approve CI model, governance framework & data ownership structure</li>
+                    <li>Ensure tight integration with core ITSM processes</li>
+                    <li>Monitor CMDB health, data quality & adoption KPIs</li>
+                    <li>Drive continuous improvement of accuracy and coverage</li>
+                    <li>Champion use of CMDB for risk reduction & compliance</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>ITIL 4 – Service Configuration Management practice</li>
+                    <li>COBIT DSS02 & BAI06 – related CMDB guidance</li>
+                    <li>ServiceNow CMDB Best Practices & Implementation Guide</li>
+                    <li>DevOps & SRE patterns for CMDB in cloud-native environments</li>
+                    <li>itSMF & HDI whitepapers on CMDB success factors</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active Directory - Windows Directory Service | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>Active Directory</h1>
+            <p>Microsoft directory service for identity and access management</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>Active Directory (AD) is Microsoft's directory service that provides centralized user authentication and authorization for Windows networks. AD has been the standard identity management system in enterprises for decades, storing user accounts, computer accounts, groups, and security policies. With cloud adoption, Azure AD (now Microsoft Entra ID) extends identity management to the cloud, but on-premises Active Directory remains critical for managing Windows workstations and servers. Active Directory is the foundation of security in Microsoft-centric IT environments.</p>
+                <div class="highlight-box">
+                    <strong>Critical Component:</strong> Active Directory is foundational to Microsoft infrastructure; compromising AD enables attackers to control the entire Windows environment.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Components</h2>
+
+                <h3>Domain Controller</h3>
+                <ul>
+                    <li>Runs Active Directory service</li>
+                    <li>Handles authentication and authorization</li>
+                    <li>Stores directory database</li>
+                    <li>Replicates to other domain controllers</li>
+                </ul>
+
+                <h3>Directory Database</h3>
+                <ul>
+                    <li>User accounts and passwords</li>
+                    <li>Computer accounts</li>
+                    <li>Groups and distribution lists</li>
+                    <li>Organizational units (OUs)</li>
+                </ul>
+
+                <h3>Group Policy</h3>
+                <ul>
+                    <li>Centralized policy management</li>
+                    <li>Computer and user policies</li>
+                    <li>Security policy enforcement</li>
+                    <li>Application deployment</li>
+                </ul>
+
+                <h3>Kerberos Authentication</h3>
+                <ul>
+                    <li>Secure authentication protocol</li>
+                    <li>Ticket-based system</li>
+                    <li>Mutual authentication</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Key Features</h2>
+
+                <h3>User Management</h3>
+                <ul>
+                    <li>Create and manage user accounts</li>
+                    <li>Password policies and expiration</li>
+                    <li>Account lockout policies</li>
+                    <li>Profile and home directory management</li>
+                </ul>
+
+                <h3>Computer Management</h3>
+                <ul>
+                    <li>Register and manage computers</li>
+                    <li>Group Policy application</li>
+                    <li>Remote Group Policy updates</li>
+                    <li>Computer certificate management</li>
+                </ul>
+
+                <h3>Group Management</h3>
+                <ul>
+                    <li>Security groups for access control</li>
+                    <li>Distribution groups for email</li>
+                    <li>Group nesting</li>
+                    <li>Dynamic group membership</li>
+                </ul>
+
+                <h3>Organizational Units (OUs)</h3>
+                <ul>
+                    <li>Hierarchy for organizing objects</li>
+                    <li>Group Policy scope</li>
+                    <li>Delegation of administration</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Active Directory Security</h2>
+
+                <h3>Authentication</h3>
+                <ul>
+                    <li>Kerberos protocol</li>
+                    <li>Password security</li>
+                    <li>Credential caching</li>
+                    <li>Multi-factor authentication integration</li>
+                </ul>
+
+                <h3>Authorization</h3>
+                <ul>
+                    <li>Access control lists (ACLs)</li>
+                    <li>Permissions on resources</li>
+                    <li>Delegation of rights</li>
+                </ul>
+
+                <h3>Security Best Practices</h3>
+                <ul>
+                    <li>Multiple domain controllers for resilience</li>
+                    <li>Regular AD backups</li>
+                    <li>Monitor for unauthorized changes</li>
+                    <li>Privileged Access Management (PAM)</li>
+                    <li>Periodic access reviews</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Active Directory Threats</h2>
+
+                <h3>Common Attacks</h3>
+                <ul>
+                    <li>Pass-the-hash attacks</li>
+                    <li>Kerberoasting</li>
+                    <li>Golden ticket attacks</li>
+                    <li>Lateral movement through AD</li>
+                </ul>
+
+                <h3>Defense Strategies</h3>
+                <ul>
+                    <li>Credential Guard on Windows 10+</li>
+                    <li>Privileged Access Workstations</li>
+                    <li>Constrained delegation</li>
+                    <li>AD hardening tools</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Hybrid Identity with Azure AD</h2>
+
+                <h3>Azure AD Connect</h3>
+                <ul>
+                    <li>Synchronize on-premises AD to Azure AD</li>
+                    <li>Hybrid identity model</li>
+                    <li>Password hash sync or pass-through auth</li>
+                </ul>
+
+                <h3>Hybrid Environment Benefits                <ul>
+                    <li>On-premises AD for Windows</li>
+                    <li>Azure AD for cloud applications</li>
+                    <li>Seamless user experience</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Maintenance and Operations</h2>
+
+                <h3>Regular Tasks</h3>
+                <ul>
+                    <li>Monitor domain controller health</li>
+                    <li>Manage replication between domain controllers</li>
+                    <li>Backup AD database</li>
+                    <li>Update Group Policies</li>
+                </ul>
+
+                <h3>Planning and Capacity</h3>
+                <ul>
+                    <li>Plan for domain controller distribution</li>
+                    <li>Monitor database size</li>
+                    <li>Plan for growth</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Design Active Directory structure</li>
+                    <li>Establish domain and OU hierarchy</li>
+                    <li>Deploy domain controllers</li>
+                    <li>Implement Group Policy</li>
+                    <li>Manage user and computer accounts</li>
+                    <li>Ensure AD security and compliance</li>
+                    <li>Plan hybrid identity strategy</li>
+                    <li>Monitor and maintain AD health</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>Microsoft Active Directory documentation</li>
+                    <li>AD design best practices</li>
+                    <li>Security hardening guides</li>
+                    <li>Azure AD Connect documentation</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

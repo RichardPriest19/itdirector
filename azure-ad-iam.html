@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azure AD & Identity Management - Authentication & Authorization | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>Azure AD & Identity Access Management (IAM)</h1>
+            <p>Cloud identity platform for authentication, authorization, and access management</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>Azure Active Directory (Azure AD, now Microsoft Entra ID) is Microsoft's cloud-based identity and access management platform. It provides authentication (verifying who you are) and authorization (what you can access) for cloud and hybrid environments. Azure AD has become the foundation of modern identity management, enabling single sign-on (SSO), multi-factor authentication (MFA), and conditional access across cloud and on-premises systems. Strong identity management is critical for security, compliance, and user productivity in modern organizations.</p>
+                <div class="highlight-box">
+                    <strong>Key Principle:</strong> Identity is the new security perimeter. Azure AD ensures only authenticated and authorized users access organizational resources.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core IAM Concepts</h2>
+
+                <h3>Authentication vs Authorization</h3>
+                <ul>
+                    <li><strong>Authentication:</strong> Verify user identity (who are you?)</li>
+                    <li><strong>Authorization:</strong> Determine what user can access (what can you do?)</li>
+                    <li>Both required for secure access control</li>
+                </ul>
+
+                <h3>Key IAM Functions</h3>
+                <ul>
+                    <li><strong>Identity Management:</strong> Create, update, delete user accounts</li>
+                    <li><strong>Access Management:</strong> Grant/revoke permissions</li>
+                    <li><strong>Authentication:</strong> Verify user credentials</li>
+                    <li><strong>Authorization:</strong> Control resource access</li>
+                    <li><strong>Governance:</strong> Audit and compliance</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Azure AD Capabilities</h2>
+
+                <h3>User and Group Management</h3>
+                <ul>
+                    <li>Create and manage user accounts</li>
+                    <li>Bulk import from on-premises AD</li>
+                    <li>Create groups for access control</li>
+                    <li>Dynamic groups based on rules</li>
+                    <li>Guest user management</li>
+                </ul>
+
+                <h3>Single Sign-On (SSO)</h3>
+                <ul>
+                    <li>One login for all cloud applications</li>
+                    <li>Pre-integrated with 1000+ SaaS apps</li>
+                    <li>SAML and OpenID Connect support</li>
+                    <li>Seamless user experience</li>
+                </ul>
+
+                <h3>Multi-Factor Authentication (MFA)</h3>
+                <ul>
+                    <li>Multiple authentication methods (phone, app, email)</li>
+                    <li>Conditional MFA based on risk</li>
+                    <li>Mobile app and Windows Hello</li>
+                    <li>Enhanced security for sensitive accounts</li>
+                </ul>
+
+                <h3>Conditional Access</h3>
+                <ul>
+                    <li>Policies based on user, location, device</li>
+                    <li>Risk-based access decisions</li>
+                    <li>Examples: Require MFA from untrusted networks</li>
+                    <li>Prevent access from compromised devices</li>
+                </ul>
+
+                <h3>Application Management</h3>
+                <ul>
+                    <li>Manage access to SaaS applications</li>
+                    <li>Configure single sign-on for apps</li>
+                    <li>Provision and deprovision users</li>
+                    <li>Control app-level permissions</li>
+                </ul>
+
+                <h3>Hybrid Identity</h3>
+                <ul>
+                    <li>Connect on-premises AD to Azure AD</li>
+                    <li>Directory synchronization (Azure AD Connect)</li>
+                    <li>Seamless user experience across cloud and on-premises</li>
+                    <li>Gradual migration to cloud</li>
+                </ul>
+
+                <h3>Privileged Access Management (PAM)</h3>
+                <ul>
+                    <li>Protect high-privilege accounts</li>
+                    <li>Time-limited access requests</li>
+                    <li>Enhanced monitoring of privileged actions</li>
+                    <li>Just-in-time (JIT) access</li>
+                </ul>
+
+                <h3>Identity Governance</h3>
+                <ul>
+                    <li>Access reviews and certifications</li>
+                    <li>Entitlement management</li>
+                    <li>Removal of orphaned accounts</li>
+                    <li>Audit trail and compliance reporting</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Azure AD Deployment Scenarios</h2>
+
+                <h3>Cloud-Only Identity</h3>
+                <ul>
+                    <li>All users in Azure AD only</li>
+                    <li>No on-premises Active Directory</li>
+                    <li>Simpler architecture</li>
+                    <li>Good for cloud-native organizations</li>
+                </ul>
+
+                <h3>Hybrid Identity</h3>
+                <ul>
+                    <li>Synchronize on-premises AD to Azure AD</li>
+                    <li>Users managed in one location</li>
+                    <li>Transitional approach during migration</li>
+                    <li>Maintains on-premises for legacy apps</li>
+                </ul>
+
+                <h3>Cloud Plus Federated</h3>
+                <ul>
+                    <li>Azure AD with federated identity providers</li>
+                    <li>Support for external identity providers</li>
+                    <li>Partner and customer collaboration</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Implementing Strong Identity</h2>
+
+                <h3>Best Practices</h3>
+                <ul>
+                    <li>Enable MFA for all users</li>
+                    <li>Implement conditional access policies</li>
+                    <li>Regular access reviews (at least annually)</li>
+                    <li>Remove unnecessary access promptly</li>
+                    <li>Audit and monitor identity activities</li>
+                    <li>Enforce strong password policies</li>
+                    <li>Monitor and block suspicious activities</li>
+                </ul>
+
+                <h3>Zero Trust Security</h3>
+                <ul>
+                    <li>Never trust, always verify</li>
+                    <li>Every access request authenticated and authorized</li>
+                    <li>Least privilege access</li>
+                    <li>Continuous monitoring and validation</li>
+                    <li>Azure AD is foundation for zero trust</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Compliance and Governance</h2>
+
+                <h3>Access Reviews</h3>
+                <ul>
+                    <li>Regular review of user access</li>
+                    <li>Resource owners certify continued need</li>
+                    <li>Automated removal of stale access</li>
+                    <li>Compliance documentation</li>
+                </ul>
+
+                <h3>Audit and Reporting</h3>
+                <ul>
+                    <li>Detailed audit logs of identity activities</li>
+                    <li>Sign-in analytics and risk detection</li>
+                    <li>Compliance reports for regulations</li>
+                    <li>Investigation of suspicious activities</li>
+                </ul>
+
+                <h3>Regulatory Support</h3>
+                <ul>
+                    <li>GDPR compliance features</li>
+                    <li>Audit trail for compliance</li>
+                    <li>User access management documentation</li>
+                    <li>Encryption and data protection</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Plan Azure AD deployment and hybrid strategy</li>
+                    <li>Implement directory synchronization</li>
+                    <li>Configure authentication methods (MFA, passwordless)</li>
+                    <li>Establish conditional access policies</li>
+                    <li>Manage user provisioning and deprovisioning</li>
+                    <li>Implement application SSO</li>
+                    <li>Conduct regular access reviews</li>
+                    <li>Monitor identity and access metrics</li>
+                    <li>Ensure compliance with security policies</li>
+                    <li>Investigate and respond to identity threats</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>Azure AD official documentation</li>
+                    <li>Zero Trust security guidance</li>
+                    <li>Identity best practices</li>
+                    <li>Conditional access templates</li>
+                    <li>Training and certification programs</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
