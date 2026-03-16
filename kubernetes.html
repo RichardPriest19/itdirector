@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kubernetes - Container Orchestration | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>Kubernetes</h1>
+            <p>Kubernetes – open-source container orchestration platform for automating deployment, scaling & management</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>Kubernetes (K8s) is the open-source container orchestration platform originally developed by Google and now maintained by the Cloud Native Computing Foundation (CNCF). In March 2026, Kubernetes remains the de facto industry standard for running production containerized workloads at scale — supporting microservices, stateless & stateful applications, batch jobs, machine learning, generative AI, edge computing, and hybrid/multi-cloud deployments. Key 2026 ecosystem highlights include **Kubernetes 1.32+** maturity, **sidecar containers** as standard pattern, **Gateway API** dominance for ingress/service mesh, **eBPF-powered networking & security** (Cilium, eBPF observability), **AI/ML acceleration** (Kubeflow, KServe, NVIDIA GPU operator), **GitOps** as the primary delivery model (ArgoCD, Flux), **multi-cluster & hybrid management** (Karmada, Cluster API), **zero-trust networking** maturity, and **sustainability-aware scheduling** (carbon-aware node selection).</p>
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> Kubernetes delivers automated, resilient, scalable, and portable container orchestration — enabling consistent deployment across clouds & on-prem, self-healing workloads, declarative GitOps workflows, fine-grained security & networking, and — with eBPF, AI/ML support & multi-cluster tools — powering modern cloud-native, AI-driven, and hybrid applications at enterprise scale.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Concepts & Components (2026)</h2>
+
+                <h3>Workloads & Controllers</h3>
+                <ul>
+                    <li>Pods, Deployments, StatefulSets, DaemonSets, Jobs/CronJobs</li>
+                    <li>Sidecar containers & init containers</li>
+                    <li>Horizontal Pod Autoscaler (HPA) & Vertical Pod Autoscaler (VPA)</li>
+                </ul>
+
+                <h3>Networking & Service Discovery</h3>
+                <ul>
+                    <li>Gateway API – ingress, service mesh, traffic splitting</li>
+                    <li>Service & Ingress resources</li>
+                    <li>eBPF-based CNI (Cilium, Calico, Multus)</li>
+                </ul>
+
+                <h3>Security & Policy</h3>
+                <ul>
+                    <li>Pod Security Admission & Pod Security Policies (deprecated)</li>
+                    <li>Network Policies & eBPF security (Cilium Network Policy)</li>
+                    <li>RBAC, ServiceAccount, IRSA / Workload Identity</li>
+                </ul>
+
+                <h3>Observability & Management</h3>
+                <ul>
+                    <li>OpenTelemetry-native metrics, logs, traces</li>
+                    <li>Prometheus, Grafana, Loki, Tempo integration</li>
+                    <li>Cluster API & multi-cluster federation (Karmada)</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Key Trends & Best Practices in 2026</h2>
+
+                <h3>AI/ML & GPU Workloads</h3>
+                <ul>
+                    <li>Kubeflow, KServe, NVIDIA GPU operator maturity</li>
+                    <li>Vector database & RAG pipelines on Kubernetes</li>
+                    <li>AI scheduling & resource quotas</li>
+                </ul>
+
+                <h3>GitOps & Progressive Delivery</h3>
+                <ul>
+                    <li>GitOps as the standard CD pattern (ArgoCD, Flux)</li>
+                    <li>Canary/blue-green/feature-flag rollouts</li>
+                    <li>Automated rollback & health checks</li>
+                </ul>
+
+                <h3>Zero Trust & Sustainability</h3>
+                <ul>
+                    <li>eBPF-based zero-trust networking (Cilium)</li>
+                    <li>Carbon-aware scheduling & energy-efficient nodes</li>
+                    <li>Policy as code (Kyverno, OPA Gatekeeper)</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Best Practices for Kubernetes Adoption (2026)</h2>
+
+                <h3>Cluster Design</h3>
+                <ul>
+                    <li>Use managed Kubernetes (EKS, AKS, GKE) for production</li>
+                    <li>Adopt multi-cluster & hybrid patterns</li>
+                    <li>Enable Gateway API & eBPF CNI</li>
+                </ul>
+
+                <h3>Security & Governance</h3>
+                <ul>
+                    <li>Enforce Pod Security Admission & network policies</li>
+                    <li>Use workload identity & least-privilege RBAC</li>
+                    <li>Implement policy as code & image scanning</li>
+                </ul>
+
+                <h3>Operations & Observability</h3>
+                <ul>
+                    <li>GitOps with ArgoCD/Flux for declarative management</li>
+                    <li>OpenTelemetry for unified observability</li>
+                    <li>Monitor DORA metrics, SLOs & cluster health</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Define Kubernetes strategy for cloud-native & multi-cloud</li>
+                    <li>Approve zero-trust & policy-as-code governance</li>
+                    <li>Ensure AI/ML workload support & GitOps maturity</li>
+                    <li>Oversee cluster security posture & compliance</li>
+                    <li>Monitor DORA metrics, cost & developer adoption</li>
+                    <li>Drive OpenTelemetry & eBPF observability adoption</li>
+                    <li>Align Kubernetes with sustainability & regulatory requirements</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>kubernetes.io – official Kubernetes documentation</li>
+                    <li>CNCF projects: ArgoCD, Flux, Cilium, Gateway API</li>
+                    <li>Kubernetes Well-Architected Frameworks (AWS, Azure, Google)</li>
+                    <li>Gartner & Forrester Container & Kubernetes reports 2025–2026</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

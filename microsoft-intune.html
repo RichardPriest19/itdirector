@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsoft Intune - Mobile Device Management | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>Microsoft Intune</h1>
+            <p>Cloud-based device and application management for modern mobile-first workplace</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>Microsoft Intune is a cloud-based mobile device management (MDM) and mobile application management (MAM) solution that enables organizations to manage and secure devices and applications across the organization. Intune allows IT administrators to manage Windows, macOS, iOS, and Android devices; control application deployment; enforce compliance policies; and protect corporate data on personal and company-owned devices. In the modern workplace with remote work and BYOD (Bring Your Own Device), Intune has become essential for managing the expanding device ecosystem while maintaining security and compliance. Intune integrates seamlessly with Azure AD and Microsoft 365 to provide unified identity and device management.</p>
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> Intune enables secure management of any device, anywhere, enforcing corporate policies while supporting employee flexibility and productivity in a mobile-first world.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Intune Capabilities</h2>
+
+                <h3>Mobile Device Management (MDM)</h3>
+                <ul>
+                    <li>Enroll and manage devices (Windows, Mac, iOS, Android)</li>
+                    <li>Apply security policies and configurations</li>
+                    <li>Remote management and troubleshooting</li>
+                    <li>Device compliance monitoring</li>
+                    <li>Remote wipe and retirement</li>
+                </ul>
+
+                <h3>Mobile Application Management (MAM)</h3>
+                <ul>
+                    <li>Manage applications on devices</li>
+                    <li>Deploy and update applications</li>
+                    <li>Protect corporate data in apps (without managing device)</li>
+                    <li>Conditional access to applications</li>
+                    <li>App-based data loss prevention</li>
+                </ul>
+
+                <h3>Device Configuration</h3>
+                <ul>
+                    <li>Configuration profiles for settings and policies</li>
+                    <li>Device compliance policies</li>
+                    <li>Conditional access rules</li>
+                    <li>RBAC (Role-Based Access Control) for device management</li>
+                    <li>PowerShell scripting for advanced configuration</li>
+                </ul>
+
+                <h3>Security and Compliance</h3>
+                <ul>
+                    <li>Enforce password requirements</li>
+                    <li>Require encryption on devices</li>
+                    <li>Configure firewall and antivirus</li>
+                    <li>Monitor compliance status</li>
+                    <li>Data Loss Prevention (DLP)</li>
+                    <li>Threat defense and monitoring</li>
+                </ul>
+
+                <h3>Application Deployment</h3>
+                <ul>
+                    <li>Deploy Microsoft 365 apps</li>
+                    <li>Deploy line-of-business applications</li>
+                    <li>Deploy web apps and links</li>
+                    <li>App assignment and targeting</li>
+                    <li>Version management and updates</li>
+                </ul>
+
+                <h3>Endpoint Analytics</h3>
+                <ul>
+                    <li>Device health insights</li>
+                    <li>Application performance monitoring</li>
+                    <li>Boot performance analysis</li>
+                    <li>Recommended actions for optimization</li>
+                    <li>Proactive remediation</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Device Management Scenarios</h2>
+
+                <h3>Corporate-Owned Devices</h3>
+                <ul>
+                    <li>Full device management</li>
+                    <li>Company owns and controls device</li>
+                    <li>Apply all security policies</li>
+                    <li>Wipe and retire when no longer needed</li>
+                    <li>Best for sensitive roles (executives, finance)</li>
+                </ul>
+
+                <h3>Bring Your Own Device (BYOD)</h3>
+                <ul>
+                    <li>Employee owns personal device</li>
+                    <li>Intune manages corporate data only</li>
+                    <li>Limited device management</li>
+                    <li>Application-level security (MAM)</li>
+                    <li>Respect employee privacy</li>
+                </ul>
+
+                <h3>Shared Company Devices</h3>
+                <ul>
+                    <li>Devices shared among multiple employees</li>
+                    <li>Kiosk mode for limited functionality</li>
+                    <li>User-centric policies</li>
+                    <li>Guest accounts and temporary access</li>
+                </ul>
+
+                <h3>Hybrid/Co-Managed Devices</h3>
+                <ul>
+                    <li>Configuration Manager and Intune together</li>
+                    <li>Transition from on-premises to cloud</li>
+                    <li>Leverage both tools' capabilities</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Device Enrollment Methods</h2>
+
+                <h3>User Self-Enrollment</h3>
+                <ul>
+                    <li>Users enroll their own devices</li>
+                    <li>Portal or Company Portal app</li>
+                    <li>Simple and user-friendly</li>
+                    <li>Best for BYOD scenarios</li>
+                </ul>
+
+                <h3>Administrator-Initiated Enrollment</h3>
+                <ul>
+                    <li>IT provisions and enroll devices</li>
+                    <li>Device Enrollment Manager</li>
+                    <li>Bulk enrollment methods</li>
+                    <li>Best for corporate devices</li>
+                </ul>
+
+                <h3>Automated Enrollment</h3>
+                <ul>
+                    <li>Windows Autopilot for Windows devices</li>
+                    <li>Automated setup and enrollment</li>
+                    <li>Zero-touch deployment</li>
+                    <li>Pre-configured with policies</li>
+                </ul>
+
+                <h3>Enrollment Restrictions</h3>
+                <ul>
+                    <li>Allow/block device platforms</li>
+                    <li>BYOD restrictions by device type</li>
+                    <li>Enrollment limits per user</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Compliance and Conditional Access</h2>
+
+                <h3>Device Compliance Policies</h3>
+                <ul>
+                    <li>Password requirements (length, complexity)</li>
+                    <li>Encryption requirements</li>
+                    <li>Minimum OS version</li>
+                    <li>Threat defense levels</li>
+                    <li>Device security settings</li>
+                </ul>
+
+                <h3>Non-Compliance Remediation</h3>
+                <ul>
+                    <li>Notification to user</li>
+                    <li>Grace period to remediate</li>
+                    <li>Block access if not remediated</li>
+                    <li>Retire device if necessary</li>
+                </ul>
+
+                <h3>Conditional Access Integration</h3>
+                <ul>
+                    <li>Require compliant devices for access</li>
+                    <li>Block access from non-compliant devices</li>
+                    <li>Require approved apps</li>
+                    <li>Risk-based access decisions</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Application Management</h2>
+
+                <h3>Application Types Supported</h3>
+                <ul>
+                    <li>Microsoft Office applications</li>
+                    <li>Microsoft 365 apps</li>
+                    <li>Line-of-business applications</li>
+                    <li>Web applications and links</li>
+                    <li>Third-party applications</li>
+                    <li>Store apps (App Store, Google Play, Microsoft Store)</li>
+                </ul>
+
+                <h3>Application Protection Policies</h3>
+                <ul>
+                    <li>Encrypt data in applications</li>
+                    <li>Prevent copy/paste of corporate data</li>
+                    <li>Prevent screenshots</li>
+                    <li>Require PIN for app access</li>
+                    <li>Wipe app data on non-compliance</li>
+                </ul>
+
+                <h3>Application Assignment</h3>
+                <ul>
+                    <li>Required applications (automatic install)</li>
+                    <li>Available applications (user selects)</li>
+                    <li>Uninstall applications</li>
+                    <li>Group and user targeting</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Intune for Windows 10/11</h2>
+
+                <h3>Windows Autopilot</h3>
+                <ul>
+                    <li>Zero-touch device setup</li>
+                    <li>Automatic enrollment and configuration</li>
+                    <li>Pre-load applications and settings</li>
+                    <li>Reduces IT overhead</li>
+                    <li>Improved user experience</li>
+                </ul>
+
+                <h3>Windows Configuration Management</h3>
+                <ul>
+                    <li>Device settings and policies</li>
+                    <li>BitLocker encryption</li>
+                    <li>Windows Defender configuration</li>
+                    <li>Firewall and VPN</li>
+                    <li>Updates and patches</li>
+                </ul>
+
+                <h3>Co-Management</h3>
+                <ul>
+                    <li>Configuration Manager and Intune together</li>
+                    <li>Transition from on-premises to cloud</li>
+                    <li>Gradual migration capability</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Intune for macOS</h2>
+
+                <h3>Mac Device Management</h3>
+                <ul>
+                    <li>Enroll corporate and personal Macs</li>
+                    <li>Configure system settings</li>
+                    <li>Deploy applications</li>
+                    <li>Enforce compliance policies</li>
+                    <li>Endpoint security</li>
+                </ul>
+
+                <h3>Jamf Integration</h3>
+                <ul>
+                    <li>Intune and Jamf together for Mac management</li>
+                    <li>Leverage best of both platforms</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Intune for Mobile (iOS/Android)</h2>
+
+                <h3>Device Management</h3>
+                <ul>
+                    <li>Enroll iOS and Android devices</li>
+                    <li>Configure device settings</li>
+                    <li>Enforce passcode requirements</li>
+                    <li>Deploy certificates</li>
+                    <li>VPN configuration</li>
+                </ul>
+
+                <h3>Mobile Application Management</h3>
+                <ul>
+                    <li>Manage corporate apps on personal devices</li>
+                    <li>Protect data at app level</li>
+                    <li>Selective wipe of corporate data</li>
+                    <li>Application data encryption</li>
+                </ul>
+
+                <h3>Mobile Threat Defense</h3>
+                <ul>
+                    <li>Detect malware and threats</li>
+                    <li>Block risky apps</li>
+                    <li>Monitor device security</li>
+                    <li>Integration with third-party MTD providers</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Implementation and Deployment</h2>
+
+                <h3>Planning Phase</h3>
+                <ul>
+                    <li>Assess current device ecosystem</li>
+                    <li>Define enrollment strategy</li>
+                    <li>Identify compliance requirements</li>
+                    <li>Plan application deployment</li>
+                    <li>Establish governance model</li>
+                </ul>
+
+                <h3>Pilot Program</h3>
+                <ul>
+                    <li>Start with small group (IT team)</li>
+                    <li>Test enrollment and policies</li>
+                    <li>Validate application deployment</li>
+                    <li>Gather feedback and adjust</li>
+                </ul>
+
+                <h3>Rollout Strategy</h3>
+                <ul>
+                    <li>Phased enrollment by department or device type</li>
+                    <li>Provide user training and support</li>
+                    <li>Monitor adoption metrics</li>
+                    <li>Expand gradually</li>
+                </ul>
+
+                <h3>Change Management</h3>
+                <ul>
+                    <li>Communicate benefits clearly</li>
+                    <li>Provide training and documentation</li>
+                    <li>Address user concerns</li>
+                    <li>Support users throughout transition</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Security Considerations</h2>
+
+                <h3>Data Protection</h3>
+                <ul>
+                    <li>Encrypt data in transit and at rest</li>
+                    <li>Application-level protection (MAM)</li>
+                    <li>Data Loss Prevention policies</li>
+                    <li>Selective wipe capability</li>
+                </ul>
+
+                <h3>Access Control</h3>
+                <ul>
+                    <li>Multi-factor authentication required</li>
+                    <li>Conditional access rules</li>
+                    <li>Device compliance requirements</li>
+                    <li>User and admin role separation</li>
+                </ul>
+
+                <h3>Compliance and Reporting</h3>
+                <ul>
+                    <li>Device compliance dashboards</li>
+                    <li>Non-compliance reports</li>
+                    <li>Audit logs for all actions</li>
+                    <li>Regulatory compliance support</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Integration with Microsoft 365</h2>
+
+                <h3>Azure AD Integration</h3>
+                <ul>
+                    <li>Device identity and authentication</li>
+                    <li>Conditional access policies</li>
+                    <li>Hybrid Azure AD join</li>
+                </ul>
+
+                <h3>Microsoft 365 Integration</h3>
+                <ul>
+                    <li>Deploy Office apps</li>
+                    <li>Manage mailbox access</li>
+                    <li>SharePoint and OneDrive protection</li>
+                    <li>Teams collaboration</li>
+                </ul>
+
+                <h3>Microsoft Defender Integration</h3>
+                <ul>
+                    <li>Threat detection on devices</li>
+                    <li>Vulnerability management</li>
+                    <li>Threat analytics</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Common Use Cases</h2>
+
+                <h3>BYOD Program</h3>
+                <ul>
+                    <li>Manage corporate data on personal devices</li>
+                    <li>Application-level protection</li>
+                    <li>Flexible work enablement</li>
+                </ul>
+
+                <h3>Remote Work Enablement</h3>
+                <ul>
+                    <li>Secure device management from anywhere</li>
+                    <li>VPN and network access control</li>
+                    <li>Compliance verification</li>
+                </ul>
+
+                <h3>Kiosk and Shared Devices</h3>
+                <ul>
+                    <li>Limited functionality devices</li>
+                    <li>Retail or manufacturing environments</li>
+                    <li>Device sharing among workers</li>
+                </ul>
+
+                <h3>Healthcare and Regulated Industries</h3>
+                <ul>
+                    <li>HIPAA compliance</li>
+                    <li>Mobile device security</li>
+                    <li>Data protection requirements</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Define device management strategy</li>
+                    <li>Plan Intune deployment and rollout</li>
+                    <li>Design enrollment processes</li>
+                    <li>Establish security and compliance policies</li>
+                    <li>Plan application deployment</li>
+                    <li>Implement conditional access</li>
+                    <li>Monitor device compliance and health</li>
+                    <li>Manage user support and training</li>
+                    <li>Ensure regulatory compliance</li>
+                    <li>Measure adoption and success metrics</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>Microsoft Intune official documentation</li>
+                    <li>Deployment guides and best practices</li>
+                    <li>Windows Autopilot documentation</li>
+                    <li>Compliance and security guides</li>
+                    <li>Training and certification programs</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

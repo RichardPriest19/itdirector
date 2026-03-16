@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Least Privilege Access - Principle of Least Privilege | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>Least Privilege Access</h1>
+            <p>Principle of Least Privilege (PoLP) – granting users, processes, and systems only the minimum access required to perform their tasks</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>The Principle of Least Privilege (PoLP) is a foundational security concept requiring that any user, account, process, application, or device is granted only the minimum permissions necessary to complete its authorized tasks — and no more. In March 2026, PoLP is a core pillar of Zero Trust architectures, identity governance, privileged access management (PAM), and compliance frameworks (NIST, ISO 27001, CIS Controls, PCI-DSS, GDPR). Modern implementations extend beyond human users to non-human identities (service accounts, workloads, APIs, AI agents), enforce just-in-time (JIT) and zero-standing privileges, and leverage automation to prevent privilege creep and reduce blast radius in case of compromise.</p>
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> Least privilege dramatically shrinks the attack surface, limits lateral movement by attackers, reduces insider threat impact, simplifies compliance audits, and is essential for achieving mature Zero Trust posture.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Capabilities & Scope (2026)</h2>
+
+                <h3>Human Identities</h3>
+                <ul>
+                    <li>Role-based access control (RBAC) & attribute-based access control (ABAC)</li>
+                    <li>Just-in-time elevation (PIM in Microsoft Entra, Okta Privileged Access)</li>
+                    <li>Zero-standing admin rights (remove local admin from endpoints)</li>
+                </ul>
+
+                <h3>Non-Human Identities</h3>
+                <ul>
+                    <li>Service accounts, API keys, workloads (Kubernetes pods, Lambda functions)</li>
+                    <li>Machine identity management & short-lived credentials</li>
+                    <li>Secrets rotation & vaulting (HashiCorp Vault, AWS Secrets Manager)</li>
+                </ul>
+
+                <h3>Application & Process Level</h3>
+                <ul>
+                    <li>Application sandboxing & container least privilege</li>
+                    <li>Database role minimization & query scoping</li>
+                    <li>Network least privilege (micro-segmentation, ZTNA)</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Key Features & Practices in 2026</h2>
+
+                <h3>Automation & Enforcement</h3>
+                <ul>
+                    <li>Identity governance platforms (SailPoint, Saviynt, Okta Identity Governance)</li>
+                    <li>Continuous access reviews & auto-revocation</li>
+                    <li>AI-driven anomaly detection for privilege misuse</li>
+                </ul>
+
+                <h3>Zero Trust Integration</h3>
+                <ul>
+                    <li>Continuous verification + least privilege (NIST 800-207, ZTNA 2.0)</li>
+                    <li>Policy-based dynamic access (BeyondTrust, CyberArk, Delinea)</li>
+                    <li>Device posture & context-aware decisions</li>
+                </ul>
+
+                <h3>Compliance & Auditing</h3>
+                <ul>
+                    <li>Automated evidence collection for SOX, PCI, ISO 27001, NIST</li>
+                    <li>Full audit trails & session recording for privileged actions</li>
+                    <li>Immutable logs & tamper-proof reporting</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Best Practices for Enterprise Implementation</h2>
+
+                <h3>Start Strong</h3>
+                <ul>
+                    <li>Make least privilege the default for all new accounts & workloads</li>
+                    <li>Conduct privilege discovery & clean-up (remove standing admin rights)</li>
+                    <li>Define granular roles using RBAC/ABAC frameworks</li>
+                </ul>
+
+                <h3>Maintain & Govern</h3>
+                <ul>
+                    <li>Implement quarterly access certification campaigns</li>
+                    <li>Use JIT & time-bound privileges for elevated tasks</li>
+                    <li>Automate deprovisioning on role change / termination</li>
+                </ul>
+
+                <h3>Extend to Modern Workloads</h3>
+                <ul>
+                    <li>Apply least privilege to cloud IAM, Kubernetes RBAC, CI/CD pipelines</li>
+                    <li>Enforce short-lived credentials & automatic rotation</li>
+                    <li>Monitor & alert on privilege escalation attempts</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Champion least privilege as a core Zero Trust pillar in security strategy</li>
+                    <li>Approve governance model, tools & policies for PoLP enforcement</li>
+                    <li>Ensure coverage across human, machine, and application identities</li>
+                    <li>Oversee regular privilege reviews, audits & compliance mapping</li>
+                    <li>Drive cultural adoption & training (no default admin rights)</li>
+                    <li>Monitor program maturity KPIs (e.g., % of accounts with standing privilege, average privilege age)</li>
+                    <li>Align investments with risk reduction & regulatory requirements</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>NIST SP 800-207 Zero Trust Architecture & SP 800-53 controls</li>
+                    <li>CISA & NSA guidance on least privilege in Zero Trust (2025–2026 updates)</li>
+                    <li>Microsoft Entra ID Governance & Privileged Identity Management docs</li>
+                    <li>CyberArk, BeyondTrust, Okta, SailPoint least privilege whitepapers</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

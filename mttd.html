@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTTD - Mean Time to Detect | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>MTTD</h1>
+            <p>Mean Time to Detect – average time taken to identify a security incident or threat</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>Mean Time to Detect (MTTD) measures the average time between the start of a security incident (e.g., initial compromise, malware execution, data exfiltration) and the moment the organization first becomes aware of it. In March 2026, MTTD is one of the most critical security operations metrics — directly impacting breach damage, regulatory fines, and reputation. With the explosion of **AI-driven threat detection**, **cloud-native security tools**, **OpenTelemetry observability**, **XDR platforms**, **UEBA**, and **threat intelligence integration**, leading organizations are driving MTTD from days/weeks down to hours or even minutes on high-severity incidents. MTTD is widely tracked in SOCs, reported to boards/executives, and used to benchmark detection maturity against industry averages (MITRE, CISA, Ponemon, IBM Cost of a Data Breach reports).</p>
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> Lower MTTD dramatically reduces breach impact (dwell time = damage), enables faster containment, improves regulatory compliance posture, and demonstrates SOC effectiveness to leadership, auditors, and insurers — making it a top priority metric in modern security operations.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Measurement & Calculation (2026)</h2>
+
+                <h3>MTTD Formula</h3>
+                <ul>
+                    <li>MTTD = (Sum of detection times for all incidents) / (Number of incidents)</li>
+                    <li>Detection time = Time from initial compromise / malicious activity to first alert / human awareness</li>
+                    <li>Typically measured in hours or minutes for critical incidents</li>
+                </ul>
+
+                <h3>Common Detection Sources</h3>
+                <ul>
+                    <li>SIEM / XDR alerts</li>
+                    <li>EDR / endpoint telemetry</li>
+                    <li>Cloud security posture tools (CSPM, CWPP)</li>
+                    <li>Threat intelligence feeds & IOC matches</li>
+                    <li>User reports & honeypots</li>
+                </ul>
+
+                <h3>Segmentation</h3>
+                <ul>
+                    <li>MTTD by severity (critical vs low)</li>
+                    <li>MTTD by attack vector (phishing, ransomware, cloud compromise)</li>
+                    <li>MTTD by detection method (signature vs behavioral/AI)</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Key Trends & Improvement Levers in 2026</h2>
+
+                <h3>AI & Behavioral Detection</h3>
+                <ul>
+                    <li>AI/ML anomaly & UEBA driving sub-hour MTTD</li>
+                    <li>Predictive alerting & false-positive suppression</li>
+                    <li>Natural language querying of security events</li>
+                </ul>
+
+                <h3>Cloud-Native & Open Standards</h3>
+                <ul>
+                    <li>OpenTelemetry for unified telemetry ingestion</li>
+                    <li>Multi-cloud & SaaS log coverage</li>
+                    <li>Integration with XDR, SOAR & threat intel platforms</li>
+                </ul>
+
+                <h3>Business & Risk Context</h3>
+                <ul>
+                    <li>Service-aware detection (business impact scoring)</li>
+                    <li>MTTD benchmarks in cyber insurance underwriting</li>
+                    <li>Regulatory pressure (NIS2, DORA, SEC 4-hour reporting)</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Best Practices for MTTD Reduction (2026)</h2>
+
+                <h3>Visibility & Coverage</h3>
+                <ul>
+                    <li>Achieve 100% coverage of critical assets & logs</li>
+                    <li>Implement OpenTelemetry & cloud-native collectors</li>
+                    <li>Integrate SaaS, identity & endpoint telemetry</li>
+                </ul>
+
+                <h3>Detection Engineering</h3>
+                <ul>
+                    <li>Build & tune AI/behavioral detection rules</li>
+                    <li>Use threat hunting & red team simulations</li>
+                    <li>Leverage external threat intelligence feeds</li>
+                </ul>
+
+                <h3>Alert & Response Optimization</h3>
+                <ul>
+                    <li>Reduce false positives & alert fatigue</li>
+                    <li>Automate enrichment & initial triage (SOAR)</li>
+                    <li>Conduct regular MTTD drills & post-incident reviews</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director / CISO Responsibilities</h2>
+                <ul>
+                    <li>Champion MTTD as top SOC performance metric</li>
+                    <li>Approve detection coverage, tooling & AI strategy</li>
+                    <li>Ensure visibility across cloud, SaaS, identity & endpoints</li>
+                    <li>Oversee MTTD benchmarks, trend reduction & reporting</li>
+                    <li>Monitor regulatory exposure (NIS2/DORA/SEC 4-hour rules)</li>
+                    <li>Drive threat hunting & red team exercises</li>
+                    <li>Align MTTD goals with cyber insurance & risk posture</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>MITRE ATT&CK, CISA & NCSC detection guidance</li>
+                    <li>Microsoft Sentinel, Splunk, Elastic Security MTTD playbooks</li>
+                    <li>IBM Cost of a Data Breach Report 2025–2026</li>
+                    <li>Ponemon / IBM & SANS Institute SOC metrics studies</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

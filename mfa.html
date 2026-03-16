@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MFA - Multi-Factor Authentication | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>MFA</h1>
+            <p>Multi-Factor Authentication – requiring two or more verification factors to confirm user identity</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>Multi-Factor Authentication (MFA) requires users to present two or more independent verification factors (something you know, have, or are) before granting access. In March 2026, MFA has evolved from optional security hygiene to a mandatory Zero Trust control. The industry standard has shifted decisively toward **phishing-resistant** and **passwordless** MFA using passkeys (FIDO2/WebAuthn), hardware security keys, platform authenticators (Windows Hello, Apple Passkeys), and biometrics bound to devices. Legacy methods (SMS, TOTP apps) are increasingly deprecated or treated as phishing-vulnerable, with adaptive/risk-based MFA and continuous authentication signals becoming common in enterprise and customer-facing scenarios.</p>
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> Phishing-resistant MFA eliminates the vast majority of credential-based attacks, enables secure passwordless experiences, supports Zero Trust enforcement, and — when adaptive — balances strong security with minimal user friction.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Authentication Factors & Methods (2026)</h2>
+
+                <h3>Phishing-Resistant / Passwordless (Recommended)</h3>
+                <ul>
+                    <li>Passkeys (FIDO2/WebAuthn) – synced or device-bound</li>
+                    <li>Hardware security keys (YubiKey, Titan, Feitian)</li>
+                    <li>Platform authenticators (Windows Hello, Touch ID, Face ID)</li>
+                </ul>
+
+                <h3>Legacy / Vulnerable Methods (Phased Out)</h3>
+                <ul>
+                    <li>SMS / voice OTP – phishing-vulnerable, deprecated by many IdPs</li>
+                    <li>TOTP apps (Google Authenticator, Microsoft Authenticator codes)</li>
+                    <li>Email-based one-time codes</li>
+                </ul>
+
+                <h3>Adaptive & Contextual MFA</h3>
+                <ul>
+                    <li>Risk-based step-up (location, device posture, behavior anomalies)</li>
+                    <li>Continuous authentication signals (keystroke, mouse, session risk)</li>
+                    <li>Just-in-time re-authentication for high-risk actions</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Key Features & Trends in 2026</h2>
+
+                <h3>Passwordless & Passkey Dominance</h3>
+                <ul>
+                    <li>Passkeys as default for workforce & consumer apps</li>
+                    <li>Cross-device sync (iCloud Keychain, Google Password Manager)</li>
+                    <li>Fallback to hardware keys for high-security roles</li>
+                </ul>
+
+                <h3>Zero Trust & Risk Engine Integration</h3>
+                <ul>
+                    <li>Conditional Access / Adaptive MFA policies</li>
+                    <li>Device trust & endpoint posture checks</li>
+                    <li>Integration with SIEM & threat intelligence for real-time risk</li>
+                </ul>
+
+                <h3>Governance & Compliance</h3>
+                <ul>
+                    <li>Mandatory MFA coverage reporting</li>
+                    <li>Audit trails for MFA events & bypass attempts</li>
+                    <li>Support for NIST AAL2/AAL3, ISO 27001, PCI-DSS</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Best Practices for Enterprise MFA (2026)</h2>
+
+                <h3>Enforcement & Rollout</h3>
+                <ul>
+                    <li>Make phishing-resistant MFA mandatory for all users</li>
+                    <li>Phase out SMS/TOTP in favor of passkeys/hardware</li>
+                    <li>Use adaptive policies to minimize friction for low-risk scenarios</li>
+                </ul>
+
+                <h3>Security Hardening</h3>
+                <ul>
+                    <li>Require MFA for all privileged & sensitive actions</li>
+                    <li>Enable number-matching / push approval with risk signals</li>
+                    <li>Monitor for MFA fatigue & prompt bombing attacks</li>
+                </ul>
+
+                <h3>Ongoing Management</h3>
+                <ul>
+                    <li>Track MFA coverage, method distribution & bypass rates</li>
+                    <li>Conduct regular access reviews & emergency access planning</li>
+                    <li>Test recovery paths & backup authentication methods</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Define MFA strategy & roadmap to phishing-resistant / passwordless</li>
+                    <li>Approve enforcement policy & acceptable methods (passkeys priority)</li>
+                    <li>Ensure coverage across workforce, B2B, and customer-facing apps</li>
+                    <li>Oversee adaptive MFA & risk engine integration</li>
+                    <li>Monitor adoption, phishing attempt deflection & user experience KPIs</li>
+                    <li>Drive cultural shift away from passwords & legacy MFA</li>
+                    <li>Plan for MFA bypass recovery & emergency break-glass procedures</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>Microsoft Entra ID Conditional Access & MFA docs</li>
+                    <li>Okta Adaptive MFA & phishing-resistant guides</li>
+                    <li>FIDO Alliance & CISA MFA best practices (2025–2026)</li>
+                    <li>NIST SP 800-63B Digital Identity Guidelines</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
