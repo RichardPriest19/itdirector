@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISO 27001 - Information Security Management | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>ISO/IEC 27001 (Information Security Management System)</h1>
+            <p>International standard for implementing and managing information security</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>ISO/IEC 27001 is an international standard that specifies requirements for establishing, implementing, maintaining, and continually improving an Information Security Management System (ISMS). Published by the International Organization for Standardization (ISO) and the International Electrotechnical Commission (IEC), it provides a systematic, risk-based approach to managing sensitive company and customer information. Unlike frameworks like ITIL or NIST, ISO 27001 is a certifiable standard—organizations can achieve independent certification demonstrating their ISMS effectiveness to customers, regulators, and stakeholders.</p>
+                <div class="highlight-box">
+                    <strong>Key Advantage:</strong> ISO 27001 is certifiable. Organizations can achieve certification by demonstrating compliance through independent audits by accredited certification bodies, providing third-party credibility and assurance.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>ISO 27001 History and Evolution</h2>
+
+                <h3>ISO/IEC 27001:2005 (First Edition)</h3>
+                <p>First international standard for ISMS. Based on British Standard BS 7799-1 (now ISO 27002). Established 93 controls organized into 11 domains.</p>
+
+                <h3>ISO/IEC 27001:2013 (Second Edition)</h3>
+                <p>Major revision adopting common structure used across ISO management system standards. Reorganized controls into 14 domains with 114 controls. Addressed cloud computing and new technologies.</p>
+
+                <h3>ISO/IEC 27001:2022 (Third Edition - Current)</h3>
+                <p>Latest version with significant changes. Consolidated to 4 control groups with 93 controls. Increased emphasis on governance, cloud security, and supplier management. More flexible approach to control implementation.</p>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Components of ISO 27001</h2>
+
+                <h3>Information Security Management System (ISMS)</h3>
+                <p>A set of policies, procedures, processes, and systems for managing information security. Includes:</p>
+                <ul>
+                    <li>Organizational structure and governance</li>
+                    <li>Risk assessment and treatment</li>
+                    <li>Security policies and procedures</li>
+                    <li>Control selection and implementation</li>
+                    <li>Performance measurement and monitoring</li>
+                    <li>Continual improvement</li>
+                </ul>
+
+                <h3>Risk-Based Approach</h3>
+                <p>ISO 27001 requires organizations to identify, assess, and treat information security risks based on business impact and likelihood. Not a one-size-fits-all approach—controls are selected based on specific organizational risks.</p>
+
+                <h3>Plan-Do-Check-Act (PDCA) Cycle</h3>
+                <p>Organizational approach to implementing and improving ISMS:</p>
+                <ul>
+                    <li><strong>Plan:</strong> Establish ISMS policy, objectives, and processes</li>
+                    <li><strong>Do:</strong> Implement and operate ISMS processes</li>
+                    <li><strong>Check:</strong> Monitor, measure, and review ISMS</li>
+                    <li><strong>Act:</strong> Maintain and improve ISMS</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>ISO 27001:2022 Control Structure</h2>
+
+                <h3>Four Control Groups (Replacing 14 Domains)</h3>
+                <p>ISO 27001:2022 simplified control organization into 4 groups:</p>
+
+                <h3>A.5: Organizational Controls (23 controls)</h3>
+                <p>Governance and organizational-level security controls:</p>
+                <ul>
+                    <li>Information security policies</li>
+                    <li>Organizational structure and governance</li>
+                    <li>Role and responsibilities</li>
+                    <li>Authorization and responsibility</li>
+                    <li>Contacts and threat reporting</li>
+                    <li>Asset management</li>
+                    <li>Acceptable use of information assets</li>
+                    <li>Return of assets</li>
+                    <li>Classification of information</li>
+                    <li>Labeling of information</li>
+                    <li>Information transfer</li>
+                    <li>Access control and segregation</li>
+                    <li>Supplier security requirements</li>
+                </ul>
+
+                <h3>A.6: People Controls (8 controls)</h3>
+                <p>Controls focused on staff and personnel security:</p>
+                <ul>
+                    <li>Screening and selection</li>
+                    <li>Terms and conditions of employment</li>
+                    <li>Information security awareness and training</li>
+                    <li>Disciplinary process</li>
+                    <li>Responsibilities after termination or change</li>
+                    <li>Confidentiality or non-disclosure agreements</li>
+                    <li>Remote working</li>
+                    <li>Information security event reporting</li>
+                </ul>
+
+                <h3>A.7: Physical Controls (14 controls)</h3>
+                <p>Controls protecting physical security of facilities:</p>
+                <ul>
+                    <li>Physical security perimeter</li>
+                    <li>Physical entry</li>
+                    <li>Securing offices, rooms, and facilities</li>
+                    <li>Physical security monitoring</li>
+                    <li>Protecting against physical and environmental threats</li>
+                    <li>Working in secure areas</li>
+                    <li>Clear desk and clear screen</li>
+                    <li>Equipment siting and protection</li>
+                    <li>Security of assets off-premises</li>
+                    <li>Secure disposal</li>
+                    <li>Reuse of physical media</li>
+                </ul>
+
+                <h3>A.8: Technological Controls (32 controls)</h3>
+                <p>Technical security controls for systems and data:</p>
+                <ul>
+                    <li>User endpoint devices</li>
+                    <li>Privileged access rights</li>
+                    <li>Information access restriction</li>
+                    <li>Access to networks and network services</li>
+                    <li>Cryptography</li>
+                    <li>Physical and logical separation</li>
+                    <li>Configuration management</li>
+                    <li>Information deletion</li>
+                    <li>Data masking</li>
+                    <li>Data leakage prevention</li>
+                    <li>Monitoring</li>
+                    <li>Event logging</li>
+                    <li>Vulnerability management</li>
+                    <li>Functional testing</li>
+                    <li>Protection from malware</li>
+                    <li>Management of technical vulnerabilities</li>
+                    <li>Information systems audit logging and monitoring</li>
+                    <li>Installing, updating and removal of software</li>
+                    <li>Restrictions on software installation</li>
+                    <li>Information systems security testing</li>
+                    <li>Protected communications</li>
+                    <li>Exchange of information</li>
+                    <li>Network segregation</li>
+                    <li>Web filtering</li>
+                    <li>Use of cryptography</li>
+                    <li>Secure development policy</li>
+                    <li>Secure development environment</li>
+                    <li>Secure development, build and deployment</li>
+                    <li>Development, test and production environment separation</li>
+                    <li>Change control</li>
+                    <li>Information systems operation</li>
+                    <li>Protection of information systems test data</li>
+                    <li>Access control to program source code</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>ISO 27001 vs ISO 27002</h2>
+
+                <h3>ISO/IEC 27001</h3>
+                <ul>
+                    <li><strong>Purpose:</strong> Standard specifying requirements for ISMS</li>
+                    <li><strong>Certifiable:</strong> Yes—third-party certification available</li>
+                    <li><strong>Approach:</strong> Requirements-based (must/shall language)</li>
+                    <li><strong>Use:</strong> Organizations implementing certified ISMS</li>
+                    <li><strong>Focus:</strong> What must be done</li>
+                </ul>
+
+                <h3>ISO/IEC 27002</h3>
+                <ul>
+                    <li><strong>Purpose:</strong> Code of practice providing guidelines for ISMS controls</li>
+                    <li><strong>Certifiable:</strong> No—guidance document</li>
+                    <li><strong>Approach:</strong> Guidelines and recommendations</li>
+                    <li><strong>Use:</strong> Guidance on implementing 27001 controls and other security practices</li>
+                    <li><strong>Focus:</strong> How to implement controls effectively</li>
+                </ul>
+
+                <p>Most organizations use both: 27001 for requirements and certification, 27002 for implementation guidance.</p>
+            </div>
+
+            <div class="content-section">
+                <h2>ISO 27001 Certification Process</h2>
+
+                <h3>Stage 1: Planning and Documentation Review</h3>
+                <p>Auditor reviews organization's ISMS documentation:</p>
+                <ul>
+                    <li>Information security policy approval and alignment with business</li>
+                    <li>Scope definition and approval</li>
+                    <li>Risk assessment methodology and process</li>
+                    <li>Risk treatment plan and Statement of Applicability (SoA)</li>
+                    <li>Evidence of top management commitment</li>
+                    <li>Resource allocation and capability</li>
+                </ul>
+
+                <h3>Stage 2: Interim Audit (Optional but Recommended)</h3>
+                <p>Early audit to verify preparation and identify issues:</p>
+                <ul>
+                    <li>Verify ISMS documentation completeness</li>
+                    <li>Confirm management understanding and commitment</li>
+                    <li>Identify potential non-conformities early</li>
+                    <li>Allow time for remediation before final audit</li>
+                </ul>
+
+                <h3>Stage 3: Final Certification Audit</h3>
+                <p>Comprehensive audit of entire ISMS:</p>
+                <ul>
+                    <li>Verification of control implementation</li>
+                    <li>Assessment of operational effectiveness</li>
+                    <li>Review of supporting evidence and records</li>
+                    <li>Staff interviews and testing</li>
+                    <li>Assessment of compliance with standard requirements</li>
+                </ul>
+
+                <h3>Certification Outcome</h3>
+                <ul>
+                    <li><strong>Certification:</strong> Certificate issued for 3 years</li>
+                    <li><strong>Non-conformities:</strong> Must be resolved (major) or corrected (minor)</li>
+                    <li><strong>Observations:</strong> Recommendations for improvement</li>
+                </ul>
+
+                <h3>Ongoing: Surveillance Audits</h3>
+                <ul>
+                    <li>Conducted annually during 3-year certification period</li>
+                    <li>Verify continued compliance and effectiveness</li>
+                    <li>Review scope changes and new risks</li>
+                    <li>Monitor for ongoing conformance</li>
+                </ul>
+
+                <h3>Re-certification</h3>
+                <ul>
+                    <li>Full re-certification audit required every 3 years</li>
+                    <li>Similar process to initial certification</li>
+                    <li>Opportunity to refresh and improve ISMS</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>ISO 27001 Implementation Requirements</h2>
+
+                <h3>Information Security Policy</h3>
+                <p>Documented policy approved by senior management covering:</p>
+                <ul>
+                    <li>Information security objectives and scope</li>
+                    <li>Commitment to compliance with applicable requirements</li>
+                    <li>Responsibility assignments</li>
+                    <li>Requirements for achieving objectives</li>
+                </ul>
+
+                <h3>Risk Assessment and Treatment</h3>
+                <p>Systematic process for identifying and managing risks:</p>
+                <ul>
+                    <li>Define risk criteria (impact and likelihood)</li>
+                    <li>Identify information assets and threats</li>
+                    <li>Assess vulnerability and risk level</li>
+                    <li>Develop treatment plans (accept, reduce, avoid, transfer)</li>
+                    <li>Maintain documented risk register</li>
+                </ul>
+
+                <h3>Statement of Applicability (SoA)</h3>
+                <p>Document explaining:</p>
+                <ul>
+                    <li>Which ISO 27001 controls are applicable</li>
+                    <li>Which controls are not applicable and why</li>
+                    <li>Any additional controls implemented beyond standard</li>
+                    <li>Justification for each decision</li>
+                </ul>
+
+                <h3>Control Implementation</h3>
+                <p>Organizations must implement selected controls through:</p>
+                <ul>
+                    <li>Policies and procedures documentation</li>
+                    <li>Technical control configuration</li>
+                    <li>Physical security measures</li>
+                    <li>Staff training and awareness</li>
+                    <li>Evidence of implementation and operation</li>
+                </ul>
+
+                <h3>Monitoring and Measurement</h3>
+                <p>Continuous oversight of control effectiveness:</p>
+                <ul>
+                    <li>Establish performance indicators (KPIs)</li>
+                    <li>Regular measurement and monitoring</li>
+                    <li>Analysis of results and effectiveness</li>
+                    <li>Reporting to management</li>
+                </ul>
+
+                <h3>Internal Audits</h3>
+                <p>Periodic reviews of ISMS compliance:</p>
+                <ul>
+                    <li>Planned internal audit program</li>
+                    <li>Annual audit of all areas</li>
+                    <li>Competent internal or external auditors</li>
+                    <li>Documentation of audit results</li>
+                    <li>Tracking of remediation</li>
+                </ul>
+
+                <h3>Management Review</h3>
+                <p>Senior management periodic assessment:</p>
+                <ul>
+                    <li>At least annual review</li>
+                    <li>Assessment of ISMS suitability and effectiveness</li>
+                    <li>Review of incidents and non-conformities</li>
+                    <li>Review of changing business and risk environment</li>
+                    <li>Decisions on ISMS improvements</li>
+                </ul>
+
+                <h3>Continual Improvement</h3>
+                <p>Systematic approach to enhancing ISMS:</p>
+                <ul>
+                    <li>Identify opportunities for improvement</li>
+                    <li>Implement corrective and preventive actions</li>
+                    <li>Monitor effectiveness of improvements</li>
+                    <li>Share lessons learned</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Benefits of ISO 27001 Certification</h2>
+                <ul>
+                    <li>Systematic, risk-based approach to managing information security risks</li>
+                    <li>Improved compliance with regulatory requirements (GDPR, PCI-DSS, etc.)</li>
+                    <li>Enhanced customer and stakeholder trust and confidence</li>
+                    <li>Competitive advantage and differentiation in marketplace</li>
+                    <li>Reduced probability and impact of security incidents</li>
+                    <li>Better incident response and business continuity capabilities</li>
+                    <li>Third-party certification demonstrating credibility</li>
+                    <li>Improved information security awareness across organization</li>
+                    <li>Structured approach to supplier and third-party risk management</li>
+                    <li>Framework for managing organizational information assets</li>
+                    <li>Cost optimization by focusing controls on actual risks</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>ISO 27001 Implementation Timeline</h2>
+
+                <h3>Small Organizations (10-50 staff)</h3>
+                <ul>
+                    <li><strong>Planning Phase:</strong> 1-2 months</li>
+                    <li><strong>Implementation Phase:</strong> 4-6 months</li>
+                    <li><strong>Audit Preparation:</strong> 1-2 months</li>
+                    <li><strong>Total Timeline:</strong> 6-10 months</li>
+                </ul>
+
+                <h3>Medium Organizations (50-500 staff)</h3>
+                <ul>
+                    <li><strong>Planning Phase:</strong> 2-3 months</li>
+                    <li><strong>Implementation Phase:</strong> 6-9 months</li>
+                    <li><strong>Audit Preparation:</strong> 2-3 months</li>
+                    <li><strong>Total Timeline:</strong> 10-15 months</li>
+                </ul>
+
+                <h3>Large Organizations (500+ staff)</h3>
+                <ul>
+                    <li><strong>Planning Phase:</strong> 3-4 months</li>
+                    <li><strong>Implementation Phase:</strong> 9-12 months</li>
+                    <li><strong>Audit Preparation:</strong> 3-4 months</li>
+                    <li><strong>Total Timeline:</strong> 15-20 months</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>ISO 27001 Scope Considerations</h2>
+
+                <h3>Defining Scope</h3>
+                <p>Critical first step. Scope determines which systems, processes, and locations are included in certification:</p>
+                <ul>
+                    <li>Single location or multiple locations</li>
+                    <li>Specific departments or entire organization</li>
+                    <li>Specific systems or all systems</li>
+                    <li>Cloud environments or on-premises only</li>
+                    <li>Supplier/third-party processing</li>
+                </ul>
+
+                <h3>Narrow vs Broad Scope</h3>
+                <p><strong>Narrow scope:</strong> Easier to implement, faster time to certification, easier to manage. <strong>Broad scope:</strong> Greater organizational benefit, demonstrates comprehensive security, may be required by customers or regulations.</p>
+            </div>
+
+            <div class="content-section">
+                <h2>ISO 27001 Accreditation and Certification Bodies</h2>
+
+                <h3>Accredited Certification Bodies</h3>
+                <p>Organizations must use accredited certification bodies recognized by national accreditation bodies (e.g., UKAS in UK, DAkkS in Germany, DEKRA, BSI, TÜV).</p>
+
+                <h3>Auditor Competency</h3>
+                <ul>
+                    <li>Lead auditors must meet specific competency requirements</li>
+                    <li>Auditors need technical and management system knowledge</li>
+                    <li>Regular continuing professional development required</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Common ISO 27001 Implementation Challenges</h2>
+                <ul>
+                    <li><strong>Resource Requirements:</strong> Significant time and budget investment</li>
+                    <li><strong>Scope Management:</strong> Defining appropriate scope can be complex</li>
+                    <li><strong>Legacy Systems:</strong> Older systems may not meet security requirements</li>
+                    <li><strong>Organizational Resistance:</strong> Security can be seen as burden</li>
+                    <li><strong>Managing Interdependencies:</strong> Security across multiple systems and suppliers</li>
+                    <li><strong>Maintaining Momentum:</strong> Sustaining effort after certification achieved</li>
+                    <li><strong>Balancing Security and Usability:</strong> Overly restrictive controls reduce productivity</li>
+                    <li><strong>Third-Party Management:</strong> Ensuring suppliers meet security requirements</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>ISO 27001 vs Other Standards</h2>
+
+                <h3>ISO 27001 vs NIST</h3>
+                <p><strong>ISO 27001</strong> is a certifiable standard with specific requirements. <strong>NIST</strong> is a flexible framework. ISO 27001 is more prescriptive; NIST is more guidance-based.</p>
+
+                <h3>ISO 27001 vs ISO 20000</h3>
+                <p><strong>ISO 27001</strong> focuses on information security. <strong>ISO 20000</strong> focuses on IT Service Management. Organizations often implement both.</p>
+
+                <h3>ISO 27001 vs ITIL</h3>
+                <p><strong>ISO 27001</strong> provides ISMS requirements. <strong>ITIL</strong> provides IT Service Management best practices. They complement each other.</p>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Lead technical ISMS design and implementation</li>
+                    <li>Ensure systems are designed with security in mind from inception</li>
+                    <li>Implement and maintain technical controls (encryption, access control, monitoring)</li>
+                    <li>Conduct vulnerability assessments and penetration testing</li>
+                    <li>Manage incident response and security incident procedures</li>
+                    <li>Oversee system and data backup, recovery, and continuity</li>
+                    <li>Manage third-party and vendor security compliance</li>
+                    <li>Conduct internal audits and testing of technical controls</li>
+                    <li>Maintain evidence of control implementation and effectiveness</li>
+                    <li>Report security metrics and risks to management</li>
+                    <li>Ensure staff training and security awareness</li>
+                    <li>Coordinate with auditors during certification process</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Cost Considerations</h2>
+
+                <h3>Implementation Costs</h3>
+                <ul>
+                    <li>Consulting services: €10,000-€100,000+</li>
+                    <li>Staff training and certification: €5,000-€20,000</li>
+                    <li>Tool and technology: €20,000-€500,000+ (varies widely)</li>
+                    <li>Internal resources (staff time): Significant ongoing commitment</li>
+                </ul>
+
+                <h3>Certification Costs</h3>
+                <ul>
+                    <li>Initial certification audit: €5,000-€50,000 (depending on size)</li>
+                    <li>Annual surveillance audits: €2,000-€20,000</li>
+                    <li>Re-certification audit: €5,000-€50,000 (every 3 years)</li>
+                </ul>
+
+                <h3>Return on Investment</h3>
+                <p>Benefits typically include reduced incident costs, improved customer relationships, regulatory compliance, and competitive advantage. ROI timeline typically 2-4 years.</p>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources and Next Steps</h2>
+                <ul>
+                    <li>ISO/IEC 27001:2022 standard (purchase from ISO)</li>
+                    <li>ISO/IEC 27002:2022 control implementation guidelines</li>
+                    <li>ISO/IEC 27005:2022 Information Security Risk Management</li>
+                    <li>Accredited certification bodies (UKAS, DEKRA, BSI, etc.)</li>
+                    <li>ISO 27001 implementation consultants</li>
+                    <li>Free ISO 27001 implementation guides and templates</li>
+                    <li>Industry-specific ISO 27001 guidelines</li>
+                    <li>Engage accredited lead auditor for guidance</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IIS - Internet Information Services | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>IIS</h1>
+            <p>Internet Information Services – Microsoft web server for hosting websites & applications on Windows</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>Internet Information Services (IIS) is Microsoft's full-featured web server built into Windows Server, used to host websites, web applications, APIs, and services (ASP.NET, .NET Core/.NET 8+, PHP, Node.js, Python, static sites). In March 2026, **IIS 10.0** (Windows Server 2022/2025) remains the dominant web server in Microsoft-centric enterprises — especially for **on-premises**, **hybrid**, and **Windows container** workloads (IIS in containers). Key 2026 capabilities include **HTTP/3 (QUIC)** full support, **TLS 1.3 mandatory by default**, **Central Certificate Store** maturity, **Application Initialization** & **pre-warming**, **WebSocket & ARR** enhancements, **Azure Arc-enabled IIS** for hybrid management, **security hardening** (default cipher suites, HSTS preload, request filtering), **Windows containers** hosting, and tight integration with **Azure App Service**, **Azure Front Door**, **Entra ID** auth, **Microsoft Defender for Cloud**, **Azure Monitor**, and **PowerShell DSC** automation. IIS is preferred for its deep Windows/.NET integration, performance on Windows Server, and zero-additional-cost licensing.</p>
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> IIS delivers a secure, high-performance, deeply integrated web hosting platform for Microsoft ecosystems — supporting ASP.NET & .NET workloads natively, HTTP/3 & TLS 1.3 out-of-the-box, centralized certificate management, containerized hosting, hybrid management via Arc, and strong security defaults — enabling reliable, scalable, and cost-effective web & API serving with minimal additional licensing cost.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Capabilities (2026)</h2>
+
+                <h3>Web Hosting & Protocols</h3>
+                <ul>
+                    <li>HTTP/1.1, HTTP/2, HTTP/3 (QUIC) support</li>
+                    <li>WebSocket, WebDAV, FTP/FTPS</li>
+                    <li>Application pools, worker processes & recycling</li>
+                </ul>
+
+                <h3>Security & Hardening</h3>
+                <ul>
+                    <li>TLS 1.3 mandatory, Central Certificate Store</li>
+                    <li>HSTS preload, request filtering, IP/domain restrictions</li>
+                    <li>Windows Authentication, URL Authorization, IPsec integration</li>
+                </ul>
+
+                <h3>Management & Automation</h3>
+                <ul>
+                    <li>IIS Manager GUI, PowerShell (WebAdministration module)</li>
+                    <li>Azure Arc-enabled IIS for hybrid/on-prem visibility</li>
+                    <li>Configuration sharing & DSC automation</li>
+                </ul>
+
+                <h3>Performance & Scalability</h3>
+                <ul>
+                    <li>Application Initialization & pre-warming</li>
+                    <li>ARR (Application Request Routing) for load balancing/reverse proxy</li>
+                    <li>Windows containers & Hyper-V isolation</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Key Trends & Best Practices in 2026</h2>
+
+                <h3>Modern Protocols & Security</h3>
+                <ul>
+                    <li>HTTP/3 & TLS 1.3 enabled by default</li>
+                    <li>HSTS preload & strict transport security</li>
+                    <li>Disable legacy protocols (TLS 1.0/1.1, SSLv3, NTLMv1)</li>
+                </ul>
+
+                <h3>Hybrid & Arc Management</h3>
+                <ul>
+                    <li>Azure Arc-enabled IIS for on-prem/hybrid visibility</li>
+                    <li>Centralized monitoring & patching via Azure Update Manager</li>
+                    <li>Integration with Defender for Cloud & Sentinel</li>
+                </ul>
+
+                <h3>Container & Cloud-Native</h3>
+                <ul>
+                    <li>IIS in Windows containers (Nano Server base)</li>
+                    <li>Migration to Azure App Service / Azure Container Apps</li>
+                    <li>Reverse proxy & ARR for legacy app modernization</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Best Practices for IIS Deployment (2026)</h2>
+
+                <h3>Security Hardening</h3>
+                <ul>
+                    <li>Enable TLS 1.3 only & Central Certificate Store</li>
+                    <li>Use HSTS preload & request filtering rules</li>
+                    <li>Disable legacy authentication & protocols</li>
+                </ul>
+
+                <h3>Performance & Reliability</h3>
+                <ul>
+                    <li>Configure application initialization & recycling</li>
+                    <li>Use ARR for load balancing & reverse proxy</li>
+                    <li>Monitor worker process health & memory usage</li>
+                </ul>
+
+                <h3>Management & Monitoring</h3>
+                <ul>
+                    <li>Enable Azure Arc for hybrid visibility</li>
+                    <li>Integrate with Azure Monitor & Defender for Cloud</li>
+                    <li>Automate configuration with PowerShell DSC</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Define IIS as standard Windows web server platform</li>
+                    <li>Approve security baseline (TLS 1.3, HSTS, legacy disable)</li>
+                    <li>Ensure hybrid management with Azure Arc</li>
+                    <li>Oversee IIS uptime, performance & security posture</li>
+                    <li>Monitor patch compliance & vulnerability exposure</li>
+                    <li>Drive modernization (containers, App Service migration)</li>
+                    <li>Align IIS with zero-trust, regulatory & sustainability goals</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>learn.microsoft.com – IIS documentation & best practices</li>
+                    <li>IIS 10.0 & HTTP/3 configuration guides</li>
+                    <li>Azure Arc-enabled IIS & Defender for Cloud integration</li>
+                    <li>CISA & NIST IIS security hardening guidance</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

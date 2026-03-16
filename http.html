@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP - Hypertext Transfer Protocol | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>HTTP</h1>
+            <p>Hypertext Transfer Protocol – application-layer protocol for distributed, collaborative hypermedia information systems</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>HTTP (Hypertext Transfer Protocol) is the foundational application-layer protocol used for communication on the World Wide Web and in virtually all modern distributed systems. In March 2026, **HTTP/3** (built on QUIC/UDP) is the dominant version across the public internet (supported by >95% of browsers, major CDNs, and origin servers), offering **multiplexing without head-of-line blocking**, **connection migration**, **zero-RTT resumption**, **built-in encryption**, and **improved performance** on lossy networks. **HTTP/2** remains common in legacy/internal systems, while **HTTP/1.1** is effectively deprecated for public-facing services due to performance limitations and security requirements. Key 2026 realities include **mandatory TLS 1.3** (no plaintext HTTP), **Encrypted Client Hello (ECH)** adoption for privacy, **server push deprecation**, **extended CONNECT** for proxying, **AI-driven traffic steering** in CDNs, and **post-quantum cryptography** readiness in early TLS extensions. HTTP underpins REST APIs, web browsing, streaming, WebSockets, and nearly all modern application communication.</p>
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> HTTP/3 delivers fast, reliable, secure, and privacy-enhanced transport for web and API traffic — eliminating head-of-line blocking, enabling connection migration, providing 0-RTT resumption, enforcing encryption, and — with modern extensions — supporting zero-trust, post-quantum readiness, and superior performance across all network conditions.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Versions & Characteristics (2026)</h2>
+
+                <h3>HTTP/1.1 (Deprecated for Public Use)</h3>
+                <ul>
+                    <li>Text-based, connection-per-request model</li>
+                    <li>Head-of-line blocking & poor performance on lossy networks</li>
+                    <li>Still found in legacy internal systems</li>
+                </ul>
+
+                <h3>HTTP/2 (Still Common Internally)</h3>
+                <ul>
+                    <li>Binary framing, multiplexing, header compression</li>
+                    <li>Server push (largely deprecated in 2026)</li>
+                    <li>Requires TLS (h2 over TLS)</li>
+                </ul>
+
+                <h3>HTTP/3 (Dominant – QUIC/UDP-based)</h3>
+                <ul>
+                    <li>Multiplexing without HOL blocking</li>
+                    <li>Connection migration & 0-RTT resumption</li>
+                    <li>Built-in encryption & congestion control (QUIC)</li>
+                    <li>Extended CONNECT for proxying & tunneling</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Key Trends & Best Practices in 2026</h2>
+
+                <h3>Security & Privacy</h3>
+                <ul>
+                    <li>TLS 1.3 mandatory – no plaintext HTTP</li>
+                    <li>Encrypted Client Hello (ECH) adoption</li>
+                    <li>HSTS preload & strict transport security</li>
+                </ul>
+
+                <h3>Performance & Modern Features</h3>
+                <ul>
+                    <li>HTTP/3 as default for public-facing services</li>
+                    <li>Multi-path & 0-RTT for mobile & lossy networks</li>
+                    <li>AI-driven CDN traffic steering & optimization</li>
+                </ul>
+
+                <h3>Post-Quantum & Future-Proofing</h3>
+                <ul>
+                    <li>Early post-quantum cipher suite adoption</li>
+                    <li>Hybrid key exchange for quantum resistance</li>
+                    <li>Preparation for HTTP/4 & next-gen protocols</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Best Practices for HTTP Usage (2026)</h2>
+
+                <h3>Security Hardening</h3>
+                <ul>
+                    <li>Enforce TLS 1.3 only & disable older versions</li>
+                    <li>Enable HSTS preload & ECH where supported</li>
+                    <li>Use strong cipher suites & certificate transparency</li>
+                </ul>
+
+                <h3>Performance & Protocol</h3>
+                <ul>
+                    <li>Enable HTTP/3 (QUIC) for public endpoints</li>
+                    <li>Support HTTP/2 fallback for legacy clients</li>
+                    <li>Implement connection coalescing & 0-RTT</li>
+                </ul>
+
+                <h3>Monitoring & Governance</h3>
+                <ul>
+                    <li>Log & monitor HTTP traffic (headers, status codes)</li>
+                    <li>Integrate with WAF, CDN & observability tools</li>
+                    <li>Conduct regular protocol & cipher audits</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Define HTTP protocol & TLS strategy for public & internal services</li>
+                    <li>Approve HTTP/3 adoption & legacy protocol deprecation</li>
+                    <li>Ensure TLS 1.3 mandatory & ECH readiness</li>
+                    <li>Oversee web security posture & cipher suite compliance</li>
+                    <li>Monitor HTTP performance, latency & error rates</li>
+                    <li>Drive post-quantum cryptography preparation</li>
+                    <li>Align HTTP usage with zero-trust, regulatory & privacy requirements</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>RFC 9110 (HTTP Semantics), RFC 9114 (HTTP/3)</li>
+                    <li>IETF QUIC & HTTP Working Group documents</li>
+                    <li>CISA & NIST TLS & HTTP security guidance</li>
+                    <li>Cloudflare, Akamai, Fastly HTTP/3 & ECH resources</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
