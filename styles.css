@@ -1,0 +1,1244 @@
+/* ============================================
+   IT DIRECTOR DASHBOARD - STYLES
+   ============================================ */
+
+/* CSS Variables & Theme */
+:root {
+    --primary-dark: #0f172a;
+    --primary-blue: #1e3a8a;
+    --accent-cyan: #06b6d4;
+    --accent-purple: #a855f7;
+    --accent-orange: #f97316;
+    --accent-red: #dc2626;
+    --accent-green: #10b981;
+    --bg-dark: #1a1f35;
+    --bg-card: #1e293b;
+    --text-primary: #f1f5f9;
+    --text-secondary: #cbd5e1;
+    --border-color: #334155;
+    --hover-bg: #475569;
+
+    --font-display: 'Segoe UI', system-ui, sans-serif;
+    --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: var(--font-body);
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--bg-dark) 100%);
+    color: var(--text-primary);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* Container & Layout */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+.header {
+    padding: 60px 0 40px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    animation: slideDown 0.6s ease-out;
+}
+
+.header-content h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--accent-cyan) 0%, var(--accent-purple) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
+}
+
+.tagline {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    font-weight: 300;
+}
+
+.search-nav {
+    flex: 1;
+    max-width: 400px;
+    position: relative;
+}
+
+.search-box {
+    width: 100%;
+    padding: 12px 18px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    transition: var(--transition);
+}
+
+.search-box:hover,
+.search-box:focus {
+    border-color: var(--accent-cyan);
+    background: rgba(6, 182, 212, 0.05);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.1);
+}
+
+.search-box::placeholder {
+    color: var(--text-secondary);
+}
+
+/* Clear Search Button */
+.clear-search-btn {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--accent-cyan);
+    color: var(--primary-dark);
+    border: none;
+    border-radius: 4px;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    opacity: 0;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.clear-search-btn.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.clear-search-btn:hover {
+    background: var(--accent-purple);
+    transform: translateY(-50%) scale(1.05);
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 60px 0;
+}
+
+/* Sections */
+.section {
+    margin-bottom: 80px;
+    animation: fadeIn 0.8s ease-out;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 35px;
+    color: var(--text-primary);
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--border-color);
+    letter-spacing: -0.01em;
+}
+
+/* Cards Grid */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+    .cards-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
+
+/* Card Styles */
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 32px 24px;
+    cursor: pointer;
+    transition: var(--transition);
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+    transition: left 0.6s ease;
+}
+
+.card:hover::before {
+    left: 100%;
+}
+
+.card:hover {
+    border-color: var(--accent-cyan);
+    background: linear-gradient(135deg, rgba(6, 182, 212, 0.1) 0%, rgba(168, 85, 247, 0.05) 100%);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 32px rgba(6, 182, 212, 0.15);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    line-height: 1;
+}
+
+.card h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    flex: 1;
+    line-height: 1.5;
+}
+
+.card-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    width: fit-content;
+}
+
+/* Card Color Variants */
+.card-itil { --accent: var(--accent-cyan); }
+.card-itil .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-itsm { --accent: var(--accent-purple); }
+.card-itsm .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
+
+.card-gdpr { --accent: var(--accent-red); }
+.card-gdpr .card-tag { background: rgba(220, 38, 38, 0.2); color: var(--accent-red); }
+
+.card-pci { --accent: var(--accent-orange); }
+.card-pci .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-iso { --accent: var(--accent-green); }
+.card-iso .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+.card-isms { --accent: var(--accent-cyan); }
+.card-isms .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-nist { --accent: #f59e0b; }
+.card-nist .card-tag { background: rgba(245, 158, 11, 0.2); color: #f59e0b; }
+
+.card-cyber-essentials { --accent: var(--accent-cyan); }
+.card-cyber-essentials .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-cyber-plus { --accent: var(--accent-purple); }
+.card-cyber-plus .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
+
+.card-appraisals { --accent: var(--accent-green); }
+.card-appraisals .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+.card-copilot { --accent: var(--accent-purple); }
+.card-copilot .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
+
+.card-sharepoint { --accent: var(--accent-cyan); }
+.card-sharepoint .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-office { --accent: var(--accent-orange); }
+.card-office .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-d365 { --accent: var(--accent-purple); }
+.card-d365 .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
+
+.card-bi { --accent: var(--accent-orange); }
+.card-bi .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-powerbi { --accent: var(--accent-red); }
+.card-powerbi .card-tag { background: rgba(220, 38, 38, 0.2); color: var(--accent-red); }
+
+.card-mimecast { --accent: var(--accent-cyan); }
+.card-mimecast .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-trello { --accent: var(--accent-green); }
+.card-trello .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+.card-cmdb { --accent: var(--accent-cyan); }
+.card-cmdb .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-erp { --accent: var(--accent-purple); }
+.card-erp .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
+
+.card-crm { --accent: var(--accent-purple); }
+.card-crm .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
+
+.card-etl-elt { --accent: var(--accent-orange); }
+.card-etl-elt .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-cav { --accent: var(--accent-purple); }
+.card-cav .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
+
+.card-ltv { --accent: var(--accent-purple); }
+.card-ltv .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
+
+.card-csat { --accent: var(--accent-purple); }
+.card-csat .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
+
+.card-azure-datalake { --accent: var(--accent-orange); }
+.card-azure-datalake .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-aws-s3 { --accent: var(--accent-orange); }
+.card-aws-s3 .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-databricks { --accent: var(--accent-orange); }
+.card-databricks .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-salesforce { --accent: var(--accent-purple); }
+.card-salesforce .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
+
+.card-least-privilege { --accent: var(--accent-cyan); }
+.card-least-privilege .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-sso { --accent: var(--accent-cyan); }
+.card-sso .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-oauth { --accent: var(--accent-cyan); }
+.card-oauth .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-tensorflow { --accent: var(--accent-orange); }
+.card-tensorflow .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-pytorch { --accent: var(--accent-orange); }
+.card-pytorch .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-azure-ml { --accent: var(--accent-orange); }
+.card-azure-ml .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-google-cloud-ai { --accent: var(--accent-orange); }
+.card-google-cloud-ai .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-mfa { --accent: var(--accent-cyan); }
+.card-mfa .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-zero-trust { --accent: var(--accent-cyan); }
+.card-zero-trust .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-vault { --accent: var(--accent-cyan); }
+.card-vault .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-secretsmanager { --accent: var(--accent-cyan); }
+.card-secretsmanager .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-kubernetes { --accent: var(--accent-cyan); }
+.card-kubernetes .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-docker { --accent: var(--accent-cyan); }
+.card-docker .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-splunk { --accent: var(--accent-orange); }
+.card-splunk .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-grafana { --accent: var(--accent-orange); }
+.card-grafana .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-prometheus { --accent: var(--accent-orange); }
+.card-prometheus .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-datadog { --accent: var(--accent-orange); }
+.card-datadog .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-dynatrace { --accent: var(--accent-orange); }
+.card-dynatrace .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-newrelic { --accent: var(--accent-orange); }
+.card-newrelic .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-apache-kafka { --accent: var(--accent-orange); }
+.card-apache-kafka .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-rabbitmq { --accent: var(--accent-orange); }
+.card-rabbitmq .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-nats { --accent: var(--accent-orange); }
+.card-nats .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-redis { --accent: var(--accent-orange); }
+.card-redis .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-memcached { --accent: var(--accent-orange); }
+.card-memcached .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-elasticsearch { --accent: var(--accent-orange); }
+.card-elasticsearch .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-opensearch { --accent: var(--accent-orange); }
+.card-opensearch .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-solr { --accent: var(--accent-orange); }
+.card-solr .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-postgres { --accent: var(--accent-orange); }
+.card-postgres .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-mysql { --accent: var(--accent-orange); }
+.card-mysql .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-mariadb { --accent: var(--accent-orange); }
+.card-mariadb .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-dynamodb { --accent: var(--accent-orange); }
+.card-dynamodb .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-cassandra { --accent: var(--accent-orange); }
+.card-cassandra .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-couchdb { --accent: var(--accent-orange); }
+.card-couchdb .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-oracle { --accent: var(--accent-red); }
+.card-oracle .card-tag { background: rgba(220, 38, 38, 0.2); color: var(--accent-red); }
+
+.card-sqlserver { --accent: var(--accent-red); }
+.card-sqlserver .card-tag { background: rgba(220, 38, 38, 0.2); color: var(--accent-red); }
+
+.card-snowflake { --accent: var(--accent-cyan); }
+.card-snowflake .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-bigquery { --accent: var(--accent-orange); }
+.card-bigquery .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-redshift { --accent: var(--accent-orange); }
+.card-redshift .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-athena { --accent: var(--accent-orange); }
+.card-athena .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-spark { --accent: var(--accent-orange); }
+.card-spark .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-hive { --accent: var(--accent-orange); }
+.card-hive .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-presto { --accent: var(--accent-orange); }
+.card-presto .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-dbt { --accent: var(--accent-green); }
+.card-dbt .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+.card-airbyte { --accent: var(--accent-green); }
+.card-airbyte .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+.card-talend { --accent: var(--accent-orange); }
+.card-talend .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-informatica { --accent: var(--accent-orange); }
+.card-informatica .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-mulesoft { --accent: var(--accent-orange); }
+.card-mulesoft .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-zapier { --accent: var(--accent-green); }
+.card-zapier .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+.card-ifttt { --accent: var(--accent-green); }
+.card-ifttt .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+.card-node-red { --accent: var(--accent-green); }
+.card-node-red .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+.card-power-automate { --accent: var(--accent-purple); }
+.card-power-automate .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
+
+.card-python { --accent: var(--accent-orange); }
+.card-python .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-java { --accent: var(--accent-orange); }
+.card-java .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-golang { --accent: var(--accent-cyan); }
+.card-golang .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-rust { --accent: var(--accent-orange); }
+.card-rust .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-nodejs { --accent: var(--accent-green); }
+.card-nodejs .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+.card-react { --accent: var(--accent-cyan); }
+.card-react .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-vue { --accent: var(--accent-green); }
+.card-vue .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+.card-angular { --accent: var(--accent-red); }
+.card-angular .card-tag { background: rgba(220, 38, 38, 0.2); color: var(--accent-red); }
+
+.card-svelte { --accent: var(--accent-orange); }
+.card-svelte .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-fastapi { --accent: var(--accent-cyan); }
+.card-fastapi .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-django { --accent: var(--accent-green); }
+.card-django .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+.card-flask { --accent: var(--accent-orange); }
+.card-flask .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-spring-boot { --accent: var(--accent-green); }
+.card-spring-boot .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+.card-docker-compose { --accent: var(--accent-cyan); }
+.card-docker-compose .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-terraform { --accent: var(--accent-purple); }
+.card-terraform .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
+
+.card-ansible { --accent: var(--accent-red); }
+.card-ansible .card-tag { background: rgba(220, 38, 38, 0.2); color: var(--accent-red); }
+
+.card-puppet { --accent: var(--accent-orange); }
+.card-puppet .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-chef { --accent: var(--accent-orange); }
+.card-chef .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-jira { --accent: var(--accent-cyan); }
+.card-jira .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-confluence { --accent: var(--accent-cyan); }
+.card-confluence .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-github { --accent: var(--accent-cyan); }
+.card-github .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-gitlab { --accent: var(--accent-orange); }
+.card-gitlab .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-bitbucket { --accent: var(--accent-cyan); }
+.card-bitbucket .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-jenkins { --accent: var(--accent-red); }
+.card-jenkins .card-tag { background: rgba(220, 38, 38, 0.2); color: var(--accent-red); }
+
+.card-gitlab-ci { --accent: var(--accent-orange); }
+.card-gitlab-ci .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-github-actions { --accent: var(--accent-cyan); }
+.card-github-actions .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-azure-devops { --accent: var(--accent-cyan); }
+.card-azure-devops .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-sonarqube { --accent: var(--accent-cyan); }
+.card-sonarqube .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-artifactory { --accent: var(--accent-cyan); }
+.card-artifactory .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-nexus { --accent: var(--accent-cyan); }
+.card-nexus .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-maven { --accent: var(--accent-orange); }
+.card-maven .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-gradle { --accent: var(--accent-orange); }
+.card-gradle .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-npm { --accent: var(--accent-red); }
+.card-npm .card-tag { background: rgba(220, 38, 38, 0.2); color: var(--accent-red); }
+
+.card-pip { --accent: var(--accent-cyan); }
+.card-pip .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-dlp { --accent: var(--accent-cyan); }
+.card-dlp .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-edr { --accent: var(--accent-cyan); }
+.card-edr .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-lakehouse { --accent: var(--accent-orange); }
+.card-lakehouse .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-mongodb { --accent: var(--accent-orange); }
+.card-mongodb .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-dex-euc { --accent: var(--accent-cyan); }
+.card-dex-euc .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-eks { --accent: var(--accent-cyan); }
+.card-eks .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-ecs { --accent: var(--accent-cyan); }
+.card-ecs .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-ec2 { --accent: var(--accent-orange); }
+.card-ec2 .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-vpc { --accent: var(--accent-cyan); }
+.card-vpc .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-cloudwatch { --accent: var(--accent-cyan); }
+.card-cloudwatch .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-iac { --accent: var(--accent-orange); }
+.card-iac .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-cicd { --accent: var(--accent-orange); }
+.card-cicd .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-controlup { --accent: var(--accent-cyan); }
+.card-controlup .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-esg { --accent: var(--accent-green); }
+.card-esg .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+
+
+
+.card-cisa { --accent: var(--accent-cyan); }
+.card-cisa .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+
+
+
+
+
+
+.card-smb { --accent: var(--accent-cyan); }
+.card-smb .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+
+
+.card-route53 { --accent: var(--accent-cyan); }
+.card-route53 .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+
+
+.card-dns { --accent: var(--accent-cyan); }
+.card-dns .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+
+.card-vpc-lattice { --accent: var(--accent-cyan); }
+.card-vpc-lattice .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+
+
+.card-kpi { --accent: var(--accent-green); }
+.card-kpi .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+
+.card-grafana { --accent: var(--accent-cyan); }
+.card-grafana .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+
+.card-datadog { --accent: var(--accent-cyan); }
+.card-datadog .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+
+
+.card-kubernetes { --accent: var(--accent-cyan); }
+.card-kubernetes .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+
+
+
+
+.card-snowflake { --accent: var(--accent-orange); }
+.card-snowflake .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+
+
+.card-newrelic { --accent: var(--accent-cyan); }
+.card-newrelic .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+
+
+
+.card-incident { --accent: var(--accent-cyan); }
+.card-incident .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+
+.card-service-catalog { --accent: var(--accent-cyan); }
+.card-service-catalog .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+
+
+
+
+
+.card-ma { --accent: var(--accent-green); }
+.card-ma .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+
+
+
+.card-dei { --accent: var(--accent-green); }
+.card-dei .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+
+.card-tableau { --accent: var(--accent-orange); }
+.card-tableau .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+
+
+
+.card-dpa { --accent: var(--accent-green); }
+.card-dpa .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+
+
+.card-baa { --accent: var(--accent-green); }
+.card-baa .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+
+
+.card-jostle { --accent: var(--accent-cyan); }
+.card-jostle .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+
+
+
+
+
+
+.card-swagger { --accent: var(--accent-cyan); }
+.card-swagger .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+
+
+
+
+.card-dora { --accent: var(--accent-green); }
+.card-dora .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+
+
+.card-ats { --accent: var(--accent-green); }
+.card-ats .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+
+
+
+
+.card-vlan { --accent: var(--accent-cyan); }
+.card-vlan .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+
+
+.card-iis { --accent: var(--accent-cyan); }
+.card-iis .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+
+.card-http { --accent: var(--accent-cyan); }
+.card-http .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+
+
+.card-mdm { --accent: var(--accent-cyan); }
+.card-mdm .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+
+
+
+.card-5g { --accent: var(--accent-cyan); }
+.card-5g .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+
+.card-xr { --accent: var(--accent-cyan); }
+.card-xr .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+
+
+
+.card-csf { --accent: var(--accent-cyan); }
+.card-csf .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+
+.card-gxp { --accent: var(--accent-green); }
+.card-gxp .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+
+
+.card-data-warehouse { --accent: var(--accent-orange); }
+.card-data-warehouse .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+
+.card-fda21 { --accent: var(--accent-green); }
+.card-fda21 .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+
+
+.card-ccb { --accent: var(--accent-green); }
+.card-ccb .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+
+
+.card-evm { --accent: var(--accent-green); }
+.card-evm .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+
+.card-esxi { --accent: var(--accent-cyan); }
+.card-esxi .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+
+
+.card-acls { --accent: var(--accent-cyan); }
+.card-acls .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+
+
+.card-vpn { --accent: var(--accent-cyan); }
+.card-vpn .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+
+
+.card-tcpip { --accent: var(--accent-cyan); }
+.card-tcpip .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+
+
+.card-tls { --accent: var(--accent-cyan); }
+.card-tls .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+
+
+.card-ech { --accent: var(--accent-cyan); }
+.card-ech .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+
+
+.card-ifs { --accent: var(--accent-orange); }
+.card-ifs .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+
+.card-aurora { --accent: var(--accent-orange); }
+.card-aurora .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+
+.card-ifs-modules { --accent: var(--accent-orange); }
+.card-ifs-modules .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+
+
+
+
+
+.card-arxr { --accent: var(--accent-cyan); }
+.card-arxr .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+
+
+
+
+.card-digital-twins { --accent: var(--accent-cyan); }
+.card-digital-twins .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+
+
+.card-spatial-ai { --accent: var(--accent-cyan); }
+.card-spatial-ai .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+
+
+.card-mitre-attack { --accent: var(--accent-cyan); }
+.card-mitre-attack .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+
+
+
+
+.card-mitre-v16 { --accent: var(--accent-cyan); }
+.card-mitre-v16 .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+
+
+
+
+.card-ot-ics { --accent: var(--accent-cyan); }
+.card-ot-ics .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+
+.card-crowdstrike { --accent: var(--accent-cyan); }
+.card-crowdstrike .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+
+
+
+
+.card-charlotte { --accent: var(--accent-cyan); }
+.card-charlotte .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+
+
+
+.card-unit4-salesforce { --accent: var(--accent-orange); }
+.card-unit4-salesforce .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+
+
+.card-mulesoft { --accent: var(--accent-orange); }
+.card-mulesoft .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+
+
+.card-ztna { --accent: var(--accent-cyan); }
+.card-ztna .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+
+
+.card-grc { --accent: var(--accent-green); }
+.card-grc .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+
+.card-isp { --accent: var(--accent-cyan); }
+.card-isp .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+
+
+
+.card-fortinet-nse { --accent: var(--accent-cyan); }
+.card-fortinet-nse .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+
+.card-cisco-ise { --accent: var(--accent-cyan); }
+.card-cisco-ise .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-byod { --accent: var(--accent-cyan); }
+.card-byod .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+
+
+
+
+.card-trustsec { --accent: var(--accent-cyan); }
+.card-trustsec .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="spiceworks.html" class="card card-spiceworks">
+    <div class="card-icon">🌶️🛠️</div>
+    <h3>Spiceworks</h3>
+    <p>Free/freemium IT help desk, asset & network management suite</p>
+    <span class="card-tag">ITSM</span>
+</a>
+
+
+
+
+
+
+
+/* Footer */
+.footer {
+    margin-top: auto;
+    padding: 40px 0;
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* Topic Pages Styles */
+.page-header {
+    padding: 60px 0 40px;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 50px;
+    animation: slideDown 0.6s ease-out;
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    transition: var(--transition);
+}
+
+.back-button:hover {
+    border-color: var(--accent-cyan);
+    color: var(--accent-cyan);
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.page-header p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+}
+
+.content-section {
+    margin-bottom: 50px;
+}
+
+.content-section h2 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--text-primary);
+}
+
+.content-section h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 24px 0 12px;
+    color: var(--accent-cyan);
+}
+
+.content-section p {
+    margin-bottom: 12px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+.content-section ul,
+.content-section ol {
+    margin: 16px 0 16px 24px;
+    color: var(--text-secondary);
+}
+
+.content-section li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.highlight-box {
+    background: rgba(6, 182, 212, 0.1);
+    border-left: 4px solid var(--accent-cyan);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.highlight-box strong {
+    color: var(--accent-cyan);
+}
+
+/* Animations */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Utility Classes */
+.hidden {
+    display: none !important;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+/* Go-to-Top Button */
+.go-to-top-btn {
+    position: fixed;
+    bottom: -60px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: var(--accent-cyan);
+    color: var(--primary-dark);
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3);
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.go-to-top-btn.visible {
+    bottom: 20px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.go-to-top-btn:hover {
+    background: var(--accent-purple);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(168, 85, 247, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 40px 0 30px;
+        gap: 20px;
+    }
+
+    .header-content h1 {
+        font-size: 2rem;
+    }
+
+    .search-nav {
+        max-width: 100%;
+    }
+
+    .clear-search-btn {
+        position: static;
+        transform: none;
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .clear-search-btn.visible {
+        transform: none;
+    }
+
+    .section {
+        margin-bottom: 50px;
+    }
+
+    .section-title {
+        font-size: 1.4rem;
+        margin-bottom: 25px;
+    }
+
+    .page-header {
+        padding: 40px 0 30px;
+        margin-bottom: 30px;
+    }
+
+    .page-header h1 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content h1 {
+        font-size: 1.6rem;
+    }
+
+    .tagline {
+        font-size: 0.95rem;
+    }
+
+    .section-title {
+        font-size: 1.2rem;
+    }
+
+    .card {
+        padding: 20px 16px;
+    }
+
+    .card h3 {
+        font-size: 1.2rem;
+    }
+
+    .card p {
+        font-size: 0.85rem;
+    }
+
+    .clear-search-btn {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+    }
+}
