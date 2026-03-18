@@ -955,12 +955,14 @@ body {
 
 
 
+.card-xledger { --accent: var(--accent-orange); }
+.card-xledger .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
 
 
 
 
-
-
+.card-activeh { --accent: var(--accent-orange); }
+.card-activeh .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
 
 
 
