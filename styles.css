@@ -966,6 +966,53 @@ body {
 
 
 
+.card-onebusiness { --accent: var(--accent-orange); }
+.card-onebusiness .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+
+.card-sap-b1 { --accent: var(--accent-orange); }
+.card-sap-b1 .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+
+
+
+
+.card-gaap { --accent: var(--accent-green); }
+.card-gaap .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
