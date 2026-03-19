@@ -8,15 +8,50 @@
 </head>
 <body>
 <div class="container">
+
+
+
 <header class="header">
-<div class="header-content">
-<h1 class="logo">IT Director Hub</h1>
-<p class="tagline">Comprehensive IT Leadership & Technology Reference</p>
-</div>
-<nav class="search-nav">
-<input type="text" id="searchInput" class="search-box" placeholder="Search topics...">
-</nav>
+    <div class="header-content">
+        <h1 class="logo">IT Director Hub</h1>
+        <p class="tagline">Comprehensive IT Leadership & Technology Reference, created by Richard E Priest</p>
+    </div>
+
+    <!-- Right side: QR code + search box, with QR on the left of search -->
+    <div class="header-right" style="display: flex; align-items: center; gap: 24px; max-width: 520px;">
+        
+        <!-- QR Code (left of search) -->
+        <div style="text-align: center; flex-shrink: 0;">
+            <img 
+                src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://richardpriest19.github.io/itdirector/&color=06b6d4&bgcolor=ffffff"
+                alt="QR Code - Scan to open IT Director Hub on mobile"
+                title="Scan to visit https://richardpriest19.github.io/itdirector/"
+                width="120"
+                height="120"
+                style="border-radius: 10px; box-shadow: 0 4px 12px rgba(6,182,212,0.25); border: 3px solid var(--accent-cyan); background: white; padding: 6px;"
+            >
+            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 6px; white-space: nowrap;">
+                Scan to visit
+            </p>
+        </div>
+
+        <!-- Search box (right of QR) -->
+        <nav class="search-nav" style="flex: 1; min-width: 280px;">
+            <input type="text" id="searchInput" class="search-box" placeholder="Search topics...">
+            <!-- The clear button will appear here via JS as before -->
+        </nav>
+    </div>
 </header>
+
+
+
+
+
+
+
+
+
+
 <main class="main-content">
 <section class="section">
 <h2 class="section-title">Cybersecurity & Threat Management</h2>
@@ -2294,7 +2329,9 @@
 </section>
 </main>
 <footer class="footer">
-<p>© 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+    <p>© 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+    
+  
 </footer>
 </div>
 <script src="script.js"></script>
