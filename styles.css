@@ -983,30 +983,37 @@ body {
 
 
 
+.card-powerapps { --accent: var(--accent-orange); }
+.card-powerapps .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+
+
+.card-rice { --accent: var(--accent-green); }
+.card-rice .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+
+
+.card-moscow { --accent: var(--accent-green); }
+.card-moscow .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+
+.card-tom { --accent: var(--accent-green); }
+.card-tom .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+
+.card-r2r { --accent: var(--accent-green); }
+.card-r2r .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
 
 
 
 
+.card-p2p { --accent: var(--accent-green); }
+.card-p2p .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.card-o2c { --accent: var(--accent-green); }
+.card-o2c .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
 
 
 
