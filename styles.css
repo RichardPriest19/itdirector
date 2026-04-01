@@ -667,29 +667,24 @@ body {
 .card-kpi .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
 
 
-.card-grafana { --accent: var(--accent-cyan); }
-.card-grafana .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-
-.card-datadog { --accent: var(--accent-cyan); }
-.card-datadog .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-
-
-.card-kubernetes { --accent: var(--accent-cyan); }
-.card-kubernetes .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
 
 
 
 
 
-.card-snowflake { --accent: var(--accent-orange); }
-.card-snowflake .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
 
 
 
-.card-newrelic { --accent: var(--accent-cyan); }
-.card-newrelic .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -916,8 +911,7 @@ body {
 
 
 
-.card-mulesoft { --accent: var(--accent-orange); }
-.card-mulesoft .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
 
 
 
@@ -1019,29 +1013,8 @@ body {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<a href="spiceworks.html" class="card card-spiceworks">
-    <div class="card-icon">🌶️🛠️</div>
-    <h3>Spiceworks</h3>
-    <p>Free/freemium IT help desk, asset & network management suite</p>
-    <span class="card-tag">ITSM</span>
-</a>
-
-
+.card-blackline { --accent: var(--accent-orange); }
+.card-blackline .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
 
 
 
@@ -1298,3 +1271,647 @@ body {
         font-size: 0.8rem;
     }
 }
+/* ─── Networking & Protocols ──────────────────────────────────── */
+.card-sase { --accent: var(--accent-cyan); }
+.card-sase .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-sdwan { --accent: var(--accent-cyan); }
+.card-sdwan .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-ftp { --accent: #64748b; }
+.card-ftp .card-tag { background: rgba(100, 116, 139, 0.2); color: #64748b; }
+
+.card-scp { --accent: #64748b; }
+.card-scp .card-tag { background: rgba(100, 116, 139, 0.2); color: #64748b; }
+
+.card-snmp { --accent: var(--accent-cyan); }
+.card-snmp .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-tftp { --accent: #64748b; }
+.card-tftp .card-tag { background: rgba(100, 116, 139, 0.2); color: #64748b; }
+
+.card-udp { --accent: var(--accent-orange); }
+.card-udp .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-protocol { --accent: var(--accent-cyan); }
+.card-protocol .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-uniflow { --accent: var(--accent-purple); }
+.card-uniflow .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
+
+/* ─── Cybersecurity & Security Tools ─────────────────────────── */
+.card-barracuda { --accent: var(--accent-cyan); }
+.card-barracuda .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-cybersecurity-mesh { --accent: var(--accent-purple); }
+.card-cybersecurity-mesh .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
+
+.card-sspm { --accent: var(--accent-cyan); }
+.card-sspm .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-siem { --accent: var(--accent-orange); }
+.card-siem .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-defender { --accent: var(--accent-cyan); }
+.card-defender .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-defender-o365 { --accent: var(--accent-cyan); }
+.card-defender-o365 .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-proofpoint { --accent: var(--accent-orange); }
+.card-proofpoint .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-proofpoint-tessian { --accent: var(--accent-orange); }
+.card-proofpoint-tessian .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+/* ─── Identity & Access Management ───────────────────────────── */
+.card-ad { --accent: var(--accent-cyan); }
+.card-ad .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-azuread { --accent: var(--accent-cyan); }
+.card-azuread .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-iam { --accent: var(--accent-purple); }
+.card-iam .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
+
+.card-jumpcloud { --accent: var(--accent-green); }
+.card-jumpcloud .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+.card-passwords { --accent: var(--accent-cyan); }
+.card-passwords .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-microsoft-entra { --accent: var(--accent-cyan); }
+.card-microsoft-entra .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-okta { --accent: var(--accent-cyan); }
+.card-okta .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-openid { --accent: var(--accent-cyan); }
+.card-openid .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-rbac { --accent: var(--accent-purple); }
+.card-rbac .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
+
+/* ─── Information Security & Compliance ──────────────────────── */
+.card-breach { --accent: var(--accent-red); }
+.card-breach .card-tag { background: rgba(220, 38, 38, 0.2); color: var(--accent-red); }
+
+.card-data-protection-act { --accent: var(--accent-cyan); }
+.card-data-protection-act .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-forensics { --accent: var(--accent-orange); }
+.card-forensics .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-iso19790 { --accent: var(--accent-green); }
+.card-iso19790 .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+.card-iso27002 { --accent: var(--accent-green); }
+.card-iso27002 .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+.card-iso27017 { --accent: var(--accent-green); }
+.card-iso27017 .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+.card-iso27018 { --accent: var(--accent-green); }
+.card-iso27018 .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+.card-iso27701 { --accent: var(--accent-green); }
+.card-iso27701 .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+.card-iso42001 { --accent: var(--accent-purple); }
+.card-iso42001 .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
+
+.card-iso18000 { --accent: var(--accent-green); }
+.card-iso18000 .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+.card-iso23894 { --accent: var(--accent-purple); }
+.card-iso23894 .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
+
+.card-isotc3 { --accent: var(--accent-purple); }
+.card-isotc3 .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
+
+.card-mttd { --accent: var(--accent-orange); }
+.card-mttd .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-mttr { --accent: var(--accent-orange); }
+.card-mttr .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-owasp { --accent: var(--accent-red); }
+.card-owasp .card-tag { background: rgba(220, 38, 38, 0.2); color: var(--accent-red); }
+
+.card-pen-testing { --accent: var(--accent-red); }
+.card-pen-testing .card-tag { background: rgba(220, 38, 38, 0.2); color: var(--accent-red); }
+
+.card-awareness { --accent: var(--accent-green); }
+.card-awareness .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+.card-supply-chain { --accent: var(--accent-orange); }
+.card-supply-chain .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-threat-intel { --accent: var(--accent-purple); }
+.card-threat-intel .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
+
+.card-vuln-mgmt { --accent: var(--accent-red); }
+.card-vuln-mgmt .card-tag { background: rgba(220, 38, 38, 0.2); color: var(--accent-red); }
+
+/* ─── Governance, Risk & Compliance ──────────────────────────── */
+.card-bia { --accent: var(--accent-orange); }
+.card-bia .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-ccpa { --accent: var(--accent-cyan); }
+.card-ccpa .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-cobit { --accent: var(--accent-purple); }
+.card-cobit .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
+
+.card-hipaa { --accent: var(--accent-green); }
+.card-hipaa .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+.card-iso19770 { --accent: var(--accent-green); }
+.card-iso19770 .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+.card-iso20000 { --accent: var(--accent-green); }
+.card-iso20000 .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+.card-it-governance { --accent: var(--accent-purple); }
+.card-it-governance .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
+
+.card-it-risk { --accent: var(--accent-red); }
+.card-it-risk .card-tag { background: rgba(220, 38, 38, 0.2); color: var(--accent-red); }
+
+.card-nis2 { --accent: var(--accent-cyan); }
+.card-nis2 .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-pci-dss { --accent: var(--accent-orange); }
+.card-pci-dss .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-rfp { --accent: var(--accent-cyan); }
+.card-rfp .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-soc2 { --accent: var(--accent-green); }
+.card-soc2 .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+/* ─── Financial & Cost Management ────────────────────────────── */
+.card-budget { --accent: var(--accent-green); }
+.card-budget .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+.card-chargeback { --accent: var(--accent-orange); }
+.card-chargeback .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-cost-opt { --accent: var(--accent-green); }
+.card-cost-opt .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+.card-finops { --accent: var(--accent-orange); }
+.card-finops .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-portfolio { --accent: var(--accent-purple); }
+.card-portfolio .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
+
+.card-roi { --accent: var(--accent-green); }
+.card-roi .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+.card-sla { --accent: var(--accent-cyan); }
+.card-sla .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-tco { --accent: var(--accent-orange); }
+.card-tco .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+/* ─── Enterprise Architecture & Strategy ─────────────────────── */
+.card-api-mgmt { --accent: var(--accent-cyan); }
+.card-api-mgmt .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-cloud-patterns { --accent: var(--accent-purple); }
+.card-cloud-patterns .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
+
+.card-ea { --accent: var(--accent-purple); }
+.card-ea .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
+
+.card-hybrid-cloud { --accent: var(--accent-cyan); }
+.card-hybrid-cloud .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-microservices { --accent: var(--accent-cyan); }
+.card-microservices .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-multi-cloud { --accent: var(--accent-cyan); }
+.card-multi-cloud .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-serverless { --accent: var(--accent-orange); }
+.card-serverless .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-service-mesh { --accent: var(--accent-cyan); }
+.card-service-mesh .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-digital-transformation { --accent: var(--accent-purple); }
+.card-digital-transformation .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
+
+/* ─── Vendor & Contract Management ───────────────────────────── */
+.card-clm { --accent: var(--accent-cyan); }
+.card-clm .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-license { --accent: var(--accent-green); }
+.card-license .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+.card-smp { --accent: var(--accent-cyan); }
+.card-smp .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-sam { --accent: var(--accent-green); }
+.card-sam .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+.card-vendor { --accent: var(--accent-cyan); }
+.card-vendor .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-vendor-risk { --accent: var(--accent-red); }
+.card-vendor-risk .card-tag { background: rgba(220, 38, 38, 0.2); color: var(--accent-red); }
+
+/* ─── Data Governance & Privacy ──────────────────────────────── */
+.card-data-class { --accent: var(--accent-cyan); }
+.card-data-class .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-data-gov { --accent: var(--accent-purple); }
+.card-data-gov .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
+
+.card-lineage { --accent: var(--accent-cyan); }
+.card-lineage .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-retention { --accent: var(--accent-orange); }
+.card-retention .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-privacy-design { --accent: var(--accent-purple); }
+.card-privacy-design .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
+
+.card-pia { --accent: var(--accent-cyan); }
+.card-pia .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+/* ─── Security Operations ────────────────────────────────────── */
+.card-api-sec { --accent: var(--accent-red); }
+.card-api-sec .card-tag { background: rgba(220, 38, 38, 0.2); color: var(--accent-red); }
+
+.card-container-sec { --accent: var(--accent-red); }
+.card-container-sec .card-tag { background: rgba(220, 38, 38, 0.2); color: var(--accent-red); }
+
+.card-cyber-insurance { --accent: var(--accent-green); }
+.card-cyber-insurance .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+.card-segmentation { --accent: var(--accent-cyan); }
+.card-segmentation .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-secrets { --accent: var(--accent-cyan); }
+.card-secrets .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-soc-soar { --accent: var(--accent-purple); }
+.card-soc-soar .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
+
+.card-threat-hunt { --accent: var(--accent-red); }
+.card-threat-hunt .card-tag { background: rgba(220, 38, 38, 0.2); color: var(--accent-red); }
+
+.card-zero-network { --accent: var(--accent-cyan); }
+.card-zero-network .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+/* ─── Cloud Platforms ────────────────────────────────────────── */
+.card-iaas { --accent: var(--accent-cyan); }
+.card-iaas .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-paas { --accent: var(--accent-purple); }
+.card-paas .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
+
+.card-saas { --accent: var(--accent-orange); }
+.card-saas .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-gcp { --accent: var(--accent-orange); }
+.card-gcp .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-caf { --accent: var(--accent-cyan); }
+.card-caf .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+/* ─── Data Analytics ─────────────────────────────────────────── */
+.card-power-query { --accent: var(--accent-orange); }
+.card-power-query .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-postgresql { --accent: var(--accent-cyan); }
+.card-postgresql .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+/* ─── IT Operations & Management ─────────────────────────────── */
+.card-change-mgmt { --accent: var(--accent-orange); }
+.card-change-mgmt .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-it-strategy { --accent: var(--accent-purple); }
+.card-it-strategy .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
+
+.card-team-topology { --accent: var(--accent-cyan); }
+.card-team-topology .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-sop { --accent: var(--accent-cyan); }
+.card-sop .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+/* ─── Industrial & Operational Technology ────────────────────── */
+.card-iot { --accent: var(--accent-green); }
+.card-iot .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+.card-scada { --accent: var(--accent-orange); }
+.card-scada .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+/* ─── Business Continuity ────────────────────────────────────── */
+.card-disaster-recovery { --accent: var(--accent-cyan); }
+.card-disaster-recovery .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+/* ─── Multimedia & Graphics Standards ───────────────────────── */
+.card-iso11072 { --accent: var(--accent-cyan); }
+.card-iso11072 .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-iso14496 { --accent: var(--accent-orange); }
+.card-iso14496 .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-iso23009 { --accent: var(--accent-orange); }
+.card-iso23009 .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+/* ─── Infrastructure Platforms ───────────────────────────────── */
+.card-net-arch { --accent: var(--accent-cyan); }
+.card-net-arch .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-patch { --accent: var(--accent-orange); }
+.card-patch .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-windows-server { --accent: var(--accent-cyan); }
+.card-windows-server .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-linux { --accent: var(--accent-orange); }
+.card-linux .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+/* ─── Monitoring, Logging & Observability ────────────────────── */
+.card-apm { --accent: var(--accent-orange); }
+.card-apm .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-opsgenie { --accent: var(--accent-red); }
+.card-opsgenie .card-tag { background: rgba(220, 38, 38, 0.2); color: var(--accent-red); }
+
+.card-pagerduty { --accent: var(--accent-red); }
+.card-pagerduty .card-tag { background: rgba(220, 38, 38, 0.2); color: var(--accent-red); }
+
+/* ─── Project & Program Management ──────────────────────────── */
+.card-agile { --accent: var(--accent-cyan); }
+.card-agile .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-agile-scrum { --accent: var(--accent-cyan); }
+.card-agile-scrum .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-apmp { --accent: var(--accent-purple); }
+.card-apmp .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
+
+.card-kanban { --accent: var(--accent-green); }
+.card-kanban .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+.card-okr { --accent: var(--accent-orange); }
+.card-okr .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-pmp { --accent: var(--accent-purple); }
+.card-pmp .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
+
+.card-prince2 { --accent: var(--accent-cyan); }
+.card-prince2 .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-stage-gates { --accent: var(--accent-orange); }
+.card-stage-gates .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-scrum { --accent: var(--accent-cyan); }
+.card-scrum .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-six-sigma { --accent: var(--accent-orange); }
+.card-six-sigma .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-waterfall { --accent: #64748b; }
+.card-waterfall .card-tag { background: rgba(100, 116, 139, 0.2); color: #64748b; }
+
+/* ─── IT Certifications ──────────────────────────────────────── */
+.card-az900 { --accent: var(--accent-cyan); }
+.card-az900 .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-az104 { --accent: var(--accent-cyan); }
+.card-az104 .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-ccna { --accent: var(--accent-green); }
+.card-ccna .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+.card-ccnp { --accent: var(--accent-green); }
+.card-ccnp .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+.card-cism { --accent: var(--accent-purple); }
+.card-cism .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
+
+.card-cissp { --accent: var(--accent-purple); }
+.card-cissp .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
+
+.card-pmi { --accent: var(--accent-orange); }
+.card-pmi .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+/* ─── DevOps & Automation ────────────────────────────────────── */
+.card-chef-puppet { --accent: var(--accent-orange); }
+.card-chef-puppet .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-devops { --accent: var(--accent-cyan); }
+.card-devops .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-gitops { --accent: var(--accent-green); }
+.card-gitops .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+.card-consul { --accent: var(--accent-purple); }
+.card-consul .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
+
+.card-platform-eng { --accent: var(--accent-purple); }
+.card-platform-eng .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
+
+.card-sre { --accent: var(--accent-red); }
+.card-sre .card-tag { background: rgba(220, 38, 38, 0.2); color: var(--accent-red); }
+
+.card-dora-metrics { --accent: var(--accent-orange); }
+.card-dora-metrics .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+/* ─── Device Management ──────────────────────────────────────── */
+.card-jamf { --accent: var(--accent-cyan); }
+.card-jamf .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-kandji { --accent: var(--accent-green); }
+.card-kandji .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+.card-workspace-one { --accent: var(--accent-purple); }
+.card-workspace-one .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
+
+/* ─── ITSM & Service Delivery ────────────────────────────────── */
+.card-freshdesk { --accent: var(--accent-green); }
+.card-freshdesk .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+.card-haloitsm { --accent: var(--accent-cyan); }
+.card-haloitsm .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-invgate-servicemgmt { --accent: var(--accent-cyan); }
+.card-invgate-servicemgmt .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-servicedesk { --accent: var(--accent-cyan); }
+.card-servicedesk .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-ivanti-neurons { --accent: var(--accent-orange); }
+.card-ivanti-neurons .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-jira-service-management { --accent: var(--accent-cyan); }
+.card-jira-service-management .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-manageengine-servicedesk { --accent: var(--accent-orange); }
+.card-manageengine-servicedesk .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-servicenow { --accent: var(--accent-green); }
+.card-servicenow .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+.card-solarwinds-servicedesk { --accent: var(--accent-orange); }
+.card-solarwinds-servicedesk .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-spiceworks { --accent: var(--accent-orange); }
+.card-spiceworks .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-sysaid { --accent: var(--accent-cyan); }
+.card-sysaid .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-teamdynamix { --accent: var(--accent-cyan); }
+.card-teamdynamix .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-topdesk { --accent: var(--accent-cyan); }
+.card-topdesk .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-zendesk { --accent: var(--accent-green); }
+.card-zendesk .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+/* ─── Remote Support ─────────────────────────────────────────── */
+.card-anydesk { --accent: var(--accent-cyan); }
+.card-anydesk .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-beyondtrust { --accent: var(--accent-red); }
+.card-beyondtrust .card-tag { background: rgba(220, 38, 38, 0.2); color: var(--accent-red); }
+
+.card-chrome-remote { --accent: var(--accent-cyan); }
+.card-chrome-remote .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-citrix { --accent: var(--accent-purple); }
+.card-citrix .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
+
+.card-teamviewer { --accent: var(--accent-cyan); }
+.card-teamviewer .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+/* ─── CRM & Enterprise Platforms ─────────────────────────────── */
+.card-hubspot { --accent: var(--accent-orange); }
+.card-hubspot .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+/* ─── Business Applications ──────────────────────────────────── */
+.card-bitrix24 { --accent: var(--accent-purple); }
+.card-bitrix24 .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
+
+.card-gong { --accent: var(--accent-orange); }
+.card-gong .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-jasper { --accent: var(--accent-purple); }
+.card-jasper .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
+
+.card-notion-ai { --accent: var(--accent-cyan); }
+.card-notion-ai .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-xero { --accent: var(--accent-cyan); }
+.card-xero .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+/* ─── Knowledge Base & Documentation ─────────────────────────── */
+.card-doc360 { --accent: var(--accent-cyan); }
+.card-doc360 .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-guru { --accent: var(--accent-orange); }
+.card-guru .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+/* ─── Communication & Collaboration ──────────────────────────── */
+.card-slack { --accent: var(--accent-purple); }
+.card-slack .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
+
+/* ─── Leadership, Talent & Org Excellence ────────────────────── */
+.card-change-org { --accent: var(--accent-purple); }
+.card-change-org .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
+
+.card-innovation { --accent: var(--accent-orange); }
+.card-innovation .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-talent { --accent: var(--accent-green); }
+.card-talent .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+.card-tech-leadership { --accent: var(--accent-purple); }
+.card-tech-leadership .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
+
+.card-team-dev { --accent: var(--accent-green); }
+.card-team-dev .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+.card-team-appraisals { --accent: var(--accent-green); }
+.card-team-appraisals .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+/* ─── AI, Machine Learning & Emerging Tech ───────────────────── */
+.card-ai { --accent: var(--accent-purple); }
+.card-ai .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
+
+.card-blockchain { --accent: var(--accent-orange); }
+.card-blockchain .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-edge { --accent: var(--accent-green); }
+.card-edge .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+.card-genai { --accent: var(--accent-purple); }
+.card-genai .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
+
+.card-hugging-face { --accent: var(--accent-orange); }
+.card-hugging-face .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-quantum { --accent: var(--accent-purple); }
+.card-quantum .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
+
+.card-openai { --accent: var(--accent-green); }
+.card-openai .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+/* ─── Microsoft Technologies & Tools ─────────────────────────── */
+.card-copilot-studio { --accent: var(--accent-purple); }
+.card-copilot-studio .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
+
+.card-dotnet { --accent: var(--accent-purple); }
+.card-dotnet .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
+
+.card-intune { --accent: var(--accent-cyan); }
+.card-intune .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-microsoft-project { --accent: var(--accent-cyan); }
+.card-microsoft-project .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-remotehelp { --accent: var(--accent-cyan); }
+.card-remotehelp .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-teams { --accent: var(--accent-purple); }
+.card-teams .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
+
+.card-sccm { --accent: var(--accent-cyan); }
+.card-sccm .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-tpm { --accent: var(--accent-cyan); }
+.card-tpm .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-bitlocker { --accent: var(--accent-cyan); }
+.card-bitlocker .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-blazor { --accent: var(--accent-purple); }
+.card-blazor .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
+
+/* ─── Software Development & Architecture ────────────────────── */
+.card-api { --accent: var(--accent-cyan); }
+.card-api .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-blazemeter { --accent: var(--accent-orange); }
+.card-blazemeter .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+
+.card-restful { --accent: var(--accent-cyan); }
+.card-restful .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-iso12207 { --accent: var(--accent-green); }
+.card-iso12207 .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+.card-iso25010 { --accent: var(--accent-green); }
+.card-iso25010 .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+
+/* ─── CRM & Enterprise ───────────────────────────────────────── */
+.card-unit4 { --accent: var(--accent-orange); }
+.card-unit4 .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
