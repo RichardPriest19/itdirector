@@ -751,194 +751,113 @@ body {
 .card-dora { --accent: var(--accent-green); }
 .card-dora .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
 
-
-
 .card-ats { --accent: var(--accent-green); }
 .card-ats .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
-
-
-
-
 
 .card-vlan { --accent: var(--accent-cyan); }
 .card-vlan .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
 
-
-
 .card-iis { --accent: var(--accent-cyan); }
 .card-iis .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
 
 .card-http { --accent: var(--accent-cyan); }
 .card-http .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
 
-
-
 .card-mdm { --accent: var(--accent-cyan); }
 .card-mdm .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-
-
 
 .card-5g { --accent: var(--accent-cyan); }
 .card-5g .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
 
-
 .card-xr { --accent: var(--accent-cyan); }
 .card-xr .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-
-
 
 .card-csf { --accent: var(--accent-cyan); }
 .card-csf .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
 
-
 .card-gxp { --accent: var(--accent-green); }
 .card-gxp .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
-
-
 
 .card-data-warehouse { --accent: var(--accent-orange); }
 .card-data-warehouse .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
 
-
 .card-fda21 { --accent: var(--accent-green); }
 .card-fda21 .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
-
-
 
 .card-ccb { --accent: var(--accent-green); }
 .card-ccb .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
 
-
-
 .card-evm { --accent: var(--accent-green); }
 .card-evm .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
-
 
 .card-esxi { --accent: var(--accent-cyan); }
 .card-esxi .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
 
-
-
 .card-acls { --accent: var(--accent-cyan); }
 .card-acls .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-
 
 .card-vpn { --accent: var(--accent-cyan); }
 .card-vpn .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
 
-
-
 .card-tcpip { --accent: var(--accent-cyan); }
 .card-tcpip .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-
 
 .card-tls { --accent: var(--accent-cyan); }
 .card-tls .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
 
-
-
 .card-ech { --accent: var(--accent-cyan); }
 .card-ech .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-
 
 .card-ifs { --accent: var(--accent-orange); }
 .card-ifs .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
 
-
 .card-aurora { --accent: var(--accent-orange); }
 .card-aurora .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
 
 .card-ifs-modules { --accent: var(--accent-orange); }
 .card-ifs-modules .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
 
-
-
-
-
-
 .card-arxr { --accent: var(--accent-cyan); }
 .card-arxr .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-
-
-
 
 .card-digital-twins { --accent: var(--accent-cyan); }
 .card-digital-twins .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
 
-
-
 .card-spatial-ai { --accent: var(--accent-cyan); }
 .card-spatial-ai .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-
 
 .card-mitre-attack { --accent: var(--accent-cyan); }
 .card-mitre-attack .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
 
-
-
-
-
 .card-mitre-v16 { --accent: var(--accent-cyan); }
 .card-mitre-v16 .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-
-
-
 
 .card-ot-ics { --accent: var(--accent-cyan); }
 .card-ot-ics .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
 
-
 .card-crowdstrike { --accent: var(--accent-cyan); }
 .card-crowdstrike .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-
-
-
 
 .card-charlotte { --accent: var(--accent-cyan); }
 .card-charlotte .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
 
-
-
-
 .card-unit4-salesforce { --accent: var(--accent-orange); }
 .card-unit4-salesforce .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-
 
 .card-mulesoft { --accent: var(--accent-orange); }
 .card-mulesoft .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
 
-
-
 .card-ztna { --accent: var(--accent-cyan); }
 .card-ztna .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-
 
 .card-grc { --accent: var(--accent-green); }
 .card-grc .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
 
-
 .card-isp { --accent: var(--accent-cyan); }
 .card-isp .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
 
-
-
-
 .card-fortinet-nse { --accent: var(--accent-cyan); }
 .card-fortinet-nse .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
 
 .card-cisco-ise { --accent: var(--accent-cyan); }
 .card-cisco-ise .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
@@ -946,106 +865,102 @@ body {
 .card-byod { --accent: var(--accent-cyan); }
 .card-byod .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
 
-
-
-
-
 .card-trustsec { --accent: var(--accent-cyan); }
 .card-trustsec .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
 
-
-
 .card-xledger { --accent: var(--accent-orange); }
 .card-xledger .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-
-
 
 .card-activeh { --accent: var(--accent-orange); }
 .card-activeh .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
 
-
-
 .card-onebusiness { --accent: var(--accent-orange); }
 .card-onebusiness .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
 
 .card-sap-b1 { --accent: var(--accent-orange); }
 .card-sap-b1 .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
 
-
-
-
-
 .card-gaap { --accent: var(--accent-green); }
 .card-gaap .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
-
-
-
 
 .card-powerapps { --accent: var(--accent-orange); }
 .card-powerapps .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
 
-
-
 .card-rice { --accent: var(--accent-green); }
 .card-rice .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
-
-
 
 .card-moscow { --accent: var(--accent-green); }
 .card-moscow .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
 
-
 .card-tom { --accent: var(--accent-green); }
 .card-tom .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
-
 
 .card-r2r { --accent: var(--accent-green); }
 .card-r2r .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
 
-
-
-
 .card-p2p { --accent: var(--accent-green); }
 .card-p2p .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
-
-
 
 .card-o2c { --accent: var(--accent-green); }
 .card-o2c .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
 
-
-
-
-
 .card-blackline { --accent: var(--accent-orange); }
 .card-blackline .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
 
-
-
 .card-xledger { --accent: var(--accent-orange); }
 .card-xledger .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-
-
-
-
-
 
 
 .card-mri { --accent: var(--accent-orange); }
 .card-mri .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
 
-
-
 .card-ssh { --accent: var(--accent-cyan); }
 .card-ssh .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
 
-
-
 .card-wireguard { --accent: var(--accent-cyan); }
 .card-wireguard .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-dooh { --accent: var(--accent-cyan); }
+.card-dooh .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+
+.card-msp { --accent: var(--accent-indigo); }
+.card-msp .card-tag {     background: rgba(99, 102, 241, 0.2);     color: var(--accent-indigo);  }
+
+.card-cyberark { --accent: var(--accent-rose); }
+
+.card-cyberark .card-tag {
+    background: rgba(244, 63, 94, 0.2);
+    color: var(--accent-rose);
+}
+
+
+
+
+.card-delinea { --accent: var(--accent-emerald); }
+
+.card-delinea .card-tag {
+    background: rgba(16, 185, 129, 0.2);
+    color: var(--accent-emerald);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
