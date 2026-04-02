@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WireGuard | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>WireGuard</h1>
+            <p>WireGuard – modern, fast, secure VPN protocol with small attack surface</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>WireGuard is a modern, simple, fast, and secure VPN protocol that uses state-of-the-art cryptography and a minimal codebase. Designed as a replacement for older protocols like IPsec and OpenVPN, WireGuard has become one of the most widely adopted VPN solutions in March 2026 for both **site-to-site** and **remote access** use cases. It is natively supported in Linux kernel, and available on Windows, macOS, Android, iOS, and many routers/firewalls. In enterprise environments, WireGuard is frequently used via **Tailscale**, **Netbird**, **Headscale**, **Cloudflare Warp**, **AWS VPC**, **Azure**, and integrated into **SASE/SD-WAN** platforms. Key advantages include **extremely fast handshakes**, **cryptokey routing**, **small attack surface**, **easy configuration**, **high performance**, and **post-quantum readiness** (hybrid post-quantum key exchange in active development). WireGuard is praised for its simplicity and security compared to traditional VPN protocols.</p>
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> WireGuard offers a modern, fast, secure, and easy-to-deploy VPN solution with a tiny codebase and strong cryptography — delivering excellent performance, simple configuration, low latency, and a significantly smaller attack surface than legacy protocols, while supporting zero-trust patterns and seamless integration into modern SASE, SD-WAN, and cloud-native architectures.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Features & Security (2026)</h2>
+
+                <h3>Cryptography & Protocol</h3>
+                <ul>
+                    <li>Modern primitives: ChaCha20-Poly1305, Curve25519, BLAKE2s, SipHash</li>
+                    <li>Cryptokey routing (public keys define allowed peers)</li>
+                    <li>Very fast handshake (typically < 100 ms)</li>
+                </ul>
+
+                <h3>Deployment Models</h3>
+                <ul>
+                    <li>Site-to-site tunnels</li>
+                    <li>Remote access / road warrior</li>
+                    <li>Mesh networking (Tailscale, Netbird, Headscale)</li>
+                </ul>
+
+                <h3>Security Advantages</h3>
+                <ul>
+                    <li>Minimal codebase (~4,000 lines) → easier to audit</li>
+                    <li>Strong resistance to side-channel attacks</li>
+                    <li>Post-quantum hybrid key exchange in active development</li>
+                </ul>
+
+                <h3>Enterprise Features</h3>
+                <ul>
+                    <li>Integration with identity providers & short-lived keys</li>
+                    <li>Zero-trust patterns with just-in-time access</li>
+                    <li>High performance on mobile and lossy networks</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Key Trends & Best Practices in 2026</h2>
+
+                <h3>WireGuard in Enterprise & SASE</h3>
+                <ul>
+                    <li>WireGuard as default transport in many SASE/SD-WAN solutions</li>
+                    <li>Mesh networking for zero-trust connectivity (Tailscale, Netbird)</li>
+                    <li>Integration with identity providers for dynamic peer management</li>
+                </ul>
+
+                <h3>Post-Quantum & Zero Trust</h3>
+                <ul>
+                    <li>Hybrid post-quantum key exchange deployment</li>
+                    <li>Short-lived keys & certificate-based authentication</li>
+                    <li>Just-in-time peer configuration</li>
+                </ul>
+
+                <h3>Performance & Security Hardening</h3>
+                <ul>
+                    <li>Use WireGuard over UDP with proper MTU settings</li>
+                    <li>Disable unnecessary features and limit allowed IPs</li>
+                    <li>Monitor handshake & traffic with modern observability tools</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Best Practices for WireGuard Deployment (2026)</h2>
+
+                <h3>Configuration & Hardening</h3>
+                <ul>
+                    <li>Use strong, unique private/public key pairs per peer</li>
+                    <li>Restrict AllowedIPs to minimum necessary</li>
+                    <li>Enable persistent keepalive only when needed</li>
+                </ul>
+
+                <h3>Zero Trust & Scalability</h3>
+                <ul>
+                    <li>Use mesh networking tools (Tailscale, Netbird) for dynamic peers</li>
+                    <li>Integrate with identity providers for just-in-time access</li>
+                    <li>Combine with ZTNA/SASE for layered security</li>
+                </ul>
+
+                <h3>Monitoring & Governance</h3>
+                <ul>
+                    <li>Monitor WireGuard handshakes and traffic patterns</li>
+                    <li>Rotate keys regularly and use short-lived configurations</li>
+                    <li>Document and audit all WireGuard configurations</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Define WireGuard strategy as part of zero-trust & SASE roadmap</li>
+                    <li>Approve WireGuard deployment standards & security baseline</li>
+                    <li>Ensure post-quantum readiness & key management practices</li>
+                    <li>Oversee WireGuard usage, performance & compliance</li>
+                    <li>Monitor for unauthorized peers and anomalous traffic</li>
+                    <li>Drive integration with identity providers and SASE platforms</li>
+                    <li>Align WireGuard usage with regulatory, security & business goals</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>wireguard.com – official WireGuard documentation & protocol</li>
+                    <li>WireGuard for Linux, Windows, macOS, Android, iOS guides</li>
+                    <li>Tailscale, Netbird & Headscale documentation</li>
+                    <li>CISA & NIST VPN & WireGuard security guidance</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

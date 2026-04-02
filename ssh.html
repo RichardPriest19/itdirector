@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSH - Secure Shell | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>SSH</h1>
+            <p>Secure Shell – cryptographic network protocol for secure remote access & file transfer</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>SSH (Secure Shell) is the standard cryptographic network protocol used for secure remote login, command execution, file transfer (SFTP/SCP), and tunneling over unsecured networks. In March 2026, **SSH version 2** is the universal standard, with **OpenSSH** as the dominant open-source implementation on Linux, macOS, Windows (via OpenSSH for Windows), and most network devices. SSH has evolved significantly with **post-quantum hybrid key exchange** (protecting against future quantum attacks), **strict key exchange**, **Verified Host Keys** (OpenSSH 9.8+), **SSH Certificate Authorities** for scalable key management, **hardware security keys** (YubiKey, FIDO2), **zero-trust SSH patterns** (short-lived certificates, just-in-time access), and integration with **identity providers** (Entra ID, Okta) and **privileged access management** tools. It remains essential for server administration, DevOps automation, CI/CD pipelines, secure file transfer, and proxying in cloud, on-prem, edge, and hybrid environments.</p>
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> SSH provides encrypted, authenticated, and secure remote access and file transfer — replacing insecure protocols (Telnet, FTP, rlogin), enabling secure automation, supporting zero-trust practices with short-lived credentials, offering post-quantum protection, and — when properly hardened — serving as a reliable, audited, and highly secure foundation for infrastructure management across all environments.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Features & Security (2026)</h2>
+
+                <h3>Authentication Methods</h3>
+                <ul>
+                    <li>Password (discouraged), Public Key, Certificate-based</li>
+                    <li>Hardware keys (YubiKey, FIDO2) & SSH agent forwarding</li>
+                    <li>Multi-factor via PAM or external authenticators</li>
+                </ul>
+
+                <h3>Modern Security Enhancements</h3>
+                <ul>
+                    <li>Post-quantum hybrid key exchange (e.g., sntrup761 + X25519)</li>
+                    <li>Strict key exchange & host key verification</li>
+                    <li>Verified Host Keys & known_hosts improvements</li>
+                </ul>
+
+                <h3>Advanced Use Cases</h3>
+                <ul>
+                    <li>Secure file transfer (SFTP/SCP) & tunneling (local/remote/dynamic)</li>
+                    <li>SSH Certificate Authorities for large-scale management</li>
+                    <li>Just-in-time & short-lived access with zero-trust tools</li>
+                </ul>
+
+                <h3>Hardening Best Practices</h3>
+                <ul>
+                    <li>Disable password auth, root login, and legacy algorithms</li>
+                    <li>Use strong ciphers, key exchange, and host key algorithms</li>
+                    <li>Enforce key rotation & certificate-based auth</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Key Trends & Best Practices in 2026</h2>
+
+                <h3>Post-Quantum & Zero Trust</h3>
+                <ul>
+                    <li>Hybrid post-quantum key exchange in production</li>
+                    <li>Short-lived certificates & just-in-time access</li>
+                    <li>Integration with identity providers & PAM modules</li>
+                </ul>
+
+                <h3>Automation & DevOps</h3>
+                <ul>
+                    <li>SSH in CI/CD pipelines & infrastructure as code</li>
+                    <li>Ansible, Terraform, and GitOps over SSH</li>
+                    <li>SSH bastion hosts & proxy jump patterns</li>
+                </ul>
+
+                <h3>Security & Compliance</h3>
+                <ul>
+                    <li>Compliance with DORA, NIS2, PCI-DSS, and cyber insurance</li>
+                    <li>Logging & monitoring of SSH sessions</li>
+                    <li>Regular SSH audits & key rotation</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Best Practices for SSH Deployment (2026)</h2>
+
+                <h3>Hardening & Configuration</h3>
+                <ul>
+                    <li>Disable password authentication & root login</li>
+                    <li>Use strong ciphers, key exchange, and host keys</li>
+                    <li>Implement host key verification & strict modes</li>
+                </ul>
+
+                <h3>Access Control & Zero Trust</h3>
+                <ul>
+                    <li>Use SSH Certificate Authorities or short-lived keys</li>
+                    <li>Integrate with identity providers & MFA</li>
+                    <li>Apply just-in-time access & bastion hosts</li>
+                </ul>
+
+                <h3>Monitoring & Governance</h3>
+                <ul>
+                    <li>Log all SSH sessions & monitor for anomalies</li>
+                    <li>Conduct regular key audits & rotation</li>
+                    <li>Align SSH usage with zero-trust & regulatory requirements</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Define SSH & remote access security strategy</li>
+                    <li>Approve SSH hardening standards & certificate authority model</li>
+                    <li>Ensure post-quantum readiness & zero-trust SSH patterns</li>
+                    <li>Oversee SSH usage, auditing & compliance</li>
+                    <li>Monitor SSH logs & anomaly detection</li>
+                    <li>Drive integration with identity providers & privileged access tools</li>
+                    <li>Align SSH practices with regulatory, security & business goals</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>openssh.com – official OpenSSH documentation</li>
+                    <li>RFC 4251–4254 (SSH Protocol) & post-quantum SSH drafts</li>
+                    <li>CISA & NIST SSH hardening guidance</li>
+                    <li>SSH Certificate Authority best practices</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
