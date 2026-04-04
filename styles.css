@@ -1234,6 +1234,92 @@ body {
     color: var(--accent-blue);
 }
 
+.card-eudb { --accent: var(--accent-teal); }
+
+.card-eudb .card-tag {
+    background: rgba(20, 184, 166, 0.2);
+    color: var(--accent-teal);
+}
+
+
+
+
+
+
+
+.card-eudb2 { --accent: var(--accent-purple); }
+
+.card-eudb2 .card-tag {
+    background: rgba(139, 92, 246, 0.2);
+    color: var(--accent-purple);
+}
+
+
+
+
+
+
+
+.card-dpa2 { --accent: var(--accent-indigo); }
+
+.card-dpa2 .card-tag {
+    background: rgba(79, 70, 229, 0.2);
+    color: var(--accent-indigo);
+}
+
+
+
+
+
+.card-dpa3 { --accent: var(--accent-indigo); }
+
+.card-dpa3 .card-tag {
+    background: rgba(79, 70, 229, 0.2);
+    color: var(--accent-indigo);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
