@@ -947,13 +947,142 @@ body {
 
 
 
+.card-suitescript { --accent: var(--accent-amber); }
+
+.card-suitescript .card-tag {
+    background: rgba(245, 158, 11, 0.2);
+    color: var(--accent-amber);
+}
+
+
+
+.card-suiteflow { --accent: var(--accent-teal); }
+
+.card-suiteflow .card-tag {
+    background: rgba(20, 184, 166, 0.2);
+    color: var(--accent-teal);
+}
+
+
+
+.card-suiteanalytics { --accent: var(--accent-blue); }
+
+.card-suiteanalytics .card-tag {
+    background: rgba(59, 130, 246, 0.2);
+    color: var(--accent-blue);
+}
+
+
+
+.card-restlets { --accent: var(--accent-violet); }
+
+.card-restlets .card-tag {
+    background: rgba(139, 92, 246, 0.2);
+    color: var(--accent-violet);
+}
+
+
+
+
+.card-celigo { --accent: var(--accent-sky); }
+
+.card-celigo .card-tag {
+    background: rgba(14, 165, 233, 0.2);
+    color: var(--accent-sky);
+}
+
+
+
+
+
+.card-boomi { --accent: var(--accent-purple); }
+
+.card-boomi .card-tag {
+    background: rgba(168, 85, 247, 0.2);
+    color: var(--accent-purple);
+}
 
 
 
 
 
 
+.card-restapis { --accent: var(--accent-cyan); }
 
+.card-restapis .card-tag {
+    background: rgba(6, 182, 212, 0.2);
+    color: var(--accent-cyan);
+}
+
+
+.card-datagovernance { --accent: var(--accent-slate); }
+
+.card-datagovernance .card-tag {
+    background: rgba(100, 116, 139, 0.2);
+    color: var(--accent-slate);
+}
+
+
+
+
+
+
+.card-scm { --accent: var(--accent-orange); }
+
+.card-scm .card-tag {
+    background: rgba(249, 115, 22, 0.2);
+    color: var(--accent-orange);
+}
+
+
+
+
+.card-configmgr { --accent: var(--accent-lime); }
+
+.card-configmgr .card-tag {
+    background: rgba(132, 204, 22, 0.2);
+    color: var(--accent-lime);
+}
+
+
+
+
+
+.card-sow { --accent: var(--accent-purple); }
+
+.card-sow .card-tag {
+    background: rgba(139, 92, 246, 0.2);
+    color: var(--accent-purple);
+}
+
+
+
+.card-wms { --accent: var(--accent-teal); }
+
+.card-wms .card-tag {
+    background: rgba(20, 184, 166, 0.2);
+    color: var(--accent-teal);
+}
+
+
+.card-nexthink { --accent: var(--accent-indigo); }
+
+.card-nexthink .card-tag {
+    background: rgba(99, 102, 241, 0.2);
+    color: var(--accent-indigo);
+}
+
+
+
+
+
+
+.card-siam { --accent: var(--accent-orange); }
+
+.card-siam .card-tag {
+    background: rgba(251, 191, 36, 0.2);
+    color: var(--accent-orange);
+}
 
 
 
