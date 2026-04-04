@@ -1087,6 +1087,44 @@ body {
 
 
 
+.card-daas { --accent: var(--accent-blue); }
+
+.card-daas .card-tag {
+    background: rgba(59, 130, 246, 0.2);
+    color: var(--accent-blue);
+}
+
+
+
+
+
+
+.card-sdlc { --accent: var(--accent-green); }
+
+.card-sdlc .card-tag {
+    background: rgba(34, 197, 94, 0.2);
+    color: var(--accent-green);
+}
+
+
+
+
+.card-arm { --accent: var(--accent-teal); }
+
+.card-arm .card-tag {
+    background: rgba(20, 184, 166, 0.2);
+    color: var(--accent-teal);
+}
+
+
+
+
+.card-h2r { --accent: var(--accent-purple); }
+
+.card-h2r .card-tag {
+    background: rgba(139, 92, 246, 0.2);
+    color: var(--accent-purple);
+}
 
 
 
@@ -1094,10 +1132,107 @@ body {
 
 
 
+.card-cac { --accent: var(--accent-orange); }
+
+.card-cac .card-tag {
+    background: rgba(251, 146, 60, 0.2);
+    color: var(--accent-orange);
+}
 
 
 
 
+.card-roas { --accent: var(--accent-red); }
+
+.card-roas .card-tag {
+    background: rgba(239, 68, 68, 0.2);
+    color: var(--accent-red);
+}
+
+
+
+
+.card-subnet { --accent: var(--accent-blue); }
+
+.card-subnet .card-tag {
+    background: rgba(59, 130, 246, 0.2);
+    color: var(--accent-blue);
+}
+
+
+.card-proxy { --accent: var(--accent-indigo); }
+
+.card-proxy .card-tag {
+    background: rgba(129, 140, 248, 0.2);
+    color: var(--accent-indigo);
+}
+
+
+
+
+
+
+.card-isdn { --accent: var(--accent-purple); }
+
+.card-isdn .card-tag {
+    background: rgba(168, 85, 247, 0.2);
+    color: var(--accent-purple);
+}
+
+
+
+
+.card-dtc { --accent: var(--accent-orange); }
+
+.card-dtc .card-tag {
+    background: rgba(249, 115, 22, 0.2);
+    color: var(--accent-orange);
+}
+
+
+
+
+.card-pam { --accent: var(--accent-red); }
+
+.card-pam .card-tag {
+    background: rgba(239, 68, 68, 0.2);
+    color: var(--accent-red);
+}
+
+
+
+.card-xdr { --accent: var(--accent-teal); }
+
+.card-xdr .card-tag {
+    background: rgba(20, 184, 166, 0.2);
+    color: var(--accent-teal);
+}
+
+
+
+.card-genai { --accent: var(--accent-purple); }
+
+.card-genai .card-tag {
+    background: rgba(139, 92, 246, 0.2);
+    color: var(--accent-purple);
+}
+
+
+
+.card-avalara { --accent: var(--accent-orange); }
+
+.card-avalara .card-tag {
+    background: rgba(249, 115, 22, 0.2);
+    color: var(--accent-orange);
+}
+
+
+.card-openair { --accent: var(--accent-blue); }
+
+.card-openair .card-tag {
+    background: rgba(59, 130, 246, 0.2);
+    color: var(--accent-blue);
+}
 
 
 
