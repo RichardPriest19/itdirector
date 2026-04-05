@@ -1445,6 +1445,96 @@ body {
 
 
 
+/* New Card Color Variants */
+.card-preemptive { --accent: var(--accent-cyan); }
+.card-preemptive .card-tag { background: rgba(6,182,212,0.2); color: var(--accent-cyan); }
+
+.card-ai-sec-platforms { --accent: var(--accent-purple); }
+.card-ai-sec-platforms .card-tag { background: rgba(168,85,247,0.2); color: var(--accent-purple); }
+
+.card-agentic-ai { --accent: var(--accent-purple); }
+.card-agentic-ai .card-tag { background: rgba(168,85,247,0.2); color: var(--accent-purple); }
+
+.card-continuous-auth { --accent: var(--accent-cyan); }
+.card-continuous-auth .card-tag { background: rgba(6,182,212,0.2); color: var(--accent-cyan); }
+
+.card-nist-ai-rmf { --accent: var(--accent-orange); }
+.card-nist-ai-rmf .card-tag { background: rgba(249,115,22,0.2); color: var(--accent-orange); }
+
+.card-sovereign-cloud { --accent: var(--accent-cyan); }
+.card-sovereign-cloud .card-tag { background: rgba(6,182,212,0.2); color: var(--accent-cyan); }
+
+.card-physical-ai { --accent: var(--accent-cyan); }
+.card-physical-ai .card-tag { background: rgba(6,182,212,0.2); color: var(--accent-cyan); }
+
+.card-domain-llm { --accent: var(--accent-orange); }
+.card-domain-llm .card-tag { background: rgba(249,115,22,0.2); color: var(--accent-orange); }
+
+.card-digital-provenance { --accent: var(--accent-green); }
+.card-digital-provenance .card-tag { background: rgba(16,185,129,0.2); color: var(--accent-green); }
+
+.card-finops-ai { --accent: var(--accent-purple); }
+.card-finops-ai .card-tag { background: rgba(168,85,247,0.2); color: var(--accent-purple); }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
