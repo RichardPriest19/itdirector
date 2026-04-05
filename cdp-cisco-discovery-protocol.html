@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDP – Cisco Discovery Protocol | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>CDP – Cisco Discovery Protocol</h1>
+            <p>Cisco Discovery Protocol – proprietary Layer 2 network protocol for device discovery, topology mapping, and neighbour identification</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>Cisco Discovery Protocol (CDP) is a proprietary Data Link Layer (Layer 2) protocol developed by Cisco Systems. It enables Cisco network devices — routers, switches, access points, and IP phones — to automatically discover and share information about directly connected neighbours. CDP operates independently of network layer protocols and functions even when IP is not configured, making it a foundational tool for network visibility, topology documentation, and troubleshooting.</p>
+
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> CDP provides automatic, real-time visibility into directly connected Cisco devices — including device type, IOS version, IP address, and interface details — without requiring manual inventory, making it indispensable for network documentation, troubleshooting, and VoIP deployments.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>How CDP Works</h2>
+
+                <h3>Protocol Mechanics</h3>
+                <ul>
+                    <li>CDP operates at Layer 2 (Data Link) using multicast MAC address 01:00:0C:CC:CC:CC</li>
+                    <li>Devices send CDP advertisements every 60 seconds by default (configurable)</li>
+                    <li>Advertisements are received and stored in the CDP neighbour table for 180 seconds (hold time)</li>
+                    <li>CDP is enabled globally and per-interface on Cisco devices by default</li>
+                </ul>
+
+                <h3>Information Advertised</h3>
+                <ul>
+                    <li>Device ID — hostname of the neighbour device</li>
+                    <li>Local and remote port/interface identifiers</li>
+                    <li>Platform and device model (e.g. Cisco Catalyst 9300)</li>
+                    <li>IOS/software version running on the neighbour device</li>
+                    <li>IP address(es) of the neighbour device</li>
+                    <li>VTP domain name and native VLAN information</li>
+                    <li>Duplex setting and Power over Ethernet (PoE) capabilities</li>
+                </ul>
+
+                <h3>Key CDP Commands</h3>
+                <ul>
+                    <li><code>show cdp neighbors</code> – summarised view of directly connected CDP neighbours</li>
+                    <li><code>show cdp neighbors detail</code> – full detail including IP addresses and software versions</li>
+                    <li><code>show cdp interface</code> – CDP status and timer settings per interface</li>
+                    <li><code>no cdp run</code> – disable CDP globally on the device</li>
+                    <li><code>no cdp enable</code> – disable CDP on a specific interface</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>CDP Use Cases</h2>
+
+                <h3>Network Topology Discovery & Documentation</h3>
+                <ul>
+                    <li>Automatically map physical network topology without manual surveys</li>
+                    <li>Identify device interconnections, interface pairings, and uplink paths</li>
+                    <li>Support network management tools (e.g. SolarWinds, PRTG, Cisco DNA Center) in auto-discovering topology</li>
+                </ul>
+
+                <h3>VoIP & IP Phone Deployment</h3>
+                <ul>
+                    <li>CDP enables Cisco IP phones to automatically receive VLAN configuration from connected switches</li>
+                    <li>Switches advertise voice VLAN information to IP phones via CDP, eliminating manual configuration</li>
+                    <li>PoE negotiation between switches and IP phones is facilitated through CDP exchanges</li>
+                </ul>
+
+                <h3>Troubleshooting & Diagnostics</h3>
+                <ul>
+                    <li>Identify misconfigured duplex or speed settings between neighbours</li>
+                    <li>Verify correct VLAN assignments and native VLAN consistency across trunk links</li>
+                    <li>Confirm physical connectivity and interface state without requiring SNMP or IP reachability</li>
+                </ul>
+
+                <h3>Network Auditing & Compliance</h3>
+                <ul>
+                    <li>Enumerate all Cisco devices and software versions for patch management planning</li>
+                    <li>Identify unauthorised or unexpected devices connected to the network</li>
+                    <li>Cross-reference CDP data with CMDB records for configuration drift detection</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>CDP Security Considerations</h2>
+
+                <h3>Information Disclosure Risks</h3>
+                <ul>
+                    <li>CDP advertisements contain sensitive data — device type, IOS version, and IP addresses — that can aid attackers in reconnaissance</li>
+                    <li>An attacker with access to a network segment can passively capture CDP frames and map the infrastructure</li>
+                    <li>CDP data can be used to identify vulnerable IOS versions targeted for exploitation</li>
+                </ul>
+
+                <h3>CDP Spoofing & Flooding Attacks</h3>
+                <ul>
+                    <li>Malicious actors can send crafted CDP packets to overload the CDP neighbour table (CDP flooding)</li>
+                    <li>CDP spoofing can be used to manipulate VoIP phone VLAN assignments</li>
+                    <li>Cisco switches are vulnerable to memory exhaustion if flooded with forged CDP advertisements</li>
+                </ul>
+
+                <h3>Hardening Recommendations</h3>
+                <ul>
+                    <li>Disable CDP globally (<code>no cdp run</code>) on devices where neighbour discovery is not required</li>
+                    <li>Disable CDP on all external-facing, untrusted, and user-access interfaces (<code>no cdp enable</code>)</li>
+                    <li>Retain CDP only on trunk links, uplinks, and infrastructure interconnects where it provides operational value</li>
+                    <li>Consider LLDP (Link Layer Discovery Protocol) as an open-standard alternative where vendor-agnostic discovery is needed</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>CDP vs. LLDP</h2>
+                <ul>
+                    <li>CDP is Cisco-proprietary; LLDP (IEEE 802.1AB) is the open-standard equivalent supported by multi-vendor devices</li>
+                    <li>LLDP-MED extends LLDP with VoIP-specific capabilities similar to CDP's IP phone support</li>
+                    <li>In mixed-vendor environments, LLDP is preferred for interoperability; CDP remains dominant in all-Cisco deployments</li>
+                    <li>Both protocols can run simultaneously on Cisco devices — CDP for Cisco-to-Cisco, LLDP for multi-vendor visibility</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Key Trends & Best Practices in 2026</h2>
+
+                <h3>Network Automation & Telemetry</h3>
+                <ul>
+                    <li>Ingest CDP neighbour data into network automation platforms (Cisco DNA Center, Ansible, NetBox) for dynamic topology management</li>
+                    <li>Use CDP data as an input to network digital twins for real-time infrastructure modelling</li>
+                    <li>Combine CDP with streaming telemetry for comprehensive, up-to-date network visibility</li>
+                </ul>
+
+                <h3>Zero Trust Network Segmentation</h3>
+                <ul>
+                    <li>Audit CDP-enabled interfaces as part of Zero Trust network segmentation reviews</li>
+                    <li>Ensure CDP is disabled on all endpoints, guest networks, and untrusted access ports</li>
+                    <li>Use CDP topology data to validate and enforce segmentation policies in microsegmented environments</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Ensure CDP security hardening is included in network device build standards and configuration baselines</li>
+                    <li>Review CDP enablement as part of regular network security audits and Cyber Essentials assessments</li>
+                    <li>Leverage CDP data to maintain accurate network topology documentation and CMDB asset records</li>
+                    <li>Coordinate with network engineering teams to establish clear policies on where CDP is permitted vs. disabled</li>
+                    <li>Evaluate LLDP as a complementary or replacement protocol in multi-vendor or Zero Trust environments</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>cisco.com – Cisco CDP official documentation and configuration guides</li>
+                    <li>Cisco IOS Configuration Fundamentals – command reference for CDP operations and hardening</li>
+                    <li>CIS Cisco IOS Benchmarks – security hardening guidance covering CDP interface controls</li>
+                    <li>IEEE 802.1AB – LLDP standard for multi-vendor neighbour discovery interoperability</li>
+                    <li>NIST SP 800-115 – Technical Guide to Information Security Testing, including network discovery considerations</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
