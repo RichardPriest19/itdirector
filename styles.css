@@ -269,7 +269,19 @@ body {
 .card-node-red,.card-django,.card-spring-boot,.card-esg,.card-ma,.card-dei,.card-dpa,.card-baa,
 .card-gxp,.card-fda21,.card-ccb,.card-evm,.card-rice,.card-moscow,.card-tom,.card-r2r,.card-p2p,
 .card-o2c,.card-gaap,.card-dora,.card-ats,.card-ecss,.card-gsom,.card-sdlc,.card-secure-dev,
-.card-digital-provenance {
+
+,.card-rasci,
+
+
+.card-digital-provenance 
+
+
+
+
+
+
+
+{
     --accent:var(--accent-green);
 }
 .card-msp { --accent:var(--accent-indigo); }
@@ -282,6 +294,9 @@ body {
 .card-celigo { --accent:var(--accent-sky); }
 .card-datagovernance { --accent:var(--accent-slate); }
 .card-configmgr { --accent:var(--accent-lime); }
+
+
+
 
 /* Card Tag Colors */
 .card-itil .card-tag,
@@ -530,6 +545,12 @@ body {
 .card-gsom .card-tag,
 .card-sdlc .card-tag,
 .card-secure-dev .card-tag,
+
+.card-rasci .card-tag,
+
+
+
+
 .card-digital-provenance .card-tag {
     background:rgba(16,185,129,0.2);
     color:var(--accent-green);
