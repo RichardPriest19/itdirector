@@ -17,1805 +17,630 @@
     --text-secondary: #cbd5e1;
     --border-color: #334155;
     --hover-bg: #475569;
-
     --font-display: 'Segoe UI', system-ui, sans-serif;
     --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Reset & Base Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-    -webkit-font-smoothing: antialiased;
-}
-
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; -webkit-font-smoothing:antialiased; }
 body {
-    font-family: var(--font-body);
-    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--bg-dark) 100%);
-    color: var(--text-primary);
-    line-height: 1.6;
-    min-height: 100vh;
+    font-family:var(--font-body);
+    background:linear-gradient(135deg, var(--primary-dark) 0%, var(--bg-dark) 100%);
+    color:var(--text-primary);
+    line-height:1.6;
+    min-height:100vh;
 }
 
 /* Container & Layout */
 .container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    max-width:1400px;
+    margin:0 auto;
+    padding:0 20px;
+    display:flex;
+    flex-direction:column;
+    min-height:100vh;
 }
 
 /* Header */
 .header {
-    padding: 60px 0 40px;
-    border-bottom: 1px solid var(--border-color);
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 30px;
-    animation: slideDown 0.6s ease-out;
+    padding:60px 0 40px;
+    border-bottom:1px solid var(--border-color);
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:30px;
+    animation:slideDown 0.6s ease-out;
 }
-
 .header-content h1 {
-    font-size: 2.8rem;
-    font-weight: 700;
-    background: linear-gradient(135deg, var(--accent-cyan) 0%, var(--accent-purple) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin-bottom: 8px;
-    letter-spacing: -0.02em;
+    font-size:2.8rem;
+    font-weight:700;
+    background:linear-gradient(135deg, var(--accent-cyan) 0%, var(--accent-purple) 100%);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
+    margin-bottom:8px;
+    letter-spacing:-0.02em;
 }
+.tagline { font-size:1.1rem; color:var(--text-secondary); font-weight:300; }
 
-.tagline {
-    font-size: 1.1rem;
-    color: var(--text-secondary);
-    font-weight: 300;
-}
-
-.search-nav {
-    flex: 1;
-    max-width: 400px;
-    position: relative;
-}
-
+.search-nav { flex:1; max-width:400px; position:relative; }
 .search-box {
-    width: 100%;
-    padding: 12px 18px;
-    background: var(--bg-card);
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    color: var(--text-primary);
-    font-size: 0.95rem;
-    transition: var(--transition);
+    width:100%;
+    padding:12px 18px;
+    background:var(--bg-card);
+    border:1px solid var(--border-color);
+    border-radius:8px;
+    color:var(--text-primary);
+    font-size:0.95rem;
+    transition:var(--transition);
 }
-
 .search-box:hover,
 .search-box:focus {
-    border-color: var(--accent-cyan);
-    background: rgba(6, 182, 212, 0.05);
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.1);
+    border-color:var(--accent-cyan);
+    background:rgba(6,182,212,0.05);
+    outline:none;
+    box-shadow:0 0 0 3px rgba(6,182,212,0.1);
 }
-
-.search-box::placeholder {
-    color: var(--text-secondary);
-}
+.search-box::placeholder { color:var(--text-secondary); }
 
 /* Clear Search Button */
 .clear-search-btn {
-    position: absolute;
-    right: 8px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: var(--accent-cyan);
-    color: var(--primary-dark);
-    border: none;
-    border-radius: 4px;
-    padding: 6px 12px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: var(--transition);
-    opacity: 0;
-    pointer-events: none;
-    white-space: nowrap;
+    position:absolute;
+    right:8px;
+    top:50%;
+    transform:translateY(-50%);
+    background:var(--accent-cyan);
+    color:var(--primary-dark);
+    border:none;
+    border-radius:4px;
+    padding:6px 12px;
+    font-size:0.85rem;
+    font-weight:600;
+    cursor:pointer;
+    transition:var(--transition);
+    opacity:0;
+    pointer-events:none;
+    white-space:nowrap;
 }
-
-.clear-search-btn.visible {
-    opacity: 1;
-    pointer-events: auto;
-}
-
+.clear-search-btn.visible { opacity:1; pointer-events:auto; }
 .clear-search-btn:hover {
-    background: var(--accent-purple);
-    transform: translateY(-50%) scale(1.05);
+    background:var(--accent-purple);
+    transform:translateY(-50%) scale(1.05);
 }
 
 /* Main Content */
-.main-content {
-    flex: 1;
-    padding: 60px 0;
-}
+.main-content { flex:1; padding:60px 0; }
 
 /* Sections */
-.section {
-    margin-bottom: 80px;
-    animation: fadeIn 0.8s ease-out;
-}
-
+.section { margin-bottom:80px; animation:fadeIn 0.8s ease-out; }
 .section-title {
-    font-size: 1.8rem;
-    font-weight: 600;
-    margin-bottom: 35px;
-    color: var(--text-primary);
-    padding-bottom: 15px;
-    border-bottom: 2px solid var(--border-color);
-    letter-spacing: -0.01em;
+    font-size:1.8rem;
+    font-weight:600;
+    margin-bottom:35px;
+    color:var(--text-primary);
+    padding-bottom:15px;
+    border-bottom:2px solid var(--border-color);
+    letter-spacing:-0.01em;
 }
 
 /* Cards Grid */
 .cards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 24px;
-    margin-bottom: 40px;
-}
-
-@media (max-width: 768px) {
-    .cards-grid {
-        grid-template-columns: 1fr;
-        gap: 16px;
-    }
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(320px, 1fr));
+    gap:24px;
+    margin-bottom:40px;
 }
 
 /* Card Styles */
 .card {
-    background: var(--bg-card);
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
-    padding: 32px 24px;
-    cursor: pointer;
-    transition: var(--transition);
-    text-decoration: none;
-    color: inherit;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    position: relative;
-    overflow: hidden;
+    background:var(--bg-card);
+    border:1px solid var(--border-color);
+    border-radius:12px;
+    padding:32px 24px;
+    cursor:pointer;
+    transition:var(--transition);
+    text-decoration:none;
+    color:inherit;
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+    position:relative;
+    overflow:hidden;
 }
-
 .card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
-    transition: left 0.6s ease;
+    content:'';
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:100%;
+    height:100%;
+    background:linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
+    transition:left 0.6s ease;
 }
-
-.card:hover::before {
-    left: 100%;
-}
-
+.card:hover::before { left:100%; }
 .card:hover {
-    border-color: var(--accent-cyan);
-    background: linear-gradient(135deg, rgba(6, 182, 212, 0.1) 0%, rgba(168, 85, 247, 0.05) 100%);
-    transform: translateY(-8px);
-    box-shadow: 0 12px 32px rgba(6, 182, 212, 0.15);
+    border-color:var(--accent-cyan);
+    background:linear-gradient(135deg, rgba(6,182,212,0.1) 0%, rgba(168,85,247,0.05) 100%);
+    transform:translateY(-8px);
+    box-shadow:0 12px 32px rgba(6,182,212,0.15);
 }
-
-.card-icon {
-    font-size: 2.5rem;
-    line-height: 1;
-}
-
-.card h3 {
-    font-size: 1.4rem;
-    font-weight: 600;
-    margin: 0;
-}
-
+.card-icon { font-size:2.5rem; line-height:1; }
+.card h3 { font-size:1.4rem; font-weight:600; margin:0; }
 .card p {
-    font-size: 0.95rem;
-    color: var(--text-secondary);
-    flex: 1;
-    line-height: 1.5;
+    font-size:0.95rem;
+    color:var(--text-secondary);
+    flex:1;
+    line-height:1.5;
 }
-
 .card-tag {
-    display: inline-block;
-    font-size: 0.75rem;
-    padding: 4px 10px;
-    border-radius: 4px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    width: fit-content;
+    display:inline-block;
+    font-size:0.75rem;
+    padding:4px 10px;
+    border-radius:4px;
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+    width:fit-content;
 }
 
 /* Card Color Variants */
-.card-itil { --accent: var(--accent-cyan); }
-.card-itil .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
 
-.card-itsm { --accent: var(--accent-purple); }
-.card-itsm .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
 
-.card-gdpr { --accent: var(--accent-red); }
-.card-gdpr .card-tag { background: rgba(220, 38, 38, 0.2); color: var(--accent-red); }
 
-.card-pci { --accent: var(--accent-orange); }
-.card-pci .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-iso { --accent: var(--accent-green); }
-.card-iso .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
-
-.card-isms { --accent: var(--accent-cyan); }
-.card-isms .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-nist { --accent: #f59e0b; }
-.card-nist .card-tag { background: rgba(245, 158, 11, 0.2); color: #f59e0b; }
-
-.card-cyber-essentials { --accent: var(--accent-cyan); }
-.card-cyber-essentials .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-cyber-plus { --accent: var(--accent-purple); }
-.card-cyber-plus .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
-
-.card-appraisals { --accent: var(--accent-green); }
-.card-appraisals .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
-
-.card-copilot { --accent: var(--accent-purple); }
-.card-copilot .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
-
-.card-sharepoint { --accent: var(--accent-cyan); }
-.card-sharepoint .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-office { --accent: var(--accent-orange); }
-.card-office .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-d365 { --accent: var(--accent-purple); }
-.card-d365 .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
-
-.card-bi { --accent: var(--accent-orange); }
-.card-bi .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-powerbi { --accent: var(--accent-red); }
-.card-powerbi .card-tag { background: rgba(220, 38, 38, 0.2); color: var(--accent-red); }
-
-.card-mimecast { --accent: var(--accent-cyan); }
-.card-mimecast .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-trello { --accent: var(--accent-green); }
-.card-trello .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
-
-.card-cmdb { --accent: var(--accent-cyan); }
-.card-cmdb .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-erp { --accent: var(--accent-purple); }
-.card-erp .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
-
-.card-crm { --accent: var(--accent-purple); }
-.card-crm .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
-
-.card-etl-elt { --accent: var(--accent-orange); }
-.card-etl-elt .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-cav { --accent: var(--accent-purple); }
-.card-cav .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
-
-.card-ltv { --accent: var(--accent-purple); }
-.card-ltv .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
-
-.card-csat { --accent: var(--accent-purple); }
-.card-csat .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
-
-.card-azure-datalake { --accent: var(--accent-orange); }
-.card-azure-datalake .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-aws-s3 { --accent: var(--accent-orange); }
-.card-aws-s3 .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-databricks { --accent: var(--accent-orange); }
-.card-databricks .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-salesforce { --accent: var(--accent-purple); }
-.card-salesforce .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
-
-.card-least-privilege { --accent: var(--accent-cyan); }
-.card-least-privilege .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-sso { --accent: var(--accent-cyan); }
-.card-sso .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-oauth { --accent: var(--accent-cyan); }
-.card-oauth .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-tensorflow { --accent: var(--accent-orange); }
-.card-tensorflow .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-pytorch { --accent: var(--accent-orange); }
-.card-pytorch .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-azure-ml { --accent: var(--accent-orange); }
-.card-azure-ml .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-google-cloud-ai { --accent: var(--accent-orange); }
-.card-google-cloud-ai .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-mfa { --accent: var(--accent-cyan); }
-.card-mfa .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-zero-trust { --accent: var(--accent-cyan); }
-.card-zero-trust .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-vault { --accent: var(--accent-cyan); }
-.card-vault .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-secretsmanager { --accent: var(--accent-cyan); }
-.card-secretsmanager .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-kubernetes { --accent: var(--accent-cyan); }
-.card-kubernetes .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-docker { --accent: var(--accent-cyan); }
-.card-docker .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-splunk { --accent: var(--accent-orange); }
-.card-splunk .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-grafana { --accent: var(--accent-orange); }
-.card-grafana .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-prometheus { --accent: var(--accent-orange); }
-.card-prometheus .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-datadog { --accent: var(--accent-orange); }
-.card-datadog .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-dynatrace { --accent: var(--accent-orange); }
-.card-dynatrace .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-newrelic { --accent: var(--accent-orange); }
-.card-newrelic .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-apache-kafka { --accent: var(--accent-orange); }
-.card-apache-kafka .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-rabbitmq { --accent: var(--accent-orange); }
-.card-rabbitmq .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-nats { --accent: var(--accent-orange); }
-.card-nats .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-redis { --accent: var(--accent-orange); }
-.card-redis .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-memcached { --accent: var(--accent-orange); }
-.card-memcached .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-elasticsearch { --accent: var(--accent-orange); }
-.card-elasticsearch .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-opensearch { --accent: var(--accent-orange); }
-.card-opensearch .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-solr { --accent: var(--accent-orange); }
-.card-solr .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-postgres { --accent: var(--accent-orange); }
-.card-postgres .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-mysql { --accent: var(--accent-orange); }
-.card-mysql .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-mariadb { --accent: var(--accent-orange); }
-.card-mariadb .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-dynamodb { --accent: var(--accent-orange); }
-.card-dynamodb .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-cassandra { --accent: var(--accent-orange); }
-.card-cassandra .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-couchdb { --accent: var(--accent-orange); }
-.card-couchdb .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-oracle { --accent: var(--accent-red); }
-.card-oracle .card-tag { background: rgba(220, 38, 38, 0.2); color: var(--accent-red); }
-
-.card-sqlserver { --accent: var(--accent-red); }
-.card-sqlserver .card-tag { background: rgba(220, 38, 38, 0.2); color: var(--accent-red); }
-
-.card-snowflake { --accent: var(--accent-cyan); }
-.card-snowflake .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-bigquery { --accent: var(--accent-orange); }
-.card-bigquery .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-redshift { --accent: var(--accent-orange); }
-.card-redshift .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-athena { --accent: var(--accent-orange); }
-.card-athena .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-spark { --accent: var(--accent-orange); }
-.card-spark .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-hive { --accent: var(--accent-orange); }
-.card-hive .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-presto { --accent: var(--accent-orange); }
-.card-presto .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-dbt { --accent: var(--accent-green); }
-.card-dbt .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
-
-.card-airbyte { --accent: var(--accent-green); }
-.card-airbyte .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
-
-.card-talend { --accent: var(--accent-orange); }
-.card-talend .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-informatica { --accent: var(--accent-orange); }
-.card-informatica .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-mulesoft { --accent: var(--accent-orange); }
-.card-mulesoft .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-zapier { --accent: var(--accent-green); }
-.card-zapier .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
-
-.card-ifttt { --accent: var(--accent-green); }
-.card-ifttt .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
-
-.card-node-red { --accent: var(--accent-green); }
-.card-node-red .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
-
-.card-power-automate { --accent: var(--accent-purple); }
-.card-power-automate .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
-
-.card-python { --accent: var(--accent-orange); }
-.card-python .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-java { --accent: var(--accent-orange); }
-.card-java .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-golang { --accent: var(--accent-cyan); }
-.card-golang .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-rust { --accent: var(--accent-orange); }
-.card-rust .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-nodejs { --accent: var(--accent-green); }
-.card-nodejs .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
-
-.card-react { --accent: var(--accent-cyan); }
-.card-react .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-vue { --accent: var(--accent-green); }
-.card-vue .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
-
-.card-angular { --accent: var(--accent-red); }
-.card-angular .card-tag { background: rgba(220, 38, 38, 0.2); color: var(--accent-red); }
-
-.card-svelte { --accent: var(--accent-orange); }
-.card-svelte .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-fastapi { --accent: var(--accent-cyan); }
-.card-fastapi .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-django { --accent: var(--accent-green); }
-.card-django .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
-
-.card-flask { --accent: var(--accent-orange); }
-.card-flask .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-spring-boot { --accent: var(--accent-green); }
-.card-spring-boot .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
-
-.card-docker-compose { --accent: var(--accent-cyan); }
-.card-docker-compose .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-terraform { --accent: var(--accent-purple); }
-.card-terraform .card-tag { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
-
-.card-ansible { --accent: var(--accent-red); }
-.card-ansible .card-tag { background: rgba(220, 38, 38, 0.2); color: var(--accent-red); }
-
-.card-puppet { --accent: var(--accent-orange); }
-.card-puppet .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-chef { --accent: var(--accent-orange); }
-.card-chef .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-jira { --accent: var(--accent-cyan); }
-.card-jira .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-confluence { --accent: var(--accent-cyan); }
-.card-confluence .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-github { --accent: var(--accent-cyan); }
-.card-github .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-gitlab { --accent: var(--accent-orange); }
-.card-gitlab .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-bitbucket { --accent: var(--accent-cyan); }
-.card-bitbucket .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-jenkins { --accent: var(--accent-red); }
-.card-jenkins .card-tag { background: rgba(220, 38, 38, 0.2); color: var(--accent-red); }
-
-.card-gitlab-ci { --accent: var(--accent-orange); }
-.card-gitlab-ci .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-github-actions { --accent: var(--accent-cyan); }
-.card-github-actions .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-azure-devops { --accent: var(--accent-cyan); }
-.card-azure-devops .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-sonarqube { --accent: var(--accent-cyan); }
-.card-sonarqube .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-artifactory { --accent: var(--accent-cyan); }
-.card-artifactory .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-nexus { --accent: var(--accent-cyan); }
-.card-nexus .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-maven { --accent: var(--accent-orange); }
-.card-maven .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-gradle { --accent: var(--accent-orange); }
-.card-gradle .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-npm { --accent: var(--accent-red); }
-.card-npm .card-tag { background: rgba(220, 38, 38, 0.2); color: var(--accent-red); }
-
-.card-pip { --accent: var(--accent-cyan); }
-.card-pip .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-dlp { --accent: var(--accent-cyan); }
-.card-dlp .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-edr { --accent: var(--accent-cyan); }
-.card-edr .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-lakehouse { --accent: var(--accent-orange); }
-.card-lakehouse .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-mongodb { --accent: var(--accent-orange); }
-.card-mongodb .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-dex-euc { --accent: var(--accent-cyan); }
-.card-dex-euc .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-eks { --accent: var(--accent-cyan); }
-.card-eks .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-ecs { --accent: var(--accent-cyan); }
-.card-ecs .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-ec2 { --accent: var(--accent-orange); }
-.card-ec2 .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-vpc { --accent: var(--accent-cyan); }
-.card-vpc .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-cloudwatch { --accent: var(--accent-cyan); }
-.card-cloudwatch .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-iac { --accent: var(--accent-orange); }
-.card-iac .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-cicd { --accent: var(--accent-orange); }
-.card-cicd .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-controlup { --accent: var(--accent-cyan); }
-.card-controlup .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-esg { --accent: var(--accent-green); }
-.card-esg .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
-
-
-
-
-.card-cisa { --accent: var(--accent-cyan); }
-.card-cisa .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-
-
-
-
-
-
-.card-smb { --accent: var(--accent-cyan); }
-.card-smb .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-
-
-.card-route53 { --accent: var(--accent-cyan); }
-.card-route53 .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-
-
-.card-dns { --accent: var(--accent-cyan); }
-.card-dns .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-
-.card-vpc-lattice { --accent: var(--accent-cyan); }
-.card-vpc-lattice .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-
-
-.card-kpi { --accent: var(--accent-green); }
-.card-kpi .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
-
-
-.card-grafana { --accent: var(--accent-cyan); }
-.card-grafana .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-
-.card-datadog { --accent: var(--accent-cyan); }
-.card-datadog .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-
-
-.card-kubernetes { --accent: var(--accent-cyan); }
-.card-kubernetes .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-
-
-
-
-.card-snowflake { --accent: var(--accent-orange); }
-.card-snowflake .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-
-
-.card-newrelic { --accent: var(--accent-cyan); }
-.card-newrelic .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-
-
-
-.card-incident { --accent: var(--accent-cyan); }
-.card-incident .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-
-.card-service-catalog { --accent: var(--accent-cyan); }
-.card-service-catalog .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-
-
-
-
-
-.card-ma { --accent: var(--accent-green); }
-.card-ma .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
-
-
-
-
-.card-dei { --accent: var(--accent-green); }
-.card-dei .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
-
-
-.card-tableau { --accent: var(--accent-orange); }
-.card-tableau .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-
-
-
-.card-dpa { --accent: var(--accent-green); }
-.card-dpa .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
-
-
-
-.card-baa { --accent: var(--accent-green); }
-.card-baa .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
-
-
-
-.card-jostle { --accent: var(--accent-cyan); }
-.card-jostle .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-
-
-
-
-
-
-.card-swagger { --accent: var(--accent-cyan); }
-.card-swagger .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-
-
-
-
-.card-dora { --accent: var(--accent-green); }
-.card-dora .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
-
-.card-ats { --accent: var(--accent-green); }
-.card-ats .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
-
-.card-vlan { --accent: var(--accent-cyan); }
-.card-vlan .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-iis { --accent: var(--accent-cyan); }
-.card-iis .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-http { --accent: var(--accent-cyan); }
-.card-http .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-mdm { --accent: var(--accent-cyan); }
-.card-mdm .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-5g { --accent: var(--accent-cyan); }
-.card-5g .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-xr { --accent: var(--accent-cyan); }
-.card-xr .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-csf { --accent: var(--accent-cyan); }
-.card-csf .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-gxp { --accent: var(--accent-green); }
-.card-gxp .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
-
-.card-data-warehouse { --accent: var(--accent-orange); }
-.card-data-warehouse .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-fda21 { --accent: var(--accent-green); }
-.card-fda21 .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
-
-.card-ccb { --accent: var(--accent-green); }
-.card-ccb .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
-
-.card-evm { --accent: var(--accent-green); }
-.card-evm .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
-
-.card-esxi { --accent: var(--accent-cyan); }
-.card-esxi .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-acls { --accent: var(--accent-cyan); }
-.card-acls .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-vpn { --accent: var(--accent-cyan); }
-.card-vpn .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-tcpip { --accent: var(--accent-cyan); }
-.card-tcpip .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-tls { --accent: var(--accent-cyan); }
-.card-tls .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-ech { --accent: var(--accent-cyan); }
-.card-ech .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-ifs { --accent: var(--accent-orange); }
-.card-ifs .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-aurora { --accent: var(--accent-orange); }
-.card-aurora .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-ifs-modules { --accent: var(--accent-orange); }
-.card-ifs-modules .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-arxr { --accent: var(--accent-cyan); }
-.card-arxr .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-digital-twins { --accent: var(--accent-cyan); }
-.card-digital-twins .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-spatial-ai { --accent: var(--accent-cyan); }
-.card-spatial-ai .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-mitre-attack { --accent: var(--accent-cyan); }
-.card-mitre-attack .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-mitre-v16 { --accent: var(--accent-cyan); }
-.card-mitre-v16 .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-ot-ics { --accent: var(--accent-cyan); }
-.card-ot-ics .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-crowdstrike { --accent: var(--accent-cyan); }
-.card-crowdstrike .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-charlotte { --accent: var(--accent-cyan); }
-.card-charlotte .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-unit4-salesforce { --accent: var(--accent-orange); }
-.card-unit4-salesforce .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-mulesoft { --accent: var(--accent-orange); }
-.card-mulesoft .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-ztna { --accent: var(--accent-cyan); }
-.card-ztna .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-grc { --accent: var(--accent-green); }
-.card-grc .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
-
-.card-isp { --accent: var(--accent-cyan); }
-.card-isp .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-fortinet-nse { --accent: var(--accent-cyan); }
-.card-fortinet-nse .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-cisco-ise { --accent: var(--accent-cyan); }
-.card-cisco-ise .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-byod { --accent: var(--accent-cyan); }
-.card-byod .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-trustsec { --accent: var(--accent-cyan); }
-.card-trustsec .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-xledger { --accent: var(--accent-orange); }
-.card-xledger .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-activeh { --accent: var(--accent-orange); }
-.card-activeh .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-onebusiness { --accent: var(--accent-orange); }
-.card-onebusiness .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-sap-b1 { --accent: var(--accent-orange); }
-.card-sap-b1 .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-gaap { --accent: var(--accent-green); }
-.card-gaap .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
-
-.card-powerapps { --accent: var(--accent-orange); }
-.card-powerapps .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-rice { --accent: var(--accent-green); }
-.card-rice .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
-
-.card-moscow { --accent: var(--accent-green); }
-.card-moscow .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
-
-.card-tom { --accent: var(--accent-green); }
-.card-tom .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
-
-.card-r2r { --accent: var(--accent-green); }
-.card-r2r .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
-
-.card-p2p { --accent: var(--accent-green); }
-.card-p2p .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
-
-.card-o2c { --accent: var(--accent-green); }
-.card-o2c .card-tag { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
-
-.card-blackline { --accent: var(--accent-orange); }
-.card-blackline .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-xledger { --accent: var(--accent-orange); }
-.card-xledger .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-
-.card-mri { --accent: var(--accent-orange); }
-.card-mri .card-tag { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
-
-.card-ssh { --accent: var(--accent-cyan); }
-.card-ssh .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-wireguard { --accent: var(--accent-cyan); }
-.card-wireguard .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-dooh { --accent: var(--accent-cyan); }
-.card-dooh .card-tag { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
-
-.card-msp { --accent: var(--accent-indigo); }
-.card-msp .card-tag {     background: rgba(99, 102, 241, 0.2);     color: var(--accent-indigo);  }
-
-.card-cyberark { --accent: var(--accent-rose); }
-
-.card-cyberark .card-tag {
-    background: rgba(244, 63, 94, 0.2);
-    color: var(--accent-rose);
+.card-itil,.card-itsm,.card-gdpr,.card-pci,.card-iso,.card-isms,.card-nist,.card-cyber-essentials,
+.card-cyber-plus,.card-appraisals,.card-copilot,.card-sharepoint,.card-office,.card-d365,.card-bi,
+.card-powerbi,.card-mimecast,.card-trello,.card-cmdb,.card-erp,.card-crm,.card-etl-elt,.card-cav,
+.card-ltv,.card-csat,.card-azure-datalake,.card-aws-s3,.card-databricks,.card-salesforce,
+.card-least-privilege,.card-sso,.card-oauth,.card-tensorflow,.card-pytorch,.card-azure-ml,
+.card-google-cloud-ai,.card-mfa,.card-zero-trust,.card-vault,.card-secretsmanager,.card-kubernetes,
+.card-docker,.card-splunk,.card-grafana,.card-prometheus,.card-datadog,.card-dynatrace,.card-newrelic,
+.card-apache-kafka,.card-rabbitmq,.card-nats,.card-redis,.card-memcached,.card-elasticsearch,
+.card-opensearch,.card-solr,.card-postgres,.card-mysql,.card-mariadb,.card-dynamodb,.card-cassandra,
+.card-couchdb,.card-oracle,.card-sqlserver,.card-snowflake,.card-bigquery,.card-redshift,.card-athena,
+.card-spark,.card-hive,.card-presto,.card-dbt,.card-airbyte,.card-talend,.card-informatica,
+.card-mulesoft,.card-zapier,.card-ifttt,.card-node-red,.card-power-automate,.card-python,.card-java,
+.card-golang,.card-rust,.card-nodejs,.card-react,.card-vue,.card-angular,.card-svelte,.card-fastapi,
+.card-django,.card-flask,.card-spring-boot,.card-docker-compose,.card-terraform,.card-ansible,
+.card-puppet,.card-chef,.card-jira,.card-confluence,.card-github,.card-gitlab,.card-bitbucket,
+.card-jenkins,.card-gitlab-ci,.card-github-actions,.card-azure-devops,.card-sonarqube,.card-artifactory,
+.card-nexus,.card-maven,.card-gradle,.card-npm,.card-pip,.card-dlp,.card-edr,.card-lakehouse,
+.card-mongodb,.card-dex-euc,.card-eks,.card-ecs,.card-ec2,.card-vpc,.card-cloudwatch,.card-iac,
+.card-cicd,.card-controlup,.card-esg,.card-cisa,.card-smb,.card-route53,.card-dns,.card-vpc-lattice,
+.card-kpi,.card-incident,.card-service-catalog,.card-ma,.card-dei,.card-tableau,.card-dpa,.card-baa,
+.card-jostle,.card-swagger,.card-dora,.card-ats,.card-vlan,.card-iis,.card-http,.card-mdm,.card-5g,
+.card-xr,.card-csf,.card-gxp,.card-data-warehouse,.card-fda21,.card-ccb,.card-evm,.card-esxi,
+.card-acls,.card-vpn,.card-tcpip,.card-tls,.card-ech,.card-ifs,.card-aurora,.card-ifs-modules,
+.card-arxr,.card-digital-twins,.card-spatial-ai,.card-mitre-attack,.card-mitre-v16,.card-ot-ics,
+.card-crowdstrike,.card-charlotte,.card-unit4-salesforce,.card-ztna,.card-grc,.card-isp,
+.card-fortinet-nse,.card-cisco-ise,.card-byod,.card-trustsec,.card-xledger,.card-activeh,
+.card-onebusiness,.card-sap-b1,.card-gaap,.card-powerapps,.card-rice,.card-moscow,.card-tom,
+.card-r2r,.card-p2p,.card-o2c,.card-blackline,.card-mri,.card-ssh,.card-wireguard,.card-dooh,
+.card-msp,.card-cyberark,.card-delinea,.card-suitescript,.card-suiteflow,.card-suiteanalytics,
+.card-restlets,.card-celigo,.card-boomi,.card-restapis,.card-datagovernance,.card-scm,
+.card-configmgr,.card-sow,.card-wms,.card-nexthink,.card-siam,.card-daas,.card-sdlc,.card-arm,
+.card-h2r,.card-cac,.card-roas,.card-subnet,.card-proxy,.card-isdn,.card-dtc,.card-pam,.card-xdr,
+.card-genai,.card-avalara,.card-openair,.card-eudb,.card-eudb2,.card-dpa2,.card-dpa3,
+.card-casp-plus,.card-cce,.card-cdp-data,.card-cdp-cisco,.card-cdpo,.card-cdppe,.card-cde,
+.card-ceh,.card-cert,.card-cgsit,.card-cipm,.card-cipp,.card-cipt,.card-cisa-isaca,.card-cism,
+.card-cissp,.card-cisco-ccna,.card-cka,.card-compbo,.card-pentest-plus,.card-secure-dev,
+.card-security-plus,.card-crisc,.card-crmp,.card-csoc,.card-csih,.card-csom,.card-ctia,.card-cwpt,
+.card-dca,.card-ecih,.card-ecss,.card-ence,.card-gcfa,.card-gcia,.card-gcih,.card-gcsa,.card-gcti,
+.card-gdsa,.card-gsom,.card-preemptive,.card-ai-sec-platforms,.card-agentic-ai,.card-continuous-auth,
+.card-nist-ai-rmf,.card-sovereign-cloud,.card-physical-ai,.card-domain-llm,.card-digital-provenance,
+.card-finops-ai {
+    --accent:var(--accent-cyan);
 }
-
-
-
-
-.card-delinea { --accent: var(--accent-emerald); }
-
-.card-delinea .card-tag {
-    background: rgba(16, 185, 129, 0.2);
-    color: var(--accent-emerald);
+.card-itsm,.card-cyber-plus,.card-copilot,.card-d365,.card-crm,.card-cav,.card-ltv,.card-csat,
+.card-salesforce,.card-terraform,.card-sow,.card-boomi,.card-cdpo,.card-cdppe,.card-cissp,
+.card-ence,.card-gcfa,.card-gdsa,.card-h2r,.card-genai,.card-eudb2,.card-cdp-data {
+    --accent:var(--accent-purple);
 }
-
-
-
-
-
-.card-suitescript { --accent: var(--accent-amber); }
-
-.card-suitescript .card-tag {
-    background: rgba(245, 158, 11, 0.2);
-    color: var(--accent-amber);
+.card-gdpr,.card-powerbi,.card-oracle,.card-sqlserver,.card-ansible,.card-jenkins,.card-angular,
+.card-casp-plus,.card-ceh,.card-ctia,.card-cwpt,.card-pam,.card-roas {
+    --accent:var(--accent-red);
 }
-
-
-
-.card-suiteflow { --accent: var(--accent-teal); }
-
-.card-suiteflow .card-tag {
-    background: rgba(20, 184, 166, 0.2);
-    color: var(--accent-teal);
+.card-pci,.card-office,.card-bi,.card-etl-elt,.card-azure-datalake,.card-aws-s3,.card-databricks,
+.card-tensorflow,.card-pytorch,.card-azure-ml,.card-google-cloud-ai,.card-splunk,.card-grafana,
+.card-prometheus,.card-datadog,.card-dynatrace,.card-newrelic,.card-apache-kafka,.card-rabbitmq,
+.card-nats,.card-redis,.card-memcached,.card-elasticsearch,.card-opensearch,.card-solr,.card-postgres,
+.card-mysql,.card-mariadb,.card-dynamodb,.card-cassandra,.card-couchdb,.card-bigquery,.card-redshift,
+.card-athena,.card-spark,.card-hive,.card-presto,.card-talend,.card-informatica,.card-mulesoft,
+.card-python,.card-java,.card-rust,.card-flask,.card-maven,.card-gradle,.card-scm,.card-dtc,
+.card-ifs,.card-aurora,.card-ifs-modules,.card-data-warehouse,.card-tableau,.card-blackline,
+.card-xledger,.card-mri,.card-activeh,.card-onebusiness,.card-sap-b1,.card-powerapps,.card-avalara,
+.card-cce,.card-compbo,.card-crisc,.card-crmp,.card-csih,.card-ecih,.card-gcih,.card-nist-ai-rmf,
+.card-domain-llm,.card-finops-ai {
+    --accent:var(--accent-orange);
 }
-
-
-
-.card-suiteanalytics { --accent: var(--accent-blue); }
-
-.card-suiteanalytics .card-tag {
-    background: rgba(59, 130, 246, 0.2);
-    color: var(--accent-blue);
+.card-iso,.card-appraisals,.card-trello,.card-dbt,.card-airbyte,.card-zapier,.card-ifttt,
+.card-node-red,.card-django,.card-spring-boot,.card-esg,.card-ma,.card-dei,.card-dpa,.card-baa,
+.card-gxp,.card-fda21,.card-ccb,.card-evm,.card-rice,.card-moscow,.card-tom,.card-r2r,.card-p2p,
+.card-o2c,.card-gaap,.card-dora,.card-ats,.card-ecss,.card-gsom,.card-sdlc,.card-secure-dev,
+.card-digital-provenance {
+    --accent:var(--accent-green);
 }
+.card-msp { --accent:var(--accent-indigo); }
+.card-cyberark { --accent:var(--accent-rose); }
+.card-delinea { --accent:var(--accent-emerald); }
+.card-suitescript { --accent:var(--accent-amber); }
+.card-suiteflow { --accent:var(--accent-teal); }
+.card-suiteanalytics { --accent:var(--accent-blue); }
+.card-restlets { --accent:var(--accent-violet); }
+.card-celigo { --accent:var(--accent-sky); }
+.card-datagovernance { --accent:var(--accent-slate); }
+.card-configmgr { --accent:var(--accent-lime); }
 
-
-
-.card-restlets { --accent: var(--accent-violet); }
-
-.card-restlets .card-tag {
-    background: rgba(139, 92, 246, 0.2);
-    color: var(--accent-violet);
-}
-
-
-
-
-.card-celigo { --accent: var(--accent-sky); }
-
-.card-celigo .card-tag {
-    background: rgba(14, 165, 233, 0.2);
-    color: var(--accent-sky);
-}
-
-
-
-
-
-.card-boomi { --accent: var(--accent-purple); }
-
-.card-boomi .card-tag {
-    background: rgba(168, 85, 247, 0.2);
-    color: var(--accent-purple);
-}
-
-
-
-
-
-
-.card-restapis { --accent: var(--accent-cyan); }
-
-.card-restapis .card-tag {
-    background: rgba(6, 182, 212, 0.2);
-    color: var(--accent-cyan);
-}
-
-
-.card-datagovernance { --accent: var(--accent-slate); }
-
-.card-datagovernance .card-tag {
-    background: rgba(100, 116, 139, 0.2);
-    color: var(--accent-slate);
-}
-
-
-
-
-
-
-.card-scm { --accent: var(--accent-orange); }
-
-.card-scm .card-tag {
-    background: rgba(249, 115, 22, 0.2);
-    color: var(--accent-orange);
-}
-
-
-
-
-.card-configmgr { --accent: var(--accent-lime); }
-
+/* Card Tag Colors */
+.card-itil .card-tag,
+.card-cyber-essentials .card-tag,
+.card-isms .card-tag,
+.card-cmdb .card-tag,
+.card-sharepoint .card-tag,
+.card-mimecast .card-tag,
+.card-sso .card-tag,
+.card-oauth .card-tag,
+.card-mfa .card-tag,
+.card-zero-trust .card-tag,
+.card-vault .card-tag,
+.card-secretsmanager .card-tag,
+.card-kubernetes .card-tag,
+.card-docker .card-tag,
+.card-controlup .card-tag,
+.card-jira .card-tag,
+.card-confluence .card-tag,
+.card-github .card-tag,
+.card-bitbucket .card-tag,
+.card-azure-devops .card-tag,
+.card-github-actions .card-tag,
+.card-sonarqube .card-tag,
+.card-artifactory .card-tag,
+.card-nexus .card-tag,
+.card-pip .card-tag,
+.card-dlp .card-tag,
+.card-edr .card-tag,
+.card-cisa .card-tag,
+.card-smb .card-tag,
+.card-route53 .card-tag,
+.card-dns .card-tag,
+.card-vpc-lattice .card-tag,
+.card-vlan .card-tag,
+.card-iis .card-tag,
+.card-http .card-tag,
+.card-mdm .card-tag,
+.card-5g .card-tag,
+.card-xr .card-tag,
+.card-csf .card-tag,
+.card-esxi .card-tag,
+.card-acls .card-tag,
+.card-vpn .card-tag,
+.card-tcpip .card-tag,
+.card-tls .card-tag,
+.card-ech .card-tag,
+.card-arxr .card-tag,
+.card-digital-twins .card-tag,
+.card-spatial-ai .card-tag,
+.card-mitre-attack .card-tag,
+.card-mitre-v16 .card-tag,
+.card-ot-ics .card-tag,
+.card-crowdstrike .card-tag,
+.card-charlotte .card-tag,
+.card-ztna .card-tag,
+.card-isp .card-tag,
+.card-fortinet-nse .card-tag,
+.card-cisco-ise .card-tag,
+.card-byod .card-tag,
+.card-trustsec .card-tag,
+.card-ssh .card-tag,
+.card-wireguard .card-tag,
+.card-dooh .card-tag,
+.card-restapis .card-tag,
+.card-preemptive .card-tag,
+.card-continuous-auth .card-tag,
+.card-sovereign-cloud .card-tag,
+.card-physical-ai .card-tag,
+.card-cgsit .card-tag,
+.card-cism .card-tag,
+.card-cisco-ccna .card-tag,
+.card-cka .card-tag,
+.card-csoc .card-tag,
+.card-csom .card-tag,
+.card-dca .card-tag,
+.card-gcia .card-tag,
+.card-gcsa .card-tag,
+.card-nexthink .card-tag,
 .card-configmgr .card-tag {
-    background: rgba(132, 204, 22, 0.2);
-    color: var(--accent-lime);
+    background:rgba(6,182,212,0.2);
+    color:var(--accent-cyan);
 }
-
-
-
-
-
-.card-sow { --accent: var(--accent-purple); }
-
-.card-sow .card-tag {
-    background: rgba(139, 92, 246, 0.2);
-    color: var(--accent-purple);
-}
-
-
-
-.card-wms { --accent: var(--accent-teal); }
-
-.card-wms .card-tag {
-    background: rgba(20, 184, 166, 0.2);
-    color: var(--accent-teal);
-}
-
-
-.card-nexthink { --accent: var(--accent-indigo); }
-
-.card-nexthink .card-tag {
-    background: rgba(99, 102, 241, 0.2);
-    color: var(--accent-indigo);
-}
-
-
-
-
-
-
-.card-siam { --accent: var(--accent-orange); }
-
-.card-siam .card-tag {
-    background: rgba(251, 191, 36, 0.2);
-    color: var(--accent-orange);
-}
-
-
-
-
-.card-daas { --accent: var(--accent-blue); }
-
-.card-daas .card-tag {
-    background: rgba(59, 130, 246, 0.2);
-    color: var(--accent-blue);
-}
-
-
-
-
-
-
-.card-sdlc { --accent: var(--accent-green); }
-
-.card-sdlc .card-tag {
-    background: rgba(34, 197, 94, 0.2);
-    color: var(--accent-green);
-}
-
-
-
-
-.card-arm { --accent: var(--accent-teal); }
-
-.card-arm .card-tag {
-    background: rgba(20, 184, 166, 0.2);
-    color: var(--accent-teal);
-}
-
-
-
-
-.card-h2r { --accent: var(--accent-purple); }
-
-.card-h2r .card-tag {
-    background: rgba(139, 92, 246, 0.2);
-    color: var(--accent-purple);
-}
-
-
-
-
-
-
-
-.card-cac { --accent: var(--accent-orange); }
-
-.card-cac .card-tag {
-    background: rgba(251, 146, 60, 0.2);
-    color: var(--accent-orange);
-}
-
-
-
-
-.card-roas { --accent: var(--accent-red); }
-
-.card-roas .card-tag {
-    background: rgba(239, 68, 68, 0.2);
-    color: var(--accent-red);
-}
-
-
-
-
-.card-subnet { --accent: var(--accent-blue); }
-
-.card-subnet .card-tag {
-    background: rgba(59, 130, 246, 0.2);
-    color: var(--accent-blue);
-}
-
-
-.card-proxy { --accent: var(--accent-indigo); }
-
-.card-proxy .card-tag {
-    background: rgba(129, 140, 248, 0.2);
-    color: var(--accent-indigo);
-}
-
-
-
-
-
-
-.card-isdn { --accent: var(--accent-purple); }
-
-.card-isdn .card-tag {
-    background: rgba(168, 85, 247, 0.2);
-    color: var(--accent-purple);
-}
-
-
-
-
-.card-dtc { --accent: var(--accent-orange); }
-
-.card-dtc .card-tag {
-    background: rgba(249, 115, 22, 0.2);
-    color: var(--accent-orange);
-}
-
-
-
-
-.card-pam { --accent: var(--accent-red); }
-
-.card-pam .card-tag {
-    background: rgba(239, 68, 68, 0.2);
-    color: var(--accent-red);
-}
-
-
-
-.card-xdr { --accent: var(--accent-teal); }
-
-.card-xdr .card-tag {
-    background: rgba(20, 184, 166, 0.2);
-    color: var(--accent-teal);
-}
-
-
-
-.card-genai { --accent: var(--accent-purple); }
-
-.card-genai .card-tag {
-    background: rgba(139, 92, 246, 0.2);
-    color: var(--accent-purple);
-}
-
-
-
-.card-avalara { --accent: var(--accent-orange); }
-
-.card-avalara .card-tag {
-    background: rgba(249, 115, 22, 0.2);
-    color: var(--accent-orange);
-}
-
-
-.card-openair { --accent: var(--accent-blue); }
-
-.card-openair .card-tag {
-    background: rgba(59, 130, 246, 0.2);
-    color: var(--accent-blue);
-}
-
-.card-eudb { --accent: var(--accent-teal); }
-
-.card-eudb .card-tag {
-    background: rgba(20, 184, 166, 0.2);
-    color: var(--accent-teal);
-}
-
-
-
-
-
-
-
-.card-eudb2 { --accent: var(--accent-purple); }
-
-.card-eudb2 .card-tag {
-    background: rgba(139, 92, 246, 0.2);
-    color: var(--accent-purple);
-}
-
-
-
-
-
-
-
-.card-dpa2 { --accent: var(--accent-indigo); }
-
-.card-dpa2 .card-tag {
-    background: rgba(79, 70, 229, 0.2);
-    color: var(--accent-indigo);
-}
-
-
-
-
-
-.card-dpa3 { --accent: var(--accent-indigo); }
-
-.card-dpa3 .card-tag {
-    background: rgba(79, 70, 229, 0.2);
-    color: var(--accent-indigo);
-}
-
-
-
-
-.card-casp-plus { --accent: var(--accent-red); }
- 
-.card-casp-plus .card-tag {
-    background: rgba(220, 38, 38, 0.2);
-    color: var(--accent-red);
-}
-
-
-
-.card-cce { --accent: var(--accent-orange); }
- 
-.card-cce .card-tag {
-    background: rgba(249, 115, 22, 0.2);
-    color: var(--accent-orange);
-}
-
-
-
-
-.card-cdp-data { --accent: var(--accent-purple); }
- 
+.card-itsm .card-tag,
+.card-cyber-plus .card-tag,
+.card-copilot .card-tag,
+.card-d365 .card-tag,
+.card-crm .card-tag,
+.card-cav .card-tag,
+.card-ltv .card-tag,
+.card-csat .card-tag,
+.card-salesforce .card-tag,
+.card-terraform .card-tag,
+.card-sow .card-tag,
+.card-boomi .card-tag,
+.card-cdpo .card-tag,
+.card-cdppe .card-tag,
+.card-cissp .card-tag,
+.card-ence .card-tag,
+.card-gcfa .card-tag,
+.card-gdsa .card-tag,
+.card-h2r .card-tag,
+.card-genai .card-tag,
+.card-eudb2 .card-tag,
 .card-cdp-data .card-tag {
-    background: rgba(168, 85, 247, 0.2);
-    color: var(--accent-purple);
+    background:rgba(168,85,247,0.2);
+    color:var(--accent-purple);
 }
- 
-.card-cdp-cisco { --accent: var(--accent-cyan); }
- 
-.card-cdp-cisco .card-tag {
-    background: rgba(6, 182, 212, 0.2);
-    color: var(--accent-cyan);
+.card-gdpr .card-tag,
+.card-powerbi .card-tag,
+.card-oracle .card-tag,
+.card-sqlserver .card-tag,
+.card-ansible .card-tag,
+.card-jenkins .card-tag,
+.card-angular .card-tag,
+.card-casp-plus .card-tag,
+.card-ceh .card-tag,
+.card-ctia .card-tag,
+.card-cwpt .card-tag,
+.card-pam .card-tag,
+.card-roas .card-tag {
+    background:rgba(220,38,38,0.2);
+    color:var(--accent-red);
 }
- 
-
-
-
-
-
-
-
-
-
-
- 
-.card-cdpo { --accent: var(--accent-purple); }
-.card-cdpo .card-tag { background: rgba(168,85,247,0.2); color: var(--accent-purple); }
- 
-.card-cdppe { --accent: var(--accent-purple); }
-.card-cdppe .card-tag { background: rgba(168,85,247,0.2); color: var(--accent-purple); }
- 
-.card-cde { --accent: var(--accent-green); }
-.card-cde .card-tag { background: rgba(16,185,129,0.2); color: var(--accent-green); }
- 
-.card-ceh { --accent: var(--accent-red); }
-.card-ceh .card-tag { background: rgba(220,38,38,0.2); color: var(--accent-red); }
- 
-.card-cert { --accent: var(--accent-orange); }
-.card-cert .card-tag { background: rgba(249,115,22,0.2); color: var(--accent-orange); }
- 
-.card-cgsit { --accent: var(--accent-cyan); }
-.card-cgsit .card-tag { background: rgba(6,182,212,0.2); color: var(--accent-cyan); }
- 
-.card-cipm { --accent: var(--accent-purple); }
-.card-cipm .card-tag { background: rgba(168,85,247,0.2); color: var(--accent-purple); }
- 
-.card-cipp { --accent: var(--accent-purple); }
-.card-cipp .card-tag { background: rgba(168,85,247,0.2); color: var(--accent-purple); }
- 
-.card-cipt { --accent: var(--accent-purple); }
-.card-cipt .card-tag { background: rgba(168,85,247,0.2); color: var(--accent-purple); }
- 
-.card-cisa-isaca { --accent: var(--accent-green); }
-.card-cisa-isaca .card-tag { background: rgba(16,185,129,0.2); color: var(--accent-green); }
- 
-.card-cism { --accent: var(--accent-cyan); }
-.card-cism .card-tag { background: rgba(6,182,212,0.2); color: var(--accent-cyan); }
- 
-.card-cissp { --accent: var(--accent-purple); }
-.card-cissp .card-tag { background: rgba(168,85,247,0.2); color: var(--accent-purple); }
- 
-.card-cisco-ccna { --accent: var(--accent-cyan); }
-.card-cisco-ccna .card-tag { background: rgba(6,182,212,0.2); color: var(--accent-cyan); }
- 
-.card-cka { --accent: var(--accent-cyan); }
-.card-cka .card-tag { background: rgba(6,182,212,0.2); color: var(--accent-cyan); }
- 
-.card-compbo { --accent: var(--accent-orange); }
-.card-compbo .card-tag { background: rgba(249,115,22,0.2); color: var(--accent-orange); }
- 
-.card-pentest-plus { --accent: var(--accent-red); }
-.card-pentest-plus .card-tag { background: rgba(220,38,38,0.2); color: var(--accent-red); }
- 
-.card-secure-dev { --accent: var(--accent-green); }
-.card-secure-dev .card-tag { background: rgba(16,185,129,0.2); color: var(--accent-green); }
- 
-.card-security-plus { --accent: var(--accent-cyan); }
-.card-security-plus .card-tag { background: rgba(6,182,212,0.2); color: var(--accent-cyan); }
- 
-.card-crisc { --accent: var(--accent-orange); }
-.card-crisc .card-tag { background: rgba(249,115,22,0.2); color: var(--accent-orange); }
- 
-.card-crmp { --accent: var(--accent-orange); }
-.card-crmp .card-tag { background: rgba(249,115,22,0.2); color: var(--accent-orange); }
- 
-.card-csoc { --accent: var(--accent-cyan); }
-.card-csoc .card-tag { background: rgba(6,182,212,0.2); color: var(--accent-cyan); }
- 
-.card-csih { --accent: var(--accent-orange); }
-.card-csih .card-tag { background: rgba(249,115,22,0.2); color: var(--accent-orange); }
- 
-.card-csom { --accent: var(--accent-cyan); }
-.card-csom .card-tag { background: rgba(6,182,212,0.2); color: var(--accent-cyan); }
- 
-.card-ctia { --accent: var(--accent-red); }
-.card-ctia .card-tag { background: rgba(220,38,38,0.2); color: var(--accent-red); }
- 
-.card-cwpt { --accent: var(--accent-red); }
-.card-cwpt .card-tag { background: rgba(220,38,38,0.2); color: var(--accent-red); }
- 
-.card-dca { --accent: var(--accent-cyan); }
-.card-dca .card-tag { background: rgba(6,182,212,0.2); color: var(--accent-cyan); }
- 
-.card-ecih { --accent: var(--accent-orange); }
-.card-ecih .card-tag { background: rgba(249,115,22,0.2); color: var(--accent-orange); }
- 
-.card-ecss { --accent: var(--accent-green); }
-.card-ecss .card-tag { background: rgba(16,185,129,0.2); color: var(--accent-green); }
- 
-.card-ence { --accent: var(--accent-purple); }
-.card-ence .card-tag { background: rgba(168,85,247,0.2); color: var(--accent-purple); }
- 
-.card-gcfa { --accent: var(--accent-purple); }
-.card-gcfa .card-tag { background: rgba(168,85,247,0.2); color: var(--accent-purple); }
- 
-.card-gcia { --accent: var(--accent-cyan); }
-.card-gcia .card-tag { background: rgba(6,182,212,0.2); color: var(--accent-cyan); }
- 
-.card-gcih { --accent: var(--accent-orange); }
-.card-gcih .card-tag { background: rgba(249,115,22,0.2); color: var(--accent-orange); }
- 
-.card-gcsa { --accent: var(--accent-cyan); }
-.card-gcsa .card-tag { background: rgba(6,182,212,0.2); color: var(--accent-cyan); }
- 
-.card-gcti { --accent: var(--accent-red); }
-.card-gcti .card-tag { background: rgba(220,38,38,0.2); color: var(--accent-red); }
- 
-.card-gdsa { --accent: var(--accent-purple); }
-.card-gdsa .card-tag { background: rgba(168,85,247,0.2); color: var(--accent-purple); }
- 
-.card-gsom { --accent: var(--accent-green); }
-.card-gsom .card-tag { background: rgba(16,185,129,0.2); color: var(--accent-green); }
- 
- 
- 
-
-
-
-
-
-
-
-
-
-
-/* New Card Color Variants */
-.card-preemptive { --accent: var(--accent-cyan); }
-.card-preemptive .card-tag { background: rgba(6,182,212,0.2); color: var(--accent-cyan); }
-
-.card-ai-sec-platforms { --accent: var(--accent-purple); }
-.card-ai-sec-platforms .card-tag { background: rgba(168,85,247,0.2); color: var(--accent-purple); }
-
-.card-agentic-ai { --accent: var(--accent-purple); }
-.card-agentic-ai .card-tag { background: rgba(168,85,247,0.2); color: var(--accent-purple); }
-
-.card-continuous-auth { --accent: var(--accent-cyan); }
-.card-continuous-auth .card-tag { background: rgba(6,182,212,0.2); color: var(--accent-cyan); }
-
-.card-nist-ai-rmf { --accent: var(--accent-orange); }
-.card-nist-ai-rmf .card-tag { background: rgba(249,115,22,0.2); color: var(--accent-orange); }
-
-.card-sovereign-cloud { --accent: var(--accent-cyan); }
-.card-sovereign-cloud .card-tag { background: rgba(6,182,212,0.2); color: var(--accent-cyan); }
-
-.card-physical-ai { --accent: var(--accent-cyan); }
-.card-physical-ai .card-tag { background: rgba(6,182,212,0.2); color: var(--accent-cyan); }
-
-.card-domain-llm { --accent: var(--accent-orange); }
-.card-domain-llm .card-tag { background: rgba(249,115,22,0.2); color: var(--accent-orange); }
-
-.card-digital-provenance { --accent: var(--accent-green); }
-.card-digital-provenance .card-tag { background: rgba(16,185,129,0.2); color: var(--accent-green); }
-
-.card-finops-ai { --accent: var(--accent-purple); }
-.card-finops-ai .card-tag { background: rgba(168,85,247,0.2); color: var(--accent-purple); }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<a href="spiceworks.html" class="card card-spiceworks">
-    <div class="card-icon">🌶️🛠️</div>
-    <h3>Spiceworks</h3>
-    <p>Free/freemium IT help desk, asset & network management suite</p>
-    <span class="card-tag">ITSM</span>
-</a>
-
-
-
-
-
-
+.card-pci .card-tag,
+.card-office .card-tag,
+.card-bi .card-tag,
+.card-etl-elt .card-tag,
+.card-azure-datalake .card-tag,
+.card-aws-s3 .card-tag,
+.card-databricks .card-tag,
+.card-tensorflow .card-tag,
+.card-pytorch .card-tag,
+.card-azure-ml .card-tag,
+.card-google-cloud-ai .card-tag,
+.card-splunk .card-tag,
+.card-grafana .card-tag,
+.card-prometheus .card-tag,
+.card-datadog .card-tag,
+.card-dynatrace .card-tag,
+.card-newrelic .card-tag,
+.card-apache-kafka .card-tag,
+.card-rabbitmq .card-tag,
+.card-nats .card-tag,
+.card-redis .card-tag,
+.card-memcached .card-tag,
+.card-elasticsearch .card-tag,
+.card-opensearch .card-tag,
+.card-solr .card-tag,
+.card-postgres .card-tag,
+.card-mysql .card-tag,
+.card-mariadb .card-tag,
+.card-dynamodb .card-tag,
+.card-cassandra .card-tag,
+.card-couchdb .card-tag,
+.card-bigquery .card-tag,
+.card-redshift .card-tag,
+.card-athena .card-tag,
+.card-spark .card-tag,
+.card-hive .card-tag,
+.card-presto .card-tag,
+.card-talend .card-tag,
+.card-informatica .card-tag,
+.card-mulesoft .card-tag,
+.card-python .card-tag,
+.card-java .card-tag,
+.card-rust .card-tag,
+.card-flask .card-tag,
+.card-maven .card-tag,
+.card-gradle .card-tag,
+.card-scm .card-tag,
+.card-dtc .card-tag,
+.card-ifs .card-tag,
+.card-aurora .card-tag,
+.card-ifs-modules .card-tag,
+.card-data-warehouse .card-tag,
+.card-tableau .card-tag,
+.card-blackline .card-tag,
+.card-xledger .card-tag,
+.card-mri .card-tag,
+.card-activeh .card-tag,
+.card-onebusiness .card-tag,
+.card-sap-b1 .card-tag,
+.card-powerapps .card-tag,
+.card-avalara .card-tag,
+.card-cce .card-tag,
+.card-compbo .card-tag,
+.card-crisc .card-tag,
+.card-crmp .card-tag,
+.card-csih .card-tag,
+.card-ecih .card-tag,
+.card-gcih .card-tag,
+.card-nist-ai-rmf .card-tag,
+.card-domain-llm .card-tag,
+.card-finops-ai .card-tag {
+    background:rgba(249,115,22,0.2);
+    color:var(--accent-orange);
+}
+.card-iso .card-tag,
+.card-appraisals .card-tag,
+.card-trello .card-tag,
+.card-dbt .card-tag,
+.card-airbyte .card-tag,
+.card-zapier .card-tag,
+.card-ifttt .card-tag,
+.card-node-red .card-tag,
+.card-django .card-tag,
+.card-spring-boot .card-tag,
+.card-esg .card-tag,
+.card-ma .card-tag,
+.card-dei .card-tag,
+.card-dpa .card-tag,
+.card-baa .card-tag,
+.card-gxp .card-tag,
+.card-fda21 .card-tag,
+.card-ccb .card-tag,
+.card-evm .card-tag,
+.card-rice .card-tag,
+.card-moscow .card-tag,
+.card-tom .card-tag,
+.card-r2r .card-tag,
+.card-p2p .card-tag,
+.card-o2c .card-tag,
+.card-gaap .card-tag,
+.card-dora .card-tag,
+.card-ats .card-tag,
+.card-ecss .card-tag,
+.card-gsom .card-tag,
+.card-sdlc .card-tag,
+.card-secure-dev .card-tag,
+.card-digital-provenance .card-tag {
+    background:rgba(16,185,129,0.2);
+    color:var(--accent-green);
+}
 
 /* Footer */
 .footer {
-    margin-top: auto;
-    padding: 40px 0;
-    border-top: 1px solid var(--border-color);
-    text-align: center;
-    color: var(--text-secondary);
-    font-size: 0.9rem;
+    margin-top:auto;
+    padding:40px 0;
+    border-top:1px solid var(--border-color);
+    text-align:center;
+    color:var(--text-secondary);
+    font-size:0.9rem;
 }
 
 /* Topic Pages Styles */
 .page-header {
-    padding: 60px 0 40px;
-    border-bottom: 1px solid var(--border-color);
-    margin-bottom: 50px;
-    animation: slideDown 0.6s ease-out;
+    padding:60px 0 40px;
+    border-bottom:1px solid var(--border-color);
+    margin-bottom:50px;
+    animation:slideDown 0.6s ease-out;
 }
-
 .back-button {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 8px 16px;
-    background: var(--bg-card);
-    border: 1px solid var(--border-color);
-    border-radius: 6px;
-    color: var(--text-primary);
-    text-decoration: none;
-    font-size: 0.9rem;
-    margin-bottom: 20px;
-    transition: var(--transition);
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:8px 16px;
+    background:var(--bg-card);
+    border:1px solid var(--border-color);
+    border-radius:6px;
+    color:var(--text-primary);
+    text-decoration:none;
+    font-size:0.9rem;
+    margin-bottom:20px;
+    transition:var(--transition);
 }
-
 .back-button:hover {
-    border-color: var(--accent-cyan);
-    color: var(--accent-cyan);
+    border-color:var(--accent-cyan);
+    color:var(--accent-cyan);
 }
+.page-header h1 { font-size:2.5rem; font-weight:700; margin-bottom:12px; }
+.page-header p { font-size:1.1rem; color:var(--text-secondary); }
 
-.page-header h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 12px;
-}
-
-.page-header p {
-    font-size: 1.1rem;
-    color: var(--text-secondary);
-}
-
-.content-section {
-    margin-bottom: 50px;
-}
-
+.content-section { margin-bottom:50px; }
 .content-section h2 {
-    font-size: 1.6rem;
-    font-weight: 600;
-    margin-bottom: 20px;
-    color: var(--text-primary);
+    font-size:1.6rem;
+    font-weight:600;
+    margin-bottom:20px;
+    color:var(--text-primary);
 }
-
 .content-section h3 {
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin: 24px 0 12px;
-    color: var(--accent-cyan);
+    font-size:1.2rem;
+    font-weight:600;
+    margin:24px 0 12px;
+    color:var(--accent-cyan);
 }
-
-.content-section p {
-    margin-bottom: 12px;
-    color: var(--text-secondary);
-    line-height: 1.8;
+.content-section p,
+.content-section li {
+    color:var(--text-secondary);
+    line-height:1.8;
 }
-
 .content-section ul,
 .content-section ol {
-    margin: 16px 0 16px 24px;
-    color: var(--text-secondary);
+    margin:16px 0 16px 24px;
 }
-
-.content-section li {
-    margin-bottom: 8px;
-    line-height: 1.6;
-}
-
 .highlight-box {
-    background: rgba(6, 182, 212, 0.1);
-    border-left: 4px solid var(--accent-cyan);
-    padding: 20px;
-    border-radius: 8px;
-    margin: 20px 0;
+    background:rgba(6,182,212,0.1);
+    border-left:4px solid var(--accent-cyan);
+    padding:20px;
+    border-radius:8px;
+    margin:20px 0;
 }
-
-.highlight-box strong {
-    color: var(--accent-cyan);
-}
+.highlight-box strong { color:var(--accent-cyan); }
 
 /* Animations */
 @keyframes slideDown {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity:0; transform:translateY(-20px); }
+    to { opacity:1; transform:translateY(0); }
 }
-
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes pulse {
-    0%, 100% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0.5;
-    }
+    from { opacity:0; }
+    to { opacity:1; }
 }
 
 /* Utility Classes */
-.hidden {
-    display: none !important;
-}
-
-.mt-20 {
-    margin-top: 20px;
-}
-
-.mb-20 {
-    margin-bottom: 20px;
-}
+.hidden { display:none !important; }
+.mt-20 { margin-top:20px; }
+.mb-20 { margin-bottom:20px; }
 
 /* Go-to-Top Button */
 .go-to-top-btn {
-    position: fixed;
-    bottom: -60px;
-    right: 20px;
-    width: 50px;
-    height: 50px;
-    background: var(--accent-cyan);
-    color: var(--primary-dark);
-    border: none;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 0.9rem;
-    cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3);
-    z-index: 999;
-    opacity: 0;
-    pointer-events: none;
+    position:fixed;
+    bottom:-60px;
+    right:20px;
+    width:50px;
+    height:50px;
+    background:var(--accent-cyan);
+    color:var(--primary-dark);
+    border:none;
+    border-radius:8px;
+    font-weight:600;
+    font-size:0.9rem;
+    cursor:pointer;
+    transition:all 0.3s cubic-bezier(0.4,0,0.2,1);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 4px 12px rgba(6,182,212,0.3);
+    z-index:999;
+    opacity:0;
+    pointer-events:none;
 }
-
 .go-to-top-btn.visible {
-    bottom: 20px;
-    opacity: 1;
-    pointer-events: auto;
+    bottom:20px;
+    opacity:1;
+    pointer-events:auto;
 }
-
 .go-to-top-btn:hover {
-    background: var(--accent-purple);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(168, 85, 247, 0.4);
+    background:var(--accent-purple);
+    transform:translateY(-3px);
+    box-shadow:0 8px 20px rgba(168,85,247,0.4);
 }
 
 /* Responsive */
-@media (max-width: 768px) {
-    .header {
-        flex-direction: column;
-        padding: 40px 0 30px;
-        gap: 20px;
-    }
-
-    .header-content h1 {
-        font-size: 2rem;
-    }
-
-    .search-nav {
-        max-width: 100%;
-    }
-
-    .clear-search-btn {
-        position: static;
-        transform: none;
-        margin-top: 10px;
-        width: 100%;
-    }
-
-    .clear-search-btn.visible {
-        transform: none;
-    }
-
-    .section {
-        margin-bottom: 50px;
-    }
-
-    .section-title {
-        font-size: 1.4rem;
-        margin-bottom: 25px;
-    }
-
-    .page-header {
-        padding: 40px 0 30px;
-        margin-bottom: 30px;
-    }
-
-    .page-header h1 {
-        font-size: 1.8rem;
-    }
+@media (max-width:768px) {
+    .header { flex-direction:column; padding:40px 0 30px; gap:20px; }
+    .header-content h1 { font-size:2rem; }
+    .search-nav { max-width:100%; }
+    .clear-search-btn { position:static; transform:none; margin-top:10px; width:100%; }
+    .section { margin-bottom:50px; }
+    .section-title { font-size:1.4rem; margin-bottom:25px; }
+    .page-header { padding:40px 0 30px; margin-bottom:30px; }
+    .page-header h1 { font-size:1.8rem; }
 }
-
-@media (max-width: 480px) {
-    .header-content h1 {
-        font-size: 1.6rem;
-    }
-
-    .tagline {
-        font-size: 0.95rem;
-    }
-
-    .section-title {
-        font-size: 1.2rem;
-    }
-
-    .card {
-        padding: 20px 16px;
-    }
-
-    .card h3 {
-        font-size: 1.2rem;
-    }
-
-    .card p {
-        font-size: 0.85rem;
-    }
-
-    .clear-search-btn {
-        padding: 8px 12px;
-        font-size: 0.8rem;
-    }
+@media (max-width:480px) {
+    .header-content h1 { font-size:1.6rem; }
+    .tagline { font-size:0.95rem; }
+    .section-title { font-size:1.2rem; }
+    .card { padding:20px 16px; }
+    .card h3 { font-size:1.2rem; }
+    .card p { font-size:0.85rem; }
 }
