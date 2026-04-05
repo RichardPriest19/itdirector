@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IEEE 802.1Q - IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1 class="logo">IEEE 802.1Q</h1>
+            <p class="tagline">VLAN tagging standard – foundational protocol for Ethernet virtual LANs, trunking, and network segmentation</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="content-section">
+            <h2>Overview</h2>
+            <p>IEEE 802.1Q is the networking standard that defines VLAN tagging for Ethernet frames. It enables multiple virtual LANs to share the same physical infrastructure while maintaining logical separation, security, and traffic management.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Key Concepts</h2>
+            <ul>
+                <li>VLAN tagging (adds 4-byte 802.1Q tag to Ethernet frames)</li>
+                <li>Trunk ports vs Access ports</li>
+                <li>Native VLAN and untagged traffic handling</li>
+                <li>QinQ (802.1ad) for service provider double-tagging</li>
+                <li>Integration with QoS (802.1p priority) and MSTP</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Best Practices 2026</h2>
+            <ul>
+                <li>Use 802.1Q for secure network segmentation in Zero Trust architectures</li>
+                <li>Implement proper VLAN pruning and avoid VLAN 1 as native VLAN</li>
+                <li>Combine with private VLANs (PVLAN) for enhanced security in multi-tenant environments</li>
+                <li>Document VLAN schemas and integrate with infrastructure-as-code (Terraform, Ansible)</li>
+                <li>Monitor trunk links and apply storm control / BPDU guard on access ports</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 IT Director Hub • IEEE 802.1Q Reference</p>
+    </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

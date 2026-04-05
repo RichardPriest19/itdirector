@@ -230,7 +230,8 @@ body {
 .card-dca,.card-ecih,.card-ecss,.card-ence,.card-gcfa,.card-gcia,.card-gcih,.card-gcsa,.card-gcti,
 .card-gdsa,.card-gsom,.card-preemptive,.card-ai-sec-platforms,.card-agentic-ai,.card-continuous-auth,
 .card-nist-ai-rmf,.card-sovereign-cloud,.card-physical-ai,.card-domain-llm,.card-digital-provenance,
-.card-finops-ai,.card-promonitor,.card-prosuite
+.card-finops-ai,.card-promonitor,.card-prosuite,.card-ieee8021q
+
 
 
  {
@@ -255,7 +256,10 @@ body {
 .card-ifs,.card-aurora,.card-ifs-modules,.card-data-warehouse,.card-tableau,.card-blackline,
 .card-xledger,.card-mri,.card-activeh,.card-onebusiness,.card-sap-b1,.card-powerapps,.card-avalara,
 .card-cce,.card-compbo,.card-crisc,.card-crmp,.card-csih,.card-ecih,.card-gcih,.card-nist-ai-rmf,
-.card-domain-llm,.card-finops-ai,.card-sql
+.card-domain-llm,.card-finops-ai,.card-sql.card-zylo,
+.card-workato,
+.card-data-driven,
+.card-torii,
 
 
 
@@ -270,7 +274,7 @@ body {
 .card-gxp,.card-fda21,.card-ccb,.card-evm,.card-rice,.card-moscow,.card-tom,.card-r2r,.card-p2p,
 .card-o2c,.card-gaap,.card-dora,.card-ats,.card-ecss,.card-gsom,.card-sdlc,.card-secure-dev,
 
-,.card-rasci,
+,.card-rasci,.card-torit,
 
 
 .card-digital-provenance 
@@ -381,7 +385,7 @@ body {
 
 .card-prosuite .card-tag,
 
-
+.card-ieee8021q .card-tag,
 
 .card-configmgr .card-tag {
     background:rgba(6,182,212,0.2);
@@ -505,6 +509,16 @@ body {
 .card-ssrs .card-tag,
 
 
+.card-zylo .card-tag,
+.card-workato .card-tag,
+.card-data-driven .card-tag,
+.card-torii .card-tag,
+
+
+
+
+
+
 
 .card-sql .card-tag
 
@@ -548,7 +562,7 @@ body {
 
 .card-rasci .card-tag,
 
-
+.card-torit .card-tag,
 
 
 .card-digital-provenance .card-tag {
