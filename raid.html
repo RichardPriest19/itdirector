@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAID - IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1 class="logo">RAID (Redundant Array of Independent Disks)</h1>
+            <p class="tagline">Data storage virtualization technology that combines multiple physical disk drives into one or more logical units for improved performance, capacity, and reliability</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="content-section">
+            <h2>Overview</h2>
+            <p>RAID allows organizations to balance performance, capacity, and data protection by using different configurations (levels). It remains a foundational technology for on-premises servers, storage arrays, and some cloud backup strategies in 2026.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Common RAID Levels</h2>
+            <ul>
+                <li><strong>RAID 0</strong> – Striping (performance only, no redundancy)</li>
+                <li><strong>RAID 1</strong> – Mirroring (excellent redundancy, 50% capacity overhead)</li>
+                <li><strong>RAID 5</strong> – Striping with single parity (good balance of performance, capacity, and fault tolerance)</li>
+                <li><strong>RAID 6</strong> – Striping with double parity (survives two disk failures)</li>
+                <li><strong>RAID 10 (1+0)</strong> – Mirrored stripes (highest performance + redundancy)</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Modern Considerations (2026)</h2>
+            <ul>
+                <li>RAID is increasingly supplemented or replaced by erasure coding in large-scale storage systems</li>
+                <li>Software-defined storage and hyper-converged infrastructure often abstract traditional RAID</li>
+                <li>NVMe and SSD arrays favor RAID 10 or RAID 6 for performance and endurance</li>
+                <li>Monitoring rebuild times and hot spares remains critical to avoid data loss during failures</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>When to Use RAID</h2>
+            <p>Use RAID for local server storage, SAN/NAS systems, or workloads requiring low-latency block storage with built-in redundancy. For large-scale or cloud environments, consider object storage with erasure coding instead.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 IT Director Hub • RAID Reference</p>
+    </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

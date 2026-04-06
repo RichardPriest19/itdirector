@@ -829,3 +829,13 @@ body {
 
 .card-dm2 { --accent: var(--accent-orange); }
 .card-dm2 .card-tag { background: rgba(249,115,22,0.2); color: var(--accent-orange); }
+
+
+
+
+
+.card-raid { --accent: var(--accent-cyan); }
+.card-raid .card-tag { 
+    background: rgba(6,182,212,0.2); 
+    color: var(--accent-cyan); 
+}
