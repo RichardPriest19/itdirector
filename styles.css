@@ -839,3 +839,12 @@ body {
     background: rgba(6,182,212,0.2); 
     color: var(--accent-cyan); 
 }
+
+
+
+
+.card-cpq { --accent: var(--accent-purple); }
+.card-cpq .card-tag { 
+    background: rgba(168,85,247,0.2); 
+    color: var(--accent-purple); 
+}
