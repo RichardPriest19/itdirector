@@ -736,3 +736,96 @@ body {
 
 .card-waterfall { --accent: var(--accent-green); }
 .card-waterfall .card-tag { background: rgba(16,185,129,0.2); color: var(--accent-green); }
+
+
+
+
+
+
+/* New Card Color Variants */
+.card-phi { --accent: var(--accent-green); }
+.card-phi .card-tag { background: rgba(16,185,129,0.2); color: var(--accent-green); }
+
+.card-nist-sp800 { --accent: var(--accent-orange); }
+.card-nist-sp800 .card-tag { background: rgba(249,115,22,0.2); color: var(--accent-orange); }
+
+.card-fedramp { --accent: var(--accent-cyan); }
+.card-fedramp .card-tag { background: rgba(6,182,212,0.2); color: var(--accent-cyan); }
+
+.card-tisax { --accent: var(--accent-red); }
+.card-tisax .card-tag { background: rgba(220,38,38,0.2); color: var(--accent-red); }
+
+.card-campaign-monitor { --accent: var(--accent-purple); }
+.card-campaign-monitor .card-tag { background: rgba(168,85,247,0.2); color: var(--accent-purple); }
+
+.card-goto-meeting { --accent: var(--accent-cyan); }
+.card-goto-meeting .card-tag { background: rgba(6,182,212,0.2); color: var(--accent-cyan); }
+
+.card-halo { --accent: var(--accent-purple); }
+.card-halo .card-tag { background: rgba(168,85,247,0.2); color: var(--accent-purple); }
+
+.card-better-cloud { --accent: var(--accent-cyan); }
+.card-better-cloud .card-tag { background: rgba(6,182,212,0.2); color: var(--accent-cyan); }
+
+.card-hsts { --accent: var(--accent-cyan); }
+.card-hsts .card-tag { background: rgba(6,182,212,0.2); color: var(--accent-cyan); }
+
+.card-nac { --accent: var(--accent-cyan); }
+.card-nac .card-tag { background: rgba(6,182,212,0.2); color: var(--accent-cyan); }
+
+.card-pvlans { --accent: var(--accent-cyan); }
+.card-pvlans .card-tag { background: rgba(6,182,212,0.2); color: var(--accent-cyan); }
+
+.card-dynamic-segmentation { --accent: var(--accent-cyan); }
+.card-dynamic-segmentation .card-tag { background: rgba(6,182,212,0.2); color: var(--accent-cyan); }
+
+.card-cloudflare { --accent: var(--accent-orange); }
+.card-cloudflare .card-tag { background: rgba(249,115,22,0.2); color: var(--accent-orange); }
+
+.card-akamai { --accent: var(--accent-orange); }
+.card-akamai .card-tag { background: rgba(249,115,22,0.2); color: var(--accent-orange); }
+
+.card-fastly { --accent: var(--accent-orange); }
+.card-fastly .card-tag { background: rgba(249,115,22,0.2); color: var(--accent-orange); }
+
+.card-google-cloud { --accent: var(--accent-blue); }
+.card-google-cloud .card-tag { background: rgba(59,130,246,0.2); color: #3b82f6; }
+
+.card-cdn { --accent: var(--accent-cyan); }
+.card-cdn .card-tag { background: rgba(6,182,212,0.2); color: var(--accent-cyan); }
+
+.card-apache { --accent: var(--accent-red); }
+.card-apache .card-tag { background: rgba(220,38,38,0.2); color: var(--accent-red); }
+
+.card-caddy { --accent: var(--accent-green); }
+.card-caddy .card-tag { background: rgba(16,185,129,0.2); color: var(--accent-green); }
+
+.card-traefik { --accent: var(--accent-cyan); }
+.card-traefik .card-tag { background: rgba(6,182,212,0.2); color: var(--accent-cyan); }
+
+.card-envoy { --accent: var(--accent-purple); }
+.card-envoy .card-tag { background: rgba(168,85,247,0.2); color: var(--accent-purple); }
+
+.card-nginx { --accent: var(--accent-cyan); }
+.card-nginx .card-tag { background: rgba(6,182,212,0.2); color: var(--accent-cyan); }
+
+.card-qlik { --accent: var(--accent-orange); }
+.card-qlik .card-tag { background: rgba(249,115,22,0.2); color: var(--accent-orange); }
+
+.card-docontrol { --accent: var(--accent-purple); }
+.card-docontrol .card-tag { background: rgba(168,85,247,0.2); color: var(--accent-purple); }
+
+.card-alcoa { --accent: var(--accent-green); }
+.card-alcoa .card-tag { background: rgba(16,185,129,0.2); color: var(--accent-green); }
+
+.card-vacl { --accent: var(--accent-cyan); }
+.card-vacl .card-tag { background: rgba(6,182,212,0.2); color: var(--accent-cyan); }
+
+.card-pacl { --accent: var(--accent-cyan); }
+.card-pacl .card-tag { background: rgba(6,182,212,0.2); color: var(--accent-cyan); }
+
+.card-tsql { --accent: var(--accent-red); }
+.card-tsql .card-tag { background: rgba(220,38,38,0.2); color: var(--accent-red); }
+
+.card-dm2 { --accent: var(--accent-orange); }
+.card-dm2 .card-tag { background: rgba(249,115,22,0.2); color: var(--accent-orange); }
