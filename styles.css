@@ -707,3 +707,32 @@ body {
     .card h3 { font-size:1.2rem; }
     .card p { font-size:0.85rem; }
 }
+
+
+
+
+
+/* New Card Color Variants - 2026 additions */
+.card-adaptive-shield { --accent: var(--accent-purple); }
+.card-adaptive-shield .card-tag { background: rgba(168,85,247,0.2); color: var(--accent-purple); }
+
+.card-lucid { --accent: var(--accent-cyan); }
+.card-lucid .card-tag { background: rgba(6,182,212,0.2); color: var(--accent-cyan); }
+
+.card-iso21500 { --accent: var(--accent-green); }
+.card-iso21500 .card-tag { background: rgba(16,185,129,0.2); color: var(--accent-green); }
+
+.card-people-hr { --accent: var(--accent-purple); }
+.card-people-hr .card-tag { background: rgba(168,85,247,0.2); color: var(--accent-purple); }
+
+.card-perview { --accent: var(--accent-orange); }
+.card-perview .card-tag { background: rgba(249,115,22,0.2); color: var(--accent-orange); }
+
+.card-repstor { --accent: var(--accent-cyan); }
+.card-repstor .card-tag { background: rgba(6,182,212,0.2); color: var(--accent-cyan); }
+
+.card-secure-dx { --accent: var(--accent-red); }
+.card-secure-dx .card-tag { background: rgba(220,38,38,0.2); color: var(--accent-red); }
+
+.card-waterfall { --accent: var(--accent-green); }
+.card-waterfall .card-tag { background: rgba(16,185,129,0.2); color: var(--accent-green); }
