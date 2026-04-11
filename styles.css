@@ -935,3 +935,22 @@ body {
     background: rgba(168,85,247,0.2); 
     color: var(--accent-purple); 
 }
+
+
+.card-saq { --accent: var(--accent-orange); }
+.card-saq .card-tag { 
+    background: rgba(249,115,22,0.2); 
+    color: var(--accent-orange); 
+}
+
+.card-iasme { --accent: var(--accent-cyan); }
+.card-iasme .card-tag { 
+    background: rgba(6,182,212,0.2); 
+    color: var(--accent-cyan); 
+}
+
+.card-crest { --accent: var(--accent-red); }
+.card-crest .card-tag { 
+    background: rgba(220,38,38,0.2); 
+    color: var(--accent-red); 
+}
