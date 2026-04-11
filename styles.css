@@ -929,3 +929,9 @@ body {
     background: rgba(249,115,22,0.2); 
     color: var(--accent-orange); 
 }
+
+.card-substack { --accent: var(--accent-purple); }
+.card-substack .card-tag { 
+    background: rgba(168,85,247,0.2); 
+    color: var(--accent-purple); 
+}
