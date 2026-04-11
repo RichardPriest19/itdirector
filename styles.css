@@ -954,3 +954,40 @@ body {
     background: rgba(220,38,38,0.2); 
     color: var(--accent-red); 
 }
+
+.card-raid-logs { --accent: var(--accent-orange); }
+.card-raid-logs .card-tag { 
+    background: rgba(249,115,22,0.2); 
+    color: var(--accent-orange); 
+}
+
+
+.card-sentinelone { --accent: var(--accent-cyan); }
+.card-sentinelone .card-tag { 
+    background: rgba(6,182,212,0.2); 
+    color: var(--accent-cyan); 
+}
+
+.card-microsoft-entra { --accent: var(--accent-cyan); }
+.card-microsoft-entra .card-tag { 
+    background: rgba(6,182,212,0.2); 
+    color: var(--accent-cyan); 
+}
+
+.card-intune { --accent: var(--accent-cyan); }
+.card-intune .card-tag { 
+    background: rgba(6,182,212,0.2); 
+    color: var(--accent-cyan); 
+}
+
+.card-soc2 { --accent: var(--accent-green); }
+.card-soc2 .card-tag { 
+    background: rgba(16,185,129,0.2); 
+    color: var(--accent-green); 
+}
+
+.card-bcp { --accent: var(--accent-green); }
+.card-bcp .card-tag { 
+    background: rgba(16,185,129,0.2); 
+    color: var(--accent-green); 
+}
