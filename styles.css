@@ -1045,3 +1045,34 @@ body {
 
 .card-picwish { --accent: var(--accent-orange); }
 .card-picwish .card-tag { background: rgba(249,115,22,0.2); color: var(--accent-orange); }
+
+
+.card-sox-itgc { --accent: var(--accent-red); }
+.card-sox-itgc .card-tag { 
+    background: rgba(220,38,38,0.2); 
+    color: var(--accent-red); 
+}
+
+
+
+.card-rcsa { --accent: var(--accent-orange); }
+.card-rcsa .card-tag { 
+    background: rgba(249,115,22,0.2); 
+    color: var(--accent-orange); 
+}
+
+
+
+.card-kri { --accent: var(--accent-orange); }
+.card-kri .card-tag { 
+    background: rgba(249,115,22,0.2); 
+    color: var(--accent-orange); 
+}
+
+
+
+.card-3pl-4pl { --accent: var(--accent-orange); }
+.card-3pl-4pl .card-tag { 
+    background: rgba(249,115,22,0.2); 
+    color: var(--accent-orange); 
+}
