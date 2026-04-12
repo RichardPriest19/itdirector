@@ -991,3 +991,57 @@ body {
     background: rgba(16,185,129,0.2); 
     color: var(--accent-green); 
 }
+
+
+
+/* ============================================
+   AI TOOLS CARD STYLES
+   ============================================ */
+
+.card-cursor { --accent: var(--accent-cyan); }
+.card-cursor .card-tag { background: rgba(6,182,212,0.2); color: var(--accent-cyan); }
+
+.card-perplexity { --accent: var(--accent-orange); }
+.card-perplexity .card-tag { background: rgba(249,115,22,0.2); color: var(--accent-orange); }
+
+.card-gemini { --accent: var(--accent-blue); }
+.card-gemini .card-tag { background: rgba(59,130,246,0.2); color: #3b82f6; }
+
+.card-chatgpt { --accent: var(--accent-green); }
+.card-chatgpt .card-tag { background: rgba(16,185,129,0.2); color: var(--accent-green); }
+
+.card-claude { --accent: var(--accent-purple); }
+.card-claude .card-tag { background: rgba(168,85,247,0.2); color: var(--accent-purple); }
+
+.card-grok { --accent: var(--accent-cyan); }
+.card-grok .card-tag { background: rgba(6,182,212,0.2); color: var(--accent-cyan); }
+
+.card-midjourney { --accent: var(--accent-pink); }
+.card-midjourney .card-tag { background: rgba(236,72,153,0.2); color: #ec4899; }
+
+.card-recraft { --accent: var(--accent-orange); }
+.card-recraft .card-tag { background: rgba(249,115,22,0.2); color: var(--accent-orange); }
+
+
+
+
+.card-figma { --accent: var(--accent-purple); }
+.card-figma .card-tag { background: rgba(168,85,247,0.2); color: var(--accent-purple); }
+
+.card-canva { --accent: var(--accent-cyan); }
+.card-canva .card-tag { background: rgba(6,182,212,0.2); color: var(--accent-cyan); }
+
+.card-rec-cloud { --accent: var(--accent-orange); }
+.card-rec-cloud .card-tag { background: rgba(249,115,22,0.2); color: var(--accent-orange); }
+
+.card-tidio { --accent: var(--accent-green); }
+.card-tidio .card-tag { background: rgba(16,185,129,0.2); color: var(--accent-green); }
+
+.card-zapier { --accent: var(--accent-cyan); }
+.card-zapier .card-tag { background: rgba(6,182,212,0.2); color: var(--accent-cyan); }
+
+.card-calendly { --accent: var(--accent-purple); }
+.card-calendly .card-tag { background: rgba(168,85,247,0.2); color: var(--accent-purple); }
+
+.card-picwish { --accent: var(--accent-orange); }
+.card-picwish .card-tag { background: rgba(249,115,22,0.2); color: var(--accent-orange); }
