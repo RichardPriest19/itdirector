@@ -1089,3 +1089,17 @@ body {
     background: rgba(6,182,212,0.2); 
     color: var(--accent-cyan); 
 }
+
+.card-uat { --accent: var(--accent-green); }
+.card-uat .card-tag { 
+    background: rgba(16,185,129,0.2); 
+    color: var(--accent-green); 
+}
+
+
+
+.card-raid-logs { --accent: var(--accent-orange); }
+.card-raid-logs .card-tag { 
+    background: rgba(249,115,22,0.2); 
+    color: var(--accent-orange); 
+}
