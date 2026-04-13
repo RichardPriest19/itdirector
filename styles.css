@@ -1083,3 +1083,9 @@ body {
     background: rgba(249,115,22,0.2); 
     color: var(--accent-orange); 
 }
+
+.card-firewall { --accent: var(--accent-cyan); }
+.card-firewall .card-tag { 
+    background: rgba(6,182,212,0.2); 
+    color: var(--accent-cyan); 
+}
