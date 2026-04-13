@@ -1076,3 +1076,10 @@ body {
     background: rgba(249,115,22,0.2); 
     color: var(--accent-orange); 
 }
+
+
+.card-microsoft-fabric { --accent: var(--accent-orange); }
+.card-microsoft-fabric .card-tag { 
+    background: rgba(249,115,22,0.2); 
+    color: var(--accent-orange); 
+}
