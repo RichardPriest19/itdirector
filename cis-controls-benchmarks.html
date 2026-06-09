@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIS Controls & Benchmarks - IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1 class="logo">CIS Controls &amp; Benchmarks</h1>
+            <p class="tagline">Prioritised security best practices and hardening baselines from the Center for Internet Security</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="content-section">
+            <h2>Overview</h2>
+            <p>The Center for Internet Security (CIS) is a non-profit that publishes two of the most practical, widely used resources in cybersecurity: the <strong>CIS Controls</strong> and the <strong>CIS Benchmarks</strong>. Where many frameworks describe <em>what</em> good security looks like in the abstract, CIS is prized for being concrete and actionable — a prioritised to-do list and detailed configuration guides that teams can apply directly. Both are free, consensus-developed by a global community of practitioners, and map cleanly to broader frameworks like NIST and ISO 27001.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>CIS Controls</h2>
+            <p>The CIS Controls are a prioritised set of safeguards to defend against the most common attacks. The current generation (version 8) consolidates them into <strong>18 controls</strong> — covering essentials such as inventory of assets and software, data protection, secure configuration, access control, vulnerability management, logging and incident response. Their defining feature is prioritisation through <strong>Implementation Groups</strong>:</p>
+            <table style="width:100%; border-collapse:collapse; margin:20px 0;">
+                <tr style="background:var(--bg-card);">
+                    <th style="padding:12px; border:1px solid var(--border-color);">Group</th>
+                    <th style="padding:12px; border:1px solid var(--border-color);">For</th>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">IG1</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Essential cyber hygiene — the baseline every organisation should meet</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">IG2</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Organisations managing more sensitive data and complexity</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">IG3</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Mature organisations facing sophisticated, targeted threats</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="content-section">
+            <h2>CIS Benchmarks</h2>
+            <p>The CIS Benchmarks are detailed, consensus-based <strong>secure configuration guides</strong> for specific technologies — operating systems, cloud platforms, browsers, databases, network devices and more. There are hundreds of them, each prescribing how to harden a particular product against attack. CIS also publishes pre-hardened virtual machine images (CIS Hardened Images) for major cloud marketplaces, so teams can start from a secure baseline rather than hardening from scratch.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>IT Director Considerations</h2>
+            <ul>
+                <li>A practical, prioritised roadmap — IG1 is an excellent starting point for "are we doing the basics?"</li>
+                <li>Benchmarks as ready-made hardening standards for your platforms</li>
+                <li>Mapping to NIST CSF, ISO 27001 and others, so CIS work supports formal compliance</li>
+                <li>Free to use, lowering the barrier compared with some commercial frameworks</li>
+                <li>Measurable: the Controls lend themselves to tracking and demonstrating progress</li>
+                <li>Tooling that can assess systems automatically against the benchmarks</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>CIS vs NIST &amp; ISO</h2>
+            <p>These are complementary, not competing. <strong>CIS</strong> is prescriptive and tactical — it tells you specifically what to do and how to configure systems. <strong>NIST</strong> frameworks (such as the Cybersecurity Framework and SP 800-53) and <strong>ISO 27001</strong> are broader management frameworks describing how to structure and govern a security programme. A common pattern is to use NIST or ISO for the overall framework and certification, and CIS Controls and Benchmarks as the practical means of actually implementing and hardening.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 IT Director Hub • CIS Controls &amp; Benchmarks Reference</p>
+    </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
