@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docker - IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1 class="logo">Docker</h1>
+            <p class="tagline">The platform that popularised containers – packaging applications into portable, consistent images</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="content-section">
+            <h2>Overview</h2>
+            <p>Docker is the platform that brought containers into the mainstream. It packages an application together with everything it needs to run — code, runtime, libraries and configuration — into a portable <em>image</em> that behaves the same way on a developer's laptop, a test server or production. By solving the long-standing "it works on my machine" problem, Docker became the de facto standard for building and running containers and a cornerstone of modern application delivery.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Core Components</h2>
+            <ul>
+                <li><strong>Docker Engine</strong> — the runtime (the <code>dockerd</code> daemon) that builds and runs containers on a host.</li>
+                <li><strong>Docker CLI</strong> — the command-line tool developers use to build, run and manage images and containers.</li>
+                <li><strong>Docker Desktop</strong> — the packaged developer environment for Windows and macOS, bundling the engine and tooling.</li>
+                <li><strong>Image &amp; container</strong> — an image is the immutable template; a container is a running instance of that image.</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Images &amp; Dockerfiles</h2>
+            <p>Docker images are built from a <strong>Dockerfile</strong> — a simple text recipe describing how to assemble the application environment step by step. Each instruction creates a <em>layer</em>, and layers are cached and reused, which makes rebuilds fast and images efficient to store and ship. Finished images are pushed to a <strong>registry</strong> — Docker Hub is the public default, while most organisations run a private registry (or use one built into their cloud) to control and secure their images.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Docker Compose</h2>
+            <p>Real applications rarely consist of a single container. <strong>Docker Compose</strong> lets you define a multi-container application — for example a web app, its database and a cache — in a single YAML file, then start the whole stack with one command. It is widely used for local development and testing, where it provides a quick, reproducible environment without the complexity of full orchestration.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Where Docker Fits</h2>
+            <table style="width:100%; border-collapse:collapse; margin:20px 0;">
+                <tr style="background:var(--bg-card);">
+                    <th style="padding:12px; border:1px solid var(--border-color);">Need</th>
+                    <th style="padding:12px; border:1px solid var(--border-color);">Tool</th>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Build and run containers</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Docker Engine + CLI</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Local multi-container dev</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Docker Compose</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Run at scale in production</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Kubernetes (orchestration)</td>
+                </tr>
+            </table>
+            <p>Docker is excellent for building images and running containers on a host, but it is not an orchestrator. Once you need to run containers across many machines with scaling, self-healing and rolling updates, that job belongs to Kubernetes.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Security Considerations</h2>
+            <ul>
+                <li><strong>Image provenance</strong> — base images can carry vulnerabilities or malicious content; use trusted sources and scan images.</li>
+                <li><strong>Registry control</strong> — host a private registry with access control rather than pulling freely from public sources.</li>
+                <li><strong>Least privilege</strong> — avoid running containers as root, and limit capabilities and host mounts.</li>
+                <li><strong>Patching</strong> — images are point-in-time; rebuild and redeploy to pick up security fixes rather than patching in place.</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>IT Director Considerations</h2>
+            <ul>
+                <li>Docker Desktop licensing — it requires a paid subscription for commercial use above a company-size threshold, so confirm current terms before standardising on it</li>
+                <li>Image supply-chain security and scanning as part of the build pipeline</li>
+                <li>Private registry strategy and integration with CI/CD</li>
+                <li>The boundary between development (Docker, Compose) and production (orchestration)</li>
+                <li>Skills and standards, so teams build images consistently and securely</li>
+                <li>Open alternatives (such as Podman) where licensing or rootless operation matters</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Docker vs Containers</h2>
+            <p><strong>Containers</strong> are the underlying concept — a standardised way of packaging and isolating applications using features of the host operating system. <strong>Docker</strong> is the best-known <em>implementation</em> of that concept: the tooling that builds and runs them. Thanks to open standards (the OCI), Docker images run on other runtimes too, and platforms like Kubernetes no longer require Docker specifically. In short: containers are the idea and the standard; Docker is the popular toolset that made them easy.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 IT Director Hub • Docker Reference</p>
+    </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

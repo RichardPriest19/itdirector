@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vector Databases - IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1 class="logo">Vector Databases</h1>
+            <p class="tagline">Databases built to store and search high-dimensional vectors by similarity</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="content-section">
+            <h2>Overview</h2>
+            <p>A vector database is a database designed to store <strong>embeddings</strong> — the numerical vectors that represent the meaning of text, images and other data — and to search them by <em>similarity</em> rather than exact match. Where a traditional database answers "find the row where this field equals that value", a vector database answers "find the items most similar in meaning to this one". This capability is what makes semantic search and retrieval-augmented generation (RAG) practical at scale, which is why vector databases have become a core part of the AI application stack.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>How They Work</h2>
+            <p>The central operation is <strong>nearest-neighbour search</strong>: given a query vector, find the stored vectors closest to it by a distance measure such as cosine similarity. Doing this exactly across millions of high-dimensional vectors would be far too slow, so vector databases use <strong>Approximate Nearest Neighbour (ANN)</strong> algorithms — such as HNSW — that trade a tiny amount of accuracy for enormous speed. They also add the practical machinery of a real database: indexing, filtering by metadata, updates, scaling and persistence.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Traditional vs Vector Databases</h2>
+            <table style="width:100%; border-collapse:collapse; margin:20px 0;">
+                <tr style="background:var(--bg-card);">
+                    <th style="padding:12px; border:1px solid var(--border-color);">Aspect</th>
+                    <th style="padding:12px; border:1px solid var(--border-color);">Traditional (relational)</th>
+                    <th style="padding:12px; border:1px solid var(--border-color);">Vector</th>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Search type</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Exact / keyword match</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Similarity by meaning</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Stores</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Rows and columns</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">High-dimensional vectors</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Best for</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Structured, transactional data</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Semantic search, RAG, recommendation</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="content-section">
+            <h2>The Landscape</h2>
+            <p>Options range from dedicated vector databases (such as Pinecone, Weaviate, Milvus, Qdrant and Chroma) to vector capabilities added onto tools you may already run — for example the <strong>pgvector</strong> extension for PostgreSQL, vector search in Elasticsearch/OpenSearch, or managed offerings like Azure AI Search. For many organisations, adding vector search to an existing database is the lowest-friction starting point.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>IT Director Considerations</h2>
+            <ul>
+                <li>Whether to adopt a dedicated vector database or extend an existing one (e.g. pgvector)</li>
+                <li>Managed service versus self-hosted, weighing control against operational burden</li>
+                <li>Scale and cost as the volume of embedded content grows</li>
+                <li>Access control and security on retrieved content, which RAG will surface to users</li>
+                <li>Integration with the wider data platform and AI tooling</li>
+                <li>Avoiding over-engineering — small use cases may not need a separate database at all</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Vector Databases in the AI Stack</h2>
+            <p>A vector database is the middle link in a chain. <strong>Embeddings</strong> turn content into vectors; the <strong>vector database</strong> stores and rapidly searches them by similarity; and <strong>RAG</strong> uses that search to feed an LLM the most relevant content at query time. The vector database is the retrieval engine that makes "chat with our documents" and semantic search fast and scalable.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 IT Director Hub • Vector Databases Reference</p>
+    </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

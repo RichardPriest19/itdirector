@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chef - IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1 class="logo">Chef</h1>
+            <p class="tagline">Code-driven configuration management treating infrastructure as Ruby-based "recipes"</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="content-section">
+            <h2>Overview</h2>
+            <p>Chef is a configuration management tool that takes a strongly <strong>code-driven</strong> approach to infrastructure automation. Configuration is expressed in a Ruby-based language as <em>recipes</em> grouped into <em>cookbooks</em>, which appeals to teams who want the full power and flexibility of a real programming language. This makes Chef capable of handling complex automation, though at the price of a steeper learning curve than YAML-based tools. First released in 2009, Chef's products are now owned by Progress Software.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>How It Works</h2>
+            <p>Chef uses an <strong>agent-based, pull</strong> model. The <code>chef-client</code> agent runs on each managed node, pulling its assigned configuration from a central Chef Server and applying it locally; a node's <em>run-list</em> defines which recipes apply to it. While recipes are written in code, the underlying <em>resources</em> are declarative — you state the desired result and Chef makes it so, idempotently. A standalone mode is also available for simpler, server-less use.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Core Concepts</h2>
+            <ul>
+                <li><strong>Recipe</strong> — a set of instructions describing how to configure part of a system.</li>
+                <li><strong>Cookbook</strong> — a collection of related recipes, files and templates.</li>
+                <li><strong>Resource</strong> — a declarative element (package, service, file) that a recipe manages.</li>
+                <li><strong>Run-list</strong> — the ordered set of recipes applied to a given node.</li>
+                <li><strong>Knife / Ohai</strong> — the command-line tool, and the utility that collects system data about each node.</li>
+                <li><strong>Chef Supermarket</strong> — the community repository of shareable cookbooks.</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>The Chef Family</h2>
+            <p>Chef is now a family of related products rather than a single tool. <strong>Chef Infra</strong> handles configuration management; <strong>Chef InSpec</strong> is a popular framework for compliance and security testing as code; and <strong>Chef Habitat</strong> focuses on application packaging and automation. The InSpec compliance capability in particular is often valued in its own right for auditing systems against defined policies.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Strengths &amp; Use Cases</h2>
+            <ul>
+                <li><strong>Flexibility</strong> — the full expressiveness of Ruby for complex logic.</li>
+                <li><strong>Developer-centric</strong> — suits engineering teams who treat infrastructure genuinely as code.</li>
+                <li><strong>Compliance as code</strong> — InSpec provides testable, automated policy checks.</li>
+                <li><strong>Scale</strong> — used in large, complex environments with demanding automation needs.</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>IT Director Considerations</h2>
+            <ul>
+                <li>The steeper learning curve, requiring genuine programming skill rather than just configuration</li>
+                <li>Infrastructure overhead of running a Chef Server and agents</li>
+                <li>Strong fit where teams already have Ruby/coding strength and want maximum flexibility</li>
+                <li>The compliance-as-code value of InSpec, sometimes adopted independently</li>
+                <li>Skills availability, given Ansible's rise has narrowed the market for agent-based tools</li>
+                <li>How Chef pairs with provisioning tools like Terraform that build the infrastructure it configures</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Chef vs Ansible &amp; Puppet</h2>
+            <p><strong>Chef</strong> is agent-based, pull-based, and the most code-centric of the three, using a Ruby-based language that rewards strong engineering skills with flexibility. <strong>Puppet</strong> shares the agent-based, pull model but is more declarative and model-driven, focused on enforcing desired state at scale. <strong>Ansible</strong> is agentless and push-based using simple YAML, making it the easiest to adopt and the most versatile beyond configuration management. A rough rule of thumb: Chef for code-heavy teams wanting flexibility, Puppet for declarative state enforcement at scale, Ansible for breadth and quick adoption.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 IT Director Hub • Chef Reference</p>
+    </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

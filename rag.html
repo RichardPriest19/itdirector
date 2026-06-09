@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAG - IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1 class="logo">RAG</h1>
+            <p class="tagline">Retrieval-Augmented Generation – grounding LLM answers in your own, current data</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="content-section">
+            <h2>Overview</h2>
+            <p>Retrieval-Augmented Generation (RAG) is a technique for making a large language model answer from <em>your</em> data rather than only from what it learned during training. Instead of relying on the model's frozen, general knowledge, RAG retrieves relevant information from a knowledge base at query time and supplies it to the model as context. This grounds the answer in current, specific, often private information — dramatically reducing hallucination and letting the model cite its sources. RAG has become the dominant pattern for enterprise AI applications such as "chat with our documents".</p>
+        </section>
+
+        <section class="content-section">
+            <h2>How It Works</h2>
+            <p>RAG has two phases. <strong>Ingestion</strong> happens ahead of time: documents are split into chunks, converted into <strong>embeddings</strong>, and stored in a <strong>vector database</strong>. <strong>Retrieval and generation</strong> happen at query time:</p>
+            <ul>
+                <li>The user's question is embedded and used to search the vector database for the most relevant chunks.</li>
+                <li>Those chunks are inserted into the prompt as context.</li>
+                <li>The LLM generates an answer grounded in that retrieved content, ideally with citations.</li>
+            </ul>
+            <p>In effect, RAG turns the open-book exam: the model answers with the right reference material in front of it.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Why It Matters</h2>
+            <ul>
+                <li><strong>Current &amp; private knowledge</strong> — answer from data the model was never trained on.</li>
+                <li><strong>Reduced hallucination</strong> — grounding answers in real source material improves accuracy.</li>
+                <li><strong>Traceability</strong> — citations let users verify where an answer came from.</li>
+                <li><strong>No retraining</strong> — update the knowledge base instead of retraining the model.</li>
+                <li><strong>Cost-effective freshness</strong> — keeping content current is far cheaper than fine-tuning.</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>RAG vs Fine-Tuning</h2>
+            <p>These are often posed as alternatives, but they solve different problems. <strong>RAG</strong> adds <em>knowledge</em> — giving the model access to information it doesn't hold. <strong>Fine-tuning</strong> changes <em>behaviour</em> — teaching the model a style, format or specialised task. If the issue is "the model doesn't know our facts", RAG is usually the answer; if it's "the model doesn't respond in the way we need", fine-tuning may be. Many sophisticated systems use both.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>IT Director Considerations</h2>
+            <ul>
+                <li>Data freshness — a process to keep the knowledge base current as content changes</li>
+                <li>Security and permissions, so RAG never surfaces documents a user shouldn't see</li>
+                <li>Retrieval quality, since poor chunks lead to poor answers ("garbage in, garbage out")</li>
+                <li>Evaluation — measuring grounding and accuracy, not just fluency</li>
+                <li>Cost of embedding and storing large document estates</li>
+                <li>It is usually the first thing to try for knowledge-based use cases, ahead of fine-tuning</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>RAG in the AI Stack</h2>
+            <p>RAG is the application pattern that ties the other pieces together. It depends on <strong>embeddings</strong> to represent meaning, a <strong>vector database</strong> to retrieve relevant content quickly, and an <strong>LLM</strong> to generate the final answer. Alongside <strong>prompt engineering</strong> and <strong>fine-tuning</strong>, it is one of the three main ways to adapt an LLM — the one focused on supplying knowledge.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 IT Director Hub • RAG Reference</p>
+    </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

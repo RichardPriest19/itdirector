@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Containers - IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1 class="logo">Containers</h1>
+            <p class="tagline">Containerization – lightweight, portable packaging and isolation of applications using the host OS</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="content-section">
+            <h2>Overview</h2>
+            <p>Containerization is a way of packaging an application together with its dependencies into a single, portable unit that runs reliably across different environments. Unlike virtual machines, containers do not each carry a full operating system — they share the host's OS kernel while remaining isolated from one another. This makes them lightweight, fast to start, and dense, allowing far more workloads to run on the same hardware. Containers have become the default packaging model for modern, cloud-native applications.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Containers vs Virtual Machines</h2>
+            <table style="width:100%; border-collapse:collapse; margin:20px 0;">
+                <tr style="background:var(--bg-card);">
+                    <th style="padding:12px; border:1px solid var(--border-color);">Aspect</th>
+                    <th style="padding:12px; border:1px solid var(--border-color);">Containers</th>
+                    <th style="padding:12px; border:1px solid var(--border-color);">Virtual Machines</th>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Isolation boundary</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Share the host OS kernel</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Each runs its own full OS</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Size &amp; startup</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Megabytes; start in seconds</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Gigabytes; start in minutes</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Density</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Many per host</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Fewer per host</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Isolation strength</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Lighter (shared kernel)</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Stronger (hardware-level)</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="content-section">
+            <h2>How They Work</h2>
+            <p>Containers rely on features built into the Linux kernel. <strong>Namespaces</strong> give each container its own isolated view of the system — its own processes, network and file system — so it cannot see others. <strong>Control groups (cgroups)</strong> limit and account for the resources (CPU, memory) a container can consume. A layered, copy-on-write file system lets containers share common layers efficiently while keeping their own changes separate. Together these provide isolation without the overhead of a separate operating system per workload.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Standards &amp; Runtimes</h2>
+            <p>Containerization is built on open standards, which is why it is not tied to any single vendor:</p>
+            <ul>
+                <li><strong>OCI (Open Container Initiative)</strong> — defines standard formats for images and runtimes, ensuring portability.</li>
+                <li><strong>containerd</strong> — a widely used core runtime that manages container lifecycle, used by many platforms.</li>
+                <li><strong>runc</strong> — the low-level runtime that actually creates and runs containers.</li>
+                <li><strong>Alternatives</strong> — tools such as Podman and CRI-O provide OCI-compatible options beyond Docker.</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Why It Matters</h2>
+            <ul>
+                <li><strong>Portability</strong> — the same image runs consistently from laptop to cloud.</li>
+                <li><strong>Efficiency</strong> — high density and fast startup reduce infrastructure cost.</li>
+                <li><strong>Consistency</strong> — eliminates environment drift between dev, test and production.</li>
+                <li><strong>Foundation for microservices</strong> — small, independently deployable services map naturally to containers.</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Orchestration at Scale</h2>
+            <p>Running a handful of containers on one host is straightforward; running hundreds across many machines is not. That is the role of <strong>orchestration</strong> — most commonly Kubernetes — which handles scheduling, scaling, self-healing, networking and rolling updates. For most organisations, adopting containers seriously means adopting an orchestration platform alongside them, with the operational skills that implies.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Security Considerations</h2>
+            <ul>
+                <li><strong>Shared-kernel risk</strong> — isolation is weaker than VMs, so a kernel vulnerability has a wider blast radius.</li>
+                <li><strong>Image vulnerabilities</strong> — scan images and use minimal, trusted base layers.</li>
+                <li><strong>Least privilege</strong> — avoid running as root; consider rootless containers and tight resource limits.</li>
+                <li><strong>Runtime security</strong> — monitor running containers for unexpected behaviour, not just images at build time.</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>IT Director Considerations</h2>
+            <ul>
+                <li>Application modernisation strategy and where containers fit versus VMs and serverless</li>
+                <li>The operational and skills investment that orchestration (Kubernetes) demands</li>
+                <li>Security posture across the full lifecycle — build, registry, deploy and runtime</li>
+                <li>Avoiding lock-in by leaning on open standards (OCI) rather than a single vendor's tooling</li>
+                <li>Sensitivity of workloads — where stronger VM-level isolation is still warranted</li>
+                <li>Governance of images, base layers and supply chain across teams</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Containers vs Docker</h2>
+            <p><strong>Containers</strong> are the concept and the open standard — a lightweight way of packaging and isolating applications using the host operating system. <strong>Docker</strong> is the best-known toolset for building and running them, and the product that made the idea mainstream. Because of open standards, containers run on many runtimes beyond Docker. In short: containers are the idea; Docker is one popular way to work with them.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 IT Director Hub • Containers Reference</p>
+    </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

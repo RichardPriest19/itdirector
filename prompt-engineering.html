@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Engineering - IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1 class="logo">Prompt Engineering</h1>
+            <p class="tagline">Crafting the inputs to an LLM to get more accurate, reliable and useful outputs</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="content-section">
+            <h2>Overview</h2>
+            <p>Prompt engineering is the practice of designing the instructions and context given to a large language model in order to get better results. Because an LLM's output depends heavily on how it is asked, the wording, structure and examples in a prompt can be the difference between a vague, unreliable response and a precise, useful one. It is the cheapest and fastest way to influence a model's behaviour — no training, no infrastructure, just a better-constructed input — which is why it is usually the first lever to reach for.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Common Techniques</h2>
+            <ul>
+                <li><strong>Clear, specific instructions</strong> — say exactly what you want, including constraints and the desired format.</li>
+                <li><strong>Few-shot examples</strong> — show the model one or more examples of the input/output you expect.</li>
+                <li><strong>Chain-of-thought</strong> — ask the model to reason step by step for problems that need working through.</li>
+                <li><strong>Role / system prompts</strong> — set a persona or standing rules that frame the whole interaction.</li>
+                <li><strong>Output formatting</strong> — specify structure (e.g. a list, table or JSON) so results are easy to use downstream.</li>
+                <li><strong>Providing context</strong> — supply relevant background directly in the prompt.</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Strengths &amp; Limits</h2>
+            <table style="width:100%; border-collapse:collapse; margin:20px 0;">
+                <tr style="background:var(--bg-card);">
+                    <th style="padding:12px; border:1px solid var(--border-color);">Strengths</th>
+                    <th style="padding:12px; border:1px solid var(--border-color);">Limits</th>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">No training, cost or infrastructure</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Cannot add knowledge beyond the prompt/context</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Immediate to apply and iterate</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Can be brittle and sensitive to wording</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Accessible to non-specialists</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Behaviour varies between models</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="content-section">
+            <h2>IT Director Considerations</h2>
+            <ul>
+                <li>A practical, low-cost skill worth building across teams, not just in technical roles</li>
+                <li>Treating effective prompts as reusable assets — managed, versioned and shared</li>
+                <li>Prompt management and testing as part of an LLMOps / MLOps practice</li>
+                <li>Security awareness, including prompt injection where untrusted input reaches a model</li>
+                <li>It is the first lever to try before investing in RAG or fine-tuning</li>
+                <li>Consistency, since the same prompt can behave differently across models and versions</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Prompt Engineering, RAG &amp; Fine-Tuning</h2>
+            <p>Prompt engineering is the lightest of the three ways to adapt an LLM. <strong>Prompt engineering</strong> shapes the input and costs almost nothing — the right starting point for most needs. <strong>RAG</strong> goes further by automatically retrieving and inserting relevant knowledge into the prompt, addressing what the model doesn't know. <strong>Fine-tuning</strong> goes further still by retraining the model to change how it behaves. They build on each other — and RAG itself is, in part, automated prompt construction with retrieved context.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 IT Director Hub • Prompt Engineering Reference</p>
+    </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSPF - IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1 class="logo">OSPF</h1>
+            <p class="tagline">Open Shortest Path First – the vendor-neutral link-state protocol for routing inside a network</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="content-section">
+            <h2>Overview</h2>
+            <p>OSPF (Open Shortest Path First) is an Interior Gateway Protocol — it routes traffic <em>within</em> a single organisation's network rather than between separate organisations. It is an open standard (RFC 2328 for OSPFv2/IPv4, RFC 5340 for OSPFv3/IPv6), which is part of why it is so widely deployed across mixed-vendor estates. OSPF is a <em>link-state</em> protocol: every router builds a complete map of the network and independently calculates the best paths, giving fast, loop-free convergence. It runs directly over IP as protocol number 89.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>How It Works</h2>
+            <p>Each router floods <strong>Link State Advertisements (LSAs)</strong> describing its connections. All routers in an area assemble these into an identical <strong>link-state database (LSDB)</strong>, then run Dijkstra's Shortest Path First algorithm to compute the lowest-cost route to every destination, where cost is derived from link bandwidth. Routers discover and maintain relationships through <strong>Hello</strong> packets, forming adjacencies. On shared multi-access segments, a <strong>Designated Router (DR)</strong> and Backup DR are elected to limit the number of adjacencies and reduce flooding.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Areas &amp; Hierarchy</h2>
+            <p>OSPF scales through a two-level hierarchy of areas, which confines flooding and SPF recalculation to smaller domains:</p>
+            <table style="width:100%; border-collapse:collapse; margin:20px 0;">
+                <tr style="background:var(--bg-card);">
+                    <th style="padding:12px; border:1px solid var(--border-color);">Concept</th>
+                    <th style="padding:12px; border:1px solid var(--border-color);">Role</th>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Backbone (Area 0)</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Central area all other areas must connect to</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Area Border Router (ABR)</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Connects an area to the backbone and summarises routes</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">ASBR</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Injects external routes (e.g. from BGP) into OSPF</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Stub / NSSA areas</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Reduce LSA volume by blocking external routes</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="content-section">
+            <h2>OSPF vs Other Interior Protocols</h2>
+            <ul>
+                <li><strong>EIGRP</strong> — fast and simple to operate, but historically Cisco-centric; OSPF's open standard makes it the safer choice in multi-vendor networks.</li>
+                <li><strong>IS-IS</strong> — another link-state protocol with similar properties, favoured by some large service providers; OSPF is more common in enterprise and campus networks.</li>
+                <li><strong>RIP</strong> — an older distance-vector protocol that does not scale and is effectively legacy.</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Security Considerations</h2>
+            <ul>
+                <li><strong>Neighbour authentication</strong> — OSPF supports authenticated adjacencies (MD5/SHA) so rogue devices cannot inject routes.</li>
+                <li><strong>Passive interfaces</strong> — disable OSPF on interfaces facing endpoints or untrusted segments to reduce exposure.</li>
+                <li><strong>Route filtering and summarisation</strong> — limit what is advertised between areas to contain mistakes and tighten the blast radius.</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>IT Director Considerations</h2>
+            <ul>
+                <li>Choice of IGP across the estate, weighing vendor neutrality (OSPF) against operational familiarity (e.g. EIGRP)</li>
+                <li>Hierarchical area design as a prerequisite for scaling campus, branch and data-centre networks</li>
+                <li>Convergence behaviour and its impact on availability SLAs during link or device failure</li>
+                <li>Redistribution between OSPF and edge protocols such as BGP, and the risk that introduces</li>
+                <li>Documentation and skills, since link-state design is less forgiving of ad-hoc growth</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>OSPF vs BGP</h2>
+            <p>Use <strong>OSPF</strong> inside a network you control end to end, where the goal is fast, automatic convergence on the shortest path. Use <strong>BGP</strong> at the boundaries — connecting to ISPs, other organisations, or across very large fabrics — where routing policy and scale outweigh convergence speed. Most real-world networks run both: OSPF as the interior fabric and BGP at the edge, with controlled redistribution between them.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 IT Director Hub • OSPF Reference</p>
+    </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

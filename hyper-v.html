@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyper-V - IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1 class="logo">Hyper-V</h1>
+            <p class="tagline">Microsoft's native hypervisor for creating and running virtual machines on Windows Server</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="content-section">
+            <h2>Overview</h2>
+            <p>Hyper-V is Microsoft's hardware virtualisation platform — the hypervisor that lets a single physical server run many isolated virtual machines (VMs), each with its own operating system. It ships built into Windows Server (and the Pro/Enterprise editions of Windows) rather than as a separate purchase, which makes it a natural fit for organisations already invested in the Microsoft stack. Hyper-V is one of the two dominant enterprise hypervisors alongside VMware, and underpins both on-premises virtualisation and Microsoft's Azure cloud.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>How It Works</h2>
+            <p>Hyper-V is a <strong>Type 1 (bare-metal) hypervisor</strong>: when enabled, it inserts itself directly above the hardware, and even the host Windows installation becomes a privileged "parent partition" running on top of it. Each virtual machine runs in its own isolated "child partition" with virtualised CPU, memory, storage and network. This direct-to-hardware model is what gives Hyper-V the performance and isolation expected of production virtualisation, as opposed to a hosted (Type 2) hypervisor that runs as an application inside an OS.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Key Capabilities</h2>
+            <ul>
+                <li><strong>Live Migration</strong> — move a running VM between hosts with no downtime.</li>
+                <li><strong>Failover Clustering</strong> — group hosts so VMs restart elsewhere automatically if a host fails.</li>
+                <li><strong>Checkpoints</strong> — point-in-time snapshots of a VM for quick rollback (better for test than production).</li>
+                <li><strong>Dynamic Memory</strong> — allocate RAM to VMs on demand to improve density.</li>
+                <li><strong>Replica</strong> — asynchronously replicate VMs to another site for disaster recovery.</li>
+                <li><strong>Generation 2 VMs</strong> — modern UEFI-based VMs with secure boot support.</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Management</h2>
+            <p>Hyper-V can be managed individually through Hyper-V Manager, scripted at scale with PowerShell, or — for larger estates — administered centrally with <strong>System Center Virtual Machine Manager (SCVMM)</strong>, which adds fabric management, templates and automation across many hosts. Windows Admin Center provides a modern browser-based alternative for day-to-day administration.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Hyper-V vs VMware vSphere</h2>
+            <table style="width:100%; border-collapse:collapse; margin:20px 0;">
+                <tr style="background:var(--bg-card);">
+                    <th style="padding:12px; border:1px solid var(--border-color);">Aspect</th>
+                    <th style="padding:12px; border:1px solid var(--border-color);">Hyper-V</th>
+                    <th style="padding:12px; border:1px solid var(--border-color);">VMware vSphere</th>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Licensing</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Included with Windows Server</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Separately licensed</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Ecosystem fit</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Tight Microsoft / Azure integration</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Mature, vendor-neutral, large ecosystem</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Typical perception</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Strong value where Windows already dominates</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Long-standing enterprise standard</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="content-section">
+            <h2>IT Director Considerations</h2>
+            <ul>
+                <li>Cost advantage where Windows Server is already licensed, versus separate hypervisor licensing</li>
+                <li>Integration with Active Directory, System Center and Azure (including hybrid via Azure Arc and Azure Stack HCI)</li>
+                <li>Recent shifts in the virtualisation market prompting many organisations to reassess VMware alternatives, with Hyper-V a leading option</li>
+                <li>High-availability and disaster-recovery design using clustering and Replica</li>
+                <li>Existing team skills and tooling, and the migration effort of switching hypervisors</li>
+                <li>Where containers may be the better target for new workloads rather than VMs</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Hyper-V vs Containers</h2>
+            <p><strong>Hyper-V</strong> virtualises at the hardware level: each VM runs a full operating system, giving strong isolation and the ability to run different OSes side by side. <strong>Containers</strong> virtualise at the OS level, sharing the host kernel for far greater density and speed but lighter isolation. They are complementary rather than competing — VMs suit traditional and mixed-OS workloads and provide a strong security boundary, while containers suit modern, scalable applications. Many organisations even run container hosts as VMs on Hyper-V.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 IT Director Hub • Hyper-V Reference</p>
+    </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

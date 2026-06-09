@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MPLS - IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1 class="logo">MPLS</h1>
+            <p class="tagline">Multiprotocol Label Switching – label-based forwarding for fast, predictable, SLA-backed wide-area networking</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="content-section">
+            <h2>Overview</h2>
+            <p>MPLS (Multiprotocol Label Switching) is a forwarding technique that moves packets through a network based on short, fixed-length <em>labels</em> rather than performing a full IP address lookup at every hop. Because it sits between the data-link and network layers, it is often described as a "Layer 2.5" technology. For most of the last two decades MPLS was the default choice for enterprise wide-area networks, prized for its predictable performance, quality-of-service guarantees, and provider-backed service-level agreements (SLAs) connecting branch sites, data centres and headquarters.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>How It Works</h2>
+            <p>The core idea is "label once, switch many times":</p>
+            <ul>
+                <li>At the <strong>ingress</strong> edge, the provider router classifies a packet and pushes a label onto it.</li>
+                <li>In the <strong>core</strong>, routers forward purely by swapping labels — a simple, fast operation that avoids repeated IP route lookups.</li>
+                <li>At the <strong>egress</strong> edge, the label is removed and the packet returns to normal IP forwarding.</li>
+            </ul>
+            <p>The path a labelled packet follows is a <strong>Label Switched Path (LSP)</strong>. Labels are distributed between routers using protocols such as LDP (Label Distribution Protocol) or RSVP-TE. Multiple labels can be stacked — for example an outer transport label plus an inner label identifying a specific customer VPN.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Key Components</h2>
+            <table style="width:100%; border-collapse:collapse; margin:20px 0;">
+                <tr style="background:var(--bg-card);">
+                    <th style="padding:12px; border:1px solid var(--border-color);">Term</th>
+                    <th style="padding:12px; border:1px solid var(--border-color);">Role</th>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">CE (Customer Edge)</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Router at the customer site connecting into the provider</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">PE (Provider Edge)</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Provider router that adds/removes labels and holds VPN routing</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">P (Provider core)</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Core router that switches labels without seeing customer routes</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">LSP</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">The end-to-end label switched path a packet follows</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">FEC</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Forwarding Equivalence Class – packets treated the same way</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="content-section">
+            <h2>MPLS VPNs</h2>
+            <p>The most common enterprise use of MPLS is the provider-managed VPN that privately links an organisation's sites:</p>
+            <ul>
+                <li><strong>L3VPN</strong> — the provider routes between sites using MP-BGP and per-customer VRFs (Virtual Routing and Forwarding tables), keeping each customer's traffic logically separate.</li>
+                <li><strong>L2VPN</strong> — the provider carries Layer 2 connectivity (pseudowires, or VPLS for multipoint), making sites appear to share the same LAN segment.</li>
+            </ul>
+            <p>Traffic is kept private through separation, not encryption — an important distinction from internet VPNs.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Traffic Engineering &amp; QoS</h2>
+            <p>MPLS Traffic Engineering (using RSVP-TE) lets providers steer flows along specific paths and reserve bandwidth, rather than simply following the shortest route. Combined with class-of-service marking, this is what allows MPLS to deliver consistent latency and jitter for real-time traffic such as voice and video — historically its biggest selling point over the public internet. Segment Routing (SR-MPLS) is the modern evolution, achieving similar steering with a much simpler control plane.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>IT Director Considerations</h2>
+            <ul>
+                <li>Cost: MPLS circuits are significantly more expensive per megabit than internet broadband</li>
+                <li>Provisioning lead times of weeks or months for new sites, versus days for internet links</li>
+                <li>Provider lock-in and long contract terms; understand exit and migration paths</li>
+                <li>The performance and SLA guarantees that may still justify MPLS for latency-sensitive workloads</li>
+                <li>Hybrid WAN strategy — running MPLS for critical traffic alongside internet for the rest</li>
+                <li>Whether SD-WAN or SASE over internet links can now meet requirements at lower cost</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>MPLS vs SD-WAN</h2>
+            <p>Use <strong>MPLS</strong> where you need contractually guaranteed performance for latency-sensitive traffic and are willing to pay a premium for it. Increasingly, organisations are shifting to <strong>SD-WAN</strong>, which uses ordinary internet connections with intelligent, application-aware path selection — far cheaper and faster to deploy, though performance depends on the underlying internet rather than a provider SLA. Many enterprises now run a hybrid: MPLS for a small set of critical flows and SD-WAN over internet for everything else, often as a stepping stone toward a full SASE architecture.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 IT Director Hub • MPLS Reference</p>
+    </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

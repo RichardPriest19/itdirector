@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puppet - IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1 class="logo">Puppet</h1>
+            <p class="tagline">Declarative, model-driven configuration management that continuously enforces desired state</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="content-section">
+            <h2>Overview</h2>
+            <p>Puppet is a configuration management tool built around a <strong>declarative</strong>, model-driven philosophy: you describe the <em>desired end state</em> of a system — which packages, files, services and settings should exist — and Puppet works out how to make reality match, then keeps it that way. This emphasis on continuously enforcing a defined state makes Puppet especially strong for large, long-lived infrastructure and for compliance, where preventing configuration drift matters. First released in 2005 and written in Ruby, Puppet is now owned by Perforce.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>How It Works</h2>
+            <p>Puppet traditionally uses an <strong>agent-based, pull</strong> model. An agent installed on each managed node periodically checks in with a central Puppet server, which compiles a <em>catalogue</em> describing that node's desired state. The agent then enforces the catalogue locally and reports back. Because this cycle repeats on a schedule, any drift — a manual change, a setting that was altered — is automatically corrected on the next run. (A masterless mode is also possible for simpler setups.)</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Core Concepts</h2>
+            <ul>
+                <li><strong>Manifest</strong> — a file written in Puppet's declarative language defining resources.</li>
+                <li><strong>Resource</strong> — a managed element such as a package, file, user or service.</li>
+                <li><strong>Module / class</strong> — reusable, organised collections of related configuration.</li>
+                <li><strong>Facter</strong> — gathers "facts" about each node (OS, IP, hardware) to inform decisions.</li>
+                <li><strong>Hiera</strong> — separates configuration data from code, so the same logic serves many environments.</li>
+                <li><strong>Puppet Forge</strong> — the public repository of community and vendor modules.</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Strengths &amp; Use Cases</h2>
+            <ul>
+                <li><strong>State enforcement</strong> — continuously corrects drift, ideal for stable, regulated environments.</li>
+                <li><strong>Scale</strong> — proven across very large fleets of servers.</li>
+                <li><strong>Compliance</strong> — a strong fit where systems must demonstrably stay in a known-good state.</li>
+                <li><strong>Maturity</strong> — a large module ecosystem and a long operational track record.</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>IT Director Considerations</h2>
+            <ul>
+                <li>The learning curve of Puppet's own declarative language compared with YAML-based tools</li>
+                <li>Infrastructure overhead of running and maintaining a Puppet server and agents</li>
+                <li>Best fit for relatively stable, long-lived estates rather than highly ephemeral cloud workloads</li>
+                <li>Value of automatic drift correction for compliance and audit evidence</li>
+                <li>Skills availability, given Ansible's rise has shifted much of the market's attention</li>
+                <li>How Puppet sits alongside provisioning tools like Terraform that create the infrastructure it then manages</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Puppet vs Ansible &amp; Chef</h2>
+            <p><strong>Puppet</strong> is declarative and agent-based: you model the desired state and agents pull and enforce it on a schedule, automatically correcting drift — excellent for large, stable estates and compliance, at the cost of more setup and a dedicated language to learn. <strong>Ansible</strong> is agentless and push-based using simple YAML, making it quicker to adopt and more versatile beyond configuration management. <strong>Chef</strong> shares Puppet's agent-based, pull model but takes a more code-centric approach using a Ruby-based language. A rough rule of thumb: Puppet for declarative state enforcement at scale, Ansible for breadth and ease of adoption, Chef for code-heavy teams comfortable with Ruby.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 IT Director Hub • Puppet Reference</p>
+    </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

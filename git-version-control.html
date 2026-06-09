@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git / Version Control - IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1 class="logo">Git &amp; Version Control</h1>
+            <p class="tagline">Tracking changes to code and files over time – the foundation of modern software collaboration</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="content-section">
+            <h2>Overview</h2>
+            <p>Version control is the practice of recording changes to files over time so you can see what changed, when, why and by whom — and roll back if needed. For software, it is non-negotiable: it enables many people to work on the same codebase without overwriting each other, preserves a complete history, and underpins automation. <strong>Git</strong> is the dominant version control system by a wide margin. Created by Linus Torvalds in 2005 for the Linux kernel, it is a <em>distributed</em> system, meaning every copy of a repository contains the full project history rather than depending on a central server.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Centralised vs Distributed</h2>
+            <table style="width:100%; border-collapse:collapse; margin:20px 0;">
+                <tr style="background:var(--bg-card);">
+                    <th style="padding:12px; border:1px solid var(--border-color);">Aspect</th>
+                    <th style="padding:12px; border:1px solid var(--border-color);">Centralised (e.g. SVN)</th>
+                    <th style="padding:12px; border:1px solid var(--border-color);">Distributed (Git)</th>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">History location</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">On a central server</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Full copy in every clone</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Offline work</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Limited</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Full commit/history offline</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Resilience</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Server is a single point of failure</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Every clone is effectively a backup</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="content-section">
+            <h2>Core Concepts</h2>
+            <ul>
+                <li><strong>Repository</strong> — the project and its complete history.</li>
+                <li><strong>Commit</strong> — a recorded snapshot of changes, with an author and message.</li>
+                <li><strong>Branch</strong> — an independent line of work that can develop separately from the main code.</li>
+                <li><strong>Merge</strong> — bringing changes from one branch into another.</li>
+                <li><strong>Clone / pull / push</strong> — copying a repository and syncing changes with a remote copy.</li>
+                <li><strong>Staging area</strong> — where changes are gathered before being committed.</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Branching &amp; Workflows</h2>
+            <p>Cheap, fast branching is Git's defining strength: teams create a branch per feature or fix, work in isolation, then merge back. Different teams formalise this in different ways:</p>
+            <ul>
+                <li><strong>Trunk-based development</strong> — short-lived branches merged frequently into one main line; favoured for continuous delivery.</li>
+                <li><strong>GitHub Flow</strong> — a simple branch-and-pull-request model.</li>
+                <li><strong>Gitflow</strong> — a more structured model with dedicated release and hotfix branches, suited to scheduled releases.</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Why It Matters</h2>
+            <ul>
+                <li><strong>Collaboration</strong> — many contributors working safely on the same codebase.</li>
+                <li><strong>History &amp; audit</strong> — a complete, attributable record of every change.</li>
+                <li><strong>Safety</strong> — the ability to revert to any previous state.</li>
+                <li><strong>Automation foundation</strong> — CI/CD pipelines trigger from commits, making Git the entry point to DevOps.</li>
+                <li><strong>Beyond code</strong> — increasingly used for infrastructure (IaC), configuration and documentation.</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>IT Director Considerations</h2>
+            <ul>
+                <li>Standardising on Git as the single version-control system across teams</li>
+                <li>Agreeing a branching strategy that fits your release cadence and governance</li>
+                <li>Preventing secrets (passwords, keys) from being committed, and scanning for them</li>
+                <li>Repository governance — access, ownership, naming and retention</li>
+                <li>Backup and continuity, even though distribution provides natural redundancy</li>
+                <li>Training, since Git's power comes with a genuine learning curve</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Git vs GitHub / GitLab</h2>
+            <p><strong>Git</strong> is the underlying tool — the version-control engine that runs on developers' machines and servers, with no web interface of its own. <strong>GitHub</strong> and <strong>GitLab</strong> are platforms built <em>around</em> Git that add hosting, code review, automation, security and project management. You can use Git entirely without them, but in practice most organisations pair Git with a platform to enable team collaboration at scale. In short: Git is the technology; GitHub and GitLab are services built on it.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 IT Director Hub • Git &amp; Version Control Reference</p>
+    </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

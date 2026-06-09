@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAN - IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1 class="logo">SAN</h1>
+            <p class="tagline">Storage Area Network – high-performance block storage delivered to servers over a dedicated network</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="content-section">
+            <h2>Overview</h2>
+            <p>A SAN (Storage Area Network) is a dedicated, high-speed network that presents centralised storage to servers as if it were locally attached disk. Crucially, a SAN delivers <em>block-level</em> storage: servers see raw volumes (LUNs) that they format and manage with their own file systems, exactly as they would a physical drive. This makes SANs the traditional choice for demanding, performance-sensitive workloads such as databases, virtualisation clusters and transactional applications.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>How It Works</h2>
+            <p>Storage capacity on shared arrays is carved into logical units called <strong>LUNs</strong>, which are presented to servers across the storage network. The server's operating system treats a LUN as a local block device. Access is controlled through <strong>zoning</strong> (on the switch fabric) and <strong>LUN masking</strong> (on the array), which together ensure each server sees only the volumes it is entitled to. Because servers boot and run production workloads directly from these volumes, the SAN is engineered for low latency, high throughput and redundancy at every layer.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Common Protocols</h2>
+            <table style="width:100%; border-collapse:collapse; margin:20px 0;">
+                <tr style="background:var(--bg-card);">
+                    <th style="padding:12px; border:1px solid var(--border-color);">Protocol</th>
+                    <th style="padding:12px; border:1px solid var(--border-color);">Characteristics</th>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Fibre Channel (FC)</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Dedicated, very high performance; needs separate HBAs and switches</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">iSCSI</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Block storage over standard Ethernet/IP; lower cost, easier to adopt</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">FCoE</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Fibre Channel encapsulated over Ethernet to converge networks</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">NVMe-oF</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">NVMe over fabrics for very low-latency flash storage</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="content-section">
+            <h2>Why Use a SAN</h2>
+            <ul>
+                <li><strong>Performance</strong> — low latency and high throughput for databases and virtualisation.</li>
+                <li><strong>Shared storage for clusters</strong> — multiple hosts accessing the same volumes underpins features like VM live migration and high availability.</li>
+                <li><strong>Centralised management</strong> — snapshots, replication, thin provisioning and tiering handled on the array.</li>
+                <li><strong>Boot from SAN</strong> — servers can be stateless, simplifying recovery and refresh.</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>IT Director Considerations</h2>
+            <ul>
+                <li>Higher cost and specialist skills, particularly for Fibre Channel fabrics</li>
+                <li>iSCSI as a lower-cost entry point using existing Ethernet infrastructure</li>
+                <li>Redundancy design — multipathing, dual fabrics and array resilience to avoid single points of failure</li>
+                <li>Replication and snapshots as part of backup and disaster-recovery strategy</li>
+                <li>How hyper-converged infrastructure (HCI) and cloud block storage may reduce or replace a traditional SAN</li>
+                <li>Capacity planning and the operational overhead of a dedicated storage tier</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>SAN vs NAS</h2>
+            <p>The defining difference is the level at which storage is shared. A <strong>SAN</strong> provides <em>block-level</em> storage — raw volumes a server formats and treats as its own disk — over a dedicated, high-performance network, making it ideal for databases and virtualisation. A <strong>NAS</strong> provides <em>file-level</em> storage — shared folders accessed over the existing network — making it ideal for user data and collaboration. In short: SAN for performance-critical block workloads, NAS for shared files. Many organisations run both, and modern unified arrays can serve each.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 IT Director Hub • SAN Reference</p>
+    </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

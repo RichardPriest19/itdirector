@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MySQL - IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1 class="logo">MySQL</h1>
+            <p class="tagline">The world's most popular open-source relational database, ubiquitous in web applications</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="content-section">
+            <h2>Overview</h2>
+            <p>MySQL is the most widely used open-source relational database, and a workhorse of the web. As the "M" in the classic LAMP stack (Linux, Apache, MySQL, PHP), it powers an enormous share of websites and applications. Its appeal is straightforward: it is free, fast, well understood, easy to get started with, and supported by a vast community and skills pool. Originally developed by MySQL AB, it is now owned by Oracle (acquired via Sun Microsystems in 2010).</p>
+        </section>
+
+        <section class="content-section">
+            <h2>How It Works</h2>
+            <p>MySQL is a traditional relational database that stores data in tables and is queried with SQL. A distinctive feature is its pluggable <strong>storage engine</strong> architecture. The default engine, <strong>InnoDB</strong>, provides full transactional, ACID-compliant behaviour with row-level locking — suitable for reliable, write-capable applications. The older MyISAM engine is faster for some read-only cases but lacks transactions and is now largely legacy. High availability and scale are achieved through replication, and through clustering options such as InnoDB Cluster / Group Replication.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Strengths &amp; Use Cases</h2>
+            <ul>
+                <li><strong>Web applications</strong> — the default database behind countless sites and SaaS products.</li>
+                <li><strong>Cost</strong> — the Community Edition is free and open-source.</li>
+                <li><strong>Ubiquity of skills</strong> — easy to hire for and well documented.</li>
+                <li><strong>Read-heavy workloads</strong> — performs well and scales out with read replicas.</li>
+                <li><strong>Ecosystem</strong> — works with virtually every language, framework and hosting platform.</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Editions, MariaDB &amp; the Cloud</h2>
+            <p>MySQL comes in a free, open-source <strong>Community Edition</strong> and a commercial <strong>Enterprise Edition</strong> from Oracle that adds support and advanced tooling. Because of concerns about open governance after the Oracle acquisition, MySQL's original creator started <strong>MariaDB</strong>, a community-driven, largely drop-in compatible fork that many organisations now choose instead. In the cloud, fully managed MySQL-compatible services are everywhere — Amazon RDS and Aurora, Azure Database for MySQL, Google Cloud SQL, and Oracle's own MySQL HeatWave — removing much of the operational burden.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>IT Director Considerations</h2>
+            <ul>
+                <li>Strong, low-cost fit for web and general-purpose applications</li>
+                <li>The MySQL-versus-MariaDB choice, weighing Oracle stewardship against community governance</li>
+                <li>Managed cloud services to offload patching, backup and high availability</li>
+                <li>Scaling strategy — read replicas and clustering for growth</li>
+                <li>Feature ceiling: for the most complex enterprise requirements, heavier databases may fit better</li>
+                <li>Backup, replication and recovery design, since "free" does not mean "looks after itself"</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>MySQL vs Oracle &amp; SQL Server</h2>
+            <p><strong>MySQL</strong> is open-source, free and ubiquitous — ideal for web and general-purpose applications where simplicity, cost and a large talent pool matter most. <strong>Oracle</strong> (which also owns MySQL) and <strong>Microsoft SQL Server</strong> are commercial enterprise databases with deeper feature sets for very large, complex or tightly integrated environments — Oracle at the demanding high end, SQL Server as the natural choice in Microsoft-centric organisations. The open-source <strong>PostgreSQL</strong> is also worth weighing where advanced features are needed without licensing cost. Choose MySQL when its simplicity and economics fit; step up to a commercial engine when enterprise depth genuinely demands it.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 IT Director Hub • MySQL Reference</p>
+    </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

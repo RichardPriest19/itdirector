@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLM - IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1 class="logo">LLM</h1>
+            <p class="tagline">Large Language Models – AI systems trained on vast text to understand and generate human-like language</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="content-section">
+            <h2>Overview</h2>
+            <p>A Large Language Model (LLM) is an AI system trained on enormous amounts of text to predict and generate language. By learning statistical patterns across billions of examples, an LLM can answer questions, summarise, translate, write and reason in remarkably fluent ways. LLMs are the engine behind today's generative AI tools, and have moved from research curiosity to mainstream business technology in a very short time. Understanding what they can and cannot do is now core to any IT leadership role.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>How They Work</h2>
+            <p>Modern LLMs are built on the <strong>transformer</strong> architecture, which uses a mechanism called <em>attention</em> to weigh the relationships between words in context. Text is broken into <strong>tokens</strong> (roughly, word fragments), and the model predicts the next token over and over to produce a response. They are first <strong>pre-trained</strong> on broad data in a self-supervised way, then typically refined through instruction tuning and human feedback so they follow instructions helpfully. The amount of text a model can consider at once is its <strong>context window</strong>.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Capabilities &amp; Limitations</h2>
+            <table style="width:100%; border-collapse:collapse; margin:20px 0;">
+                <tr style="background:var(--bg-card);">
+                    <th style="padding:12px; border:1px solid var(--border-color);">Strengths</th>
+                    <th style="padding:12px; border:1px solid var(--border-color);">Limitations</th>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Fluent language understanding and generation</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Can "hallucinate" — state false things confidently</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Broad general knowledge and reasoning</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Knowledge is frozen at a training cutoff</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Adaptable to many tasks</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">No inherent access to private or live data</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Fast to prototype with</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Cost, latency and limited context windows</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="content-section">
+            <h2>Open vs Proprietary</h2>
+            <p>LLMs come in two broad flavours. <strong>Proprietary</strong> models are consumed as a service via an API — fast to adopt, always maintained, but with usage costs and reliance on a provider. <strong>Open-weight</strong> models can be downloaded and self-hosted — offering control and data residency, at the cost of needing infrastructure and skills to run them. Many organisations use both, matching the model to the sensitivity, scale and economics of each use case.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>IT Director Considerations</h2>
+            <ul>
+                <li>Build vs buy: API-based proprietary models versus self-hosted open models</li>
+                <li>Data privacy — what leaves the organisation when prompts are sent to a third-party API</li>
+                <li>Accuracy and hallucination risk, especially for customer-facing or high-stakes use</li>
+                <li>Cost and latency at scale, which differ sharply from traditional software</li>
+                <li>Governance and responsible-AI controls (links to ISO 42001 and the NIST AI RMF)</li>
+                <li>How to adapt a model to your needs — prompting, retrieval (RAG) or fine-tuning</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Working With LLMs</h2>
+            <p>An out-of-the-box LLM rarely fits a specific business need perfectly. There are three main ways to adapt one, in increasing order of effort: <strong>prompt engineering</strong> (carefully crafting the input), <strong>RAG</strong> (retrieval-augmented generation, which supplies the model with your own relevant data at query time), and <strong>fine-tuning</strong> (further training the model on your data to change its behaviour). These are complementary, and most real deployments combine them — with MLOps practices to run them reliably in production.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 IT Director Hub • LLM Reference</p>
+    </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oracle Database - IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1 class="logo">Oracle Database</h1>
+            <p class="tagline">Enterprise-grade relational database for the most demanding, mission-critical workloads</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="content-section">
+            <h2>Overview</h2>
+            <p>Oracle Database is a relational database management system (RDBMS) long regarded as the high end of the enterprise market. It is built for the most demanding mission-critical systems — large banks, telcos, government, and major ERP deployments — where scale, reliability and feature depth justify a premium. Oracle's strengths are matched by a reputation for cost and complexity, particularly around licensing, which makes it as much a commercial decision as a technical one. It uses <strong>PL/SQL</strong> as its procedural extension to SQL.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Key Capabilities</h2>
+            <ul>
+                <li><strong>Real Application Clusters (RAC)</strong> — multiple servers acting as one database for high availability and scale.</li>
+                <li><strong>Data Guard</strong> — standby databases for disaster recovery and replication.</li>
+                <li><strong>Partitioning</strong> — splitting very large tables for performance and manageability.</li>
+                <li><strong>Exadata</strong> — Oracle's engineered hardware/software systems optimised for the database.</li>
+                <li><strong>Autonomous Database</strong> — a cloud offering that automates tuning, patching and scaling.</li>
+                <li><strong>Multitenant</strong> — pluggable databases consolidated within a container database.</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Editions &amp; Licensing</h2>
+            <p>Oracle is offered in several editions, and licensing is famously intricate — typically based on processor cores, with many capabilities sold as separately licensed <em>options</em> and <em>packs</em> on top of the base product. This complexity, combined with Oracle's active licence-audit practices, makes governance a genuine commercial risk rather than a back-office detail.</p>
+            <table style="width:100%; border-collapse:collapse; margin:20px 0;">
+                <tr style="background:var(--bg-card);">
+                    <th style="padding:12px; border:1px solid var(--border-color);">Edition</th>
+                    <th style="padding:12px; border:1px solid var(--border-color);">Positioning</th>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Enterprise Edition</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Full features; most options available (at cost)</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Standard Edition</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Lower cost, reduced feature set</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Express Edition (XE)</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Free, with strict resource limits</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="content-section">
+            <h2>IT Director Considerations</h2>
+            <ul>
+                <li>Licensing cost and audit exposure — arguably the single biggest governance issue with Oracle</li>
+                <li>Be careful with virtualisation and cloud, where Oracle's licensing rules can be counter-intuitive and costly</li>
+                <li>Vendor lock-in and the difficulty (and risk) of migrating away once deeply embedded</li>
+                <li>Whether the workload genuinely needs Oracle, or a lower-cost database would suffice</li>
+                <li>Specialist DBA skills required to run and tune it well</li>
+                <li>Cloud direction — Oracle Cloud Infrastructure and Autonomous Database, plus Oracle-on-Azure options</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Oracle vs MySQL &amp; SQL Server</h2>
+            <p><strong>Oracle</strong> sits at the top end: the deepest feature set and proven scale for the most critical workloads, at the highest cost and complexity. <strong>Microsoft SQL Server</strong> is a strong enterprise database that is generally more cost-effective and is the natural choice in Microsoft-centric organisations, with excellent tooling and a built-in BI stack. <strong>MySQL</strong> — interestingly, also owned by Oracle — is open-source, free and ubiquitous for web applications, trading enterprise feature depth for simplicity and a vast community. Choose Oracle when the workload's demands and risk profile justify the premium; otherwise the alternatives often deliver more than enough.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 IT Director Hub • Oracle Database Reference</p>
+    </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

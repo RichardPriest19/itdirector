@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ansible - IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1 class="logo">Ansible</h1>
+            <p class="tagline">Agentless automation and configuration management using simple, human-readable YAML</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="content-section">
+            <h2>Overview</h2>
+            <p>Ansible is an automation tool used for configuration management, application deployment, provisioning and orchestration. Its defining characteristic is that it is <strong>agentless</strong>: it needs no software installed on the machines it manages, connecting instead over standard SSH (or WinRM for Windows). Combined with its use of simple, human-readable YAML, this gives Ansible the lowest barrier to entry of the major configuration tools, which is a large part of why it has become the most widely adopted. Created by Michael DeHaan and acquired by Red Hat in 2015, it now sits within IBM's Red Hat portfolio.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>How It Works</h2>
+            <p>Ansible follows a <strong>push</strong> model: a control node connects out to the managed machines listed in an <em>inventory</em> and applies the desired configuration. There is no central server or database required for basic use, and no persistent agent polling for changes. Operations are <strong>idempotent</strong> — running the same playbook repeatedly converges the system to the defined state without making redundant changes — so playbooks are safe to re-run.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Core Concepts</h2>
+            <ul>
+                <li><strong>Playbook</strong> — a YAML file describing the desired configuration as a series of plays and tasks.</li>
+                <li><strong>Module</strong> — a unit of work (install a package, copy a file, manage a service); Ansible ships with thousands.</li>
+                <li><strong>Inventory</strong> — the list of managed hosts, which can be static or generated dynamically (e.g. from a cloud).</li>
+                <li><strong>Role</strong> — a reusable, shareable bundle of tasks, variables and files.</li>
+                <li><strong>Ansible Galaxy</strong> — the public hub for sharing roles and collections.</li>
+                <li><strong>Ansible Vault</strong> — built-in encryption for secrets such as passwords and keys.</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Strengths &amp; Use Cases</h2>
+            <ul>
+                <li><strong>Low barrier to entry</strong> — agentless and YAML-based, easy for mixed teams to pick up.</li>
+                <li><strong>Versatile</strong> — handles config management, app deployment, cloud provisioning and orchestration in one tool.</li>
+                <li><strong>Network &amp; appliance automation</strong> — strong support for devices that cannot run an agent.</li>
+                <li><strong>Ad-hoc tasks</strong> — quick one-off commands across many machines without writing a full playbook.</li>
+            </ul>
+            <p>For larger organisations, the commercial <strong>Ansible Automation Platform</strong> adds a web UI, role-based access control, scheduling, credentials management and auditing on top of the open-source engine.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>IT Director Considerations</h2>
+            <ul>
+                <li>Fast time-to-value thanks to the agentless model and gentle learning curve</li>
+                <li>The push model's reliance on network reachability and SSH access to targets</li>
+                <li>When to step up from open-source Ansible to the supported Automation Platform for governance at scale</li>
+                <li>Secrets management discipline (Vault) so credentials never sit in plain text</li>
+                <li>How Ansible complements provisioning tools like Terraform rather than replacing them</li>
+                <li>Standardising reusable roles to avoid duplicated, drifting automation across teams</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Ansible vs Puppet &amp; Chef</h2>
+            <p><strong>Ansible</strong> is agentless and push-based, using YAML — generally the simplest of the three to start with and the most versatile beyond pure configuration management. <strong>Puppet</strong> and <strong>Chef</strong> are agent-based and pull-based, with each managed node running an agent that periodically fetches and enforces its desired state from a central server. That model excels at continuously correcting drift across large, long-lived server fleets, but carries more setup and a steeper learning curve. A rough rule of thumb: Ansible for breadth and quick adoption, Puppet for declarative state enforcement at scale, Chef for code-centric teams comfortable with Ruby.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 IT Director Hub • Ansible Reference</p>
+    </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

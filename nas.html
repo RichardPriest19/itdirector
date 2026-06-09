@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAS - IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1 class="logo">NAS</h1>
+            <p class="tagline">Network Attached Storage – shared file-level storage accessed over the standard network</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="content-section">
+            <h2>Overview</h2>
+            <p>A NAS (Network Attached Storage) is a dedicated storage device or appliance that provides shared <em>file-level</em> storage to users and applications over the existing IP network. Rather than presenting raw disk, a NAS exposes ready-to-use shared folders that many clients can access concurrently, handling the file system itself. This makes NAS the natural home for user home directories, departmental shares, document repositories and general collaboration — storage that is simple to deploy and easy for people to consume.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>How It Works</h2>
+            <p>A NAS runs its own lightweight operating system and file system, and shares folders to clients over standard file-sharing protocols. Clients mount these shares and read and write files exactly as they would a local folder, while the NAS manages permissions, concurrent access and the underlying disks (typically pooled and protected with RAID). Because it uses the ordinary network, a NAS requires no specialist storage fabric — it plugs into the same switches as everything else.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Common Protocols</h2>
+            <table style="width:100%; border-collapse:collapse; margin:20px 0;">
+                <tr style="background:var(--bg-card);">
+                    <th style="padding:12px; border:1px solid var(--border-color);">Protocol</th>
+                    <th style="padding:12px; border:1px solid var(--border-color);">Typical use</th>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">SMB / CIFS</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Windows file shares; integrates with Active Directory permissions</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">NFS</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Unix/Linux file shares and virtualisation datastores</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">AFP</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Legacy Apple file sharing (largely superseded by SMB)</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">FTP / S3</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Optional access methods many appliances also expose</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="content-section">
+            <h2>Why Use a NAS</h2>
+            <ul>
+                <li><strong>Simplicity</strong> — quick to deploy on existing Ethernet, with no storage fabric required.</li>
+                <li><strong>Shared access</strong> — many users and systems read and write the same files concurrently.</li>
+                <li><strong>Cost-effective</strong> — strong capacity-per-pound for bulk and unstructured data.</li>
+                <li><strong>Built-in services</strong> — snapshots, replication, versioning and backup targets are common features.</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Security Considerations</h2>
+            <ul>
+                <li><strong>Access control</strong> — integrate with directory services so share and file permissions follow existing identity and group policy.</li>
+                <li><strong>Ransomware exposure</strong> — open file shares are a prime target; use immutable/locked snapshots, least-privilege access and monitoring.</li>
+                <li><strong>Encryption</strong> — protect data at rest on the appliance and in transit where supported.</li>
+                <li><strong>Backup</strong> — a NAS is not a backup by itself; replicate or back it up to a separate location.</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>IT Director Considerations</h2>
+            <ul>
+                <li>Capacity growth of unstructured data and the cost of keeping it on primary NAS</li>
+                <li>Performance limits for write-intensive, low-latency workloads (where a SAN may fit better)</li>
+                <li>Resilience and backup — RAID protects against disk failure, not against deletion or ransomware</li>
+                <li>Identity integration and permissions hygiene to avoid sprawling, over-shared folders</li>
+                <li>Tiering or archiving cold data to cloud object storage to control cost</li>
+                <li>How cloud file services and collaboration platforms may reduce reliance on on-prem NAS</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>NAS vs SAN</h2>
+            <p>The defining difference is the level at which storage is shared. A <strong>NAS</strong> provides <em>file-level</em> storage — shared folders accessed over the ordinary network — making it simple, cost-effective, and ideal for user data and collaboration. A <strong>SAN</strong> provides <em>block-level</em> storage — raw volumes a server formats as its own disk — over a dedicated high-performance network, making it ideal for databases and virtualisation. In short: NAS for shared files, SAN for performance-critical block workloads. Many organisations run both, and modern unified arrays can serve each.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 IT Director Hub • NAS Reference</p>
+    </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zachman Framework - IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1 class="logo">Zachman Framework</h1>
+            <p class="tagline">A taxonomy for classifying and organising enterprise architecture artefacts</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="content-section">
+            <h2>Overview</h2>
+            <p>The Zachman Framework is one of the earliest and most influential enterprise architecture frameworks, devised by John Zachman in the 1980s. Crucially, it is a <strong>taxonomy</strong> — a way of classifying and organising the artefacts that describe an enterprise — and <em>not</em> a methodology. It does not tell you how to build an architecture or in what order; instead it provides a structured grid that ensures every important perspective and question has been considered. Think of it as a comprehensive checklist or filing system for architecture, rather than a process.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>The Matrix</h2>
+            <p>The framework is a two-dimensional grid. The <strong>columns</strong> are six fundamental questions; the <strong>rows</strong> are six stakeholder perspectives, moving from the most abstract to the most concrete. Each cell where a row meets a column represents a specific kind of artefact.</p>
+            <table style="width:100%; border-collapse:collapse; margin:20px 0;">
+                <tr style="background:var(--bg-card);">
+                    <th style="padding:12px; border:1px solid var(--border-color);">Column (question)</th>
+                    <th style="padding:12px; border:1px solid var(--border-color);">Describes</th>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">What</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Data and things</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">How</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Processes and functions</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Where</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Locations and networks</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Who</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">People and roles</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">When</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Timing and events</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Why</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Motivation and goals</td>
+                </tr>
+            </table>
+            <p>The rows run from the most abstract to the most concrete perspective — typically Executive (scope), Business Management, Architect, Engineer, Technician, and finally the functioning enterprise itself. Reading down a column shows how one concern (say, data) is expressed at every level from strategy to implementation.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Strengths &amp; Limitations</h2>
+            <ul>
+                <li><strong>Completeness</strong> — the grid makes gaps visible, ensuring no perspective or question is overlooked.</li>
+                <li><strong>Clarity of structure</strong> — a precise, logical way to classify and locate artefacts.</li>
+                <li><strong>No method</strong> — it deliberately offers no process, so it must be paired with one (such as TOGAF) to actually deliver architecture.</li>
+                <li><strong>Can feel academic</strong> — filling in all the cells fully can be onerous and is rarely done exhaustively in practice.</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>IT Director Considerations</h2>
+            <ul>
+                <li>Most useful as a classification and completeness tool rather than a delivery method</li>
+                <li>Commonly combined with TOGAF — Zachman to organise the "what", TOGAF for the "how"</li>
+                <li>Pragmatism over completeness: use the cells that add value rather than populating all of them</li>
+                <li>Value as a communication device that connects executive intent to technical detail</li>
+                <li>Risk of over-documentation if treated as an end in itself</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Zachman vs TOGAF</h2>
+            <p><strong>Zachman</strong> answers <em>what</em> — it classifies and organises architectural artefacts across perspectives and questions, ensuring completeness, but provides no process for creating them. <strong>TOGAF</strong> answers <em>how</em> — it gives a step-by-step method (the ADM) for developing and governing architecture. They are complementary rather than alternatives: many organisations use TOGAF to drive the work and Zachman to structure and sense-check the outputs. Both sit within the wider discipline of enterprise architecture.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 IT Director Hub • Zachman Framework Reference</p>
+    </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

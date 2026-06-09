@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citrix - IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1 class="logo">Citrix</h1>
+            <p class="tagline">Application and desktop virtualisation – delivering apps and full desktops securely to any device</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="content-section">
+            <h2>Overview</h2>
+            <p>Citrix is best known for virtual apps and desktops — technology that runs applications and full Windows desktops centrally in the data centre or cloud and streams only the screen to the user's device. This is the basis of Virtual Desktop Infrastructure (VDI) and published applications. Because the data and processing stay central and nothing meaningful is stored on the endpoint, Citrix has long been favoured in regulated industries, for remote and contractor access, and for delivering demanding applications to lightweight devices. The flagship product, Citrix Virtual Apps and Desktops (formerly XenApp/XenDesktop), is now also offered as a cloud-managed service, Citrix DaaS.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>How It Works</h2>
+            <p>Applications and desktops run on servers in the data centre or cloud. A user connects from the <strong>Citrix Workspace app</strong> on almost any device, authenticates, and is presented with their entitled apps and desktops. The session itself executes centrally; Citrix's <strong>HDX</strong> protocol transmits the display, keystrokes and mouse movements efficiently — tuned to stay usable even over constrained or high-latency networks. The endpoint effectively becomes a window onto a session running elsewhere, which is why even a thin client or tablet can run a heavy enterprise application.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Key Components</h2>
+            <table style="width:100%; border-collapse:collapse; margin:20px 0;">
+                <tr style="background:var(--bg-card);">
+                    <th style="padding:12px; border:1px solid var(--border-color);">Component</th>
+                    <th style="padding:12px; border:1px solid var(--border-color);">Role</th>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Workspace app</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">The client users run to reach their apps and desktops</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Delivery Controller</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Brokers sessions and manages the environment</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">VDA (Virtual Delivery Agent)</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Installed on the machines that host sessions</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">StoreFront</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">The portal listing a user's available resources</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">NetScaler / Citrix Gateway</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Secure remote access and load balancing at the edge</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="content-section">
+            <h2>Common Use Cases</h2>
+            <ul>
+                <li><strong>Remote and hybrid work</strong> — consistent access to corporate apps from anywhere.</li>
+                <li><strong>Contractors and BYOD</strong> — deliver apps without trusting or managing the endpoint.</li>
+                <li><strong>Regulated data</strong> — keep sensitive information in the data centre, never on the device.</li>
+                <li><strong>Demanding or legacy apps</strong> — run graphics-heavy or hard-to-deploy software centrally.</li>
+                <li><strong>Mergers and seasonal scale</strong> — provision and remove access quickly.</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Security Considerations</h2>
+            <p>Keeping data central is a security strength, but the access tier itself demands care. The internet-facing gateway and load-balancing appliances (NetScaler / Citrix Gateway) are high-value targets that have been subject to serious, actively exploited vulnerabilities. Treat them as critical infrastructure: patch promptly, restrict exposure, enable multi-factor authentication, and monitor closely. Session policies should also control clipboard, printing and drive mapping to prevent data leaving the controlled environment.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>IT Director Considerations</h2>
+            <ul>
+                <li>Licensing and total cost of ownership, which can be significant and complex</li>
+                <li>Infrastructure complexity of on-premises VDI versus the cloud-managed DaaS model</li>
+                <li>End-user experience as the make-or-break factor for adoption</li>
+                <li>Security of the access tier, including prompt patching of gateway appliances</li>
+                <li>How Citrix relates to cloud alternatives such as Azure Virtual Desktop, Windows 365 and VMware Horizon — sometimes layered on top of them rather than replaced</li>
+                <li>Specialist skills required to design and operate the platform well</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Citrix vs Cloud DaaS</h2>
+            <p><strong>Citrix</strong> is the established, feature-rich platform for app and desktop virtualisation, offering deep control and strong performance through HDX — at the cost of complexity and licensing. Native cloud <strong>DaaS</strong> offerings such as Azure Virtual Desktop and Windows 365 trade some of that depth for simplicity and a pure subscription model. The two are not mutually exclusive: Citrix is frequently deployed <em>on top of</em> cloud desktop services to add its management, optimisation and security capabilities. The decision usually comes down to required functionality, existing investment, and appetite for operating infrastructure.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 IT Director Hub • Citrix Reference</p>
+    </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

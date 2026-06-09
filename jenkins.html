@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jenkins - IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1 class="logo">Jenkins</h1>
+            <p class="tagline">The long-established open-source automation server for building CI/CD pipelines</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="content-section">
+            <h2>Overview</h2>
+            <p>Jenkins is an open-source automation server used to build, test and deploy software — the engine behind countless continuous integration and continuous delivery (CI/CD) pipelines. It automates the repetitive work between a developer committing code and that code reaching production: compiling, running tests, packaging and deploying. One of the original and most widely deployed CI/CD tools, Jenkins is defined by its enormous plugin ecosystem, which lets it integrate with almost any tool, language or platform. It is free, self-hosted, and governed under the Continuous Delivery Foundation.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>How It Works</h2>
+            <p>Jenkins runs as a server (the <strong>controller</strong>) that orchestrates work and distributes it to <strong>agents</strong> — separate machines that execute the actual build and test jobs, allowing work to run in parallel and at scale. A <strong>pipeline</strong> defines the stages a change passes through, and is typically expressed as code in a <code>Jenkinsfile</code> stored alongside the application in version control. Jenkins watches the source repository (or receives a webhook) and automatically triggers the pipeline whenever code changes, so integration and testing happen continuously rather than in occasional large batches.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Core Concepts</h2>
+            <ul>
+                <li><strong>Pipeline</strong> — the defined sequence of stages from build through test to deploy.</li>
+                <li><strong>Jenkinsfile</strong> — pipeline-as-code kept in the repository, versioned with the application.</li>
+                <li><strong>Job / build</strong> — a single execution of a defined task or pipeline.</li>
+                <li><strong>Controller &amp; agents</strong> — the orchestrating server and the distributed workers that run jobs.</li>
+                <li><strong>Plugins</strong> — thousands of extensions that add integrations and capabilities.</li>
+                <li><strong>Stage &amp; step</strong> — the phases of a pipeline and the individual actions within them.</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Strengths &amp; Trade-offs</h2>
+            <table style="width:100%; border-collapse:collapse; margin:20px 0;">
+                <tr style="background:var(--bg-card);">
+                    <th style="padding:12px; border:1px solid var(--border-color);">Strengths</th>
+                    <th style="padding:12px; border:1px solid var(--border-color);">Trade-offs</th>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Free and open-source</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">You host, maintain and secure it yourself</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Vast plugin ecosystem</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Plugin sprawl and upkeep can become a burden</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Highly flexible and tool-agnostic</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">More setup than integrated, hosted alternatives</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Mature, proven, large community</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Architecture predates cloud-native CI tooling</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="content-section">
+            <h2>Jenkins in Context</h2>
+            <p>Jenkins popularised CI/CD, but the landscape has broadened. Platform-integrated options such as GitHub Actions and GitLab CI/CD now bundle pipelines directly into the code platform, while hosted services reduce the operational burden of running your own server. Jenkins remains widely used — especially where teams need maximum flexibility, have complex or on-premises requirements, or have significant existing investment — but new projects increasingly weigh it against these more turnkey alternatives.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Security Considerations</h2>
+            <ul>
+                <li><strong>Self-hosted responsibility</strong> — you own patching of Jenkins, its plugins and the underlying server.</li>
+                <li><strong>Plugin risk</strong> — plugins are a common source of vulnerabilities; keep them minimal and updated.</li>
+                <li><strong>Credentials</strong> — pipelines often hold powerful secrets and deploy keys; use the credentials store and least privilege.</li>
+                <li><strong>Access control</strong> — a CI server can push to production, so it is a high-value target needing strong authentication and authorisation.</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>IT Director Considerations</h2>
+            <ul>
+                <li>No licence cost, but real operational cost in hosting, maintenance and security</li>
+                <li>Plugin governance to prevent sprawl and reduce the attack surface</li>
+                <li>Securing the pipeline as critical infrastructure with a direct path to production</li>
+                <li>Whether platform-native CI/CD (GitHub Actions, GitLab CI/CD) would reduce overhead</li>
+                <li>Scaling via distributed agents to meet build demand</li>
+                <li>Skills and ownership, so the CI/CD platform is actively maintained rather than left to drift</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Jenkins vs Platform-Native CI/CD</h2>
+            <p><strong>Jenkins</strong> is a flexible, self-hosted automation server that can integrate with virtually anything and gives you full control — at the cost of running and securing it yourself. <strong>Platform-native CI/CD</strong> such as GitHub Actions or GitLab CI/CD trades some flexibility for tight integration with the code platform and far less operational overhead, since the provider runs the infrastructure. The choice usually comes down to how much control and customisation you need versus how much operational burden you want to carry — and both ultimately serve the same DevOps goal of automating the path from commit to production.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 IT Director Hub • Jenkins Reference</p>
+    </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

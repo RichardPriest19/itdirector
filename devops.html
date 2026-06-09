@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOps - IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1 class="logo">DevOps</h1>
+            <p class="tagline">A culture and set of practices uniting development and operations to deliver software faster and more reliably</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="content-section">
+            <h2>Overview</h2>
+            <p>DevOps is a way of working that breaks down the traditional wall between software development (Dev) and IT operations (Ops). Rather than developers "throwing code over the fence" to a separate team to run, DevOps brings them together with shared ownership, automation and fast feedback. The goal is to release software more frequently, more reliably and with less risk. It is as much a cultural shift as a technical one — collaboration, accountability and continuous improvement matter as much as any particular tool.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Core Principles</h2>
+            <ul>
+                <li><strong>Collaboration &amp; shared ownership</strong> — Dev and Ops are responsible for the service end to end ("you build it, you run it").</li>
+                <li><strong>Automation</strong> — automate building, testing, deployment and infrastructure to remove slow, error-prone manual steps.</li>
+                <li><strong>Continuous feedback</strong> — measure and monitor everything, and feed lessons straight back into the next change.</li>
+                <li><strong>Small, frequent changes</strong> — ship in small increments to reduce risk and make problems easier to isolate.</li>
+                <li><strong>Continuous improvement</strong> — treat failures as learning, with blameless post-incident reviews.</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>The DevOps Lifecycle</h2>
+            <p>DevOps is often drawn as a continuous loop rather than a straight line, reflecting that delivery never really "finishes":</p>
+            <table style="width:100%; border-collapse:collapse; margin:20px 0;">
+                <tr style="background:var(--bg-card);">
+                    <th style="padding:12px; border:1px solid var(--border-color);">Stage</th>
+                    <th style="padding:12px; border:1px solid var(--border-color);">Focus</th>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Plan &amp; Code</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Define work and write software, tracked in version control</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Build &amp; Test</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Compile and automatically test every change</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Release &amp; Deploy</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Promote changes to production safely and repeatably</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Operate &amp; Monitor</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Run the service, observe it, and feed insight back to planning</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="content-section">
+            <h2>Key Practices &amp; Tooling</h2>
+            <ul>
+                <li><strong>Version control</strong> — Git is the foundation; all code and configuration lives here.</li>
+                <li><strong>CI/CD pipelines</strong> — automated build, test and deployment on every change.</li>
+                <li><strong>Infrastructure as Code (IaC)</strong> — define servers and services in code (e.g. Terraform) for consistent, repeatable environments.</li>
+                <li><strong>Containers &amp; orchestration</strong> — Docker and Kubernetes for portable, scalable deployment.</li>
+                <li><strong>Configuration management</strong> — tools such as Ansible to enforce desired state.</li>
+                <li><strong>Monitoring &amp; observability</strong> — metrics, logs and traces (e.g. Grafana, Datadog) to understand live systems.</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Measuring DevOps (DORA Metrics)</h2>
+            <p>The widely used DORA metrics give a balanced view of both speed and stability, avoiding the trap of optimising one at the expense of the other:</p>
+            <ul>
+                <li><strong>Deployment frequency</strong> — how often you release.</li>
+                <li><strong>Lead time for changes</strong> — how quickly a change goes from commit to production.</li>
+                <li><strong>Change failure rate</strong> — what proportion of changes cause problems.</li>
+                <li><strong>Mean time to restore</strong> — how fast you recover when something breaks.</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Related Approaches</h2>
+            <p><strong>DevSecOps</strong> extends the model by building security into the pipeline from the start ("shift left") rather than bolting it on at the end. <strong>Platform engineering</strong> is a more recent evolution, where a dedicated team builds an internal platform and self-service tooling so product teams can ship safely without each reinventing the plumbing. <strong>Site Reliability Engineering (SRE)</strong>, originating at Google, applies an engineering discipline to operations using concepts such as error budgets.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>IT Director Considerations</h2>
+            <ul>
+                <li>DevOps is primarily a cultural and organisational change; tools alone will not deliver it</li>
+                <li>Investment in automation, skills and platform capability pays back in speed and reliability</li>
+                <li>Balancing delivery speed against governance, audit and change-control obligations</li>
+                <li>Embedding security (DevSecOps) rather than treating it as a final gate</li>
+                <li>Using outcome metrics (DORA) rather than vanity activity measures</li>
+                <li>Avoiding "DevOps in name only" — renaming a team without changing how it works</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>DevOps vs Traditional IT Delivery</h2>
+            <p>Traditional delivery tends to separate development from operations, batch up large releases, and rely on manual hand-offs and change gates — which makes releases infrequent, high-risk events. <strong>DevOps</strong> favours shared ownership, automation and small, frequent changes, so releasing becomes routine and low-drama. It pairs naturally with Agile (which focuses on how work is planned and built) by extending the same fast-feedback philosophy all the way through to running software in production.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 IT Director Hub • DevOps Reference</p>
+    </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

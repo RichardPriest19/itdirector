@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Load Balancing - IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1 class="logo">Load Balancing</h1>
+            <p class="tagline">Distributing traffic across multiple servers to improve performance, scalability and resilience</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="content-section">
+            <h2>Overview</h2>
+            <p>Load balancing is the practice of distributing incoming requests across a pool of backend servers so that no single server becomes a bottleneck or a single point of failure. It is a foundational technique behind almost every scalable, highly available service: rather than relying on one large server, traffic is spread across many, and the load balancer presents them to users as a single endpoint. The result is better performance, the ability to scale out, and resilience when individual servers fail.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>How It Works</h2>
+            <p>Clients connect to a single virtual address presented by the load balancer, which then forwards each request to one of several backend servers (often called a pool or server farm). The load balancer continuously runs <strong>health checks</strong> against those servers and stops sending traffic to any that fail, routing around problems automatically. Because state can be an issue when a user's requests land on different servers, load balancers can maintain <strong>session persistence</strong> ("stickiness") so a given client keeps hitting the same backend where required.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Layer 4 vs Layer 7</h2>
+            <table style="width:100%; border-collapse:collapse; margin:20px 0;">
+                <tr style="background:var(--bg-card);">
+                    <th style="padding:12px; border:1px solid var(--border-color);">Aspect</th>
+                    <th style="padding:12px; border:1px solid var(--border-color);">Layer 4 (Transport)</th>
+                    <th style="padding:12px; border:1px solid var(--border-color);">Layer 7 (Application)</th>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Decisions based on</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">IP address and TCP/UDP port</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">URL, headers, cookies, content</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Intelligence</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Fast and simple</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Content-aware routing</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Extra capabilities</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Minimal</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">SSL offload, caching, WAF, redirects</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="content-section">
+            <h2>Common Algorithms</h2>
+            <ul>
+                <li><strong>Round robin</strong> — each server in turn; simple and even when servers are equal.</li>
+                <li><strong>Least connections</strong> — favour the server currently handling the fewest sessions.</li>
+                <li><strong>Weighted</strong> — send more traffic to more capable servers.</li>
+                <li><strong>IP hash</strong> — map a client consistently to the same server based on its address.</li>
+                <li><strong>Least response time</strong> — factor in how quickly servers are currently responding.</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Where It Is Used</h2>
+            <ul>
+                <li><strong>Web and application tiers</strong> — spreading user traffic across server farms.</li>
+                <li><strong>Global load balancing (GSLB)</strong> — directing users to the best site or region, often via DNS.</li>
+                <li><strong>Cloud-native</strong> — managed load balancers and ingress controllers in front of containers and Kubernetes services.</li>
+                <li><strong>Application delivery controllers (ADCs)</strong> — combining load balancing with SSL offload, caching and security.</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>IT Director Considerations</h2>
+            <ul>
+                <li>Resilience: the load balancer itself must be redundant, or it becomes the single point of failure it was meant to remove</li>
+                <li>Hardware appliance vs software vs cloud-managed load balancing, and the cost and flexibility trade-offs</li>
+                <li>SSL/TLS termination and certificate management as a central responsibility</li>
+                <li>Integration with autoscaling so capacity follows demand</li>
+                <li>Observability — health checks, metrics and logging to understand traffic and failures</li>
+                <li>Security features such as WAF and rate limiting often delivered at this tier</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Load Balancing vs Failover</h2>
+            <p>The two are related but distinct. <strong>Load balancing</strong> actively distributes traffic across multiple servers that are all in use, improving both performance and availability. <strong>Failover</strong> keeps a standby resource idle until the primary fails, addressing availability alone. Load balancing effectively delivers failover as a by-product — because unhealthy servers are simply removed from the pool — which is why it underpins most modern high-availability and horizontal-scaling designs.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 IT Director Hub • Load Balancing Reference</p>
+    </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

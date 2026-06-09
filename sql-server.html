@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsoft SQL Server - IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1 class="logo">Microsoft SQL Server</h1>
+            <p class="tagline">Microsoft's enterprise relational database, tightly integrated with the Windows and Azure ecosystem</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="content-section">
+            <h2>Overview</h2>
+            <p>Microsoft SQL Server is Microsoft's enterprise-grade relational database. It is the natural choice for organisations already invested in the Microsoft stack, integrating tightly with Windows, Active Directory, .NET and Azure. It is known for strong, approachable tooling and a built-in business-intelligence suite, and it queries using <strong>T-SQL</strong> (Transact-SQL), Microsoft's dialect of SQL. While historically Windows-only, SQL Server has run on Linux since 2017, broadening where it can be deployed.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Key Capabilities</h2>
+            <ul>
+                <li><strong>Always On Availability Groups</strong> — high availability and disaster recovery across replicas.</li>
+                <li><strong>Columnstore indexes &amp; in-memory OLTP</strong> — performance features for analytics and high-throughput transactions.</li>
+                <li><strong>Partitioning</strong> — managing very large tables efficiently.</li>
+                <li><strong>Security</strong> — Transparent Data Encryption, Always Encrypted, row-level security and dynamic data masking.</li>
+                <li><strong>Cross-platform</strong> — runs on Windows, Linux and in containers.</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Tooling &amp; the BI Stack</h2>
+            <p>A major part of SQL Server's appeal is its surrounding ecosystem. <strong>SQL Server Management Studio (SSMS)</strong> is a mature, widely liked administration tool. The platform also bundles a business-intelligence suite: <strong>SSIS</strong> for data integration and ETL, <strong>SSRS</strong> for reporting, and <strong>SSAS</strong> for analytical models — and it feeds naturally into Power BI. For many organisations this integrated data-and-analytics story is as compelling as the database engine itself.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Editions &amp; Azure</h2>
+            <table style="width:100%; border-collapse:collapse; margin:20px 0;">
+                <tr style="background:var(--bg-card);">
+                    <th style="padding:12px; border:1px solid var(--border-color);">Option</th>
+                    <th style="padding:12px; border:1px solid var(--border-color);">Positioning</th>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Enterprise / Standard</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Production editions; licensed per core or server + CALs</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Express / Developer</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Free, for small workloads and development</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Azure SQL Database</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Fully managed PaaS in the cloud</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Azure SQL Managed Instance</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Managed service with high on-prem compatibility</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="content-section">
+            <h2>IT Director Considerations</h2>
+            <ul>
+                <li>Strong fit and integration value where the organisation already runs on Microsoft</li>
+                <li>Licensing cost — significant at Enterprise level, though generally below Oracle</li>
+                <li>The integrated BI stack and Power BI path as part of a wider data strategy</li>
+                <li>Clear cloud migration routes via Azure SQL Database and Managed Instance</li>
+                <li>The Linux and container option, reducing former Windows-only constraints</li>
+                <li>Skills, which are widely available in Microsoft-oriented teams</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>SQL Server vs Oracle &amp; MySQL</h2>
+            <p><strong>SQL Server</strong> is a powerful enterprise database that is generally more cost-effective than Oracle and unbeatable for ease of integration in Microsoft-centric organisations, with excellent tooling and a built-in BI suite. <strong>Oracle</strong> offers the deepest features and proven scale for the most demanding workloads, at the highest cost and complexity. <strong>MySQL</strong> is open-source, free and ubiquitous for web applications, trading enterprise depth for simplicity and economics. The decision is often driven less by raw capability than by ecosystem: SQL Server where you are a Microsoft shop, Oracle where the workload demands its top-end engineering, MySQL where open-source web simplicity wins.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 IT Director Hub • Microsoft SQL Server Reference</p>
+    </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

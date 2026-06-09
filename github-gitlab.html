@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub / GitLab - IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1 class="logo">GitHub &amp; GitLab</h1>
+            <p class="tagline">Platforms built around Git that add collaboration, code review, CI/CD and security</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="content-section">
+            <h2>Overview</h2>
+            <p>GitHub and GitLab are the two leading platforms built on top of Git. Where Git itself is just the version-control engine, these platforms add everything a team needs to collaborate around code: a central hosted home for repositories, code review, automation pipelines, issue tracking, security scanning and access control. They have become the hub through which much of modern software is developed and delivered. GitHub is the largest by community and has been owned by Microsoft since 2018; GitLab positions itself as a single, integrated platform covering the whole DevOps lifecycle.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>What They Add Beyond Git</h2>
+            <ul>
+                <li><strong>Hosted repositories</strong> — a central, managed home for code with redundancy and access control.</li>
+                <li><strong>Pull / merge requests</strong> — the structured mechanism for proposing, reviewing and approving changes.</li>
+                <li><strong>Code review</strong> — inline comments, required approvals and discussion before merging.</li>
+                <li><strong>Built-in CI/CD</strong> — GitHub Actions and GitLab CI/CD run automated build, test and deploy pipelines.</li>
+                <li><strong>Issues &amp; project management</strong> — tracking work alongside the code it relates to.</li>
+                <li><strong>Package &amp; container registries</strong> — storing build artefacts and images.</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>GitHub vs GitLab</h2>
+            <table style="width:100%; border-collapse:collapse; margin:20px 0;">
+                <tr style="background:var(--bg-card);">
+                    <th style="padding:12px; border:1px solid var(--border-color);">Aspect</th>
+                    <th style="padding:12px; border:1px solid var(--border-color);">GitHub</th>
+                    <th style="padding:12px; border:1px solid var(--border-color);">GitLab</th>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Strength</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Largest community, open-source ecosystem</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Single integrated DevOps platform</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">CI/CD</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">GitHub Actions</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Mature built-in CI/CD from early on</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Self-hosting</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Available (GitHub Enterprise Server)</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">A long-standing core strength</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">AI assistant</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">GitHub Copilot</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">GitLab Duo</td>
+                </tr>
+            </table>
+            <p>Other platforms worth knowing include Atlassian's Bitbucket and Azure DevOps, both common in organisations already using those vendors' tooling.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Security Features</h2>
+            <ul>
+                <li><strong>Branch protection</strong> — require reviews and passing checks before code can be merged.</li>
+                <li><strong>Secret scanning</strong> — detect credentials accidentally committed to a repository.</li>
+                <li><strong>Dependency &amp; code scanning</strong> — flag vulnerable libraries (SCA) and insecure code (SAST).</li>
+                <li><strong>Signed commits</strong> — verify the authenticity of who made a change.</li>
+                <li><strong>SSO/SAML &amp; audit logs</strong> — enterprise identity integration and a record of activity.</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>IT Director Considerations</h2>
+            <ul>
+                <li>SaaS (cloud-hosted) versus self-managed deployment, and the trade-offs in control, compliance and overhead</li>
+                <li>Per-seat licensing and how costs scale, including paid tiers for security and advanced features</li>
+                <li>Source code as critical intellectual property — access control, data residency and protection</li>
+                <li>Consolidation: using the platform's built-in CI/CD, registries and security rather than many separate tools</li>
+                <li>Identity integration (SSO/SAML) and offboarding to control access</li>
+                <li>AI coding assistants (Copilot, Duo) and the governance and data questions they raise</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>GitHub / GitLab vs Git</h2>
+            <p><strong>Git</strong> is the version-control tool itself — it works perfectly well with no platform at all. <strong>GitHub</strong> and <strong>GitLab</strong> are the collaboration and automation layer wrapped around it: hosting, review, pipelines, security and governance that make Git usable for whole organisations rather than individuals. Choosing a platform is largely a decision about collaboration, automation, security and cost — the underlying Git technology is the same either way.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 IT Director Hub • GitHub &amp; GitLab Reference</p>
+    </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

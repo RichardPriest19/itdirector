@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MLOps - IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1 class="logo">MLOps</h1>
+            <p class="tagline">Applying DevOps discipline to deploying, monitoring and governing machine learning in production</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="content-section">
+            <h2>Overview</h2>
+            <p>MLOps (Machine Learning Operations) is the set of practices for reliably deploying, running, monitoring and maintaining machine learning models in production. It applies the principles of DevOps — automation, continuous delivery, monitoring — to the particular challenges of ML, where the "software" is a trained model whose behaviour depends on data. MLOps exists to close the gap between a promising model in a data scientist's notebook and a dependable capability running in the business, which is where many AI initiatives quietly stall.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Why ML Needs Its Own Ops</h2>
+            <p>Traditional software is deterministic and changes only when code changes. ML systems are different: they depend on data as much as code, they can degrade silently as the world shifts, and reproducing a result requires capturing the exact data, code and parameters together. These differences create needs that ordinary DevOps does not address, including data and model versioning, experiment tracking, and monitoring for <strong>drift</strong> — where a model's accuracy decays because live data no longer resembles its training data.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>The Lifecycle</h2>
+            <table style="width:100%; border-collapse:collapse; margin:20px 0;">
+                <tr style="background:var(--bg-card);">
+                    <th style="padding:12px; border:1px solid var(--border-color);">Stage</th>
+                    <th style="padding:12px; border:1px solid var(--border-color);">Focus</th>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Data &amp; features</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Prepare, version and manage training data</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Train &amp; experiment</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Build models and track experiments reproducibly</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Validate</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Test quality, fairness and performance before release</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Deploy</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Promote models to production safely and repeatably</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Monitor &amp; retrain</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Watch for drift and refresh models as needed</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="content-section">
+            <h2>LLMOps</h2>
+            <p>The rise of large language models has produced a specialised offshoot sometimes called <strong>LLMOps</strong>. It adds concerns specific to generative AI: managing and versioning prompts, evaluating outputs that have no single "correct" answer, applying guardrails and safety filters, controlling token costs, and monitoring for issues like hallucination. The underlying philosophy is the same as MLOps — bring engineering rigour to AI in production — applied to the particular shape of LLM-based systems.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>IT Director Considerations</h2>
+            <ul>
+                <li>Moving from AI experiments to dependable production capability — where most value is won or lost</li>
+                <li>Monitoring for model and data drift so quality does not silently decay</li>
+                <li>Reproducibility and versioning of data, models and parameters for audit and trust</li>
+                <li>Governance and compliance, linking to frameworks like ISO 42001 and the NIST AI RMF</li>
+                <li>Skills and tooling, and whether to build a platform or use managed services</li>
+                <li>Cost control, especially token and compute spend for LLM-based systems</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>MLOps vs DevOps</h2>
+            <p><strong>MLOps</strong> extends <strong>DevOps</strong> rather than replacing it. It keeps the same goals — automation, fast and reliable delivery, continuous monitoring — but adds what ML uniquely requires: versioning data as well as code, tracking experiments, validating model quality, and continuously watching for drift (sometimes called "continuous training"). If DevOps makes software delivery dependable, MLOps does the same for the data-driven, ever-shifting world of machine learning and AI.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 IT Director Hub • MLOps Reference</p>
+    </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

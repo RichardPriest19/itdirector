@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoIP / Unified Comms - IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1 class="logo">VoIP &amp; Unified Comms</h1>
+            <p class="tagline">Voice over IP, telephony and unified communications – carrying voice, video and messaging over the data network</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="content-section">
+            <h2>Overview</h2>
+            <p>VoIP (Voice over Internet Protocol) carries telephone calls as data packets across IP networks rather than over traditional dedicated phone lines. Unified Communications (UC) builds on this foundation to bring voice, video conferencing, instant messaging, presence and screen sharing together into a single integrated experience. For most organisations this has meant retiring legacy on-premises phone systems in favour of cloud-delivered platforms, fundamentally changing how telephony is procured, operated and supported.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>How It Works</h2>
+            <p>A VoIP call has two distinct parts. <strong>Signalling</strong> sets up, manages and tears down the call — most commonly using SIP (Session Initiation Protocol). The <strong>media</strong> — the actual digitised audio or video — is then carried using RTP (Real-time Transport Protocol). A <em>codec</em> compresses the audio (for example G.711 for quality or Opus for efficiency), trading bandwidth against call quality. Because voice is real-time and unforgiving of delay, the network must deliver these packets with consistently low latency and minimal loss.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Deployment Models</h2>
+            <table style="width:100%; border-collapse:collapse; margin:20px 0;">
+                <tr style="background:var(--bg-card);">
+                    <th style="padding:12px; border:1px solid var(--border-color);">Model</th>
+                    <th style="padding:12px; border:1px solid var(--border-color);">Description</th>
+                    <th style="padding:12px; border:1px solid var(--border-color);">Trade-off</th>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">On-premises PBX</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Call control hardware in your own data centre</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Full control, but capital cost and maintenance burden</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Hosted / Cloud (UCaaS)</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Provider runs the platform; you consume it as a service</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Low overhead and scalable, with provider dependency</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Hybrid</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">On-prem call control with cloud features or trunking</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Bridges legacy investment and cloud, but more complex</td>
+                </tr>
+            </table>
+            <p>Connectivity to the public phone network is typically delivered via <strong>SIP trunks</strong> — virtual lines from a provider that replace traditional ISDN circuits.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Quality of Service</h2>
+            <p>Voice quality lives or dies on the network. The key metrics are <strong>latency</strong> (delay, ideally under ~150 ms one way), <strong>jitter</strong> (variation in packet timing) and <strong>packet loss</strong>. To protect calls, voice traffic is prioritised using QoS marking (commonly DSCP EF) so it is queued ahead of less time-sensitive data. A dedicated voice VLAN is also common, separating phones from general traffic and simplifying both QoS and security.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Security Considerations</h2>
+            <ul>
+                <li><strong>Encryption</strong> — protect signalling with TLS and media with SRTP, so calls cannot be intercepted.</li>
+                <li><strong>Toll fraud</strong> — compromised systems can be abused to place expensive calls; controls include strong credentials, call barring and spend limits.</li>
+                <li><strong>Segmentation</strong> — isolating voice on its own VLAN limits exposure and contains attacks.</li>
+                <li><strong>Eavesdropping and spoofing</strong> — unencrypted SIP/RTP is vulnerable to call interception and caller-ID spoofing.</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Resilience &amp; Emergency Calling</h2>
+            <p>Because VoIP rides the data network and often mains-powered devices, availability planning matters. Consider power resilience (PoE switches on UPS), internet/WAN redundancy, and failover to mobile or PSTN. <strong>Emergency calls</strong> deserve special attention: the platform must route to the correct local emergency service and present an accurate location, which is a regulatory obligation in many jurisdictions and a genuine safety issue for remote and home workers.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>IT Director Considerations</h2>
+            <ul>
+                <li>Migration from legacy PBX/ISDN, accelerated by PSTN switch-off programmes</li>
+                <li>UCaaS platform selection and how it integrates with collaboration suites already in use</li>
+                <li>Network readiness — QoS, bandwidth and WAN design to support real-time media</li>
+                <li>Licensing models and total cost of ownership versus legacy telephony</li>
+                <li>Emergency-calling compliance and accurate location for hybrid/remote staff</li>
+                <li>Contact-centre requirements, call recording, and analytics needs</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>VoIP vs Unified Comms</h2>
+            <p>Think of <strong>VoIP</strong> as the underlying capability — voice carried over IP — and <strong>Unified Communications</strong> as the broader platform that wraps voice together with video, messaging and presence. Most organisations no longer buy "phone systems" in isolation: telephony arrives as one feature of a UC platform (frequently the same suite used for meetings and chat), which is why voice strategy is increasingly inseparable from the wider collaboration and network strategy.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 IT Director Hub • VoIP &amp; Unified Comms Reference</p>
+    </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fine-Tuning - IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1 class="logo">Fine-Tuning</h1>
+            <p class="tagline">Adapting a pre-trained model to a specific task, domain or style through further training</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="content-section">
+            <h2>Overview</h2>
+            <p>Fine-tuning is the process of taking a model that has already been trained on broad data and training it further on a smaller, curated dataset to specialise it. Rather than building a model from scratch — which is hugely expensive — fine-tuning adapts an existing one to a particular task, domain or style. The result is a model that behaves more consistently the way you want: matching a house tone of voice, producing a specific output format, or performing well on a narrow, specialised task.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>How It Works</h2>
+            <p>You provide a dataset of examples — typically inputs paired with the desired outputs — and continue training the model on them so it adjusts toward those patterns. Full fine-tuning updates all of the model's parameters and is resource-intensive. More common today are <strong>parameter-efficient</strong> methods such as <strong>LoRA</strong>, which train only a small set of additional parameters, drastically cutting the cost and compute required while achieving much of the benefit.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>When to Use It</h2>
+            <ul>
+                <li><strong>Consistent style or format</strong> — enforce a tone, structure or output schema reliably.</li>
+                <li><strong>Specialised tasks</strong> — improve performance on a narrow, well-defined job.</li>
+                <li><strong>Domain language</strong> — adapt to specialised terminology or conventions.</li>
+                <li><strong>Efficiency</strong> — sometimes let a smaller, cheaper model match a larger one on a specific task.</li>
+            </ul>
+            <p>Fine-tuning is generally <em>not</em> the right tool for adding factual knowledge that changes over time — that is what RAG is for.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Costs &amp; Risks</h2>
+            <ul>
+                <li><strong>Data effort</strong> — preparing a good-quality, representative dataset is the hardest part.</li>
+                <li><strong>Cost &amp; skills</strong> — needs ML expertise and compute, though far less than training from scratch.</li>
+                <li><strong>Staleness</strong> — a fine-tuned model is a snapshot; new information means re-tuning.</li>
+                <li><strong>Overfitting</strong> — too narrow a dataset can degrade general performance.</li>
+                <li><strong>Maintenance</strong> — fine-tuned models become assets you must host, version and update.</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>IT Director Considerations</h2>
+            <ul>
+                <li>Whether simpler approaches — prompt engineering or RAG — would meet the need first</li>
+                <li>The investment in data preparation, which usually dominates the effort</li>
+                <li>Hosting and lifecycle management of fine-tuned models (an MLOps concern)</li>
+                <li>Data governance and IP around the training data used</li>
+                <li>Re-tuning cadence as requirements and source data evolve</li>
+                <li>Combining fine-tuning (for behaviour) with RAG (for knowledge) where both are needed</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Fine-Tuning, RAG &amp; Prompt Engineering</h2>
+            <p>These are the three ways to adapt an LLM, in increasing order of effort. <strong>Prompt engineering</strong> steers the model through its input alone — cheapest and quickest. <strong>RAG</strong> supplies the model with external knowledge at query time — best when the gap is missing information. <strong>Fine-tuning</strong> changes the model's underlying behaviour — best when the gap is <em>how</em> it responds. The usual advice is to start with prompting, add RAG for knowledge, and reach for fine-tuning only when behaviour itself needs to change.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 IT Director Hub • Fine-Tuning Reference</p>
+    </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DHCP - IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1 class="logo">DHCP</h1>
+            <p class="tagline">Dynamic Host Configuration Protocol – automated assignment of IP addresses and network configuration to devices</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="content-section">
+            <h2>Overview</h2>
+            <p>DHCP (Dynamic Host Configuration Protocol) is the network service that automatically hands out IP addresses and related configuration — subnet mask, default gateway, DNS servers, and more — to devices as they join a network. Without it, every device would need to be configured manually, which is impractical at any meaningful scale. Defined in RFC 2131, DHCP operates over UDP using port 67 (server) and port 68 (client), and it is one of the quiet foundations that almost every other network service depends on.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>How DHCP Works: The DORA Process</h2>
+            <p>A client obtains an address through a four-step exchange, commonly remembered by the acronym DORA:</p>
+            <ul>
+                <li><strong>Discover</strong> – The client broadcasts a DHCPDISCOVER to find any available DHCP server.</li>
+                <li><strong>Offer</strong> – One or more servers reply with a DHCPOFFER proposing an address and configuration.</li>
+                <li><strong>Request</strong> – The client broadcasts a DHCPREQUEST accepting one specific offer.</li>
+                <li><strong>Acknowledge</strong> – The chosen server confirms with a DHCPACK, committing the lease.</li>
+            </ul>
+            <p>Addresses are issued as time-limited <em>leases</em>. The client attempts to renew at roughly 50% of the lease duration (the T1 timer) and, if that fails, tries to rebind from any server at about 87.5% (the T2 timer) before the lease expires.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Core Components</h2>
+            <ul>
+                <li><strong>Scope</strong> – The pool of addresses a server can lease for a given subnet, with associated settings.</li>
+                <li><strong>Reservation</strong> – A fixed address tied to a device's MAC address, so it always receives the same IP while still being managed centrally.</li>
+                <li><strong>Exclusion</strong> – Addresses inside a scope that are held back (e.g. for statically configured servers).</li>
+                <li><strong>Lease</strong> – The time-bound assignment of an address to a client.</li>
+                <li><strong>Options</strong> – Additional configuration delivered alongside the address, such as default gateway (option 003), DNS servers (006), domain name (015), and PXE/boot settings (066/067) for network imaging.</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>DHCP Relay</h2>
+            <p>Because DHCPDISCOVER is a broadcast and routers do not forward broadcasts between subnets, a <strong>DHCP relay agent</strong> (often configured as an <code>ip helper-address</code> on a router or switch) intercepts client requests and forwards them as unicast to a central DHCP server. This lets a small number of centralized servers handle addressing for many subnets, rather than placing a server on every segment.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>High Availability &amp; Redundancy</h2>
+            <p>DHCP is a critical-path service: if it fails, new and renewing devices lose connectivity. Common resilience approaches:</p>
+            <table style="width:100%; border-collapse:collapse; margin:20px 0;">
+                <tr style="background:var(--bg-card);">
+                    <th style="padding:12px; border:1px solid var(--border-color);">Approach</th>
+                    <th style="padding:12px; border:1px solid var(--border-color);">How it works</th>
+                    <th style="padding:12px; border:1px solid var(--border-color);">Trade-off</th>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Failover (load-balance)</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Two servers share a scope and split active leases</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Best balance of capacity and resilience</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Failover (hot standby)</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">One server is active, the other takes over on failure</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Simpler, but standby capacity sits idle</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Split scope (80/20)</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Two servers hold non-overlapping parts of one range</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Works without failover support but wastes addresses</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="content-section">
+            <h2>Security Considerations</h2>
+            <ul>
+                <li><strong>Rogue DHCP servers</strong> – An unauthorised server (accidental or malicious) can hand out bad gateways and DNS, enabling interception. Mitigate with <strong>DHCP snooping</strong> on switches, which trusts only designated ports.</li>
+                <li><strong>DHCP starvation</strong> – An attacker floods requests with spoofed MAC addresses to exhaust the pool. Mitigate with port security and rate limiting.</li>
+                <li><strong>Option 82</strong> – Relay agent information that helps servers make policy decisions and adds an audit trail.</li>
+                <li><strong>Logging &amp; auditing</strong> – Lease logs map addresses to devices over time, which is valuable for incident response and compliance.</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>DHCPv6 &amp; Cloud</h2>
+            <p>For IPv6, DHCPv6 (ports 546/547) works alongside or instead of Stateless Address Autoconfiguration (SLAAC), using multicast rather than broadcast. In public cloud, you typically don't run DHCP servers yourself — providers manage addressing within a VPC/VNet, and you influence behaviour through constructs such as AWS DHCP option sets (for example, custom DNS and domain names).</p>
+        </section>
+
+        <section class="content-section">
+            <h2>IT Director Considerations</h2>
+            <ul>
+                <li>Centralised vs distributed DHCP architecture and its impact on resilience and WAN dependency</li>
+                <li>Integration with DNS and Active Directory, including Dynamic DNS (DDNS) record updates</li>
+                <li>IP Address Management (IPAM) tooling for visibility across scopes, sites and cloud</li>
+                <li>Redundancy design aligned to availability SLAs for a service with no graceful failure mode</li>
+                <li>Security hardening (snooping, rogue-server detection) as part of network access control</li>
+                <li>Lease and audit logging to support security investigations and compliance evidence</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>DHCP vs Static Addressing</h2>
+            <p>Use <strong>DHCP</strong> for the vast majority of endpoints — laptops, phones, printers and general workstations — where centralised, automated management is essential. Use <strong>static addressing or reservations</strong> for infrastructure that must be predictable, such as servers, network gear, and devices referenced by IP in firewall rules or applications. Reservations are usually preferable to pure static configuration because they keep that predictability while remaining centrally managed.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 IT Director Hub • DHCP Reference</p>
+    </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

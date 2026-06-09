@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BGP - IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1 class="logo">BGP</h1>
+            <p class="tagline">Border Gateway Protocol – the path-vector routing protocol that holds the internet together</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="content-section">
+            <h2>Overview</h2>
+            <p>BGP (Border Gateway Protocol) is the routing protocol that exchanges reachability information between the large, independently operated networks that make up the internet. Each of these networks is an Autonomous System (AS) with its own number, and BGP is how they tell one another which destinations they can reach and by what path. Defined in RFC 4271 (BGP-4), it runs over TCP port 179, which gives it reliable, ordered delivery of routing updates. BGP is described as a <em>path-vector</em> protocol because it advertises the full list of autonomous systems a route passes through, which is central to both loop prevention and policy.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>eBGP vs iBGP</h2>
+            <p>BGP runs in two contexts that behave differently:</p>
+            <table style="width:100%; border-collapse:collapse; margin:20px 0;">
+                <tr style="background:var(--bg-card);">
+                    <th style="padding:12px; border:1px solid var(--border-color);">Aspect</th>
+                    <th style="padding:12px; border:1px solid var(--border-color);">eBGP (External)</th>
+                    <th style="padding:12px; border:1px solid var(--border-color);">iBGP (Internal)</th>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Peers</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Between different autonomous systems</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Between routers in the same AS</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Typical use</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Connecting to ISPs and peers</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Carrying external routes across the AS</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Scale aid</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Direct peering sessions</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Route reflectors or confederations</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="content-section">
+            <h2>Path Selection</h2>
+            <p>Unlike interior protocols that simply pick the shortest path, BGP chooses routes using a ranked list of <em>attributes</em>, which lets operators steer traffic for commercial and engineering reasons rather than purely on distance:</p>
+            <ul>
+                <li><strong>Weight</strong> (Cisco-specific, local to one router) and <strong>Local Preference</strong> (consistent across the AS) — the primary levers for preferring one exit over another.</li>
+                <li><strong>AS_PATH</strong> — a shorter list of autonomous systems is preferred, and it doubles as the loop-prevention mechanism.</li>
+                <li><strong>MED (Multi-Exit Discriminator)</strong> — a hint to a neighbouring AS about a preferred entry point.</li>
+                <li><strong>Communities</strong> — tags attached to routes to apply policy at scale.</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Where It Is Used</h2>
+            <ul>
+                <li><strong>Internet edge / multihoming</strong> — connecting an enterprise to two or more ISPs for resilience and traffic control.</li>
+                <li><strong>Service providers</strong> — carrying the full internet routing table (well over a million IPv4 prefixes).</li>
+                <li><strong>MPLS VPNs</strong> — MP-BGP distributes customer VPN routes across provider networks.</li>
+                <li><strong>Data centre fabrics</strong> — eBGP is increasingly used as the control plane in leaf-spine (Clos) designs.</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Security Considerations</h2>
+            <p>BGP was designed for a smaller, higher-trust internet, and by default it accepts what peers advertise. This has led to repeated high-profile outages from route hijacks and leaks. Key controls:</p>
+            <ul>
+                <li><strong>Prefix filtering</strong> — only accept and announce expected prefixes from each peer.</li>
+                <li><strong>RPKI / ROAs</strong> — Resource Public Key Infrastructure lets networks cryptographically validate which AS is authorised to originate a prefix.</li>
+                <li><strong>Maximum-prefix limits</strong> — guard against a misbehaving peer flooding the routing table.</li>
+                <li><strong>MANRS</strong> — an industry set of routing-security norms many providers commit to.</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>IT Director Considerations</h2>
+            <ul>
+                <li>ISP multihoming strategy and whether to obtain a public ASN and provider-independent address space</li>
+                <li>The difference between transit and peering, and its cost and resilience implications</li>
+                <li>Dependence on provider routing hygiene; questions to ask ISPs about RPKI and filtering</li>
+                <li>DDoS response options that rely on BGP, such as remotely triggered blackholing and traffic scrubbing</li>
+                <li>Monitoring and alerting for prefix hijacks and unexpected route changes</li>
+                <li>BGP as a data-centre control plane, and the skills implications of that choice</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>BGP vs OSPF</h2>
+            <p>Use <strong>BGP</strong> where you need to exchange routes <em>between</em> organisations or sites under different administrative control — the internet edge, provider networks, and large fabrics — and where policy and scale matter more than raw convergence speed. Use an interior protocol such as <strong>OSPF</strong> inside a single network you fully control, where fast convergence on the shortest path is the priority. In practice the two are complementary: OSPF (or another IGP) runs the inside, BGP handles the boundaries.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 IT Director Hub • BGP Reference</p>
+    </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
