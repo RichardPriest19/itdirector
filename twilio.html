@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twilio - IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1 class="logo">Twilio</h1>
+            <p class="tagline">A cloud communications platform (CPaaS) for embedding messaging, voice and email into applications via APIs</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="content-section">
+            <h2>Overview</h2>
+            <p>Twilio is a cloud communications platform — a <strong>CPaaS</strong> (Communications Platform as a Service) — that lets organisations build messaging, voice, video and email directly into their own applications and workflows through programmable APIs. Founded in 2008, its model is "communications as building blocks": rather than buying a finished phone system, developers write code to send a text, place a call, verify a login or trigger a notification. This flexibility has made Twilio the backbone of communications for a vast range of apps, from appointment reminders to two-factor authentication codes.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>How It Works</h2>
+            <p>Twilio exposes its capabilities as web APIs and SDKs. An application makes a request — "send this SMS", "call this number" — and Twilio handles the underlying connectivity to carriers and networks worldwide. Incoming events (a reply, an inbound call) are delivered back to the application via <strong>webhooks</strong>, and call or message flows can be scripted. Pricing is <strong>usage-based</strong>: you pay per message, per minute, per phone number and so on, with no traditional fixed-line contracts. There is nothing to host — it is consumed entirely as a service.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Key Products</h2>
+            <table style="width:100%; border-collapse:collapse; margin:20px 0;">
+                <tr style="background:var(--bg-card);">
+                    <th style="padding:12px; border:1px solid var(--border-color);">Product</th>
+                    <th style="padding:12px; border:1px solid var(--border-color);">Purpose</th>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Programmable Messaging</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">SMS, MMS and WhatsApp messaging</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Programmable Voice</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Make and receive calls, build IVRs</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">SendGrid</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Transactional and marketing email</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Verify</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">One-time passcodes and two-factor authentication</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Flex</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Programmable cloud contact centre</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Segment</td>
+                    <td style="padding:12px; border:1px solid var(--border-color);">Customer data platform feeding personalised communications</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="content-section">
+            <h2>Common Use Cases</h2>
+            <ul>
+                <li><strong>Verification &amp; 2FA</strong> — sending one-time login or transaction codes.</li>
+                <li><strong>Notifications &amp; alerts</strong> — order updates, appointment reminders, delivery tracking.</li>
+                <li><strong>Customer engagement</strong> — marketing and conversational messaging across channels.</li>
+                <li><strong>Contact centre</strong> — building or extending support operations with Flex.</li>
+                <li><strong>Click-to-call &amp; masked numbers</strong> — connecting users without exposing real numbers.</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>IT Director Considerations</h2>
+            <ul>
+                <li>Usage-based cost can scale quickly and unpredictably — model and monitor spend closely</li>
+                <li>Fraud risk such as SMS "pumping" and toll fraud, which can drive sudden costs</li>
+                <li>Messaging compliance — sender registration (e.g. A2P 10DLC in the US), consent/opt-in and anti-spam rules</li>
+                <li>Data privacy obligations (GDPR and, for some products, HIPAA eligibility)</li>
+                <li>It is a developer platform — building on it requires engineering resource</li>
+                <li>Protecting API credentials, and designing for reliability and deliverability</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Twilio (CPaaS) vs UCaaS</h2>
+            <p>It is easy to confuse Twilio with a phone or collaboration system, but they serve different needs. <strong>CPaaS</strong> like Twilio provides programmable building blocks to embed communications into <em>your own applications and customer journeys</em> — and requires development to use. <strong>UCaaS</strong> (unified communications as a service) provides ready-made calling, meetings and messaging <em>for employees</em>, out of the box. In short: use UCaaS to equip your staff to communicate, and CPaaS like Twilio to build communications into the products and processes your customers interact with. Many organisations use both.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 IT Director Hub • Twilio Reference</p>
+    </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
