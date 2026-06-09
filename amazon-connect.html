@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Connect - IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1 class="logo">Amazon Connect</h1>
+            <p class="tagline">AWS's pay-as-you-go cloud contact centre, with built-in AI and deep AWS integration</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="content-section">
+            <h2>Overview</h2>
+            <p>Amazon Connect is a cloud-based contact centre service from AWS — a <strong>CCaaS</strong> (Contact Centre as a Service) offering that lets organisations run customer service operations without owning any contact centre hardware. Launched in 2017, it grew out of the technology Amazon built to run its own large-scale customer service. Its model is elastic and usage-based: you spin up agents and capacity on demand and pay for what you use, which makes it especially attractive for handling seasonal peaks or sudden surges, and for supporting remote agents quickly.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>How It Works</h2>
+            <p>At its heart is the <strong>contact flow</strong> — a visual, drag-and-drop designer for building the logic that handles each interaction: the IVR menus, the routing rules, the prompts and the hand-offs to agents. Connect provides the telephony (claiming or porting numbers), automatic call distribution and skills-based routing, an agent workspace, and the reporting around it. Because it is part of AWS, it integrates naturally with services such as Lambda for custom logic, S3 for storage and the wider AWS data and AI stack.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Channels &amp; AI</h2>
+            <p>Amazon Connect is omnichannel, handling voice, chat and tasks through a single system. A major differentiator is its built-in use of AWS AI services:</p>
+            <ul>
+                <li><strong>Amazon Lex</strong> — conversational bots and natural-language IVR.</li>
+                <li><strong>Amazon Polly</strong> — lifelike text-to-speech for prompts.</li>
+                <li><strong>Contact Lens</strong> — call transcription, sentiment analysis and real-time supervisor insights.</li>
+                <li><strong>Generative AI agent assist</strong> — surfacing answers and recommendations to agents in real time.</li>
+                <li><strong>Forecasting &amp; scheduling</strong> — workforce management built into the platform.</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Strengths</h2>
+            <ul>
+                <li><strong>Elastic scale</strong> — add agents and capacity rapidly, ideal for surges and remote working.</li>
+                <li><strong>Pay-as-you-go</strong> — usage-based pricing with no large upfront licensing.</li>
+                <li><strong>Built-in AI</strong> — bots, analytics and agent assist without bolting on third-party tools.</li>
+                <li><strong>AWS integration</strong> — natural fit for organisations already on AWS.</li>
+                <li><strong>No infrastructure</strong> — fully managed, with nothing to run on-premises.</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>IT Director Considerations</h2>
+            <ul>
+                <li>Strong fit for organisations already invested in AWS; less so otherwise</li>
+                <li>Usage-based cost needs careful modelling and monitoring, including telephony charges</li>
+                <li>AWS skills required to design flows, integrations and supporting services</li>
+                <li>Integration with CRM and back-office systems to give agents context</li>
+                <li>Resilience and region design for a customer-facing, business-critical service</li>
+                <li>Compliance and data residency (PCI, HIPAA eligibility) for sensitive interactions</li>
+                <li>Ecosystem reliance — capability and lock-in both increase with AWS dependence</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Amazon Connect vs Traditional &amp; Programmable Alternatives</h2>
+            <p><strong>Amazon Connect</strong> is a largely ready-to-configure cloud contact centre with AI built in, billed by usage and tightly tied to AWS. A <strong>traditional on-premises contact centre</strong> means capital cost, fixed capacity and slower change, which cloud CCaaS is steadily displacing. At the other end, a programmable platform such as <strong>Twilio Flex</strong> offers a more developer-driven, build-it-yourself approach for organisations wanting maximum control. Connect sits in the middle — more turnkey than a pure API platform, more flexible and elastic than legacy on-premises systems — and is a natural choice where AWS is already the foundation.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 IT Director Hub • Amazon Connect Reference</p>
+    </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
