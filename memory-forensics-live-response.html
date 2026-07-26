@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Forensics & Live Incident Response | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>Memory Forensics & Live Incident Response</h1>
+            <p>Capturing and analyzing volatile system memory before evidence disappears at power-off</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>Memory forensics involves capturing and analyzing a system's volatile RAM to recover evidence — running processes, network connections, injected code, and encryption keys — that disappears the moment a machine is powered off or rebooted. Live incident response builds on this by triaging an active compromise on a running system without destroying evidence. In 2026, this discipline relies on remote memory acquisition tooling integrated with EDR platforms, automated memory analysis frameworks, and playbooks that prioritize live capture before any remediation action that would wipe volatile state.</p>
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> Memory forensics recovers evidence of fileless malware, injected code, and in-memory-only attacker activity that never touches disk — often the only trace left by sophisticated intrusions designed to evade traditional file-based detection.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Components</h2>
+                <h3>Acquisition</h3>
+                <ul>
+                    <li>Remote memory acquisition via EDR agents</li>
+                    <li>Full memory image capture tooling</li>
+                    <li>Live triage collection (processes, network state, handles)</li>
+                </ul>
+                <h3>Analysis</h3>
+                <ul>
+                    <li>Memory analysis frameworks for process & injection artifact review</li>
+                    <li>Malware/rootkit signature scanning of memory images</li>
+                    <li>Timeline reconstruction from volatile artifacts</li>
+                </ul>
+                <h3>Response Integration</h3>
+                <ul>
+                    <li>Playbooks sequencing capture before containment/remediation</li>
+                    <li>Chain-of-custody handling for memory images</li>
+                    <li>Coordination with broader DFIR & anti-forensics detection workflows</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Best Practices</h2>
+                <ul>
+                    <li>Capture volatile memory before powering off or reimaging a suspected compromised host</li>
+                    <li>Pre-stage remote memory acquisition capability across the EDR fleet</li>
+                    <li>Train responders on live triage procedures that preserve evidence integrity</li>
+                    <li>Maintain documented chain-of-custody for all captured memory images</li>
+                    <li>Integrate memory analysis findings into the broader incident timeline</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Ensure memory acquisition capability is built into IR tooling & playbooks</li>
+                    <li>Fund training for responders on live forensics procedures</li>
+                    <li>Coordinate memory forensics with legal on evidentiary requirements</li>
+                    <li>Test live response capability through incident simulations</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>NIST SP 800-86 Guide to Integrating Forensic Techniques</li>
+                    <li>SANS FOR508 Advanced Incident Response & Memory Forensics guidance</li>
+                    <li>Volatility Foundation memory analysis framework documentation</li>
+                    <li>CISA incident response guidance</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

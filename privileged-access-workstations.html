@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privileged Access Workstations (PAW) | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>Privileged Access Workstations (PAW)</h1>
+            <p>Dedicated, hardened endpoints for administrators performing high-privilege tasks</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>Privileged Access Workstations (PAWs) are dedicated, tightly locked-down endpoints used exclusively for high-privilege administrative tasks — domain administration, cloud tenant management, security tooling — isolated from general email, web browsing, and everyday productivity work where most compromise originates. In 2026, PAW programs are commonly tiered (e.g., separate workstations for domain admins, cloud admins, and security operations), integrated with conditional access policies, and paired with Privileged Access Management (PAM) session brokering.</p>
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> Separating privileged administrative activity onto dedicated, hardened workstations removes the single biggest source of credential theft — a compromised everyday endpoint — from the path an attacker would need to reach domain or cloud administrative control.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Components</h2>
+                <h3>Workstation Tiering</h3>
+                <ul>
+                    <li>Tiered PAW model separating domain, cloud & security admin roles</li>
+                    <li>No email/web browsing/general productivity software on PAWs</li>
+                    <li>Physical or strict logical separation from standard user devices</li>
+                </ul>
+                <h3>Access Controls</h3>
+                <ul>
+                    <li>Conditional access policies restricting privileged sign-in to PAWs only</li>
+                    <li>Multi-factor authentication enforced for all privileged sessions</li>
+                    <li>Integration with PAM session brokering & recording</li>
+                </ul>
+                <h3>Hardening & Monitoring</h3>
+                <ul>
+                    <li>Application allowlisting restricted to approved admin tooling</li>
+                    <li>Enhanced logging & monitoring on all PAW activity</li>
+                    <li>Regular reimaging & configuration baseline enforcement</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Best Practices</h2>
+                <ul>
+                    <li>Deploy tiered PAWs for domain, cloud, and security administrative roles</li>
+                    <li>Block privileged sign-in attempts from non-PAW devices via conditional access</li>
+                    <li>Restrict PAWs to approved administrative tooling only — no email or web browsing</li>
+                    <li>Enforce MFA and session recording for all privileged access from PAWs</li>
+                    <li>Regularly reimage & re-baseline PAWs to prevent configuration drift</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Define & fund a tiered PAW program for privileged administrative roles</li>
+                    <li>Ensure conditional access policy enforces PAW-only privileged sign-in</li>
+                    <li>Integrate PAWs with PAM & identity governance programs</li>
+                    <li>Audit PAW usage & configuration compliance regularly</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>Microsoft Privileged Access Workstation deployment guidance</li>
+                    <li>NIST SP 800-53 privileged access & separation of duties controls</li>
+                    <li>CISA guidance on securing privileged administrative access</li>
+                    <li>Gartner & Forrester Privileged Access Management reports 2025–2026</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

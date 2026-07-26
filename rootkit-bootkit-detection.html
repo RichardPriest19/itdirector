@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rootkit & Bootkit Detection | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>Rootkit & Bootkit Detection</h1>
+            <p>Finding compromise that hides below the operating system, in the kernel or boot chain</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>Rootkits and bootkits are malicious code designed to hide at the kernel or boot-loader level, granting persistent, hard-to-detect control while evading standard antivirus and OS-level monitoring. In 2026, detection relies on hardware-backed measured boot, hypervisor-level integrity checks, and specialized scanning tools that compare live kernel/boot state against known-good baselines — complementing the boot-integrity controls covered under Firmware & UEFI Security.</p>
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> Dedicated rootkit/bootkit detection catches the specific class of compromise engineered to be invisible to the operating system itself, closing a blind spot that standard endpoint agents — which rely on the OS they're trying to protect — cannot see into.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Components</h2>
+                <h3>Boot-Chain Verification</h3>
+                <ul>
+                    <li>Measured boot with TPM-backed attestation</li>
+                    <li>Secure Boot chain validation at every startup</li>
+                    <li>Bootloader integrity comparison against known-good baselines</li>
+                </ul>
+                <h3>Kernel Integrity</h3>
+                <ul>
+                    <li>Hypervisor-level kernel integrity monitoring</li>
+                    <li>Kernel module & driver signature verification</li>
+                    <li>Out-of-band scanning tools independent of the potentially compromised OS</li>
+                </ul>
+                <h3>Detection & Remediation</h3>
+                <ul>
+                    <li>Offline/out-of-band rootkit scanning</li>
+                    <li>Baseline drift alerting for critical system components</li>
+                    <li>Reimaging & firmware reflash procedures for confirmed compromise</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Best Practices</h2>
+                <ul>
+                    <li>Enable measured boot & TPM attestation across the managed fleet</li>
+                    <li>Use hypervisor-level or out-of-band tools to verify kernel integrity</li>
+                    <li>Maintain known-good baselines for boot & kernel components</li>
+                    <li>Treat confirmed rootkit/bootkit compromise as requiring full reimage & firmware reflash</li>
+                    <li>Coordinate detection with the broader firmware & anti-forensics programs</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Ensure measured boot & attestation are enabled fleet-wide</li>
+                    <li>Fund out-of-band rootkit/bootkit detection tooling</li>
+                    <li>Define remediation standards for confirmed low-level compromise</li>
+                    <li>Coordinate with firmware security & DFIR teams on shared tooling</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>NIST SP 800-193 Platform Firmware Resiliency Guidelines</li>
+                    <li>Trusted Computing Group measured boot specifications</li>
+                    <li>MITRE ATT&CK Rootkit technique (T1014) detection guidance</li>
+                    <li>CISA firmware & boot-integrity guidance</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Device Health Attestation & Compliance Gating | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>Device Health Attestation & Compliance Gating</h1>
+            <p>Verifying a device's security posture before granting it access to enterprise resources</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>Device health attestation verifies that a device meets defined security requirements — patch level, disk encryption, endpoint protection status, boot integrity — before granting it access to enterprise resources, and continues to re-verify throughout the session rather than trusting a one-time check. In 2026, attestation is a core building block of practical zero-trust deployments, using TPM-backed hardware attestation, mobile device compliance signals, and continuous conditional-access policy evaluation tied into identity and network access decisions.</p>
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> Device attestation closes the gap between having a device management policy on paper and actually enforcing it at the access-control layer — an unpatched or non-compliant device is blocked from sensitive resources automatically, rather than relying on manual audit.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Components</h2>
+                <h3>Attestation Signals</h3>
+                <ul>
+                    <li>TPM-backed hardware & boot integrity attestation</li>
+                    <li>Patch level, disk encryption & endpoint protection status</li>
+                    <li>Mobile device compliance signals (jailbreak/root detection, OS version)</li>
+                </ul>
+                <h3>Enforcement</h3>
+                <ul>
+                    <li>Conditional access policies gating resource access on compliance status</li>
+                    <li>Continuous re-verification throughout active sessions</li>
+                    <li>Automated quarantine/remediation workflows for non-compliant devices</li>
+                </ul>
+                <h3>Integration</h3>
+                <ul>
+                    <li>UEM/MDM compliance signal feeds into identity providers</li>
+                    <li>Network access control tied to device health status</li>
+                    <li>Reporting & audit trails for compliance posture over time</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Best Practices</h2>
+                <ul>
+                    <li>Tie conditional access decisions directly to device compliance signals</li>
+                    <li>Re-evaluate device health continuously, not just at initial sign-in</li>
+                    <li>Automate quarantine & remediation workflows for non-compliant devices</li>
+                    <li>Use hardware-backed attestation (TPM) wherever devices support it</li>
+                    <li>Extend attestation coverage to mobile & BYOD devices consistently</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Define device compliance requirements & attestation policy</li>
+                    <li>Integrate attestation signals with identity & conditional access systems</li>
+                    <li>Ensure continuous re-verification is enforced, not one-time checks</li>
+                    <li>Track compliance posture trends & remediation effectiveness</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>NIST SP 800-207 Zero Trust Architecture</li>
+                    <li>Trusted Computing Group device attestation specifications</li>
+                    <li>Microsoft & Google device compliance & conditional access documentation</li>
+                    <li>Gartner & Forrester zero-trust & device attestation reports 2025–2026</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
