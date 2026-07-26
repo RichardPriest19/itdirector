@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chef & Puppet | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>Chef & Puppet</h1>
+            <p>Comparing two established declarative configuration management platforms for infrastructure automation</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>Chef and Puppet are two long-established configuration management platforms that use declarative, code-based definitions to enforce consistent infrastructure and application state across servers at scale. In 2026, both remain in wide use for managing traditional and hybrid infrastructure, though many organizations building purely cloud-native, immutable infrastructure have shifted toward tools like Ansible, Terraform, or Kubernetes-native operators for new workloads while retaining Chef/Puppet for legacy estate management.</p>
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> Both Chef and Puppet solve the same fundamental problem — eliminating configuration drift through declarative, enforced state — and the choice between them (or migration away from both) usually comes down to existing team expertise and the balance between legacy and cloud-native infrastructure in the estate.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Components</h2>
+                <h3>Chef</h3>
+                <ul>
+                    <li>Ruby-based declarative recipes & cookbooks</li>
+                    <li>Chef Infra for configuration enforcement</li>
+                    <li>Strong ecosystem for complex, procedural configuration logic</li>
+                </ul>
+                <h3>Puppet</h3>
+                <ul>
+                    <li>Puppet's own declarative DSL for manifests</li>
+                    <li>Model-driven approach with strong reporting/compliance features</li>
+                    <li>Mature enterprise support & compliance-focused tooling</li>
+                </ul>
+                <h3>Selection Considerations</h3>
+                <ul>
+                    <li>Existing team skill & ecosystem familiarity</li>
+                    <li>Legacy vs. cloud-native infrastructure balance</li>
+                    <li>Migration path toward Ansible/Terraform/Kubernetes-native tooling</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Best Practices</h2>
+                <ul>
+                    <li>Choose based on existing team expertise rather than switching without a clear reason</li>
+                    <li>Maintain configuration code with the same rigor as application code (version control, testing)</li>
+                    <li>Plan a deliberate migration path for legacy estates moving toward cloud-native tooling</li>
+                    <li>Use compliance reporting features to support audit & governance requirements</li>
+                    <li>Avoid running both platforms in parallel indefinitely without a consolidation plan</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Maintain configuration management standards for whichever platform is in use</li>
+                    <li>Plan legacy infrastructure migration paths toward cloud-native tooling where appropriate</li>
+                    <li>Ensure configuration code follows the same governance as application code</li>
+                    <li>Track configuration drift & compliance reporting across the managed estate</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>Chef official documentation & Chef Infra guidance</li>
+                    <li>Puppet official documentation & manifest guidance</li>
+                    <li>CNCF configuration management landscape</li>
+                    <li>Gartner & Forrester configuration management reports 2025–2026</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

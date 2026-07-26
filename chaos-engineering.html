@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chaos Engineering | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>Chaos Engineering</h1>
+            <p>Deliberately injecting failure into systems to build confidence in their resilience</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>Chaos engineering is the discipline of deliberately injecting controlled failures — killing instances, introducing network latency, exhausting resources — into a system to discover weaknesses before they cause a real, uncontrolled outage. In 2026, chaos engineering practice extends beyond infrastructure resilience testing to include AI system failure modes (model unavailability, degraded inference quality) as organizations increasingly depend on AI services as production-critical components.</p>
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> Chaos engineering replaces the false confidence of untested resilience assumptions with empirical evidence — the only reliable way to know a system will survive a specific failure mode is to have actually tested it under controlled conditions, on your own terms, before an attacker or random failure does it for you.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Components</h2>
+                <h3>Experiment Design</h3>
+                <ul>
+                    <li>Steady-state hypothesis definition before injecting failure</li>
+                    <li>Blast radius control & experiment scoping</li>
+                    <li>Gradual rollout from staging to production experiments</li>
+                </ul>
+                <h3>Failure Injection Types</h3>
+                <ul>
+                    <li>Instance/node termination & resource exhaustion</li>
+                    <li>Network latency, partition & packet loss injection</li>
+                    <li>Dependency failure simulation (databases, third-party APIs, AI services)</li>
+                </ul>
+                <h3>Program Maturity</h3>
+                <ul>
+                    <li>Automated, scheduled chaos experiments ('chaos as a service')</li>
+                    <li>Findings feeding into resilience engineering backlogs</li>
+                    <li>Game days combining chaos engineering with incident response practice</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Best Practices</h2>
+                <ul>
+                    <li>Define a clear steady-state hypothesis before running any chaos experiment</li>
+                    <li>Start experiments in staging and expand to production only with careful blast-radius control</li>
+                    <li>Extend failure injection scenarios to cover AI/LLM service dependency failures</li>
+                    <li>Convert every finding into a tracked resilience engineering backlog item</li>
+                    <li>Run regular game days combining chaos experiments with incident response practice</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Sponsor a chaos engineering program with appropriate safety guardrails</li>
+                    <li>Ensure blast radius controls prevent experiments from causing genuine outages</li>
+                    <li>Extend chaos engineering scope to cover AI service dependency failures</li>
+                    <li>Track resilience improvements resulting from chaos engineering findings</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>Principles of Chaos Engineering (principlesofchaos.org)</li>
+                    <li>Netflix Chaos Monkey & Chaos Engineering literature</li>
+                    <li>CNCF chaos engineering landscape (LitmusChaos, Chaos Mesh)</li>
+                    <li>Gartner & Forrester resilience engineering reports 2025–2026</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
