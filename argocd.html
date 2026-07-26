@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Argo CD | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>Argo CD</h1>
+            <p>A declarative, GitOps continuous delivery tool for Kubernetes</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes that continuously monitors Git repositories and automatically reconciles the live cluster state to match what's declared, providing a visual UI for deployment status and drift detection. In 2026, Argo CD remains one of the most widely adopted GitOps controllers, commonly used alongside Argo Rollouts for progressive delivery (canary, blue-green) and ApplicationSets for managing deployments across many clusters consistently.</p>
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> Argo CD's continuous reconciliation model — automatically detecting and correcting drift between Git's declared state and the cluster's actual state — is what makes GitOps practical at scale, replacing manual kubectl apply commands with an auditable, self-healing deployment pipeline.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Components</h2>
+                <h3>Core Capabilities</h3>
+                <ul>
+                    <li>Continuous reconciliation between Git & cluster state</li>
+                    <li>Visual UI for deployment status, health & drift detection</li>
+                    <li>Multi-cluster application management</li>
+                </ul>
+                <h3>Progressive Delivery</h3>
+                <ul>
+                    <li>Argo Rollouts integration for canary & blue-green deployments</li>
+                    <li>Automated rollback on failed health checks</li>
+                    <li>Traffic shifting integration with service mesh</li>
+                </ul>
+                <h3>Enterprise Scaling</h3>
+                <ul>
+                    <li>ApplicationSets for managing deployments across many clusters</li>
+                    <li>RBAC & SSO integration for multi-team access control</li>
+                    <li>Sync policies & automated vs. manual promotion workflows</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Best Practices</h2>
+                <ul>
+                    <li>Enable automated sync with self-healing for genuinely GitOps-native workloads</li>
+                    <li>Use Argo Rollouts for progressive delivery on risk-sensitive production deployments</li>
+                    <li>Manage multi-cluster deployments through ApplicationSets rather than per-cluster configuration</li>
+                    <li>Configure RBAC carefully for multi-team Argo CD instances</li>
+                    <li>Monitor drift detection alerts as a signal of unauthorized or out-of-band cluster changes</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Standardize on Argo CD (or equivalent) as the GitOps continuous delivery controller</li>
+                    <li>Fund progressive delivery capability for risk-sensitive production workloads</li>
+                    <li>Ensure multi-cluster deployment management scales through ApplicationSets</li>
+                    <li>Configure access control appropriately for multi-team GitOps adoption</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>Argo CD official documentation</li>
+                    <li>CNCF Argo project governance</li>
+                    <li>OpenGitOps principles (CNCF)</li>
+                    <li>Argo Rollouts progressive delivery documentation</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

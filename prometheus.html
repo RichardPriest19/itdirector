@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prometheus | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>Prometheus</h1>
+            <p>The de facto standard open-source metrics collection and alerting system for cloud-native environments</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>Prometheus is the de facto standard open-source systems monitoring and alerting toolkit for cloud-native environments, using a pull-based metrics collection model and its own query language (PromQL) to power dashboards and automated alerting. In 2026, Prometheus remains the metrics collection foundation underlying most Kubernetes observability stacks, commonly paired with Grafana for visualization and increasingly integrated into broader AIOps platforms that layer AI-assisted anomaly detection on top of its raw metrics data.</p>
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> Prometheus's pull-based model and label-based data model became the standard for cloud-native metrics precisely because they fit Kubernetes's dynamic, ephemeral workload model — services can appear and disappear constantly while Prometheus's service discovery keeps scraping them without manual reconfiguration.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Components</h2>
+                <h3>Core Architecture</h3>
+                <ul>
+                    <li>Pull-based metrics scraping model</li>
+                    <li>Time-series data storage with label-based dimensionality</li>
+                    <li>PromQL query language for metrics analysis & alerting rules</li>
+                </ul>
+                <h3>Ecosystem Integration</h3>
+                <ul>
+                    <li>Kubernetes-native service discovery for automatic target scraping</li>
+                    <li>Grafana integration for visualization dashboards</li>
+                    <li>Alertmanager for alert routing, grouping & deduplication</li>
+                </ul>
+                <h3>Operational Considerations</h3>
+                <ul>
+                    <li>Long-term storage solutions for metrics retention beyond local limits</li>
+                    <li>Federation & remote-write for multi-cluster/multi-region setups</li>
+                    <li>Cardinality management to avoid metrics explosion</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Best Practices</h2>
+                <ul>
+                    <li>Use Kubernetes service discovery to avoid manual scrape target configuration</li>
+                    <li>Pair with Grafana for visualization rather than relying on Prometheus's native UI alone</li>
+                    <li>Manage label cardinality deliberately to avoid performance & storage issues</li>
+                    <li>Use a long-term storage solution for metrics retention beyond Prometheus's local limits</li>
+                    <li>Configure Alertmanager grouping & deduplication to avoid alert fatigue</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Standardize on Prometheus as the cloud-native metrics collection foundation</li>
+                    <li>Ensure long-term storage & multi-cluster federation strategy is planned deliberately</li>
+                    <li>Fund Grafana or equivalent visualization layered on top of Prometheus data</li>
+                    <li>Monitor cardinality growth to prevent metrics infrastructure performance issues</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>Prometheus official documentation</li>
+                    <li>CNCF Prometheus project governance</li>
+                    <li>Grafana Labs Prometheus integration documentation</li>
+                    <li>Google SRE Book (monitoring & alerting principles)</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

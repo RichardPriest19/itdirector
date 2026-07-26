@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feature Store | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>Feature Store</h1>
+            <p>Centralized infrastructure for storing, sharing, and serving machine learning features consistently</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>A feature store is centralized infrastructure for storing, managing, and serving the engineered features that machine learning models consume — ensuring the same feature computation logic is used consistently between model training and production serving, and letting teams discover and reuse features other teams have already built. In 2026, feature stores remain a core MLOps infrastructure component for organizations running multiple production ML models, reducing duplicated feature engineering effort and eliminating training-serving skew.</p>
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> Feature stores solve the specific, costly problem of training-serving skew — where a model performs well in training but poorly in production because the feature computation logic subtly differs between the two environments — by guaranteeing the same feature definitions are used consistently everywhere.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Components</h2>
+                <h3>Core Capabilities</h3>
+                <ul>
+                    <li>Centralized feature definition & computation logic</li>
+                    <li>Offline store for training & batch use cases</li>
+                    <li>Online store for low-latency production serving</li>
+                </ul>
+                <h3>Governance & Reuse</h3>
+                <ul>
+                    <li>Feature discovery & catalog across teams</li>
+                    <li>Feature versioning & lineage tracking</li>
+                    <li>Access control for sensitive feature data</li>
+                </ul>
+                <h3>Operational Integration</h3>
+                <ul>
+                    <li>Integration with MLOps training & deployment pipelines</li>
+                    <li>Point-in-time correctness for training data joins</li>
+                    <li>Monitoring for feature drift & staleness</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Best Practices</h2>
+                <ul>
+                    <li>Use a feature store to eliminate training-serving skew across production ML models</li>
+                    <li>Catalog features for discovery & reuse across teams before building duplicates</li>
+                    <li>Ensure point-in-time correctness when joining features for training data</li>
+                    <li>Monitor for feature drift & staleness in production, not just at initial deployment</li>
+                    <li>Apply access control to features derived from sensitive underlying data</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Evaluate feature store adoption for organizations running multiple production ML models</li>
+                    <li>Ensure feature governance & cataloging reduces duplicated engineering effort</li>
+                    <li>Fund monitoring for feature drift & training-serving consistency</li>
+                    <li>Apply appropriate access control to features built from sensitive data</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>Feast (open-source feature store) documentation</li>
+                    <li>Google, AWS & Databricks feature store platform documentation</li>
+                    <li>MLOps community feature store best practices</li>
+                    <li>Gartner & Forrester MLOps infrastructure reports 2025–2026</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

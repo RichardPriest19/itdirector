@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Security Testing (SAST/DAST/SCA) | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>Application Security Testing (SAST/DAST/SCA)</h1>
+            <p>Layered automated testing techniques that find vulnerabilities across the software development lifecycle</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>Application Security Testing combines Static Application Security Testing (SAST, analyzing source code without executing it), Dynamic Application Security Testing (DAST, testing a running application from the outside), and Software Composition Analysis (SCA, scanning open-source dependencies) to catch different vulnerability classes at different pipeline stages. In 2026, these tools are standard, automated pipeline gates rather than optional pre-release audits, with AI-assisted triage helping teams manage the volume of findings each technique generates.</p>
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> Each testing technique catches vulnerability classes the others miss — SAST finds code-level flaws before runtime, DAST finds configuration and runtime issues SAST can't see, and SCA catches known vulnerabilities in the open-source dependencies that make up most modern application code — making all three necessary, not redundant.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Components</h2>
+                <h3>SAST</h3>
+                <ul>
+                    <li>Source code analysis without execution</li>
+                    <li>Early pipeline integration (pre-merge, pre-build)</li>
+                    <li>Language & framework-specific rule sets</li>
+                </ul>
+                <h3>DAST</h3>
+                <ul>
+                    <li>Runtime testing of deployed/staging applications</li>
+                    <li>Black-box testing simulating external attacker perspective</li>
+                    <li>API & web application vulnerability discovery</li>
+                </ul>
+                <h3>SCA</h3>
+                <ul>
+                    <li>Open-source dependency vulnerability scanning</li>
+                    <li>License compliance checking</li>
+                    <li>Software Bill of Materials (SBOM) generation</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Best Practices</h2>
+                <ul>
+                    <li>Integrate SAST as an early, pre-merge pipeline gate rather than a late pre-release step</li>
+                    <li>Run DAST against staging environments that mirror production configuration</li>
+                    <li>Scan dependencies continuously with SCA, not just at initial adoption</li>
+                    <li>Use AI-assisted triage to manage finding volume without missing genuine risk</li>
+                    <li>Track remediation SLAs by severity across all three testing techniques</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Mandate SAST/DAST/SCA as standard pipeline gates for all application development</li>
+                    <li>Ensure finding triage & remediation SLAs are tracked & enforced</li>
+                    <li>Fund AI-assisted triage tooling to manage testing volume at scale</li>
+                    <li>Extend SCA & SBOM generation to meet supply chain security requirements</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>OWASP Testing Guide</li>
+                    <li>NIST SP 800-218 Secure Software Development Framework (SSDF)</li>
+                    <li>OWASP Software Component Verification Standard</li>
+                    <li>Gartner & Forrester application security testing reports 2025–2026</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

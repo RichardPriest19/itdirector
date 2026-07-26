@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helm | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>Helm</h1>
+            <p>The package manager for Kubernetes, standardizing how applications are packaged and deployed</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>Helm is the standard package manager for Kubernetes, using "charts" — templated, versioned collections of Kubernetes manifest files — to package applications for consistent, repeatable installation and upgrade across clusters. In 2026, Helm remains the dominant Kubernetes packaging standard, with a large public chart ecosystem for common software and growing enterprise use of private chart repositories for internal application packaging alongside GitOps-based deployment workflows.</p>
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> Helm solves the practical problem of deploying complex, multi-resource Kubernetes applications consistently — templating out environment-specific values while keeping the underlying manifest structure standardized — turning what would otherwise be sprawling, hand-maintained YAML files into versioned, repeatable, upgradeable packages.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Components</h2>
+                <h3>Core Concepts</h3>
+                <ul>
+                    <li>Charts — templated, versioned Kubernetes manifest packages</li>
+                    <li>Values files for environment-specific configuration</li>
+                    <li>Releases — installed instances of a chart in a cluster</li>
+                </ul>
+                <h3>Ecosystem</h3>
+                <ul>
+                    <li>Public chart repositories (Artifact Hub) for common software</li>
+                    <li>Private/internal chart repositories for proprietary applications</li>
+                    <li>Chart dependency management for multi-component applications</li>
+                </ul>
+                <h3>Operational Integration</h3>
+                <ul>
+                    <li>GitOps-based Helm deployment (Argo CD, Flux)</li>
+                    <li>Chart testing & linting in CI pipelines</li>
+                    <li>Upgrade & rollback management for cluster applications</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Best Practices</h2>
+                <ul>
+                    <li>Use values files to separate environment-specific configuration from chart templates</li>
+                    <li>Maintain a private chart repository for internal application packaging standards</li>
+                    <li>Integrate Helm deployment into GitOps workflows rather than manual helm install commands</li>
+                    <li>Lint & test charts in CI before they reach any cluster</li>
+                    <li>Pin chart & dependency versions deliberately rather than always tracking latest</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Standardize on Helm as the Kubernetes application packaging approach</li>
+                    <li>Maintain private chart repository standards for internal applications</li>
+                    <li>Integrate Helm deployment into GitOps & CI/CD pipelines</li>
+                    <li>Track chart versioning & upgrade practices across managed clusters</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>Helm official documentation</li>
+                    <li>Artifact Hub public chart repository</li>
+                    <li>CNCF Helm project governance & release notes</li>
+                    <li>Kubernetes packaging & deployment best practices guidance</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
