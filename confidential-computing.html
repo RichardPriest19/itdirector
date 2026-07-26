@@ -3,45 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Confidential Computing - IT Director Hub</title>
+    <title>Confidential Computing | IT Director Hub</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="container">
-    <header class="header">
-        <div class="header-content">
+    <div class="container">
+        <div class="page-header">
             <a href="index.html" class="back-button">← Back to Dashboard</a>
-            <h1 class="logo">Confidential Computing</h1>
-            <p class="tagline">Hardware-based Trusted Execution Environments (TEEs) that protect data in use – critical for secure AI inference and regulated workloads</p>
+            <h1>Confidential Computing</h1>
+            <p>Hardware-based protection of data in use through isolated, encrypted execution environments</p>
         </div>
-    </header>
 
-    <main class="main-content">
-        <section class="content-section">
-            <h2>Overview</h2>
-            <p>Confidential Computing uses CPU features (Intel TDX, AMD SEV, ARM CCA, etc.) and confidential VMs/containers to keep data encrypted even while being processed. It is rapidly becoming a foundational technology for enterprise AI adoption in 2026.</p>
-        </section>
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>Confidential Computing protects data while it is being processed — not just at rest or in transit — by running workloads inside hardware-based Trusted Execution Environments (TEEs) that isolate memory and computation from the host OS, hypervisor, and cloud operator. In 2026, confidential computing is mainstream across major clouds (AWS Nitro Enclaves, Azure Confidential VMs, Google Confidential Space), used for confidential AI/ML inference and training, multi-party data collaboration, regulated industries (finance, healthcare, government), and confidential containers on Kubernetes.</p>
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> Confidential computing closes the "data in use" gap, enabling secure multi-party computation, protecting sensitive AI models and training data, and providing verifiable attestation that workloads run unmodified in a trusted environment.
+                </div>
+            </div>
 
-        <section class="content-section">
-            <h2>Use Cases</h2>
-            <ul>
-                <li>Secure multi-party AI training and inference</li>
-                <li>Protecting sensitive data in cloud/hybrid environments</li>
-                <li>Regulated industries (finance, healthcare, government)</li>
-                <li>Confidential AI model serving without exposing weights or prompts</li>
-            </ul>
-        </section>
+            <div class="content-section">
+                <h2>Core Components (2026)</h2>
+                <h3>Hardware Roots of Trust</h3>
+                <ul>
+                    <li>Intel TDX, AMD SEV-SNP, ARM CCA</li>
+                    <li>Trusted Execution Environments (TEEs)</li>
+                    <li>Remote attestation services</li>
+                </ul>
+                <h3>Platform Integrations</h3>
+                <ul>
+                    <li>Confidential VMs across major cloud providers</li>
+                    <li>Confidential containers & Kubernetes node pools</li>
+                    <li>Confidential AI/ML training & inference enclaves</li>
+                </ul>
+                <h3>Use Case Patterns</h3>
+                <ul>
+                    <li>Multi-party data clean rooms</li>
+                    <li>Confidential model & prompt protection</li>
+                    <li>Regulated data processing (PII, PHI, financial records)</li>
+                </ul>
+            </div>
 
-        <section class="content-section">
-            <h2>2026 Status</h2>
-            <p>75%+ of organizations are adopting or piloting confidential computing. Gartner ranks it among the top technologies to watch. Major cloud providers offer confidential VM and container options with attestation capabilities.</p>
-        </section>
-    </main>
+            <div class="content-section">
+                <h2>Key Trends & Best Practices in 2026</h2>
+                <h3>Cloud & Platform Adoption</h3>
+                <ul>
+                    <li>Default-on confidential VM options from hyperscalers</li>
+                    <li>Growing confidential-AI tooling for LLM workloads</li>
+                    <li>Confidential computing consortium standardization</li>
+                </ul>
+                <h3>Governance & Verification</h3>
+                <ul>
+                    <li>Attestation-based trust verification pipelines</li>
+                    <li>Confidential computing built into zero-trust architectures</li>
+                    <li>Audit trails for regulated workload processing</li>
+                </ul>
+            </div>
 
-    <footer class="footer">
-        <p>© 2026 IT Director Hub • Confidential Computing Reference</p>
-    </footer>
-</div>
-<script src="script.js"></script>
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Identify workloads handling highly sensitive data-in-use</li>
+                    <li>Evaluate confidential computing options across cloud vendors</li>
+                    <li>Integrate attestation into security & compliance workflows</li>
+                    <li>Assess performance & cost trade-offs of TEE adoption</li>
+                    <li>Align confidential computing with data protection regulations</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>Confidential Computing Consortium technical guidance</li>
+                    <li>NIST data-in-use protection guidance</li>
+                    <li>Cloud provider confidential computing documentation</li>
+                    <li>Gartner & Forrester confidential computing reports 2025–2026</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

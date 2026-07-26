@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Command-and-Control (C2) Traffic Detection | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>Command-and-Control (C2) Traffic Detection</h1>
+            <p>Identifying and disrupting covert communication channels between compromised hosts and attackers</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>Command-and-control (C2) traffic detection focuses on identifying network communications between compromised internal systems and external attacker infrastructure, which attackers increasingly disguise within legitimate-looking protocols (HTTPS, DNS, cloud APIs) to blend in with normal traffic. In 2026, detection relies on encrypted traffic analysis (JA3/JA4 fingerprinting), DNS anomaly detection, network detection & response (NDR) platforms, and behavioral baselining to flag beaconing patterns even when payloads are encrypted.</p>
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> Reliable C2 detection interrupts an active attack before data exfiltration or lateral movement completes, turning network telemetry into an early-warning system rather than a post-incident audit trail.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Components</h2>
+                <h3>Detection Techniques</h3>
+                <ul>
+                    <li>Beaconing & periodicity analysis</li>
+                    <li>Encrypted traffic fingerprinting (JA3/JA4, TLS metadata)</li>
+                    <li>DNS tunneling & fast-flux domain detection</li>
+                </ul>
+                <h3>Platforms</h3>
+                <ul>
+                    <li>Network Detection & Response (NDR)</li>
+                    <li>DNS security & resolver-level monitoring</li>
+                    <li>Threat intelligence feed integration (known C2 infrastructure)</li>
+                </ul>
+                <h3>Response</h3>
+                <ul>
+                    <li>Automated network isolation & blocking playbooks</li>
+                    <li>Egress filtering & allowlist-based outbound policy</li>
+                    <li>Cross-correlation with EDR & identity telemetry</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Best Practices</h2>
+                <ul>
+                    <li>Deploy NDR with encrypted traffic analysis across egress points</li>
+                    <li>Enforce strict egress filtering & default-deny outbound policy</li>
+                    <li>Monitor DNS queries for tunneling & anomalous domain patterns</li>
+                    <li>Integrate up-to-date threat intelligence feeds into detection rules</li>
+                    <li>Correlate network alerts with endpoint & identity telemetry for faster triage</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Ensure NDR & DNS security coverage across the network perimeter</li>
+                    <li>Define egress filtering & outbound traffic policy</li>
+                    <li>Maintain threat intelligence integration for known-bad infrastructure</li>
+                    <li>Fund cross-team correlation between network, endpoint & identity security</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>MITRE ATT&CK Command and Control tactic (TA0011) detection guidance</li>
+                    <li>NIST SP 800-94 Guide to Intrusion Detection & Prevention Systems</li>
+                    <li>CISA network defense & threat hunting guidance</li>
+                    <li>Gartner & Forrester NDR market reports 2025–2026</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows Endpoint Hardening & Persistence Detection | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>Windows Endpoint Hardening & Persistence Detection</h1>
+            <p>Closing the mechanisms attackers use to survive reboots and blend into Windows services</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>Windows endpoint hardening focuses on reducing the attack surface of Windows systems and detecting persistence mechanisms — malicious services, scheduled tasks, registry run keys, and WMI subscriptions — that allow compromise to survive reboots and evade casual inspection. In 2026, this is supported by Windows Defender Application Control (WDAC), attack surface reduction (ASR) rules, and EDR platforms that specifically baseline and alert on new services, driver installations, and registry persistence points across the Windows fleet, from legacy versions through the current release.</p>
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> Systematic persistence-mechanism monitoring turns Windows's built-in flexibility — the very thing that makes services, tasks, and registry run keys useful for legitimate administration — into a detection surface rather than a blind spot.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Components</h2>
+                <h3>Attack Surface Reduction</h3>
+                <ul>
+                    <li>Windows Defender Application Control (WDAC) & AppLocker</li>
+                    <li>Attack Surface Reduction (ASR) rules</li>
+                    <li>Credential Guard & LSA protection</li>
+                </ul>
+                <h3>Persistence Detection</h3>
+                <ul>
+                    <li>New service & driver installation alerting</li>
+                    <li>Scheduled task & registry run-key monitoring</li>
+                    <li>WMI event subscription baseline & anomaly detection</li>
+                </ul>
+                <h3>Patch & Configuration Management</h3>
+                <ul>
+                    <li>Consistent patch cadence across all supported Windows versions</li>
+                    <li>CIS Benchmark-aligned configuration baselines</li>
+                    <li>Group Policy / Intune-enforced security baselines</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Best Practices</h2>
+                <ul>
+                    <li>Deploy WDAC or AppLocker to restrict unauthorized executable execution</li>
+                    <li>Enable ASR rules & Credential Guard on all supported endpoints</li>
+                    <li>Alert on new service creation, scheduled tasks & registry persistence points</li>
+                    <li>Enforce CIS Benchmark-aligned baselines via Group Policy or Intune</li>
+                    <li>Retire unsupported Windows versions from the fleet promptly</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Define Windows hardening baselines & enforce via policy management</li>
+                    <li>Ensure persistence-mechanism monitoring is active fleet-wide</li>
+                    <li>Track patch compliance across all supported Windows versions</li>
+                    <li>Retire end-of-life Windows systems from production</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>Microsoft Security Baselines for Windows</li>
+                    <li>CIS Benchmarks for Microsoft Windows</li>
+                    <li>MITRE ATT&CK Persistence tactic (TA0003) detection guidance</li>
+                    <li>NIST SP 800-53 configuration management controls</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Router & Network Device Firmware Security | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>Router & Network Device Firmware Security</h1>
+            <p>Hardening the network devices that sit at the perimeter and inside every enterprise segment</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>Routers, switches, and wireless access points run their own firmware and are frequent, high-value targets because compromise at this layer can enable traffic interception across an entire network segment. In 2026, enterprise practice emphasizes signed firmware verification, disabling legacy remote-management protocols, regular firmware patch cycles, and network monitoring specifically tuned to detect anomalous device behavior such as unexpected configuration changes or traffic redirection.</p>
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> Because network devices sit at chokepoints for enterprise traffic, hardened firmware and disciplined patch management prevent an entire network segment from being silently exposed to interception or manipulation.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Components</h2>
+                <h3>Firmware Integrity</h3>
+                <ul>
+                    <li>Signed firmware verification & secure boot on network devices</li>
+                    <li>Vendor patch monitoring & scheduled update cycles</li>
+                    <li>Configuration backup & drift detection</li>
+                </ul>
+                <h3>Access Control</h3>
+                <ul>
+                    <li>Disabling legacy/insecure remote management (Telnet, unauthenticated SNMP)</li>
+                    <li>Strong, unique administrative credentials per device</li>
+                    <li>Management-plane network segmentation</li>
+                </ul>
+                <h3>Monitoring</h3>
+                <ul>
+                    <li>Configuration-change alerting</li>
+                    <li>Anomalous routing/traffic-redirection detection</li>
+                    <li>Regular firmware vulnerability scanning</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Best Practices</h2>
+                <ul>
+                    <li>Verify signed firmware and enable secure boot on all supported devices</li>
+                    <li>Disable unused/legacy remote-management protocols by default</li>
+                    <li>Segment device management interfaces from general network traffic</li>
+                    <li>Monitor for unauthorized configuration changes in real time</li>
+                    <li>Maintain a rolling firmware patch schedule aligned to vendor advisories</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Define network device hardening & patch management standards</li>
+                    <li>Ensure management-plane segmentation across all sites</li>
+                    <li>Track vendor firmware advisories & compliance status</li>
+                    <li>Integrate network device monitoring into SOC workflows</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>NIST SP 800-193 Platform Firmware Resiliency Guidelines</li>
+                    <li>CISA network infrastructure security guidance</li>
+                    <li>Vendor security advisories for enterprise router/switch platforms</li>
+                    <li>Center for Internet Security (CIS) network device benchmarks</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

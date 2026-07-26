@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firmware & UEFI Security | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>Firmware & UEFI Security</h1>
+            <p>Protecting boot firmware and low-level system components from tampering & persistence threats</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>Firmware & UEFI security covers the protection of boot-level and low-level firmware — BIOS/UEFI, EFI System Partitions, and device firmware — against tampering that could persist below the operating system and survive reinstalls. In 2026, this discipline is driven by mandatory Secure Boot, firmware attestation services, supply-chain firmware integrity verification, and hardware root-of-trust technologies embedded in enterprise devices.</p>
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> Firmware-level protections stop the most persistent class of compromise — one that survives OS reinstalls and standard remediation — by verifying integrity at every boot and restricting unauthorized firmware modification.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Components</h2>
+                <h3>Boot Integrity</h3>
+                <ul>
+                    <li>UEFI Secure Boot & signed bootloader chains</li>
+                    <li>Trusted Platform Module (TPM) attestation</li>
+                    <li>Measured boot & remote attestation services</li>
+                </ul>
+                <h3>Firmware Management</h3>
+                <ul>
+                    <li>Vendor firmware update & signing verification</li>
+                    <li>Firmware Bill of Materials (FBOM) tracking</li>
+                    <li>Automated firmware vulnerability scanning</li>
+                </ul>
+                <h3>Detection</h3>
+                <ul>
+                    <li>Firmware integrity monitoring tools</li>
+                    <li>EFI System Partition anomaly detection</li>
+                    <li>Hardware-based root-of-trust verification</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Best Practices</h2>
+                <ul>
+                    <li>Enforce Secure Boot & TPM-backed attestation on all managed endpoints</li>
+                    <li>Maintain an up-to-date firmware inventory & patch cadence</li>
+                    <li>Restrict physical & remote access to firmware update mechanisms</li>
+                    <li>Use vendor-verified firmware sources only; block unsigned updates</li>
+                    <li>Integrate firmware integrity checks into endpoint detection & response</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Define firmware security policy across device fleets</li>
+                    <li>Ensure Secure Boot & attestation are enabled by default</li>
+                    <li>Track vendor firmware advisories & patch compliance</li>
+                    <li>Include firmware integrity in incident response playbooks</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>NIST SP 800-193 Platform Firmware Resiliency Guidelines</li>
+                    <li>UEFI Forum Secure Boot specifications</li>
+                    <li>Trusted Computing Group TPM documentation</li>
+                    <li>CISA firmware security guidance</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux & Unix Host Hardening | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>Linux & Unix Host Hardening</h1>
+            <p>Securing the kernel, services, and configuration of Linux, macOS & Unix-family systems</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>Linux and Unix-family host hardening covers reducing attack surface at the kernel, service, and configuration level across servers, workstations, and specialized Unix systems. In 2026, this includes kernel module allowlisting, mandatory access control frameworks (SELinux, AppArmor), integrity monitoring for kernel-level tampering, and consistent configuration baselines across the full range of Unix-family operating systems used in enterprise and specialized environments.</p>
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> Kernel-level and configuration hardening prevents attackers from using legitimate system extensibility (kernel modules, cron, systemd units) as a stealthy foothold, closing off traffic redirection and rootkit-style persistence at the source.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Components</h2>
+                <h3>Kernel & Module Security</h3>
+                <ul>
+                    <li>Kernel module signing & loading restrictions</li>
+                    <li>Mandatory Access Control (SELinux, AppArmor)</li>
+                    <li>Kernel integrity monitoring & rootkit detection</li>
+                </ul>
+                <h3>Configuration Hardening</h3>
+                <ul>
+                    <li>CIS Benchmark-aligned baselines for Linux distributions & Unix variants</li>
+                    <li>Service minimization & unnecessary daemon removal</li>
+                    <li>Systemd unit & cron job integrity monitoring</li>
+                </ul>
+                <h3>Access & Monitoring</h3>
+                <ul>
+                    <li>sudo/privilege escalation logging & alerting</li>
+                    <li>File integrity monitoring (FIM) on critical system paths</li>
+                    <li>Centralized audit logging (auditd) with tamper-evidence</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Best Practices</h2>
+                <ul>
+                    <li>Enforce kernel module signing & restrict unauthorized module loading</li>
+                    <li>Deploy SELinux or AppArmor in enforcing mode on production systems</li>
+                    <li>Monitor systemd units, cron jobs & startup scripts for unauthorized changes</li>
+                    <li>Apply CIS Benchmarks consistently across distributions & Unix variants</li>
+                    <li>Centralize auditd logs with tamper-evident retention</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Define Linux/Unix hardening baselines across all managed systems</li>
+                    <li>Ensure kernel integrity monitoring & MAC frameworks are active</li>
+                    <li>Track patch & configuration compliance across distributions</li>
+                    <li>Maintain centralized, tamper-evident audit logging</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>CIS Benchmarks for Linux distributions & Unix systems</li>
+                    <li>NIST SP 800-53 configuration management controls</li>
+                    <li>SELinux & AppArmor project documentation</li>
+                    <li>MITRE ATT&CK Linux-specific persistence & defense evasion techniques</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSH Security & Credential Protection | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>SSH Security & Credential Protection</h1>
+            <p>Hardening secure shell access and protecting the credentials that guard remote administration</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>SSH is the backbone of secure remote administration for Linux, network devices, and cloud infrastructure, which makes SSH credentials and session integrity a high-value target. In 2026, enterprise SSH security emphasizes certificate-based authentication over long-lived keys, centralized key/credential management, session recording for privileged access, and monitoring for anomalous authentication patterns across fleets of servers.</p>
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> Hardened SSH access — short-lived certificates, centralized key governance, and session monitoring — prevents credential theft from translating into silent, long-term unauthorized access across critical infrastructure.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Components</h2>
+                <h3>Authentication</h3>
+                <ul>
+                    <li>SSH certificate authorities & short-lived certificates</li>
+                    <li>Centralized key management & rotation</li>
+                    <li>Multi-factor authentication for privileged SSH access</li>
+                </ul>
+                <h3>Session Control</h3>
+                <ul>
+                    <li>Privileged Access Management (PAM) session brokering</li>
+                    <li>Session recording & audit logging</li>
+                    <li>Just-in-time access provisioning</li>
+                </ul>
+                <h3>Monitoring</h3>
+                <ul>
+                    <li>Anomalous login pattern & geo-velocity detection</li>
+                    <li>Key usage & credential exfiltration monitoring</li>
+                    <li>Automated key rotation & revocation on compromise indicators</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Best Practices</h2>
+                <ul>
+                    <li>Move from static long-lived SSH keys to short-lived certificates</li>
+                    <li>Broker privileged SSH sessions through a PAM solution with recording</li>
+                    <li>Enforce MFA for SSH access to critical systems</li>
+                    <li>Rotate and revoke keys promptly on personnel changes or compromise signals</li>
+                    <li>Monitor authentication logs for anomalous access patterns</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Define enterprise SSH key & certificate management policy</li>
+                    <li>Ensure privileged SSH sessions are brokered & recorded</li>
+                    <li>Track key rotation compliance across all managed systems</li>
+                    <li>Integrate SSH monitoring into broader identity threat detection</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>NIST IR 7966 Security of Interactive & Automated Access Management Using SSH</li>
+                    <li>CIS SSH hardening benchmarks</li>
+                    <li>OpenSSH certificate authentication documentation</li>
+                    <li>Gartner & Forrester Privileged Access Management reports 2025–2026</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
