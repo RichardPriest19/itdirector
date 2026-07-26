@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HashiCorp Vault | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>HashiCorp Vault</h1>
+            <p>A widely used platform for centralized secrets management, encryption, and identity-based access</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>HashiCorp Vault is a widely adopted platform for centralized secrets management, providing dynamic secrets generation, encryption-as-a-service, and identity-based access control across cloud and on-premises environments. In 2026, Vault deployments commonly serve as the central secrets backbone for Kubernetes clusters, CI/CD pipelines, and multi-cloud infrastructure, with HCP Vault (HashiCorp Cloud Platform) offering a managed alternative to self-hosted operation.</p>
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> Vault's dynamic secrets model — generating short-lived, automatically expiring credentials on demand rather than storing static ones — is the practical mechanism behind much of modern secrets management best practice, directly reducing the value of any single leaked credential.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Components</h2>
+                <h3>Core Capabilities</h3>
+                <ul>
+                    <li>Dynamic secrets generation for databases & cloud providers</li>
+                    <li>Encryption-as-a-service (Transit secrets engine)</li>
+                    <li>Identity-based access policies (auth methods)</li>
+                </ul>
+                <h3>Deployment Models</h3>
+                <ul>
+                    <li>Self-hosted Vault clusters</li>
+                    <li>HCP Vault managed service</li>
+                    <li>Integration with Kubernetes via Vault Agent/CSI</li>
+                </ul>
+                <h3>Operational Practices</h3>
+                <ul>
+                    <li>Auto-unseal configuration for high availability</li>
+                    <li>Audit logging of all secret access</li>
+                    <li>Policy-as-code for access control management</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Best Practices</h2>
+                <ul>
+                    <li>Use dynamic, short-lived secrets rather than static long-lived credentials wherever supported</li>
+                    <li>Configure auto-unseal and high-availability clustering for production reliability</li>
+                    <li>Enable comprehensive audit logging on all Vault access</li>
+                    <li>Manage access policies as code for consistency & review</li>
+                    <li>Integrate Vault directly into CI/CD & Kubernetes secret injection workflows</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Own enterprise secrets management platform strategy & Vault deployment</li>
+                    <li>Ensure dynamic secrets adoption across databases & cloud credentials</li>
+                    <li>Maintain high-availability configuration for production Vault clusters</li>
+                    <li>Audit Vault access patterns & policy compliance regularly</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>HashiCorp Vault official documentation</li>
+                    <li>NIST SP 800-57 Key Management Recommendations</li>
+                    <li>CIS Benchmark guidance for secrets management</li>
+                    <li>HashiCorp Vault security model whitepaper</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

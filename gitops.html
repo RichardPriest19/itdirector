@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitOps | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>GitOps</h1>
+            <p>Using Git as the single source of truth for declarative infrastructure and application deployment</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>GitOps is an operational model where the desired state of infrastructure and applications is declared in Git, and automated controllers continuously reconcile the live environment to match that declared state. In 2026, GitOps is the default deployment pattern for Kubernetes-native platforms, using tools like Argo CD and Flux to provide auditable, rollback-friendly, pull-based deployment across multi-cluster and multi-cloud environments.</p>
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> GitOps turns every infrastructure and deployment change into a reviewed, version-controlled, auditable pull request — replacing ad hoc manual changes with a consistent, rollback-friendly delivery model that matches how teams already manage application code.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Components</h2>
+                <h3>Core Principles</h3>
+                <ul>
+                    <li>Git as the single source of truth for desired state</li>
+                    <li>Automated reconciliation controllers (Argo CD, Flux)</li>
+                    <li>Pull-based deployment rather than push-based scripts</li>
+                </ul>
+                <h3>Workflow</h3>
+                <ul>
+                    <li>Pull request review for all infrastructure changes</li>
+                    <li>Automated drift detection & self-healing</li>
+                    <li>Multi-cluster & multi-environment promotion pipelines</li>
+                </ul>
+                <h3>Governance</h3>
+                <ul>
+                    <li>Audit trail via Git history for compliance</li>
+                    <li>Policy-as-code enforcement (OPA/Kyverno) in the pipeline</li>
+                    <li>Rollback via Git revert for rapid recovery</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Best Practices</h2>
+                <ul>
+                    <li>Require pull request review for all infrastructure & config changes</li>
+                    <li>Use automated reconciliation to detect & correct configuration drift</li>
+                    <li>Integrate policy-as-code checks into the GitOps pipeline</li>
+                    <li>Maintain clear promotion paths between dev, staging & production</li>
+                    <li>Treat Git history as the audit trail for compliance reporting</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Sponsor GitOps adoption for infrastructure & application delivery</li>
+                    <li>Ensure policy-as-code enforcement is integrated into pipelines</li>
+                    <li>Oversee multi-cluster/multi-environment promotion standards</li>
+                    <li>Leverage Git audit trails for compliance & change reporting</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>OpenGitOps principles (CNCF)</li>
+                    <li>Argo CD & Flux project documentation</li>
+                    <li>Open Policy Agent (OPA) policy-as-code guidance</li>
+                    <li>Gartner & Forrester GitOps & platform engineering reports 2025–2026</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

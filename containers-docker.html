@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Containers & Docker | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>Containers & Docker</h1>
+            <p>Container technology – lightweight virtualization, image registries, orchestration</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>Docker popularized application containerization — packaging applications with their dependencies into lightweight, portable images that run consistently across environments — using layered images, a standard runtime, and registries for image distribution. In 2026, Docker remains the dominant container image format and local development tool, even as production orchestration has largely consolidated around Kubernetes, with Docker Compose still widely used for local multi-container development environments.</p>
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> Docker's standardized image format and layered build process solved the fundamental "works on my machine" problem by packaging an application with its exact runtime environment, becoming the foundation that container orchestration platforms like Kubernetes build upon.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Components</h2>
+                <h3>Core Concepts</h3>
+                <ul>
+                    <li>Dockerfile-based image builds & layered caching</li>
+                    <li>Container registries (Docker Hub, private registries)</li>
+                    <li>Docker Compose for local multi-container development</li>
+                </ul>
+                <h3>Image Management</h3>
+                <ul>
+                    <li>Base image selection & minimization</li>
+                    <li>Multi-stage builds for smaller production images</li>
+                    <li>Image vulnerability scanning before registry push</li>
+                </ul>
+                <h3>Production Considerations</h3>
+                <ul>
+                    <li>Transition from Docker Compose to Kubernetes for production orchestration</li>
+                    <li>Container runtime security (rootless containers, read-only filesystems)</li>
+                    <li>Image signing & provenance verification</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Best Practices</h2>
+                <ul>
+                    <li>Use multi-stage builds to keep production images minimal & fast to deploy</li>
+                    <li>Scan every image for vulnerabilities before pushing to a registry</li>
+                    <li>Run containers with least-privilege configurations (non-root, read-only filesystem where possible)</li>
+                    <li>Use Docker Compose for local development but Kubernetes for production orchestration</li>
+                    <li>Sign and verify image provenance throughout the build & deployment pipeline</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Define container image build & security standards</li>
+                    <li>Ensure vulnerability scanning is enforced before registry push</li>
+                    <li>Oversee the transition path from local Docker development to production orchestration</li>
+                    <li>Track image size, build efficiency & security compliance across teams</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>Docker official documentation</li>
+                    <li>NIST SP 800-190 Application Container Security Guide</li>
+                    <li>CIS Benchmark for Docker</li>
+                    <li>CNCF container landscape & Kubernetes documentation</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

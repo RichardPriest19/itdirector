@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microservices | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>Microservices</h1>
+            <p>Building applications as independently deployable services organized around business capability</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>Microservices architecture decomposes applications into small, independently deployable services, each owning a specific business capability and communicating over well-defined APIs. In 2026, mature microservices practice emphasizes service mesh for cross-cutting concerns, contract-based API testing, and domain-driven design boundaries — with growing recognition that microservices trade development-time simplicity for operational complexity, making the decision workload-dependent rather than default.</p>
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> Microservices let teams deploy, scale, and evolve services independently, enabling faster iteration and better fault isolation — but only when organizational structure, tooling maturity, and workload characteristics justify the added operational complexity.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Components</h2>
+                <h3>Design Principles</h3>
+                <ul>
+                    <li>Domain-driven design & bounded contexts</li>
+                    <li>API-first contract design between services</li>
+                    <li>Database-per-service data ownership</li>
+                </ul>
+                <h3>Operational Foundations</h3>
+                <ul>
+                    <li>Service mesh for traffic management & observability</li>
+                    <li>Distributed tracing across service boundaries</li>
+                    <li>Independent CI/CD pipelines per service</li>
+                </ul>
+                <h3>Resilience Patterns</h3>
+                <ul>
+                    <li>Circuit breakers & graceful degradation</li>
+                    <li>Contract testing to prevent breaking changes</li>
+                    <li>Centralized API gateway for external access</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Best Practices</h2>
+                <ul>
+                    <li>Only decompose into microservices where team structure & scale justify it</li>
+                    <li>Establish clear service ownership & on-call accountability</li>
+                    <li>Invest in distributed tracing before scaling service count</li>
+                    <li>Use contract testing to catch breaking changes between services</li>
+                    <li>Avoid distributed monoliths — ensure services are truly independently deployable</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Assess whether microservices architecture fits organizational maturity</li>
+                    <li>Ensure observability & tracing scale with service count</li>
+                    <li>Define service ownership & governance standards</li>
+                    <li>Monitor for accidental complexity (distributed monolith anti-patterns)</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>Sam Newman's microservices architecture literature</li>
+                    <li>CNCF microservices & service mesh landscape</li>
+                    <li>NIST SP 800-204 series microservices security guidance</li>
+                    <li>Gartner & Forrester microservices adoption reports 2025–2026</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

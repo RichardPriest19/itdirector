@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Container Security | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>Container Security</h1>
+            <p>Securing container images, runtimes, and orchestration platforms across the build-to-run lifecycle</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>Container security covers protecting the full container lifecycle — image build, registry storage, orchestration, and runtime — from vulnerabilities, misconfiguration, and runtime threats. In 2026, container security practice emphasizes shift-left image scanning integrated into CI/CD, Kubernetes-native admission control policies, and runtime detection tuned to the ephemeral, immutable nature of container workloads.</p>
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> Container security requires a different model than traditional endpoint protection — with workloads often living for minutes and images rebuilt constantly, the highest-leverage controls are scanning and policy enforcement before deployment, backed by lightweight runtime detection tuned for ephemeral infrastructure.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Components</h2>
+                <h3>Build-Time Security</h3>
+                <ul>
+                    <li>Container image vulnerability scanning</li>
+                    <li>Base image minimization & hardening</li>
+                    <li>Software Bill of Materials (SBOM) generation</li>
+                </ul>
+                <h3>Deploy-Time Controls</h3>
+                <ul>
+                    <li>Kubernetes admission control policies (OPA/Kyverno)</li>
+                    <li>Image signing & provenance verification</li>
+                    <li>Registry access control & scanning gates</li>
+                </ul>
+                <h3>Runtime Protection</h3>
+                <ul>
+                    <li>Runtime behavioral anomaly detection</li>
+                    <li>Least-privilege container & pod security policies</li>
+                    <li>Network policy enforcement between workloads</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Best Practices</h2>
+                <ul>
+                    <li>Scan every container image for vulnerabilities before it reaches the registry</li>
+                    <li>Enforce admission control policies blocking non-compliant deployments</li>
+                    <li>Sign and verify image provenance throughout the supply chain</li>
+                    <li>Apply least-privilege security contexts to every container & pod</li>
+                    <li>Monitor runtime behavior for anomalies rather than relying on build-time scanning alone</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Define container security standards across build, deploy & runtime stages</li>
+                    <li>Ensure admission control policy enforcement is active cluster-wide</li>
+                    <li>Track vulnerability remediation SLAs for container images</li>
+                    <li>Fund runtime container security tooling appropriate to workload scale</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>NIST SP 800-190 Application Container Security Guide</li>
+                    <li>CIS Benchmarks for Docker & Kubernetes</li>
+                    <li>Kubernetes Pod Security Standards</li>
+                    <li>Gartner & Forrester container security reports 2025–2026</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

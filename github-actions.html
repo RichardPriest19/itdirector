@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Actions | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>GitHub Actions</h1>
+            <p>Native CI/CD automation built directly into GitHub repositories</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>GitHub Actions is GitHub's native CI/CD and workflow automation platform, letting teams define build, test, and deployment pipelines as YAML files stored alongside their code. In 2026, GitHub Actions is widely used for enterprise CI/CD, with growing adoption of self-hosted runners for compliance/performance needs, reusable workflow templates for organization-wide standardization, and tight integration with security scanning (CodeQL, Dependabot).</p>
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> Because workflows live in the same repository as the code they build, GitHub Actions eliminates the context-switching and configuration drift of separate CI/CD tooling, while reusable workflows let platform teams enforce consistent pipeline standards organization-wide.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Components</h2>
+                <h3>Pipeline Design</h3>
+                <ul>
+                    <li>YAML-defined workflows triggered by repository events</li>
+                    <li>Reusable & composite workflows for standardization</li>
+                    <li>Matrix builds for multi-platform/version testing</li>
+                </ul>
+                <h3>Runners & Infrastructure</h3>
+                <ul>
+                    <li>GitHub-hosted vs. self-hosted runner trade-offs</li>
+                    <li>Runner security & isolation for sensitive builds</li>
+                    <li>Cost management for compute-intensive pipelines</li>
+                </ul>
+                <h3>Security Integration</h3>
+                <ul>
+                    <li>CodeQL static analysis integration</li>
+                    <li>Dependabot automated dependency updates</li>
+                    <li>Secrets management via GitHub Actions secrets/OIDC</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Best Practices</h2>
+                <ul>
+                    <li>Use reusable workflows to enforce organization-wide pipeline standards</li>
+                    <li>Prefer OIDC federation over long-lived secrets for cloud deployment</li>
+                    <li>Isolate self-hosted runners running untrusted or third-party code</li>
+                    <li>Integrate CodeQL & Dependabot into every repository by default</li>
+                    <li>Monitor Actions minutes/cost for compute-intensive pipelines</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Define organization-wide GitHub Actions standards & reusable workflows</li>
+                    <li>Ensure runner security & secrets management best practices</li>
+                    <li>Track CI/CD cost & performance across repositories</li>
+                    <li>Integrate security scanning into the standard pipeline template</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>GitHub Actions official documentation</li>
+                    <li>GitHub security hardening guide for Actions</li>
+                    <li>OpenID Connect (OIDC) federation guidance for cloud deployment</li>
+                    <li>Gartner & Forrester CI/CD platform reports 2025–2026</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
