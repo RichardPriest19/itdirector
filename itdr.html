@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identity Threat Detection & Response (ITDR) | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>Identity Threat Detection & Response (ITDR)</h1>
+            <p>Detecting and responding to attacks that target identity systems and credentials directly</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>Identity Threat Detection & Response (ITDR) is a security discipline focused specifically on detecting and responding to attacks against identity infrastructure — credential theft, privilege escalation, session hijacking, and abuse of identity provider misconfigurations — rather than the broader endpoint or network telemetry that EDR/NDR tools monitor. In 2026, ITDR has become essential as identity has become the primary attack vector in most breaches, with attackers increasingly targeting cloud identity providers and SaaS authentication flows directly rather than traditional endpoints.</p>
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> ITDR closes the detection gap left by EDR and NDR tools, which weren't designed to catch identity-specific attack patterns — impossible travel, anomalous privilege escalation, token replay — that unfold entirely within identity provider and SaaS authentication logs rather than device or network telemetry.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Components</h2>
+                <h3>Detection Focus</h3>
+                <ul>
+                    <li>Anomalous authentication patterns (impossible travel, unusual MFA)</li>
+                    <li>Privilege escalation & lateral movement via identity abuse</li>
+                    <li>Session token theft & replay detection</li>
+                </ul>
+                <h3>Data Sources</h3>
+                <ul>
+                    <li>Identity provider logs (Entra ID, Okta, etc.)</li>
+                    <li>SaaS application authentication events</li>
+                    <li>Directory service change & configuration monitoring</li>
+                </ul>
+                <h3>Response Integration</h3>
+                <ul>
+                    <li>Automated session revocation & credential reset</li>
+                    <li>Correlation with broader SOC/XDR workflows</li>
+                    <li>Identity-specific incident response playbooks</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Best Practices</h2>
+                <ul>
+                    <li>Monitor identity provider & SaaS authentication logs as a first-class detection data source</li>
+                    <li>Build specific detection rules for identity-attack patterns EDR/NDR won't catch</li>
+                    <li>Automate session revocation & credential reset for confirmed identity compromise</li>
+                    <li>Integrate ITDR alerts directly into SOC triage & incident response workflows</li>
+                    <li>Extend ITDR coverage to cover federated & B2B identity relationships, not just internal accounts</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Sponsor ITDR tooling & capability as a distinct SOC function</li>
+                    <li>Ensure identity provider & SaaS authentication logs feed centralized detection</li>
+                    <li>Integrate ITDR response playbooks with broader incident response</li>
+                    <li>Track identity-based attack trends as a distinct risk category for leadership reporting</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>Gartner Identity Threat Detection and Response (ITDR) market guidance</li>
+                    <li>MITRE ATT&CK identity-based attack techniques</li>
+                    <li>CISA identity security guidance</li>
+                    <li>Gartner & Forrester ITDR reports 2025–2026</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

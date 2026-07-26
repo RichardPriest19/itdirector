@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Policy as Code (OPA/Kyverno) | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>Policy as Code (OPA/Kyverno)</h1>
+            <p>Defining and enforcing governance rules as version-controlled, automatically enforced code</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>Policy as Code defines governance, compliance, and security rules as version-controlled code rather than manually enforced documentation, using tools like Open Policy Agent (OPA) or Kyverno to automatically evaluate and enforce policies at deployment time — most commonly as Kubernetes admission controllers blocking non-compliant resources before they're created. In 2026, policy as code has expanded beyond Kubernetes into broader infrastructure-as-code validation, CI/CD pipeline gates, and cloud resource governance, treating policy the same way modern teams treat application code.</p>
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> Policy as code turns governance from a manually reviewed checklist into an automatically enforced gate — the same shift DevOps brought to infrastructure provisioning — catching non-compliant resources at creation time rather than during a periodic audit that finds violations long after they've been running in production.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Components</h2>
+                <h3>Policy Engines</h3>
+                <ul>
+                    <li>Open Policy Agent (OPA) — general-purpose policy engine (Rego language)</li>
+                    <li>Kyverno — Kubernetes-native policy engine (YAML-based)</li>
+                    <li>Cloud-native policy services (AWS Config Rules, Azure Policy)</li>
+                </ul>
+                <h3>Enforcement Points</h3>
+                <ul>
+                    <li>Kubernetes admission control (blocking non-compliant resources)</li>
+                    <li>CI/CD pipeline gates (Terraform/IaC validation)</li>
+                    <li>Runtime policy evaluation for ongoing compliance checking</li>
+                </ul>
+                <h3>Governance Application</h3>
+                <ul>
+                    <li>Security baseline enforcement (no privileged containers, required labels)</li>
+                    <li>Cost & resource governance (quota, tagging enforcement)</li>
+                    <li>Compliance mapping to regulatory & internal standards</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Best Practices</h2>
+                <ul>
+                    <li>Start with policies in audit/warn mode before moving to hard enforcement</li>
+                    <li>Version-control policies with the same rigor as application code</li>
+                    <li>Apply policy enforcement at multiple points — CI/CD gates and runtime admission control both</li>
+                    <li>Map policies explicitly to specific compliance or security requirements for traceability</li>
+                    <li>Involve application teams in policy design to avoid overly restrictive, workflow-breaking rules</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Sponsor policy-as-code adoption for security & compliance enforcement</li>
+                    <li>Ensure policies are versioned, tested & rolled out gradually (audit before enforce)</li>
+                    <li>Map enforced policies to specific compliance & security requirements</li>
+                    <li>Balance enforcement rigor against application team workflow impact</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>Open Policy Agent (OPA) official documentation</li>
+                    <li>Kyverno official documentation</li>
+                    <li>CNCF policy-as-code landscape</li>
+                    <li>NIST SP 800-53 policy enforcement automation guidance</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

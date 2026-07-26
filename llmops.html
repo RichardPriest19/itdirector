@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLMOps | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>LLMOps</h1>
+            <p>Operational practices specific to deploying, evaluating, and maintaining large language model applications</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>LLMOps adapts and extends MLOps practices specifically for large language model applications, addressing concerns unique to LLMs — prompt version control, retrieval-augmented generation (RAG) pipeline management, output evaluation against non-deterministic responses, and cost management for token-based API pricing — that traditional MLOps tooling wasn't designed around. In 2026, LLMOps has matured into a distinct discipline from general MLOps, with dedicated tooling for prompt management, evaluation frameworks, and guardrail deployment.</p>
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> LLMOps addresses problems that simply don't exist in traditional ML deployment — prompts that need versioning like code, outputs that must be evaluated for quality without a single ground-truth answer, and API costs that scale with usage in ways a traditionally-trained, self-hosted model doesn't — making dedicated LLMOps practice necessary rather than an extension of existing MLOps tooling.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Components</h2>
+                <h3>Prompt & Pipeline Management</h3>
+                <ul>
+                    <li>Prompt version control & change tracking</li>
+                    <li>Retrieval-Augmented Generation (RAG) pipeline management</li>
+                    <li>Multi-model & multi-provider orchestration</li>
+                </ul>
+                <h3>Evaluation & Quality</h3>
+                <ul>
+                    <li>Non-deterministic output evaluation frameworks</li>
+                    <li>Automated regression testing for prompt/model changes</li>
+                    <li>Human feedback loops for quality assessment</li>
+                </ul>
+                <h3>Operations & Cost</h3>
+                <ul>
+                    <li>Token-based API cost monitoring & optimization</li>
+                    <li>Guardrail & safety filter deployment</li>
+                    <li>Latency & reliability monitoring for LLM-dependent features</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Best Practices</h2>
+                <ul>
+                    <li>Version-control prompts with the same rigor as application code</li>
+                    <li>Build evaluation frameworks that handle non-deterministic outputs meaningfully</li>
+                    <li>Monitor token-based API costs closely as a distinct, fast-growing cost category</li>
+                    <li>Test prompt & model changes through automated regression suites before deployment</li>
+                    <li>Deploy guardrails & safety filters as a standard part of the LLM application pipeline</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Sponsor LLMOps tooling & practice adoption for AI application teams</li>
+                    <li>Ensure prompt versioning & evaluation frameworks are standard practice</li>
+                    <li>Track LLM API cost consumption as a distinct FinOps category</li>
+                    <li>Fund guardrail & safety filter deployment across LLM-powered applications</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>LLMOps community & tooling landscape (LangSmith, Weights & Biases, etc.)</li>
+                    <li>NIST AI Risk Management Framework</li>
+                    <li>OWASP Top 10 for Large Language Model Applications</li>
+                    <li>Gartner & Forrester LLMOps & generative AI platform reports 2025–2026</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
