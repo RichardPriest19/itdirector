@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Segmentation | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>Network Segmentation</h1>
+            <p>Dividing networks into isolated zones to contain breaches and limit lateral movement</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>Network segmentation divides a network into isolated zones — by function, sensitivity, or trust level — so that a compromise in one segment cannot freely spread to others. In 2026, segmentation practice has moved from coarse VLAN-based zoning toward fine-grained micro-segmentation enforced at the workload level, often software-defined and tightly coupled with zero-trust access policy.</p>
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> Effective segmentation is one of the highest-leverage controls against ransomware and lateral movement — it doesn't prevent every initial compromise, but it caps the damage a single foothold can do by design.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Components</h2>
+                <h3>Segmentation Approaches</h3>
+                <ul>
+                    <li>Traditional VLAN & subnet-based zoning</li>
+                    <li>Micro-segmentation at the workload/container level</li>
+                    <li>Software-defined segmentation policy enforcement</li>
+                </ul>
+                <h3>Design Considerations</h3>
+                <ul>
+                    <li>Segmentation by data sensitivity & business function</li>
+                    <li>East-west traffic inspection between segments</li>
+                    <li>OT/IT segmentation for industrial environments</li>
+                </ul>
+                <h3>Operations</h3>
+                <ul>
+                    <li>Segmentation policy documentation & change control</li>
+                    <li>Regular validation testing of segment isolation</li>
+                    <li>Monitoring for unauthorized cross-segment traffic</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Best Practices</h2>
+                <ul>
+                    <li>Segment by sensitivity & function, not just physical network topology</li>
+                    <li>Extend segmentation to the workload level with micro-segmentation where feasible</li>
+                    <li>Regularly test that segment isolation actually holds under realistic scenarios</li>
+                    <li>Monitor and alert on unexpected east-west traffic between segments</li>
+                    <li>Prioritize segmentation of OT/ICS environments from general IT networks</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Define enterprise network segmentation strategy & standards</li>
+                    <li>Ensure segmentation policy is enforced & regularly validated</li>
+                    <li>Prioritize segmentation of critical & sensitive network zones</li>
+                    <li>Monitor for segmentation policy violations & drift</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>NIST SP 800-207 Zero Trust Architecture</li>
+                    <li>NIST SP 800-82 ICS/OT security segmentation guidance</li>
+                    <li>CIS Controls network segmentation guidance</li>
+                    <li>Gartner & Forrester micro-segmentation reports 2025–2026</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

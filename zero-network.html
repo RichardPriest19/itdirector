@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero Trust Network Architecture | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>Zero Trust Network Architecture</h1>
+            <p>Continuous verification and least-privilege access replacing implicit trust in the network perimeter</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>Zero Trust Network Architecture eliminates the assumption that anything inside a traditional network perimeter is trustworthy, instead requiring continuous verification of identity, device health, and context for every access request regardless of network location. In 2026, zero trust implementations are typically built on micro-segmentation, identity-aware proxies, and continuous risk-based re-authentication rather than one-time perimeter checks.</p>
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> Zero trust network architecture assumes breach and verifies continuously, dramatically limiting lateral movement even when a single credential or device is compromised — a critical shift from the traditional model where perimeter access implied broad internal trust.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Components</h2>
+                <h3>Architectural Principles</h3>
+                <ul>
+                    <li>Never trust, always verify — no implicit network trust</li>
+                    <li>Least-privilege, per-request access decisions</li>
+                    <li>Assume breach — design for containment, not just prevention</li>
+                </ul>
+                <h3>Implementation Building Blocks</h3>
+                <ul>
+                    <li>Micro-segmentation of network zones</li>
+                    <li>Identity-aware proxies for application access</li>
+                    <li>Continuous, risk-based re-authentication</li>
+                </ul>
+                <h3>Integration Points</h3>
+                <ul>
+                    <li>Device health attestation feeding access decisions</li>
+                    <li>Identity provider integration for contextual signals</li>
+                    <li>ZTNA replacing traditional VPN remote access</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Best Practices</h2>
+                <ul>
+                    <li>Replace flat internal network trust with micro-segmented zones</li>
+                    <li>Tie access decisions to continuous identity & device health signals</li>
+                    <li>Deploy ZTNA to replace broad-access VPN for remote connectivity</li>
+                    <li>Design for breach containment, not just perimeter prevention</li>
+                    <li>Phase implementation by risk tier rather than attempting a big-bang rollout</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Own the enterprise zero trust architecture roadmap</li>
+                    <li>Ensure micro-segmentation & continuous verification are implemented consistently</li>
+                    <li>Coordinate zero trust rollout with identity & device management teams</li>
+                    <li>Track adoption progress across network zones & applications</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>NIST SP 800-207 Zero Trust Architecture</li>
+                    <li>CISA Zero Trust Maturity Model</li>
+                    <li>Forrester Zero Trust eXtended (ZTX) framework</li>
+                    <li>Gartner & Forrester zero trust network access reports 2025–2026</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

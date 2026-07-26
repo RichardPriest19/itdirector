@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serverless Architecture | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>Serverless Architecture</h1>
+            <p>Building applications on managed, event-triggered compute without provisioning servers</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>Serverless architecture runs application logic in managed, event-triggered compute services — functions, managed containers, and backend-as-a-service — eliminating server provisioning and scaling entirely to the cloud provider. In 2026, serverless has matured with reduced cold-start latency, broader language support, and growing use in AI inference pipelines and event-driven data processing alongside its traditional web/API backend role.</p>
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> Serverless architecture eliminates idle infrastructure cost and operational overhead for variable or event-driven workloads, letting teams focus entirely on business logic while the provider handles scaling, patching, and availability.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Components</h2>
+                <h3>Compute Models</h3>
+                <ul>
+                    <li>Function-as-a-Service (Lambda, Azure Functions, Cloud Functions)</li>
+                    <li>Serverless containers (Fargate, Cloud Run)</li>
+                    <li>Backend-as-a-Service (managed databases, auth, storage)</li>
+                </ul>
+                <h3>Design Considerations</h3>
+                <ul>
+                    <li>Event-driven trigger design (queues, streams, HTTP)</li>
+                    <li>Cold-start latency mitigation strategies</li>
+                    <li>Stateless function design & external state management</li>
+                </ul>
+                <h3>Operational Practices</h3>
+                <ul>
+                    <li>Observability across ephemeral function invocations</li>
+                    <li>Cost monitoring per-invocation & per-workload</li>
+                    <li>Security scanning integrated into deployment pipelines</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Best Practices</h2>
+                <ul>
+                    <li>Design functions to be stateless and idempotent</li>
+                    <li>Monitor cold-start latency for user-facing workloads</li>
+                    <li>Set concurrency limits to control cost & avoid downstream overload</li>
+                    <li>Apply the same security scanning rigor as traditional workloads</li>
+                    <li>Track per-function cost attribution to avoid billing surprises</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Evaluate serverless fit for variable-demand & event-driven workloads</li>
+                    <li>Ensure observability & security tooling covers serverless functions</li>
+                    <li>Monitor cost attribution across serverless deployments</li>
+                    <li>Set governance standards for function deployment & permissions</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>AWS Serverless Application Lens (Well-Architected Framework)</li>
+                    <li>CNCF serverless whitepaper</li>
+                    <li>NIST SP 800-204 microservices & serverless security guidance</li>
+                    <li>Gartner & Forrester serverless computing reports 2025–2026</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

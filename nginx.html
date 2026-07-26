@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NGINX | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>NGINX</h1>
+            <p>High-performance web server, reverse proxy, and load balancer widely used across enterprise infrastructure</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>NGINX is a high-performance web server, reverse proxy, load balancer, and API gateway used across a large share of internet-facing and internal enterprise infrastructure. In 2026, NGINX deployments commonly serve as the ingress layer for Kubernetes clusters, TLS termination points, and the foundation for API gateway and rate-limiting policy enforcement, alongside its traditional static content serving role.</p>
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> NGINX's combination of performance, flexibility, and broad ecosystem support makes it a common default for ingress, reverse proxying, and load balancing — but that ubiquity also means misconfiguration can have outsized blast radius, making disciplined configuration management essential.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Components</h2>
+                <h3>Core Roles</h3>
+                <ul>
+                    <li>Reverse proxy & TLS termination</li>
+                    <li>Load balancing across backend services</li>
+                    <li>Kubernetes ingress controller</li>
+                </ul>
+                <h3>Performance & Reliability</h3>
+                <ul>
+                    <li>Caching & static content acceleration</li>
+                    <li>Connection & rate limiting configuration</li>
+                    <li>Health checks & upstream failover</li>
+                </ul>
+                <h3>Security</h3>
+                <ul>
+                    <li>TLS/SSL configuration hardening</li>
+                    <li>WAF module integration (NGINX App Protect / ModSecurity)</li>
+                    <li>Access control & IP allowlisting</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Best Practices</h2>
+                <ul>
+                    <li>Harden TLS configuration following current cipher suite guidance</li>
+                    <li>Version-control NGINX configuration & deploy through CI/CD</li>
+                    <li>Enable rate limiting to protect backend services from overload</li>
+                    <li>Integrate WAF capability for internet-facing deployments</li>
+                    <li>Monitor upstream health checks to catch backend failures early</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Define standard NGINX configuration templates & review process</li>
+                    <li>Ensure TLS & WAF hardening standards are applied consistently</li>
+                    <li>Oversee ingress & load balancing architecture decisions</li>
+                    <li>Track configuration drift across NGINX deployments</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>NGINX official documentation & security advisories</li>
+                    <li>Mozilla TLS configuration guidelines</li>
+                    <li>OWASP web server hardening guidance</li>
+                    <li>CIS Benchmark for NGINX</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SLA, SLO & SLI Framework | IT Director Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+            <h1>SLA, SLO & SLI Framework</h1>
+            <p>The layered metrics framework defining, measuring, and committing to service reliability</p>
+        </div>
+
+        <main class="main-content">
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>SLAs (Service Level Agreements), SLOs (Service Level Objectives), and SLIs (Service Level Indicators) form a layered framework for defining and measuring service reliability: SLIs are the raw measurements (e.g., request latency), SLOs are internal reliability targets based on those measurements, and SLAs are the external, often contractual, commitments built on top with consequences for failure. In 2026, this framework is foundational to SRE practice and increasingly extends beyond infrastructure uptime to cover AI model response quality and latency commitments.</p>
+                <div class="highlight-box">
+                    <strong>Key Value:</strong> Clearly separating SLIs, SLOs, and SLAs prevents the common confusion of treating internal aspirational targets as external contractual promises — giving engineering teams room to use error budgets for internal trade-off decisions while still honoring firmer external commitments.
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Core Components</h2>
+                <h3>Framework Layers</h3>
+                <ul>
+                    <li>SLI — raw service level indicators (latency, error rate, availability)</li>
+                    <li>SLO — internal reliability targets derived from SLIs</li>
+                    <li>SLA — external, often contractual, commitments with consequences</li>
+                </ul>
+                <h3>Design Considerations</h3>
+                <ul>
+                    <li>Error budget derived from the gap between SLO & 100%</li>
+                    <li>User-centric SLI selection reflecting real experience</li>
+                    <li>Tiered SLAs by service criticality</li>
+                </ul>
+                <h3>Application</h3>
+                <ul>
+                    <li>SLO-driven release/deployment gating</li>
+                    <li>SLA penalty & credit structures for vendor & customer contracts</li>
+                    <li>AI/LLM service quality & latency SLO extension</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Best Practices</h2>
+                <ul>
+                    <li>Select SLIs that reflect genuine user experience, not just easy-to-measure infrastructure metrics</li>
+                    <li>Set SLOs deliberately below 100% to create a usable error budget</li>
+                    <li>Keep external SLAs looser than internal SLOs to preserve a safety margin</li>
+                    <li>Use error budget consumption to gate release velocity decisions</li>
+                    <li>Extend the SLI/SLO/SLA framework to AI/LLM service quality as those become customer-facing</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>IT Director Responsibilities</h2>
+                <ul>
+                    <li>Define the enterprise SLI/SLO/SLA framework & governance</li>
+                    <li>Ensure SLOs are set with meaningful, defensible error budgets</li>
+                    <li>Oversee SLA contractual commitments & penalty structures</li>
+                    <li>Extend the framework to cover emerging AI/LLM service commitments</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li>Google SRE Book — SLO chapter</li>
+                    <li>FinOps Foundation & SRE community SLO guidance</li>
+                    <li>ITIL service level management guidance</li>
+                    <li>Gartner & Forrester SRE & reliability engineering reports 2025–2026</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 IT Director Hub. A comprehensive resource for IT leadership and operations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
